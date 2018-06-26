@@ -17,7 +17,6 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
-import sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -81,7 +80,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.action_share, menu);
+        inflater.inflate(R.menu.detail_action_share, menu);
         MenuItem menuItem = menu.findItem(R.id.action_share);
         menuItem.setIntent(createShareForcastIntent());
         return true;

@@ -14,12 +14,15 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
 import sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter;
 import sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoriesService;
+import sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoryServiceRxJava;
 import sfedu.physics.dmitriy.githubapiresttestproject.application.Application;
 import sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository;
 import sfedu.physics.dmitriy.githubapiresttestproject.user_model.User;
@@ -40,17 +43,19 @@ public class RepositoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repository);
 
+        // Check If intent came with userLogin or Quit;
         String userName = getIntent().getAction();
         if (userName == null) {
-            Toast.makeText(this, "UserLOgin is not loaded", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "UserLogin is not loaded", Toast.LENGTH_SHORT).show();
             finish();
         }
+
         initViews();
         configureViews();
-        loadJSON(userName);
+        loadJsonViaRxJava(userName);
 
         swipeRefreshLayout.setOnRefreshListener(() -> {
-                    loadJSON(userName);
+                    loadJsonViaRxJava(userName);
                     Toast.makeText(RepositoryActivity.this, "Github Users Refreshed", Toast.LENGTH_SHORT).show();
                 }
         );
@@ -75,7 +80,33 @@ public class RepositoryActivity extends AppCompatActivity {
 
     }
 
-    private void loadJSON(String userLogin) {
+    private void loadJsonViaRxJava(String userLogin) {
+        SearchRepositoryServiceRxJava searchRepositoryServiceRxJava
+                = Application.getRxJavaClient().create(SearchRepositoryServiceRxJava.class);
+        searchRepositoryServiceRxJava.getUserRepositoriesByLogin(userLogin)
+                .subscribeOn(Schedulers.io())
+                .cache()
+                .retry(2)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(this::handleResult, this::handleError);
+    }
+
+    private void handleResult(List<Repository> repositories) {
+        recyclerView.setAdapter(new RepositoryAdapter(getApplicationContext(), repositories));
+        swipeRefreshLayout.setRefreshing(false);
+        progressDialog.hide();
+    }
+
+    private void handleError(Throwable throwable) {
+        Log.d("ERROR", throwable.getMessage());
+        Toast.makeText(RepositoryActivity.this, "Error Fetching Data", Toast.LENGTH_SHORT).show();
+        disconnected.setVisibility(View.VISIBLE);
+        progressDialog.hide();
+    }
+}
+
+
+/*    private void loadJSON(String userLogin) {
         try {
 
             SearchRepositoriesService searchRepositoriesService
@@ -103,5 +134,4 @@ public class RepositoryActivity extends AppCompatActivity {
             Log.d("ERROR", e.getMessage());
             Toast.makeText(RepositoryActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
         }
-    }
-}
+    }*/
