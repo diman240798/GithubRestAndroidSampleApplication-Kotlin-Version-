@@ -1,13 +1,12 @@
 package sfedu.physics.dmitriy.githubapiresttestproject.activity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,6 +16,8 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import java.util.List;
 
@@ -29,22 +30,22 @@ import sfedu.physics.dmitriy.githubapiresttestproject.application.Application;
 import sfedu.physics.dmitriy.githubapiresttestproject.user_model.User;
 import sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse;
 
-import static sfedu.physics.dmitriy.githubapiresttestproject.StringUtils.*;
-public class UsersActivity extends AppCompatActivity {
+public class UsersActivity extends RxAppCompatActivity {
 
 
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
 
-    TextView disconnected;
+    private TextView disconnected;
 
-    SwipeRefreshLayout swipeRefreshLayout;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
-    ProgressDialog progressDialog;
+    private ProgressDialog progressDialog;
 
     // Search Views
-    RelativeLayout relativeLayout;
-    EditText search_location, search_language;
-    Button start_search_button;
+    private RelativeLayout relativeLayout;
+    private EditText search_location, search_language;
+    private Button start_search_button;
+    private StringBuilder query;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,11 +55,7 @@ public class UsersActivity extends AppCompatActivity {
         initViews();
         initAndConfigureSearchViews();
         configureViews();
-
-        swipeRefreshLayout.setOnRefreshListener(() -> {
-            loadInitJsonViaRxJava();
-            Toast.makeText(UsersActivity.this, "Github Users Refreshed", Toast.LENGTH_SHORT).show();
-        });
+        loadInitJson();
     }
 
     private void initViews() {
@@ -74,19 +71,21 @@ public class UsersActivity extends AppCompatActivity {
 
         start_search_button = (Button) findViewById(R.id.users_search_startBT);
         start_search_button.setOnClickListener(v -> {
+
             String userLocation = search_location.getText().toString();
             String userProgrammingLanguage = search_language.getText().toString();
-           choseJsonMethodForSearch(userLocation, userProgrammingLanguage);
+
+            createQueryForSearch(userLocation, userProgrammingLanguage);
         });
     }
 
-    private void choseJsonMethodForSearch(String userLocation, String userProgrammingLanguage) {
-        if (checkStringIsNotNullOrEmpty(userLocation) && checkStringIsNotNullOrEmpty(userProgrammingLanguage))
-            loadJsonByLocationAndLanguage(userLocation, userProgrammingLanguage);
-        else if (checkStringIsNotNullOrEmpty(userLocation) && checkStringIsNullOrEmpty(userProgrammingLanguage))
-            loadJsonByLocation(userLocation);
-        else if (checkStringIsNullOrEmpty(userLocation) && checkStringIsNotNullOrEmpty(userProgrammingLanguage))
-            loadJsonByProgrammingLanguage(userProgrammingLanguage);
+    private void createQueryForSearch(String userLocation, String userProgrammingLanguage) {
+        query = new StringBuilder();
+        if (!userLocation.isEmpty())
+            query.append(String.format("location:%s+", userLocation));
+        if (!userProgrammingLanguage.isEmpty())
+            query.append(String.format("language:%s", userProgrammingLanguage));
+        loadUsersByQuery(query.toString());
     }
 
     private void configureViews() {
@@ -99,59 +98,59 @@ public class UsersActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-        loadInitJsonViaRxJava();
+
+        swipeRefreshLayout.setOnRefreshListener(() -> {
+            loadUsersByQuery(query == null ? null : query.toString());
+            Toast.makeText(UsersActivity.this, "Github Users Refreshed", Toast.LENGTH_SHORT).show();
+        });
     }
 
-    private void loadInitJsonViaRxJava() {
-        SearchUsersServiceRxJava searchUsersServiceRxJava = Application.getRxJavaClient().create(SearchUsersServiceRxJava.class);
-        searchUsersServiceRxJava.getInitUsers()
-                .subscribeOn(Schedulers.io())
-                .cache()
-                .retry(2)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(this::handleResult, this::handleError);
 
-    }
-
-    private void loadJsonByLocationAndLanguage(String userLocation, String userProgrammingLanguage) {
-        loadUsersByQuery(String.format("location:%s+language:%s", userLocation, userProgrammingLanguage));
-    }
-
-    private void loadJsonByLocation(String userLocation) {
-        loadUsersByQuery(String.format("location:%s", userLocation));
-    }
-
-    private void loadJsonByProgrammingLanguage(String userProgrammingLanguage) {
-        loadUsersByQuery(String.format("language:%s", userProgrammingLanguage));
-    }
     private void loadUsersByQuery(String query) {
+        if (query == null)
+            loadInitJson();
+
         SearchUsersServiceRxJava searchUsersServiceRxJava = Application.getRxJavaClient().create(SearchUsersServiceRxJava.class);
         searchUsersServiceRxJava.getUsersByQuery(query)
                 .subscribeOn(Schedulers.io())
+                .compose(bindToLifecycle())
                 .cache()
                 .retry(2)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::handleResult, this::handleError);
     }
+
+    private void loadInitJson() {
+        SearchUsersServiceRxJava searchUsersServiceRxJava = Application.getRxJavaClient().create(SearchUsersServiceRxJava.class);
+        searchUsersServiceRxJava.getInitUsers()
+                .subscribeOn(Schedulers.io())
+                .compose(bindToLifecycle())
+                .cache()
+                .retry(2)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(this::handleResult, this::handleError);
+    }
+
 
     private void handleResult(UserResponse userResponse) {
         List<User> users = userResponse.getUsers();
         recyclerView.setAdapter(new UserAdapter(getApplicationContext(), users));
         swipeRefreshLayout.setRefreshing(false);
         progressDialog.hide();
+        progressDialog.dismiss();
     }
 
     private void handleError(Throwable throwable) {
-        Log.d("ERROR", throwable.getMessage());
-        Toast.makeText(UsersActivity.this, "Error Fetching Data", Toast.LENGTH_SHORT).show();
         disconnected.setVisibility(View.VISIBLE);
         progressDialog.hide();
+        progressDialog.dismiss();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.users_action_search, menu);
+
         MenuItem menuItem = menu.findItem(R.id.action_search);
         menuItem.setOnMenuItemClickListener(item -> {
             int relativeLayoutVisibility = relativeLayout.getVisibility();
@@ -166,35 +165,8 @@ public class UsersActivity extends AppCompatActivity {
                     return false;
             }
         });
+
         return true;
 
     }
 }
-
-/*private void loadJSON() {
-        try {
-            SearchUsersService apiSearchUsersService =
-                    Application.getClient().create(SearchUsersService.class);
-            Call<UserResponse> call = apiSearchUsersService.getInitUsers();
-            call.enqueue(new Callback<UserResponse>() {
-                @Override
-                public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
-                    List<User> users = response.body().getUsers();
-                    recyclerView.setAdapter(new UserAdapter(getApplicationContext(), users));
-                    swipeRefreshLayout.setRefreshing(false);
-                    progressDialog.hide();
-                }
-
-                @Override
-                public void onFailure(Call<UserResponse> call, Throwable t) {
-                    Log.d("ERROR", t.getMessage());
-                    Toast.makeText(UsersActivity.this, "Error Fetching Data", Toast.LENGTH_SHORT).show();
-                    disconnected.setVisibility(View.VISIBLE);
-                    progressDialog.hide();
-                }
-            });
-        } catch (Exception e) {
-            Log.d("ERROR", e.getMessage());
-            Toast.makeText(UsersActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
-        }
-    }*/

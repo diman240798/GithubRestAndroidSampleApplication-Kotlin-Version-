@@ -12,22 +12,20 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
 import sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter;
-import sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoriesService;
 import sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoryServiceRxJava;
 import sfedu.physics.dmitriy.githubapiresttestproject.application.Application;
 import sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository;
 import sfedu.physics.dmitriy.githubapiresttestproject.user_model.User;
 
-public class RepositoryActivity extends AppCompatActivity {
+public class RepositoryActivity extends RxAppCompatActivity {
 
     RecyclerView recyclerView;
 
@@ -52,6 +50,7 @@ public class RepositoryActivity extends AppCompatActivity {
 
         initViews();
         configureViews();
+        configureActionBar();
         loadJsonViaRxJava(userName);
 
         swipeRefreshLayout.setOnRefreshListener(() -> {
@@ -78,6 +77,11 @@ public class RepositoryActivity extends AppCompatActivity {
         progressDialog.show();
 
 
+
+    }
+
+    private void configureActionBar() {
+        getSupportActionBar().setTitle("User Repositories");
     }
 
     private void loadJsonViaRxJava(String userLogin) {
@@ -85,6 +89,7 @@ public class RepositoryActivity extends AppCompatActivity {
                 = Application.getRxJavaClient().create(SearchRepositoryServiceRxJava.class);
         searchRepositoryServiceRxJava.getUserRepositoriesByLogin(userLogin)
                 .subscribeOn(Schedulers.io())
+                .compose(bindToLifecycle())
                 .cache()
                 .retry(2)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -95,43 +100,13 @@ public class RepositoryActivity extends AppCompatActivity {
         recyclerView.setAdapter(new RepositoryAdapter(getApplicationContext(), repositories));
         swipeRefreshLayout.setRefreshing(false);
         progressDialog.hide();
+        progressDialog.dismiss();
     }
 
     private void handleError(Throwable throwable) {
-        Log.d("ERROR", throwable.getMessage());
-        Toast.makeText(RepositoryActivity.this, "Error Fetching Data", Toast.LENGTH_SHORT).show();
-        disconnected.setVisibility(View.VISIBLE);
+        swipeRefreshLayout.setRefreshing(false);
         progressDialog.hide();
+        progressDialog.dismiss();
     }
+
 }
-
-
-/*    private void loadJSON(String userLogin) {
-        try {
-
-            SearchRepositoriesService searchRepositoriesService
-                    = Application.getClient().create(SearchRepositoriesService.class);
-
-            Call<List<Repository>> userRepositories = searchRepositoriesService.getUserRepositoriesByLogin(userLogin);
-            userRepositories.enqueue(new Callback<List<Repository>>() {
-                @Override
-                public void onResponse(Call<List<Repository>> call, Response<List<Repository>> response) {
-                    List<Repository> repositories = response.body();
-                    recyclerView.setAdapter(new RepositoryAdapter(getApplicationContext(), repositories));
-                    swipeRefreshLayout.setRefreshing(false);
-                    progressDialog.hide();
-                }
-
-                @Override
-                public void onFailure(Call<List<Repository>> call, Throwable t) {
-                    Log.d("ERROR", t.getMessage());
-                    Toast.makeText(RepositoryActivity.this, "Error Fetching Data", Toast.LENGTH_SHORT).show();
-                    disconnected.setVisibility(View.VISIBLE);
-                    progressDialog.hide();
-                }
-            });
-        } catch (Exception e) {
-            Log.d("ERROR", e.getMessage());
-            Toast.makeText(RepositoryActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
-        }
-    }*/

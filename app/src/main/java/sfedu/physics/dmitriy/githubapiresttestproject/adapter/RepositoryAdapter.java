@@ -40,12 +40,12 @@ public class RepositoryAdapter extends RecyclerView.Adapter<RepositoryAdapter.Vi
         String repositoryHtml_url = dataRepository.getHtml_url();
 
 
-        holder.repo_model_nameTV.setText(repositoryName);
-        holder.repo_model_languageTV.setText(repositoryLanguage);
-        holder.repo_model_isPrivateTV.setText(String.valueOf(repositoryPrivate));
-        holder.repo_model_descritionTV.setText(repositoryDescription);
-        holder.repo_model_cloneURLTV.setText(repositoryClone_url);
-        holder.repo_model_htmlURLTV.setText(repositoryHtml_url);
+        holder.repo_model_nameTV.setText("RepositoryName: " + repositoryName);
+        holder.repo_model_languageTV.setText("RepositoryLanguage: " + repositoryLanguage);
+        holder.repo_model_isPrivateTV.setText("IsPrivate: " + String.valueOf(repositoryPrivate));
+        holder.repo_model_descritionTV.setText("RepositoryDescription: " + repositoryDescription);
+        holder.repo_model_cloneURLTV.setText("RepositoryCloneURL: " + repositoryClone_url);
+        holder.repo_model_htmlURLTV.setText("RepositoryHtmlURL: " + repositoryHtml_url);
 
 
     }
@@ -72,21 +72,5 @@ public class RepositoryAdapter extends RecyclerView.Adapter<RepositoryAdapter.Vi
             repo_model_cloneURLTV = (TextView) view.findViewById(R.id.repo_model_cloneURLTV);
             repo_model_htmlURLTV = (TextView) view.findViewById(R.id.repo_model_htmlURLTV);
         }
-
-           /* int position = getAdapterPosition();
-
-            if (position != RecyclerView.NO_POSITION) {
-                Repository dataRepository = repositories.get(position);
-
-                String repositoryName = dataRepository.getName();
-                String repositoryLanguage = dataRepository.getLanguage();
-                boolean repositoryPrivate = dataRepository.isPrivate();
-                String repositoryDescription = dataRepository.getDescription();
-                String repositoryClone_url = dataRepository.getClone_url();
-                String repositoryHtml_url = dataRepository.getHtml_url();
-
-            }*/
-
-
     }
 }

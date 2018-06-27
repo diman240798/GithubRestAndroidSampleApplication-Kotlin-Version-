@@ -30,7 +30,6 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-
         initView();
         configureViews();
         configureActionBar();
@@ -45,14 +44,15 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void configureViews() {
-        if (getIntent().getExtras() == null) {
-            Toast.makeText(this, "Data is not loaded", Toast.LENGTH_SHORT).show();
-            finish();
-        }
 
-        String userName = getIntent().getExtras().getString("login");
-        String avatarURL = getIntent().getExtras().getString("avatar_url");
-        String linkURL = getIntent().getExtras().getString("html_url");
+        if (getIntent() == null)
+            finish();
+
+        Bundle extras = getIntent().getExtras();
+
+        String userName = extras.getString("login");
+        String avatarURL = extras.getString("avatar_url");
+        String linkURL = extras.getString("html_url");
 
         detail_link.setText(linkURL);
         Linkify.addLinks(detail_link, Linkify.WEB_URLS);
@@ -72,8 +72,6 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void configureActionBar() {
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Details Activity");
     }
 

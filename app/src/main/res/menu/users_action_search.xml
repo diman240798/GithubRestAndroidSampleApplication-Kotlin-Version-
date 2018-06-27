@@ -4,6 +4,7 @@
     <item
         android:id="@+id/action_search"
         android:icon="@android:drawable/ic_menu_search"
+        android:iconTint="#fff"
         android:title="Share"
         app:showAsAction="always" />
 </menu>
