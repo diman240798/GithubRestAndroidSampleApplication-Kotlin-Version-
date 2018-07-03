@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         // Users Activity
-        <activity android:name=".activity.UsersActivity"/>
+        <activity android:name=".activity.MvpUsersActivity"/>
         // Detail Activity
         <activity
             android:name=".activity.DetailActivity"

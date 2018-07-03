@@ -60,7 +60,7 @@ public class AuthorizationActivity extends AppCompatActivity {
             authorizationService.getAccessToken(CLIENT_ID, CLIENT_SECRET, code).enqueue(new Callback<AccessToken>() {
                 @Override
                 public void onResponse(Call<AccessToken> call, Response<AccessToken> response) {
-                    startActivity(new Intent(AuthorizationActivity.this, UsersActivity.class));
+                    startActivity(new Intent(AuthorizationActivity.this, MvpUsersActivity.class));
                 }
 
                 @Override
@@ -73,7 +73,7 @@ public class AuthorizationActivity extends AppCompatActivity {
     }
 
     public void skipRegistration(View v) {
-        Intent intent = new Intent(this, UsersActivity.class);
+        Intent intent = new Intent(this, MvpUsersActivity.class);
         startActivity(intent);
     }
 }

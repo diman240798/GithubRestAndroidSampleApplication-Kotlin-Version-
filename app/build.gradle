@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -17,13 +19,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -68,5 +68,11 @@ dependencies {
     implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
     // If you want pre-written Activities and Fragments you can subclass as providers
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+
+    // Moxy
+    implementation 'com.arello-mobile:moxy:1.5.5'
+    kapt 'com.arello-mobile:moxy-compiler:1.5.5'
+    implementation 'com.arello-mobile:moxy-app-compat:1.5.5'
+    implementation 'com.android.support:appcompat-v7:26.0.2'
 
 }

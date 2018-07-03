@@ -34,7 +34,7 @@ public class UsersActivity extends RxAppCompatActivity {
 
     private RecyclerView recyclerView;
 
-    private TextView disconnected;
+    //private TextView disconnected;
 
     private SwipeRefreshLayout swipeRefreshLayout;
 
@@ -67,7 +67,7 @@ public class UsersActivity extends RxAppCompatActivity {
     }
 
     private void initViews() {
-        disconnected = (TextView) findViewById(R.id.users_disconnectedTV);
+        //disconnected = (TextView) findViewById(R.id.users_disconnectedTV);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.users_swipeContainer);
         recyclerView = (RecyclerView) findViewById(R.id.users_recyclerView);
     }
@@ -168,7 +168,7 @@ public class UsersActivity extends RxAppCompatActivity {
     }
 
     private void handleError(Throwable throwable) {
-        disconnected.setVisibility(View.VISIBLE);
+       // disconnected.setVisibility(View.VISIBLE);
         progressDialog.hide();
         progressDialog.dismiss();
         pageNumber = 1;
