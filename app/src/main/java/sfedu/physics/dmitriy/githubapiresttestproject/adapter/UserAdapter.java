@@ -21,12 +21,20 @@ import sfedu.physics.dmitriy.githubapiresttestproject.user_model.User;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
+
+    private OnLoadMoreListener onLoadMoreListener;
+    private boolean isLoading, noMore;
+
     private List<User> users;
     private Context context;
 
     public UserAdapter(Context context, List<User> users) {
         this.users = users;
         this.context = context;
+    }
+
+    public List<User> getUsers() {
+        return users;
     }
 
     @NonNull
@@ -53,6 +61,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                 .load(userAvatarURL)
                 .placeholder(R.drawable.load)
                 .into(holder.avatarIV);
+
+        if(onLoadMoreListener != null && !isLoading && !noMore && holder.getAdapterPosition() == getItemCount() - 1) {
+            isLoading = true;
+            onLoadMoreListener.onLoadMore();
+        }
+
     }
 
     @Override
@@ -90,7 +104,24 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             });
 
 
+
         }
 
+    }
+
+    public void setOnLoadMoreListener(OnLoadMoreListener onLoadMoreListener) {
+        this.onLoadMoreListener = onLoadMoreListener;
+    }
+
+    public void endLoading() {
+        this.isLoading = false;
+    }
+
+    public void setNoMore() {
+        this.noMore = false;
+    }
+
+    public interface OnLoadMoreListener {
+        void onLoadMore();
     }
 }

@@ -11,11 +11,23 @@ public class UserResponse {
     @Expose
     private List<User> users;
 
+    @SerializedName("total_count")
+    @Expose
+    private int totalCount;
+
     public List<User> getUsers() {
         return users;
     }
 
     public void setUsers(List<User> users) {
         this.users = users;
+    }
+
+    public int getTotalCount() {
+        return totalCount;
+    }
+
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
     }
 }

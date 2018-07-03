@@ -7,7 +7,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
-public interface AuthorizationServiceRxJava {
+public interface AuthorizationService {
 
     @Headers("Accept: application/json")
     @POST("/login/oauth/access_token")

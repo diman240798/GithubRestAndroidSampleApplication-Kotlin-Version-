@@ -12,7 +12,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
 import sfedu.physics.dmitriy.githubapiresttestproject.api.AccessToken;
-import sfedu.physics.dmitriy.githubapiresttestproject.api.AuthorizationServiceRxJava;
+import sfedu.physics.dmitriy.githubapiresttestproject.api.AuthorizationService;
 import sfedu.physics.dmitriy.githubapiresttestproject.application.Application;
 
 /**
@@ -56,8 +56,8 @@ public class AuthorizationActivity extends AppCompatActivity {
 
         if (uri != null && uri.toString().startsWith(CLIENT_CALLBACK_URL)) {
             String code = uri.getQueryParameter("code");
-            AuthorizationServiceRxJava authorizationServiceRxJava = Application.getRxJavaClient().create(AuthorizationServiceRxJava.class);
-            authorizationServiceRxJava.getAccessToken(CLIENT_ID, CLIENT_SECRET, code).enqueue(new Callback<AccessToken>() {
+            AuthorizationService authorizationService = Application.getRxJavaClient().create(AuthorizationService.class);
+            authorizationService.getAccessToken(CLIENT_ID, CLIENT_SECRET, code).enqueue(new Callback<AccessToken>() {
                 @Override
                 public void onResponse(Call<AccessToken> call, Response<AccessToken> response) {
                     startActivity(new Intent(AuthorizationActivity.this, UsersActivity.class));
