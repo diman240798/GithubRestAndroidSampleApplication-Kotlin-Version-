@@ -47,4 +47,4 @@ And finally User's repositories list
 (Don't be afraid, the Disign is Obviously Missing :)
 <br>
 <br>
-<img src="https://s6.postimg.cc/lqqa9c68h/user_repositories_info.jpg" /> 
+<img src="https://s6.postimg.cc/lqqa9c68h/user_repositories_info.jpg" />
