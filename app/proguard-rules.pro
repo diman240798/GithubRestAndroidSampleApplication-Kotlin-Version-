@@ -83,6 +83,9 @@
 
 
 -keep public class * extends android.app.Activity
+-keep public class * extends com.arellomobile.mvp.MvpAppCompatActivity
+-keep public class * extends com.arellomobile.mvp.MvpPresenter
+-keep public class * extends com.arellomobile.mvp.MvpView
 -keep public class * extends android.app.Application
 -keep public class * extends android.app.Service
 -keep public class * extends android.content.BroadcastReceiver
@@ -150,16 +153,13 @@
 
 
 
+-keep class javax.annotation.** {*;}
+-keep interface javax.annotation.** {*;}
+-dontwarn javax.annotation.**
 
+-keep class org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 
-
-
-
-
-
-
-
-
+-dontwarn okio.**
 
 
 

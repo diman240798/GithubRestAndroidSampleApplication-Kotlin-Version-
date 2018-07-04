@@ -1,4 +1,4 @@
-#Wed Jul 04 13:37:47 MSK 2018
-base.0=/home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/build/intermediates/transforms/dexMerger/debug/1
+#Wed Jul 04 14:35:59 MSK 2018
+base.0=/home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/build/intermediates/transforms/dexMerger/debug/21
 path.0=classes.dex
 renamed.0=classes.dex

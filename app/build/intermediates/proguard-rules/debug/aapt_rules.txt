@@ -113,10 +113,10 @@
 -keep class sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity { <init>(...); }
 
 # Referenced at /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml:35
--keep class sfedu.physics.dmitriy.githubapiresttestproject.activity.RepositoryActivity { <init>(...); }
+-keep class sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity { <init>(...); }
 
 # Referenced at /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml:29
--keep class sfedu.physics.dmitriy.githubapiresttestproject.activity.UsersActivity { <init>(...); }
+-keep class sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity { <init>(...); }
 
 # Referenced at /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml:18
 -keep class sfedu.physics.dmitriy.githubapiresttestproject.application.Application { <init>(...); }
