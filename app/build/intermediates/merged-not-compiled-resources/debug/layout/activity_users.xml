@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/users_swipeContainer">
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+       <RelativeLayout
+           android:id="@+id/users_search_layoutRL"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:visibility="gone">
+           <TextView
+               android:layout_marginTop="15dp"
+               android:layout_marginLeft="10dp"
+               android:id="@+id/rl_users_location"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Location:"
+               android:textStyle="bold"
+               android:textColor="#000"
+               android:layout_marginStart="10dp" />
+           <EditText
+               android:id="@+id/users_search_locationET"
+               android:layout_toRightOf="@id/rl_users_location"
+               android:layout_width="wrap_content"
+               android:hint="UserLocation"
+               android:layout_height="wrap_content"
+               android:layout_toEndOf="@id/rl_users_location" />
+           <TextView
+               android:textStyle="bold"
+               android:textColor="#000"
+               android:layout_marginTop="15dp"
+               android:layout_marginLeft="10dp"
+               android:layout_below="@id/users_search_locationET"
+               android:id="@+id/rl_users_language"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Language:"
+               android:layout_marginStart="10dp" />
+           <EditText
+               android:hint="UserProgrammingLanguage"
+               android:id="@+id/users_search_languageET"
+               android:layout_toRightOf="@id/rl_users_language"
+               android:layout_below="@id/users_search_locationET"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toEndOf="@id/rl_users_language" />
+           <Button
+               android:id="@+id/users_search_startBT"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Start Search"
+               android:textColor="#000"
+               android:textAllCaps="false"
+               android:textSize="12dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_below="@id/rl_users_language"/>
+       </RelativeLayout>
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/users_recyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="#f2f2f2"
+           tools:showIn="@layout/activity_users"
+           tools:context=".activity.UsersActivity"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/users_disconnectedTV"
+           android:text="@string/no_internet_connection"
+           android:textStyle="bold"
+           android:textSize="30sp"/>
+   </LinearLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

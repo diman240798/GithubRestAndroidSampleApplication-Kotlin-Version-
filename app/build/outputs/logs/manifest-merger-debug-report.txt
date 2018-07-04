@@ -1,0 +1,232 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+MERGED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:17:1-31:12
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-components:2.2.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxlifecycle-components-2.2.1.aar/b02a9d8953a2d37cc23e7f5b26939dec/AndroidManifest.xml:13:1-19:12
+MERGED from [com.android.support:appcompat-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/548ae65fdf37005fca6d7924b445bd67/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/6d5757407cf46c4df87139b4f381122f/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:cardview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/651c172ecf7230dfa2120ea39c1d6dec/AndroidManifest.xml:17:1-28:12
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-android:2.2.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxlifecycle-android-2.2.1.aar/56c6411d2914e32b1395a6174e74c032/AndroidManifest.xml:13:1-19:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/faaadb65c39eb43130e3684a4d0bd718/AndroidManifest.xml:15:1-21:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/827eec3fced94717704a1722c44c4099/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/addfedcc39f058340d7aeb48a44aeac4/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/b91802c83212037e6748e58338ff32d8/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/transition-26.0.2.aar/5285f2ab84df8c47bb559b066a5dede7/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/c7316115a3f311b6b5ce7d30c9bef5f2/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/1e57c9a22ee6aff1367889a9dc7daec7/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/1c66c5b905fca94f188ee6e57f951d39/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/96ebb755a5b2ca8cc716f3c2211ae33e/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/baf54df7e59973735bda51212bf4511a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/e2e73b89b8f3bfa1ec4b8d1dc18c2d93/AndroidManifest.xml:17:1-31:12
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+	package
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:3:5-61
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:1-53:12
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:8:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:9:5-71
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:9:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:10:5-72
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:10:22-69
+application
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:12:5-51:19
+MERGED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/548ae65fdf37005fca6d7924b445bd67/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/548ae65fdf37005fca6d7924b445bd67/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/6d5757407cf46c4df87139b4f381122f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/6d5757407cf46c4df87139b4f381122f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/651c172ecf7230dfa2120ea39c1d6dec/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/651c172ecf7230dfa2120ea39c1d6dec/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/827eec3fced94717704a1722c44c4099/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/827eec3fced94717704a1722c44c4099/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/addfedcc39f058340d7aeb48a44aeac4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/addfedcc39f058340d7aeb48a44aeac4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/b91802c83212037e6748e58338ff32d8/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/b91802c83212037e6748e58338ff32d8/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/transition-26.0.2.aar/5285f2ab84df8c47bb559b066a5dede7/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/transition-26.0.2.aar/5285f2ab84df8c47bb559b066a5dede7/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/c7316115a3f311b6b5ce7d30c9bef5f2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/c7316115a3f311b6b5ce7d30c9bef5f2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/1e57c9a22ee6aff1367889a9dc7daec7/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/1e57c9a22ee6aff1367889a9dc7daec7/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/1c66c5b905fca94f188ee6e57f951d39/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/1c66c5b905fca94f188ee6e57f951d39/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/96ebb755a5b2ca8cc716f3c2211ae33e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/96ebb755a5b2ca8cc716f3c2211ae33e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/baf54df7e59973735bda51212bf4511a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/baf54df7e59973735bda51212bf4511a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/e2e73b89b8f3bfa1ec4b8d1dc18c2d93/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/e2e73b89b8f3bfa1ec4b8d1dc18c2d93/AndroidManifest.xml:25:5-29:19
+	android:supportsRtl
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:18:9-35
+	android:label
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:16:9-41
+	android:roundIcon
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:17:9-54
+	android:icon
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:15:9-50
+	android:allowBackup
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:14:9-35
+	android:theme
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:19:9-40
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:13:9-48
+activity#sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:21:9-62
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:21:19-60
+activity#sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:23:9-25:51
+	android:screenOrientation
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:25:13-49
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:24:13-52
+activity#sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:27:9-67
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:27:19-65
+activity#sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:30:9-50:20
+	android:noHistory
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:33:13-37
+	android:theme
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:32:13-56
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:31:13-59
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:34:13-38:29
+action#android.intent.action.MAIN
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:35:17-69
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:35:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:37:17-77
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:37:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:callback+data:scheme:testapplication
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:40:13-49:29
+action#android.intent.action.VIEW
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:41:17-68
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:41:25-66
+category#android.intent.category.DEFAULT
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:43:17-75
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:43:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:44:17-77
+	android:name
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:44:27-75
+data
+ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:46:17-48:55
+	android:host
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:47:21-44
+	android:scheme
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml:48:21-53
+uses-sdk
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:21:5-23:62
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-components:2.2.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxlifecycle-components-2.2.1.aar/b02a9d8953a2d37cc23e7f5b26939dec/AndroidManifest.xml:17:5-44
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-components:2.2.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxlifecycle-components-2.2.1.aar/b02a9d8953a2d37cc23e7f5b26939dec/AndroidManifest.xml:17:5-44
+MERGED from [com.android.support:appcompat-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/548ae65fdf37005fca6d7924b445bd67/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/548ae65fdf37005fca6d7924b445bd67/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/6d5757407cf46c4df87139b4f381122f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/6d5757407cf46c4df87139b4f381122f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/651c172ecf7230dfa2120ea39c1d6dec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/651c172ecf7230dfa2120ea39c1d6dec/AndroidManifest.xml:20:5-44
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-android:2.2.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxlifecycle-android-2.2.1.aar/56c6411d2914e32b1395a6174e74c032/AndroidManifest.xml:17:5-44
+MERGED from [com.trello.rxlifecycle2:rxlifecycle-android:2.2.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxlifecycle-android-2.2.1.aar/56c6411d2914e32b1395a6174e74c032/AndroidManifest.xml:17:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/faaadb65c39eb43130e3684a4d0bd718/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/faaadb65c39eb43130e3684a4d0bd718/AndroidManifest.xml:19:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/827eec3fced94717704a1722c44c4099/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/827eec3fced94717704a1722c44c4099/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/addfedcc39f058340d7aeb48a44aeac4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/addfedcc39f058340d7aeb48a44aeac4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/b91802c83212037e6748e58338ff32d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/b91802c83212037e6748e58338ff32d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/transition-26.0.2.aar/5285f2ab84df8c47bb559b066a5dede7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/transition-26.0.2.aar/5285f2ab84df8c47bb559b066a5dede7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/c7316115a3f311b6b5ce7d30c9bef5f2/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/c7316115a3f311b6b5ce7d30c9bef5f2/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/1e57c9a22ee6aff1367889a9dc7daec7/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/1e57c9a22ee6aff1367889a9dc7daec7/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/1c66c5b905fca94f188ee6e57f951d39/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/1c66c5b905fca94f188ee6e57f951d39/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/96ebb755a5b2ca8cc716f3c2211ae33e/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/96ebb755a5b2ca8cc716f3c2211ae33e/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/baf54df7e59973735bda51212bf4511a/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/baf54df7e59973735bda51212bf4511a/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/e2e73b89b8f3bfa1ec4b8d1dc18c2d93/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/e2e73b89b8f3bfa1ec4b8d1dc18c2d93/AndroidManifest.xml:21:5-23:58
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+		ADDED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+		INJECTED from /home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/548ae65fdf37005fca6d7924b445bd67/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/548ae65fdf37005fca6d7924b445bd67/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/6d5757407cf46c4df87139b4f381122f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.2.aar/6d5757407cf46c4df87139b4f381122f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/651c172ecf7230dfa2120ea39c1d6dec/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.2.aar/651c172ecf7230dfa2120ea39c1d6dec/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/addfedcc39f058340d7aeb48a44aeac4/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.2.aar/addfedcc39f058340d7aeb48a44aeac4/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/b91802c83212037e6748e58338ff32d8/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.2.aar/b91802c83212037e6748e58338ff32d8/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/transition-26.0.2.aar/5285f2ab84df8c47bb559b066a5dede7/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/transition-26.0.2.aar/5285f2ab84df8c47bb559b066a5dede7/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/c7316115a3f311b6b5ce7d30c9bef5f2/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.2.aar/c7316115a3f311b6b5ce7d30c9bef5f2/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/1e57c9a22ee6aff1367889a9dc7daec7/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.2.aar/1e57c9a22ee6aff1367889a9dc7daec7/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/1c66c5b905fca94f188ee6e57f951d39/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.2.aar/1c66c5b905fca94f188ee6e57f951d39/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/96ebb755a5b2ca8cc716f3c2211ae33e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.2.aar/96ebb755a5b2ca8cc716f3c2211ae33e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/baf54df7e59973735bda51212bf4511a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.2.aar/baf54df7e59973735bda51212bf4511a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/e2e73b89b8f3bfa1ec4b8d1dc18c2d93/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.2.aar/e2e73b89b8f3bfa1ec4b8d1dc18c2d93/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.0.2] /home/dmitriy/.gradle/caches/transforms-1/files-1.1/design-26.0.2.aar/369cbc7cf574844f7cba1a496f7ef7bb/AndroidManifest.xml:27:13-51

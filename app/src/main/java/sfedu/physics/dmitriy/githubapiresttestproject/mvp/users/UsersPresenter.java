@@ -8,7 +8,7 @@ import io.reactivex.disposables.Disposable;
 @InjectViewState
 public class UsersPresenter extends MvpPresenter<UsersView> {
 
-    UsersModel usersModel;
+    private final UsersModel usersModel;
 
     private final String initQuery = "language:java+location:russia";
     private String query = initQuery;

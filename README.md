@@ -3,9 +3,9 @@
 Used Technologies<b>
 
 <ul>
- <li>Retrofit2</li>
+ <li>Retrofit</li>
  <li>RxJava</li>
- <li>RxLifeCycle</li>
+ <li>Moxy</li>
  <li>Glide</li>
 </ul>
 

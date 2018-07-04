@@ -65,7 +65,7 @@ public class DetailActivity extends AppCompatActivity {
                 .into(detail_userIconHeaderIV);
 
         show_repositoriesBT.setOnClickListener(v -> {
-            Intent intent = new Intent(DetailActivity.this, RepositoryActivity.class);
+            Intent intent = new Intent(DetailActivity.this, MvpRepositoryActivity.class);
             intent.setAction(userName);
             startActivity(intent);
         });
@@ -74,6 +74,7 @@ public class DetailActivity extends AppCompatActivity {
     private void configureActionBar() {
         getSupportActionBar().setTitle("Details Activity");
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

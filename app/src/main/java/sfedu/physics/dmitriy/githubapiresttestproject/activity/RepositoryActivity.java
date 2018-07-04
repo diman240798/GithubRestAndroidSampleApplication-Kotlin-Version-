@@ -29,7 +29,6 @@ public class RepositoryActivity extends RxAppCompatActivity {
 
     RecyclerView recyclerView;
 
-    TextView disconnected;
 
     SwipeRefreshLayout swipeRefreshLayout;
 
@@ -41,7 +40,7 @@ public class RepositoryActivity extends RxAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repository);
 
-        // Check If intent came with userLogin or Quit;
+        // Check If intent came with userLogin or Quit if not
         String userName = getIntent().getAction();
         if (userName == null) {
             Toast.makeText(this, "UserLogin is not loaded", Toast.LENGTH_SHORT).show();
@@ -61,7 +60,6 @@ public class RepositoryActivity extends RxAppCompatActivity {
     }
 
     private void initViews() {
-        disconnected = (TextView) findViewById(R.id.repo_disconnectedTV);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.repo_swipeContainer);
         recyclerView = (RecyclerView) findViewById(R.id.repo_recyclerView);
     }
@@ -104,6 +102,7 @@ public class RepositoryActivity extends RxAppCompatActivity {
     }
 
     private void handleError(Throwable throwable) {
+        Toast.makeText(this, throwable.getMessage(), Toast.LENGTH_SHORT).show();
         swipeRefreshLayout.setRefreshing(false);
         progressDialog.hide();
         progressDialog.dismiss();
