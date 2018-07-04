@@ -4,6 +4,10 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'realm-android'
+
 
 android {
     compileSdkVersion 26
@@ -65,8 +69,10 @@ dependencies {
 
     // Moxy
     implementation 'com.arello-mobile:moxy:1.5.5'
-    annotationProcessor 'com.arello-mobile:moxy-compiler:1.5.5'
+    kapt 'com.arello-mobile:moxy-compiler:1.5.5'
     implementation 'com.arello-mobile:moxy-app-compat:1.5.5'
-    implementation 'com.android.support:appcompat-v7:26.0.2'
+
+    //Picasso
+
 
 }

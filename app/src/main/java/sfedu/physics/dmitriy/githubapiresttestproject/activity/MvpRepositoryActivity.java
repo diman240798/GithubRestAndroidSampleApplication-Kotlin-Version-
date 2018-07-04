@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
@@ -19,7 +18,7 @@ import sfedu.physics.dmitriy.githubapiresttestproject.R;
 import sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter;
 import sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter;
 import sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView;
-import sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository;
 
 public class MvpRepositoryActivity extends MvpAppCompatActivity implements RepositoriesView {
 
@@ -103,7 +102,7 @@ public class MvpRepositoryActivity extends MvpAppCompatActivity implements Repos
     }
 
     private void configureActionBar() {
-        getSupportActionBar().setTitle("User Repositories");
+        getSupportActionBar().setTitle("UserDbModel Repositories");
     }
 
 

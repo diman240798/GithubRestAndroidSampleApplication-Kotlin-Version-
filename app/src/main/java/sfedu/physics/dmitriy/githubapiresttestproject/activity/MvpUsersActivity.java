@@ -1,8 +1,10 @@
 package sfedu.physics.dmitriy.githubapiresttestproject.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,20 +16,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import io.realm.Realm;
+import io.realm.RealmResults;
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
 import sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter;
+import sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel;
 import sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter;
 import sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView;
-import sfedu.physics.dmitriy.githubapiresttestproject.user_model.User;
-import sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse;
 
 public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView {
 
@@ -42,7 +47,6 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
     private ProgressDialog progressDialog;
 
 
-
     // Search Views
     private RelativeLayout relativeLayout;
     private EditText search_location, search_language;
@@ -54,6 +58,7 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
     private UserAdapter userAdapter;
     private int pageNumber = 1;
     private int pageLimit = 100;
+    private Realm realm;
 
 
     @Override
@@ -64,7 +69,25 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
         initViews();
         configureViews();
         initAndConfigureSearchViews();
-        usersPresenter.loadUsersByQuery();
+        if (networkConnected()) {
+            usersPresenter.loadUsersByQuery();
+        } else {
+            realm = Realm.getDefaultInstance();
+
+            RealmResults<UserDbModel> userModels = realm.where(UserDbModel.class).findAll();
+
+            List<User> users = new ArrayList<>();
+            for (UserDbModel userDbModel : userModels) {
+                User user = new User();
+                user.setBitmapData(userDbModel.getBitmapData());
+                user.setHtmlURL(userDbModel.getHtmlURL());
+                user.setLogin(userDbModel.getLogin());
+                users.add(user);
+            }
+            userAdapter = new UserAdapter(this, users);
+            recyclerView.setAdapter(userAdapter);
+            swipeRefreshLayout.setEnabled(false);
+        }
 
     }
 
@@ -83,7 +106,7 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
         pageLimit = userResponse.getTotalCount();
         userAdapter.setOnLoadMoreListener(() -> {
             if (pageNumber <= pageLimit) {
-                pageNumber+=1;
+                pageNumber += 1;
                 usersPresenter.loadMoreUsers(pageNumber);
             }
         });
@@ -173,5 +196,29 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
     protected void onDestroy() {
         super.onDestroy();
         usersPresenter.check_if_disposable_is_null_or_unsubscribe();
+        cashUsersAndCloseDbConnection();
+    }
+
+    private void cashUsersAndCloseDbConnection() {
+        if (realm == null)
+            realm = Realm.getDefaultInstance();
+
+        List<User> users = userAdapter.getUsers();
+        realm.beginTransaction();
+        for (User user : users) {
+            UserDbModel userDbModel = realm.createObject(UserDbModel.class);
+            userDbModel.setLogin(user.getLogin());
+            userDbModel.setBitmapData(user.getBitmapData());
+            userDbModel.setHtmlURL(user.getHtmlURL());
+        }
+        realm.commitTransaction();
+        realm.close();
+    }
+
+    public boolean networkConnected() {
+        ConnectivityManager cm =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

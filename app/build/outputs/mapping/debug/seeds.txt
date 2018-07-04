@@ -1,3 +1,4 @@
+android.support.annotation.Keep
 android.support.annotation.RestrictTo$Scope: android.support.annotation.RestrictTo$Scope[] values()
 android.support.annotation.RestrictTo$Scope: android.support.annotation.RestrictTo$Scope valueOf(java.lang.String)
 android.support.compat.R$attr: int font
@@ -101,13 +102,16 @@ android.support.constraint.Barrier
 android.support.constraint.Barrier: Barrier(android.content.Context)
 android.support.constraint.Barrier: Barrier(android.content.Context,android.util.AttributeSet)
 android.support.constraint.Barrier: Barrier(android.content.Context,android.util.AttributeSet,int)
+android.support.constraint.Barrier: int getType()
 android.support.constraint.Barrier: void setType(int)
 android.support.constraint.ConstraintHelper
 android.support.constraint.ConstraintHelper: ConstraintHelper(android.content.Context)
 android.support.constraint.ConstraintHelper: ConstraintHelper(android.content.Context,android.util.AttributeSet)
 android.support.constraint.ConstraintHelper: ConstraintHelper(android.content.Context,android.util.AttributeSet,int)
+android.support.constraint.ConstraintHelper: int[] getReferencedIds()
 android.support.constraint.ConstraintHelper: void setReferencedIds(int[])
 android.support.constraint.ConstraintHelper: void setTag(int,java.lang.Object)
+android.support.constraint.ConstraintHelper: void setIds(java.lang.String)
 android.support.constraint.ConstraintLayout
 android.support.constraint.ConstraintLayout: void setDesignInformation(int,java.lang.Object,java.lang.Object)
 android.support.constraint.ConstraintLayout: ConstraintLayout(android.content.Context)
@@ -116,9 +120,14 @@ android.support.constraint.ConstraintLayout: ConstraintLayout(android.content.Co
 android.support.constraint.ConstraintLayout: void setId(int)
 android.support.constraint.ConstraintLayout: void setMinWidth(int)
 android.support.constraint.ConstraintLayout: void setMinHeight(int)
+android.support.constraint.ConstraintLayout: int getMinWidth()
+android.support.constraint.ConstraintLayout: int getMinHeight()
 android.support.constraint.ConstraintLayout: void setMaxWidth(int)
 android.support.constraint.ConstraintLayout: void setMaxHeight(int)
+android.support.constraint.ConstraintLayout: int getMaxWidth()
+android.support.constraint.ConstraintLayout: int getMaxHeight()
 android.support.constraint.ConstraintLayout: void setOptimizationLevel(int)
+android.support.constraint.ConstraintLayout: int getOptimizationLevel()
 android.support.constraint.ConstraintLayout: void setConstraintSet(android.support.constraint.ConstraintSet)
 android.support.constraint.ConstraintLayout$LayoutParams
 android.support.constraint.ConstraintLayout$LayoutParams: ConstraintLayout$LayoutParams(android.content.Context,android.util.AttributeSet)
@@ -126,6 +135,7 @@ android.support.constraint.Constraints
 android.support.constraint.Constraints: Constraints(android.content.Context)
 android.support.constraint.Constraints: Constraints(android.content.Context,android.util.AttributeSet)
 android.support.constraint.Constraints: Constraints(android.content.Context,android.util.AttributeSet,int)
+android.support.constraint.Constraints: android.support.constraint.ConstraintSet getConstraintSet()
 android.support.constraint.Constraints$LayoutParams
 android.support.constraint.Constraints$LayoutParams: Constraints$LayoutParams(android.content.Context,android.util.AttributeSet)
 android.support.constraint.Group
@@ -145,6 +155,8 @@ android.support.constraint.Placeholder: Placeholder(android.content.Context)
 android.support.constraint.Placeholder: Placeholder(android.content.Context,android.util.AttributeSet)
 android.support.constraint.Placeholder: Placeholder(android.content.Context,android.util.AttributeSet,int)
 android.support.constraint.Placeholder: void setEmptyVisibility(int)
+android.support.constraint.Placeholder: int getEmptyVisibility()
+android.support.constraint.Placeholder: android.view.View getContent()
 android.support.constraint.Placeholder: void setContentId(int)
 android.support.constraint.R$attr: int barrierAllowsGoneWidgets
 android.support.constraint.R$attr: int barrierDirection
@@ -8846,33 +8858,46 @@ android.support.v4.view.PagerTabStrip: PagerTabStrip(android.content.Context)
 android.support.v4.view.PagerTabStrip: PagerTabStrip(android.content.Context,android.util.AttributeSet)
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
+android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
 android.support.v4.view.PagerTabStrip: void setPadding(int,int,int,int)
 android.support.v4.view.PagerTabStrip: void setTextSpacing(int)
 android.support.v4.view.PagerTabStrip: void setBackgroundDrawable(android.graphics.drawable.Drawable)
 android.support.v4.view.PagerTabStrip: void setBackgroundColor(int)
 android.support.v4.view.PagerTabStrip: void setBackgroundResource(int)
 android.support.v4.view.PagerTabStrip: void setDrawFullUnderline(boolean)
+android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
+android.support.v4.view.PagerTabStrip: int getMinHeight()
 android.support.v4.view.PagerTitleStrip
+android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
 android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context)
 android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context,android.util.AttributeSet)
 android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTitleStrip: int getTextSpacing()
 android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
 android.support.v4.view.PagerTitleStrip: void setTextColor(int)
 android.support.v4.view.PagerTitleStrip: void setTextSize(int,float)
 android.support.v4.view.PagerTitleStrip: void setGravity(int)
+android.support.v4.view.PagerTitleStrip: int getMinHeight()
 android.support.v4.view.ViewPager
 android.support.v4.view.ViewPager: ViewPager(android.content.Context)
 android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager: void setScrollState(int)
 android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: int getClientWidth()
 android.support.v4.view.ViewPager: void setCurrentItem(int)
 android.support.v4.view.ViewPager: void setCurrentItem(int,boolean)
+android.support.v4.view.ViewPager: int getCurrentItem()
 android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
 android.support.v4.view.ViewPager: void setPageTransformer(boolean,android.support.v4.view.ViewPager$PageTransformer)
 android.support.v4.view.ViewPager: void setPageTransformer(boolean,android.support.v4.view.ViewPager$PageTransformer,int)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
 android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
 android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
 android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
 android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
 android.support.v4.view.ViewPager$LayoutParams
 android.support.v4.view.ViewPager$LayoutParams: ViewPager$LayoutParams(android.content.Context,android.util.AttributeSet)
 android.support.v4.view.ViewPager$SavedState
@@ -8885,6 +8910,7 @@ android.support.v4.widget.DrawerLayout: DrawerLayout(android.content.Context)
 android.support.v4.widget.DrawerLayout: DrawerLayout(android.content.Context,android.util.AttributeSet)
 android.support.v4.widget.DrawerLayout: DrawerLayout(android.content.Context,android.util.AttributeSet,int)
 android.support.v4.widget.DrawerLayout: void setDrawerElevation(float)
+android.support.v4.widget.DrawerLayout: float getDrawerElevation()
 android.support.v4.widget.DrawerLayout: void setChildInsets(java.lang.Object,boolean)
 android.support.v4.widget.DrawerLayout: void setDrawerShadow(android.graphics.drawable.Drawable,int)
 android.support.v4.widget.DrawerLayout: void setDrawerShadow(int,int)
@@ -8895,6 +8921,7 @@ android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int,int)
 android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int,android.view.View)
 android.support.v4.widget.DrawerLayout: void setDrawerTitle(int,java.lang.CharSequence)
 android.support.v4.widget.DrawerLayout: void setStatusBarBackground(android.graphics.drawable.Drawable)
+android.support.v4.widget.DrawerLayout: android.graphics.drawable.Drawable getStatusBarBackgroundDrawable()
 android.support.v4.widget.DrawerLayout: void setStatusBarBackground(int)
 android.support.v4.widget.DrawerLayout: void setStatusBarBackgroundColor(int)
 android.support.v4.widget.DrawerLayout$LayoutParams
@@ -8906,9 +8933,15 @@ android.support.v4.widget.NestedScrollView: NestedScrollView(android.content.Con
 android.support.v4.widget.NestedScrollView: NestedScrollView(android.content.Context,android.util.AttributeSet)
 android.support.v4.widget.NestedScrollView: NestedScrollView(android.content.Context,android.util.AttributeSet,int)
 android.support.v4.widget.NestedScrollView: void setNestedScrollingEnabled(boolean)
+android.support.v4.widget.NestedScrollView: int getNestedScrollAxes()
+android.support.v4.widget.NestedScrollView: float getTopFadingEdgeStrength()
+android.support.v4.widget.NestedScrollView: float getBottomFadingEdgeStrength()
+android.support.v4.widget.NestedScrollView: int getMaxScrollAmount()
 android.support.v4.widget.NestedScrollView: void setOnScrollChangeListener(android.support.v4.widget.NestedScrollView$OnScrollChangeListener)
 android.support.v4.widget.NestedScrollView: void setFillViewport(boolean)
 android.support.v4.widget.NestedScrollView: void setSmoothScrollingEnabled(boolean)
+android.support.v4.widget.NestedScrollView: float getVerticalScrollFactorCompat()
+android.support.v4.widget.NestedScrollView: int getScrollRange()
 android.support.v4.widget.NestedScrollView$SavedState
 android.support.v4.widget.NestedScrollView$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.SlidingPaneLayout
@@ -8916,8 +8949,11 @@ android.support.v4.widget.SlidingPaneLayout: SlidingPaneLayout(android.content.C
 android.support.v4.widget.SlidingPaneLayout: SlidingPaneLayout(android.content.Context,android.util.AttributeSet)
 android.support.v4.widget.SlidingPaneLayout: SlidingPaneLayout(android.content.Context,android.util.AttributeSet,int)
 android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
+android.support.v4.widget.SlidingPaneLayout: int getParallaxDistance()
 android.support.v4.widget.SlidingPaneLayout: void setSliderFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getSliderFadeColor()
 android.support.v4.widget.SlidingPaneLayout: void setCoveredFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getCoveredFadeColor()
 android.support.v4.widget.SlidingPaneLayout: void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener)
 android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
 android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableLeft(android.graphics.drawable.Drawable)
@@ -8935,13 +8971,17 @@ android.support.v4.widget.Space: Space(android.content.Context,android.util.Attr
 android.support.v4.widget.Space: Space(android.content.Context)
 android.support.v4.widget.SwipeRefreshLayout
 android.support.v4.widget.SwipeRefreshLayout: void setEnabled(boolean)
+android.support.v4.widget.SwipeRefreshLayout: void setColorViewAlpha(int)
 android.support.v4.widget.SwipeRefreshLayout: void setProgressViewOffset(boolean,int,int)
+android.support.v4.widget.SwipeRefreshLayout: int getProgressViewStartOffset()
+android.support.v4.widget.SwipeRefreshLayout: int getProgressViewEndOffset()
 android.support.v4.widget.SwipeRefreshLayout: void setProgressViewEndTarget(boolean,int)
 android.support.v4.widget.SwipeRefreshLayout: void setSize(int)
 android.support.v4.widget.SwipeRefreshLayout: SwipeRefreshLayout(android.content.Context)
 android.support.v4.widget.SwipeRefreshLayout: SwipeRefreshLayout(android.content.Context,android.util.AttributeSet)
 android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener)
 android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
+android.support.v4.widget.SwipeRefreshLayout: void setAnimationProgress(float)
 android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColor(int)
 android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColorSchemeResource(int)
 android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColorSchemeColor(int)
@@ -8949,8 +8989,11 @@ android.support.v4.widget.SwipeRefreshLayout: void setColorScheme(int[])
 android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeResources(int[])
 android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeColors(int[])
 android.support.v4.widget.SwipeRefreshLayout: void setDistanceToTriggerSync(int)
+android.support.v4.widget.SwipeRefreshLayout: int getProgressCircleDiameter()
 android.support.v4.widget.SwipeRefreshLayout: void setOnChildScrollUpCallback(android.support.v4.widget.SwipeRefreshLayout$OnChildScrollUpCallback)
+android.support.v4.widget.SwipeRefreshLayout: int getNestedScrollAxes()
 android.support.v4.widget.SwipeRefreshLayout: void setNestedScrollingEnabled(boolean)
+android.support.v4.widget.SwipeRefreshLayout: void setTargetOffsetTopAndBottom(int)
 android.support.v4.widget.ViewDragHelper$Callback: ViewDragHelper$Callback()
 android.support.v4.widget.ViewDragHelper$Callback: void onViewDragStateChanged(int)
 android.support.v4.widget.ViewDragHelper$Callback: void onViewPositionChanged(android.view.View,int,int,int,int)
@@ -10721,6 +10764,7 @@ android.support.v7.view.menu.ActionMenuItemView: ActionMenuItemView(android.cont
 android.support.v7.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context,android.util.AttributeSet)
 android.support.v7.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context,android.util.AttributeSet,int)
 android.support.v7.view.menu.ActionMenuItemView: void setPadding(int,int,int,int)
+android.support.v7.view.menu.ActionMenuItemView: android.support.v7.view.menu.MenuItemImpl getItemData()
 android.support.v7.view.menu.ActionMenuItemView: void setItemInvoker(android.support.v7.view.menu.MenuBuilder$ItemInvoker)
 android.support.v7.view.menu.ActionMenuItemView: void setPopupCallback(android.support.v7.view.menu.ActionMenuItemView$PopupCallback)
 android.support.v7.view.menu.ActionMenuItemView: void setCheckable(boolean)
@@ -10732,15 +10776,19 @@ android.support.v7.view.menu.ActionMenuItemView: void setTitle(java.lang.CharSeq
 android.support.v7.view.menu.ExpandedMenuView
 android.support.v7.view.menu.ExpandedMenuView: ExpandedMenuView(android.content.Context,android.util.AttributeSet)
 android.support.v7.view.menu.ExpandedMenuView: ExpandedMenuView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.view.menu.ExpandedMenuView: int getWindowAnimations()
 android.support.v7.view.menu.ListMenuItemView
 android.support.v7.view.menu.ListMenuItemView: ListMenuItemView(android.content.Context,android.util.AttributeSet)
 android.support.v7.view.menu.ListMenuItemView: ListMenuItemView(android.content.Context,android.util.AttributeSet,int)
 android.support.v7.view.menu.ListMenuItemView: void setForceShowIcon(boolean)
 android.support.v7.view.menu.ListMenuItemView: void setTitle(java.lang.CharSequence)
+android.support.v7.view.menu.ListMenuItemView: android.support.v7.view.menu.MenuItemImpl getItemData()
 android.support.v7.view.menu.ListMenuItemView: void setCheckable(boolean)
 android.support.v7.view.menu.ListMenuItemView: void setChecked(boolean)
+android.support.v7.view.menu.ListMenuItemView: void setSubMenuArrowVisible(boolean)
 android.support.v7.view.menu.ListMenuItemView: void setShortcut(boolean,char)
 android.support.v7.view.menu.ListMenuItemView: void setIcon(android.graphics.drawable.Drawable)
+android.support.v7.view.menu.ListMenuItemView: android.view.LayoutInflater getInflater()
 android.support.v7.view.menu.MenuBuilder: java.lang.String TAG
 android.support.v7.view.menu.MenuBuilder: java.lang.String PRESENTER_KEY
 android.support.v7.view.menu.MenuBuilder: java.lang.String ACTION_VIEW_STATES_KEY
@@ -15083,6 +15131,677 @@ io.reactivex.parallel.ParallelFailureHandling: io.reactivex.parallel.ParallelFai
 io.reactivex.parallel.ParallelFailureHandling: io.reactivex.parallel.ParallelFailureHandling valueOf(java.lang.String)
 io.reactivex.subscribers.TestSubscriber$EmptySubscriber: io.reactivex.subscribers.TestSubscriber$EmptySubscriber[] values()
 io.reactivex.subscribers.TestSubscriber$EmptySubscriber: io.reactivex.subscribers.TestSubscriber$EmptySubscriber valueOf(java.lang.String)
+io.realm.BaseModuleMediator
+io.realm.Case: io.realm.Case[] values()
+io.realm.Case: io.realm.Case valueOf(java.lang.String)
+io.realm.CompactOnLaunchCallback
+io.realm.CompactOnLaunchCallback: boolean shouldCompact(long,long)
+io.realm.FieldAttribute: io.realm.FieldAttribute[] values()
+io.realm.FieldAttribute: io.realm.FieldAttribute valueOf(java.lang.String)
+io.realm.OrderedCollectionChangeSet$State: io.realm.OrderedCollectionChangeSet$State[] values()
+io.realm.OrderedCollectionChangeSet$State: io.realm.OrderedCollectionChangeSet$State valueOf(java.lang.String)
+io.realm.OrderedRealmCollection
+io.realm.RealmCache$RealmCacheType: io.realm.RealmCache$RealmCacheType[] values()
+io.realm.RealmCache$RealmCacheType: io.realm.RealmCache$RealmCacheType valueOf(java.lang.String)
+io.realm.RealmCollection
+io.realm.RealmFieldType
+io.realm.RealmFieldType: io.realm.RealmFieldType INTEGER
+io.realm.RealmFieldType: io.realm.RealmFieldType BOOLEAN
+io.realm.RealmFieldType: io.realm.RealmFieldType STRING
+io.realm.RealmFieldType: io.realm.RealmFieldType BINARY
+io.realm.RealmFieldType: io.realm.RealmFieldType DATE
+io.realm.RealmFieldType: io.realm.RealmFieldType FLOAT
+io.realm.RealmFieldType: io.realm.RealmFieldType DOUBLE
+io.realm.RealmFieldType: io.realm.RealmFieldType OBJECT
+io.realm.RealmFieldType: io.realm.RealmFieldType LIST
+io.realm.RealmFieldType: io.realm.RealmFieldType LINKING_OBJECTS
+io.realm.RealmFieldType: io.realm.RealmFieldType INTEGER_LIST
+io.realm.RealmFieldType: io.realm.RealmFieldType BOOLEAN_LIST
+io.realm.RealmFieldType: io.realm.RealmFieldType STRING_LIST
+io.realm.RealmFieldType: io.realm.RealmFieldType BINARY_LIST
+io.realm.RealmFieldType: io.realm.RealmFieldType DATE_LIST
+io.realm.RealmFieldType: io.realm.RealmFieldType FLOAT_LIST
+io.realm.RealmFieldType: io.realm.RealmFieldType DOUBLE_LIST
+io.realm.RealmFieldType: io.realm.RealmFieldType[] basicTypes
+io.realm.RealmFieldType: io.realm.RealmFieldType[] listTypes
+io.realm.RealmFieldType: int nativeValue
+io.realm.RealmFieldType: io.realm.RealmFieldType[] $VALUES
+io.realm.RealmFieldType: io.realm.RealmFieldType[] values()
+io.realm.RealmFieldType: io.realm.RealmFieldType valueOf(java.lang.String)
+io.realm.RealmFieldType: RealmFieldType(java.lang.String,int,int)
+io.realm.RealmFieldType: int getNativeValue()
+io.realm.RealmFieldType: boolean isValid(java.lang.Object)
+io.realm.RealmFieldType: io.realm.RealmFieldType fromNativeValue(int)
+io.realm.RealmFieldType: void <clinit>()
+io.realm.Sort: io.realm.Sort[] values()
+io.realm.Sort: io.realm.Sort valueOf(java.lang.String)
+io.realm.annotations.RealmModule
+io.realm.annotations.RealmNamingPolicy: io.realm.annotations.RealmNamingPolicy[] values()
+io.realm.annotations.RealmNamingPolicy: io.realm.annotations.RealmNamingPolicy valueOf(java.lang.String)
+io.realm.exceptions.RealmError
+io.realm.exceptions.RealmError: RealmError(java.lang.String)
+io.realm.exceptions.RealmException
+io.realm.exceptions.RealmException: RealmException(java.lang.String)
+io.realm.exceptions.RealmException: RealmException(java.lang.String,java.lang.Throwable)
+io.realm.exceptions.RealmFileException
+io.realm.exceptions.RealmFileException: io.realm.exceptions.RealmFileException$Kind kind
+io.realm.exceptions.RealmFileException: RealmFileException(byte,java.lang.String)
+io.realm.exceptions.RealmFileException: RealmFileException(io.realm.exceptions.RealmFileException$Kind,java.lang.String)
+io.realm.exceptions.RealmFileException: RealmFileException(io.realm.exceptions.RealmFileException$Kind,java.lang.Throwable)
+io.realm.exceptions.RealmFileException: RealmFileException(io.realm.exceptions.RealmFileException$Kind,java.lang.String,java.lang.Throwable)
+io.realm.exceptions.RealmFileException: io.realm.exceptions.RealmFileException$Kind getKind()
+io.realm.exceptions.RealmFileException: java.lang.String toString()
+io.realm.exceptions.RealmFileException$Kind
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind ACCESS_ERROR
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind BAD_HISTORY
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind PERMISSION_DENIED
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind EXISTS
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind NOT_FOUND
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind INCOMPATIBLE_LOCK_FILE
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind FORMAT_UPGRADE_REQUIRED
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind INCOMPATIBLE_SYNC_FILE
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind[] $VALUES
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind[] values()
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind valueOf(java.lang.String)
+io.realm.exceptions.RealmFileException$Kind: RealmFileException$Kind(java.lang.String,int)
+io.realm.exceptions.RealmFileException$Kind: io.realm.exceptions.RealmFileException$Kind getKind(byte)
+io.realm.exceptions.RealmFileException$Kind: void <clinit>()
+io.realm.exceptions.RealmMigrationNeededException
+io.realm.exceptions.RealmMigrationNeededException: java.lang.String canonicalRealmPath
+io.realm.exceptions.RealmMigrationNeededException: RealmMigrationNeededException(java.lang.String,java.lang.String)
+io.realm.exceptions.RealmMigrationNeededException: java.lang.String getPath()
+io.realm.exceptions.RealmPrimaryKeyConstraintException
+io.realm.exceptions.RealmPrimaryKeyConstraintException: RealmPrimaryKeyConstraintException(java.lang.String)
+io.realm.internal.CheckedRow
+io.realm.internal.CheckedRow: long nativeGetColumnCount(long)
+io.realm.internal.CheckedRow: java.lang.String nativeGetColumnName(long,long)
+io.realm.internal.CheckedRow: long nativeGetColumnIndex(long,java.lang.String)
+io.realm.internal.CheckedRow: int nativeGetColumnType(long,long)
+io.realm.internal.CheckedRow: long nativeGetLong(long,long)
+io.realm.internal.CheckedRow: boolean nativeGetBoolean(long,long)
+io.realm.internal.CheckedRow: float nativeGetFloat(long,long)
+io.realm.internal.CheckedRow: double nativeGetDouble(long,long)
+io.realm.internal.CheckedRow: long nativeGetTimestamp(long,long)
+io.realm.internal.CheckedRow: java.lang.String nativeGetString(long,long)
+io.realm.internal.CheckedRow: boolean nativeIsNullLink(long,long)
+io.realm.internal.CheckedRow: byte[] nativeGetByteArray(long,long)
+io.realm.internal.CheckedRow: void nativeSetLong(long,long,long)
+io.realm.internal.CheckedRow: void nativeSetBoolean(long,long,boolean)
+io.realm.internal.CheckedRow: void nativeSetFloat(long,long,float)
+io.realm.internal.CheckedRow: long nativeGetLink(long,long)
+io.realm.internal.CheckedRow: void nativeSetDouble(long,long,double)
+io.realm.internal.CheckedRow: void nativeSetTimestamp(long,long,long)
+io.realm.internal.CheckedRow: void nativeSetString(long,long,java.lang.String)
+io.realm.internal.CheckedRow: void nativeSetByteArray(long,long,byte[])
+io.realm.internal.CheckedRow: void nativeSetLink(long,long,long)
+io.realm.internal.CheckedRow: void nativeNullifyLink(long,long)
+io.realm.internal.InvalidRow: io.realm.internal.InvalidRow[] values()
+io.realm.internal.InvalidRow: io.realm.internal.InvalidRow valueOf(java.lang.String)
+io.realm.internal.Keep
+io.realm.internal.KeepMember
+io.realm.internal.NativeObjectReference
+io.realm.internal.NativeObjectReference: void nativeCleanUp(long,long)
+io.realm.internal.ObservableCollection
+io.realm.internal.ObservableCollection: void notifyChangeListeners(long)
+io.realm.internal.OsCollectionChangeSet
+io.realm.internal.OsCollectionChangeSet: long nativeGetFinalizerPtr()
+io.realm.internal.OsCollectionChangeSet: int[] nativeGetRanges(long,int)
+io.realm.internal.OsCollectionChangeSet: int[] nativeGetIndices(long,int)
+io.realm.internal.OsList
+io.realm.internal.OsList: long nativeGetFinalizerPtr()
+io.realm.internal.OsList: long[] nativeCreate(long,long,long)
+io.realm.internal.OsList: long nativeGetRow(long,long)
+io.realm.internal.OsList: void nativeAddRow(long,long)
+io.realm.internal.OsList: void nativeInsertRow(long,long,long)
+io.realm.internal.OsList: void nativeSetRow(long,long,long)
+io.realm.internal.OsList: void nativeMove(long,long,long)
+io.realm.internal.OsList: void nativeRemove(long,long)
+io.realm.internal.OsList: void nativeRemoveAll(long)
+io.realm.internal.OsList: long nativeSize(long)
+io.realm.internal.OsList: long nativeGetQuery(long)
+io.realm.internal.OsList: boolean nativeIsValid(long)
+io.realm.internal.OsList: void nativeDelete(long,long)
+io.realm.internal.OsList: void nativeDeleteAll(long)
+io.realm.internal.OsList: void nativeAddNull(long)
+io.realm.internal.OsList: void nativeInsertNull(long,long)
+io.realm.internal.OsList: void nativeSetNull(long,long)
+io.realm.internal.OsList: void nativeAddLong(long,long)
+io.realm.internal.OsList: void nativeInsertLong(long,long,long)
+io.realm.internal.OsList: void nativeSetLong(long,long,long)
+io.realm.internal.OsList: void nativeAddDouble(long,double)
+io.realm.internal.OsList: void nativeInsertDouble(long,long,double)
+io.realm.internal.OsList: void nativeSetDouble(long,long,double)
+io.realm.internal.OsList: void nativeAddFloat(long,float)
+io.realm.internal.OsList: void nativeInsertFloat(long,long,float)
+io.realm.internal.OsList: void nativeSetFloat(long,long,float)
+io.realm.internal.OsList: void nativeAddBoolean(long,boolean)
+io.realm.internal.OsList: void nativeInsertBoolean(long,long,boolean)
+io.realm.internal.OsList: void nativeSetBoolean(long,long,boolean)
+io.realm.internal.OsList: void nativeAddBinary(long,byte[])
+io.realm.internal.OsList: void nativeInsertBinary(long,long,byte[])
+io.realm.internal.OsList: void nativeSetBinary(long,long,byte[])
+io.realm.internal.OsList: void nativeAddDate(long,long)
+io.realm.internal.OsList: void nativeInsertDate(long,long,long)
+io.realm.internal.OsList: void nativeSetDate(long,long,long)
+io.realm.internal.OsList: void nativeAddString(long,java.lang.String)
+io.realm.internal.OsList: void nativeInsertString(long,long,java.lang.String)
+io.realm.internal.OsList: void nativeSetString(long,long,java.lang.String)
+io.realm.internal.OsList: java.lang.Object nativeGetValue(long,long)
+io.realm.internal.OsList: void nativeStartListening(long)
+io.realm.internal.OsList: void nativeStopListening(long)
+io.realm.internal.OsObject
+io.realm.internal.OsObject: java.lang.String OBJECT_ID_COLUMN_NAME
+io.realm.internal.OsObject: long nativePtr
+io.realm.internal.OsObject: long nativeFinalizerPtr
+io.realm.internal.OsObject: io.realm.internal.ObserverPairList observerPairs
+io.realm.internal.OsObject: OsObject(io.realm.internal.OsSharedRealm,io.realm.internal.UncheckedRow)
+io.realm.internal.OsObject: long getNativePtr()
+io.realm.internal.OsObject: long getNativeFinalizerPtr()
+io.realm.internal.OsObject: void addListener(io.realm.RealmModel,io.realm.RealmObjectChangeListener)
+io.realm.internal.OsObject: void removeListener(io.realm.RealmModel)
+io.realm.internal.OsObject: void removeListener(io.realm.RealmModel,io.realm.RealmObjectChangeListener)
+io.realm.internal.OsObject: void setObserverPairs(io.realm.internal.ObserverPairList)
+io.realm.internal.OsObject: io.realm.internal.UncheckedRow create(io.realm.internal.Table)
+io.realm.internal.OsObject: long createRow(io.realm.internal.Table)
+io.realm.internal.OsObject: long getAndVerifyPrimaryKeyColumnIndex(io.realm.internal.Table)
+io.realm.internal.OsObject: io.realm.internal.UncheckedRow createWithPrimaryKey(io.realm.internal.Table,java.lang.Object)
+io.realm.internal.OsObject: long createRowWithPrimaryKey(io.realm.internal.Table,long,java.lang.Object)
+io.realm.internal.OsObject: boolean isObjectIdColumn(java.lang.String)
+io.realm.internal.OsObject: void notifyChangeListeners(java.lang.String[])
+io.realm.internal.OsObject: long nativeGetFinalizerPtr()
+io.realm.internal.OsObject: long nativeCreate(long,long)
+io.realm.internal.OsObject: void nativeStartListening(long)
+io.realm.internal.OsObject: void nativeStopListening(long)
+io.realm.internal.OsObject: long nativeCreateNewObject(long,long)
+io.realm.internal.OsObject: long nativeCreateRow(long,long)
+io.realm.internal.OsObject: long nativeCreateNewObjectWithLongPrimaryKey(long,long,long,long,boolean)
+io.realm.internal.OsObject: long nativeCreateRowWithLongPrimaryKey(long,long,long,long,boolean)
+io.realm.internal.OsObject: long nativeCreateNewObjectWithStringPrimaryKey(long,long,long,java.lang.String)
+io.realm.internal.OsObject: long nativeCreateRowWithStringPrimaryKey(long,long,long,java.lang.String)
+io.realm.internal.OsObject: java.lang.String nativeGetObjectIdColumName()
+io.realm.internal.OsObject: void <clinit>()
+io.realm.internal.OsObjectSchemaInfo
+io.realm.internal.OsObjectSchemaInfo: long nativeCreateRealmObjectSchema(java.lang.String)
+io.realm.internal.OsObjectSchemaInfo: long nativeGetFinalizerPtr()
+io.realm.internal.OsObjectSchemaInfo: void nativeAddProperties(long,long[],long[])
+io.realm.internal.OsObjectSchemaInfo: java.lang.String nativeGetClassName(long)
+io.realm.internal.OsObjectSchemaInfo: long nativeGetProperty(long,java.lang.String)
+io.realm.internal.OsObjectSchemaInfo: long nativeGetPrimaryKeyProperty(long)
+io.realm.internal.OsObjectStore
+io.realm.internal.OsObjectStore: void nativeSetPrimaryKeyForObject(long,java.lang.String,java.lang.String)
+io.realm.internal.OsObjectStore: java.lang.String nativeGetPrimaryKeyForObject(long,java.lang.String)
+io.realm.internal.OsObjectStore: void nativeSetSchemaVersion(long,long)
+io.realm.internal.OsObjectStore: long nativeGetSchemaVersion(long)
+io.realm.internal.OsObjectStore: boolean nativeDeleteTableForObject(long,java.lang.String)
+io.realm.internal.OsObjectStore: boolean nativeCallWithLock(java.lang.String,java.lang.Runnable)
+io.realm.internal.OsRealmConfig
+io.realm.internal.OsRealmConfig: long nativeCreate(java.lang.String,boolean,boolean)
+io.realm.internal.OsRealmConfig: void nativeSetEncryptionKey(long,byte[])
+io.realm.internal.OsRealmConfig: void nativeSetInMemory(long,boolean)
+io.realm.internal.OsRealmConfig: void nativeSetSchemaConfig(long,byte,long,long,io.realm.internal.OsSharedRealm$MigrationCallback)
+io.realm.internal.OsRealmConfig: void nativeSetCompactOnLaunchCallback(long,io.realm.CompactOnLaunchCallback)
+io.realm.internal.OsRealmConfig: void nativeSetInitializationCallback(long,io.realm.internal.OsSharedRealm$InitializationCallback)
+io.realm.internal.OsRealmConfig: void nativeEnableChangeNotification(long,boolean)
+io.realm.internal.OsRealmConfig: java.lang.String nativeCreateAndSetSyncConfig(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,byte)
+io.realm.internal.OsRealmConfig: void nativeSetSyncConfigSslSettings(long,boolean,java.lang.String)
+io.realm.internal.OsRealmConfig: long nativeGetFinalizerPtr()
+io.realm.internal.OsRealmConfig$Durability: io.realm.internal.OsRealmConfig$Durability[] values()
+io.realm.internal.OsRealmConfig$Durability: io.realm.internal.OsRealmConfig$Durability valueOf(java.lang.String)
+io.realm.internal.OsRealmConfig$SchemaMode: io.realm.internal.OsRealmConfig$SchemaMode[] values()
+io.realm.internal.OsRealmConfig$SchemaMode: io.realm.internal.OsRealmConfig$SchemaMode valueOf(java.lang.String)
+io.realm.internal.OsRealmConfig$SyncSessionStopPolicy: io.realm.internal.OsRealmConfig$SyncSessionStopPolicy[] values()
+io.realm.internal.OsRealmConfig$SyncSessionStopPolicy: io.realm.internal.OsRealmConfig$SyncSessionStopPolicy valueOf(java.lang.String)
+io.realm.internal.OsResults
+io.realm.internal.OsResults: long nativeGetFinalizerPtr()
+io.realm.internal.OsResults: long nativeCreateResults(long,long,io.realm.internal.SortDescriptor,io.realm.internal.SortDescriptor)
+io.realm.internal.OsResults: long nativeCreateSnapshot(long)
+io.realm.internal.OsResults: long nativeGetRow(long,int)
+io.realm.internal.OsResults: long nativeFirstRow(long)
+io.realm.internal.OsResults: long nativeLastRow(long)
+io.realm.internal.OsResults: boolean nativeContains(long,long)
+io.realm.internal.OsResults: void nativeClear(long)
+io.realm.internal.OsResults: long nativeSize(long)
+io.realm.internal.OsResults: java.lang.Object nativeAggregate(long,long,byte)
+io.realm.internal.OsResults: long nativeSort(long,io.realm.internal.SortDescriptor)
+io.realm.internal.OsResults: long nativeDistinct(long,io.realm.internal.SortDescriptor)
+io.realm.internal.OsResults: boolean nativeDeleteFirst(long)
+io.realm.internal.OsResults: boolean nativeDeleteLast(long)
+io.realm.internal.OsResults: void nativeDelete(long,long)
+io.realm.internal.OsResults: void nativeStartListening(long)
+io.realm.internal.OsResults: void nativeStopListening(long)
+io.realm.internal.OsResults: long nativeWhere(long)
+io.realm.internal.OsResults: long nativeIndexOf(long,long)
+io.realm.internal.OsResults: boolean nativeIsValid(long)
+io.realm.internal.OsResults: byte nativeGetMode(long)
+io.realm.internal.OsResults: long nativeCreateResultsFromBacklinks(long,long,long,long)
+io.realm.internal.OsResults: void nativeEvaluateQueryIfNeeded(long,boolean)
+io.realm.internal.OsResults$Aggregate: io.realm.internal.OsResults$Aggregate[] values()
+io.realm.internal.OsResults$Aggregate: io.realm.internal.OsResults$Aggregate valueOf(java.lang.String)
+io.realm.internal.OsResults$Mode: io.realm.internal.OsResults$Mode[] values()
+io.realm.internal.OsResults$Mode: io.realm.internal.OsResults$Mode valueOf(java.lang.String)
+io.realm.internal.OsSchemaInfo
+io.realm.internal.OsSchemaInfo: long nativeCreateFromList(long[])
+io.realm.internal.OsSchemaInfo: long nativeGetFinalizerPtr()
+io.realm.internal.OsSchemaInfo: long nativeGetObjectSchemaInfo(long,java.lang.String)
+io.realm.internal.OsSharedRealm
+io.realm.internal.OsSharedRealm: byte FILE_EXCEPTION_KIND_ACCESS_ERROR
+io.realm.internal.OsSharedRealm: byte FILE_EXCEPTION_KIND_BAD_HISTORY
+io.realm.internal.OsSharedRealm: byte FILE_EXCEPTION_KIND_PERMISSION_DENIED
+io.realm.internal.OsSharedRealm: byte FILE_EXCEPTION_KIND_EXISTS
+io.realm.internal.OsSharedRealm: byte FILE_EXCEPTION_KIND_NOT_FOUND
+io.realm.internal.OsSharedRealm: byte FILE_EXCEPTION_KIND_INCOMPATIBLE_LOCK_FILE
+io.realm.internal.OsSharedRealm: byte FILE_EXCEPTION_KIND_FORMAT_UPGRADE_REQUIRED
+io.realm.internal.OsSharedRealm: byte FILE_EXCEPTION_INCOMPATIBLE_SYNC_FILE
+io.realm.internal.OsSharedRealm: long nativeFinalizerPtr
+io.realm.internal.OsSharedRealm: long nativePtr
+io.realm.internal.OsSharedRealm: io.realm.internal.OsRealmConfig osRealmConfig
+io.realm.internal.OsSharedRealm: io.realm.internal.NativeContext context
+io.realm.internal.OsSharedRealm: io.realm.internal.OsSchemaInfo schemaInfo
+io.realm.internal.OsSharedRealm: java.io.File temporaryDirectory
+io.realm.internal.OsSharedRealm: io.realm.internal.RealmNotifier realmNotifier
+io.realm.internal.OsSharedRealm: io.realm.internal.Capabilities capabilities
+io.realm.internal.OsSharedRealm: java.util.List sharedRealmsUnderConstruction
+io.realm.internal.OsSharedRealm: java.util.List tempSharedRealmsForCallback
+io.realm.internal.OsSharedRealm: java.util.List pendingRows
+io.realm.internal.OsSharedRealm: java.util.List iterators
+io.realm.internal.OsSharedRealm: OsSharedRealm(io.realm.internal.OsRealmConfig)
+io.realm.internal.OsSharedRealm: OsSharedRealm(long,io.realm.internal.OsRealmConfig)
+io.realm.internal.OsSharedRealm: io.realm.internal.OsSharedRealm getInstance(io.realm.RealmConfiguration)
+io.realm.internal.OsSharedRealm: io.realm.internal.OsSharedRealm getInstance(io.realm.internal.OsRealmConfig$Builder)
+io.realm.internal.OsSharedRealm: void initialize(java.io.File)
+io.realm.internal.OsSharedRealm: java.io.File getTemporaryDirectory()
+io.realm.internal.OsSharedRealm: void beginTransaction()
+io.realm.internal.OsSharedRealm: void commitTransaction()
+io.realm.internal.OsSharedRealm: void cancelTransaction()
+io.realm.internal.OsSharedRealm: boolean isInTransaction()
+io.realm.internal.OsSharedRealm: boolean hasTable(java.lang.String)
+io.realm.internal.OsSharedRealm: io.realm.internal.Table getTable(java.lang.String)
+io.realm.internal.OsSharedRealm: io.realm.internal.Table createTable(java.lang.String)
+io.realm.internal.OsSharedRealm: io.realm.internal.Table createTableWithPrimaryKey(java.lang.String,java.lang.String,boolean,boolean)
+io.realm.internal.OsSharedRealm: void renameTable(java.lang.String,java.lang.String)
+io.realm.internal.OsSharedRealm: java.lang.String getTableName(int)
+io.realm.internal.OsSharedRealm: long size()
+io.realm.internal.OsSharedRealm: java.lang.String getPath()
+io.realm.internal.OsSharedRealm: boolean isEmpty()
+io.realm.internal.OsSharedRealm: void refresh()
+io.realm.internal.OsSharedRealm: io.realm.internal.OsSharedRealm$VersionID getVersionID()
+io.realm.internal.OsSharedRealm: int getPrivileges()
+io.realm.internal.OsSharedRealm: int getClassPrivileges(java.lang.String)
+io.realm.internal.OsSharedRealm: int getObjectPrivileges(io.realm.internal.UncheckedRow)
+io.realm.internal.OsSharedRealm: boolean isClosed()
+io.realm.internal.OsSharedRealm: void writeCopy(java.io.File,byte[])
+io.realm.internal.OsSharedRealm: boolean waitForChange()
+io.realm.internal.OsSharedRealm: void stopWaitForChange()
+io.realm.internal.OsSharedRealm: boolean compact()
+io.realm.internal.OsSharedRealm: void setAutoRefresh(boolean)
+io.realm.internal.OsSharedRealm: boolean isAutoRefresh()
+io.realm.internal.OsSharedRealm: io.realm.RealmConfiguration getConfiguration()
+io.realm.internal.OsSharedRealm: void close()
+io.realm.internal.OsSharedRealm: long getNativePtr()
+io.realm.internal.OsSharedRealm: long getNativeFinalizerPtr()
+io.realm.internal.OsSharedRealm: io.realm.internal.OsSchemaInfo getSchemaInfo()
+io.realm.internal.OsSharedRealm: void registerSchemaChangedCallback(io.realm.internal.OsSharedRealm$SchemaChangedCallback)
+io.realm.internal.OsSharedRealm: boolean isPartial()
+io.realm.internal.OsSharedRealm: boolean isSyncRealm()
+io.realm.internal.OsSharedRealm: void addIterator(io.realm.internal.OsResults$Iterator)
+io.realm.internal.OsSharedRealm: void detachIterators()
+io.realm.internal.OsSharedRealm: void invalidateIterators()
+io.realm.internal.OsSharedRealm: void addPendingRow(io.realm.internal.PendingRow)
+io.realm.internal.OsSharedRealm: void removePendingRow(io.realm.internal.PendingRow)
+io.realm.internal.OsSharedRealm: void executePendingRowQueries()
+io.realm.internal.OsSharedRealm: void runMigrationCallback(long,io.realm.internal.OsRealmConfig,io.realm.internal.OsSharedRealm$MigrationCallback,long)
+io.realm.internal.OsSharedRealm: void runInitializationCallback(long,io.realm.internal.OsRealmConfig,io.realm.internal.OsSharedRealm$InitializationCallback)
+io.realm.internal.OsSharedRealm: void nativeInit(java.lang.String)
+io.realm.internal.OsSharedRealm: long nativeGetSharedRealm(long,io.realm.internal.RealmNotifier)
+io.realm.internal.OsSharedRealm: void nativeCloseSharedRealm(long)
+io.realm.internal.OsSharedRealm: boolean nativeIsClosed(long)
+io.realm.internal.OsSharedRealm: void nativeBeginTransaction(long)
+io.realm.internal.OsSharedRealm: void nativeCommitTransaction(long)
+io.realm.internal.OsSharedRealm: void nativeCancelTransaction(long)
+io.realm.internal.OsSharedRealm: boolean nativeIsInTransaction(long)
+io.realm.internal.OsSharedRealm: boolean nativeIsEmpty(long)
+io.realm.internal.OsSharedRealm: void nativeRefresh(long)
+io.realm.internal.OsSharedRealm: long[] nativeGetVersionID(long)
+io.realm.internal.OsSharedRealm: long nativeGetTable(long,java.lang.String)
+io.realm.internal.OsSharedRealm: long nativeCreateTable(long,java.lang.String)
+io.realm.internal.OsSharedRealm: long nativeCreateTableWithPrimaryKeyField(long,java.lang.String,java.lang.String,boolean,boolean)
+io.realm.internal.OsSharedRealm: java.lang.String nativeGetTableName(long,int)
+io.realm.internal.OsSharedRealm: boolean nativeHasTable(long,java.lang.String)
+io.realm.internal.OsSharedRealm: void nativeRenameTable(long,java.lang.String,java.lang.String)
+io.realm.internal.OsSharedRealm: long nativeSize(long)
+io.realm.internal.OsSharedRealm: void nativeWriteCopy(long,java.lang.String,byte[])
+io.realm.internal.OsSharedRealm: boolean nativeWaitForChange(long)
+io.realm.internal.OsSharedRealm: void nativeStopWaitForChange(long)
+io.realm.internal.OsSharedRealm: boolean nativeCompact(long)
+io.realm.internal.OsSharedRealm: void nativeSetAutoRefresh(long,boolean)
+io.realm.internal.OsSharedRealm: boolean nativeIsAutoRefresh(long)
+io.realm.internal.OsSharedRealm: long nativeGetFinalizerPtr()
+io.realm.internal.OsSharedRealm: long nativeGetSchemaInfo(long)
+io.realm.internal.OsSharedRealm: void nativeRegisterSchemaChangedCallback(long,io.realm.internal.OsSharedRealm$SchemaChangedCallback)
+io.realm.internal.OsSharedRealm: int nativeGetRealmPrivileges(long)
+io.realm.internal.OsSharedRealm: int nativeGetClassPrivileges(long,java.lang.String)
+io.realm.internal.OsSharedRealm: int nativeGetObjectPrivileges(long,long)
+io.realm.internal.OsSharedRealm: boolean nativeIsPartial(long)
+io.realm.internal.OsSharedRealm: void <clinit>()
+io.realm.internal.OsSharedRealm$InitializationCallback
+io.realm.internal.OsSharedRealm$InitializationCallback: void onInit(io.realm.internal.OsSharedRealm)
+io.realm.internal.OsSharedRealm$MigrationCallback
+io.realm.internal.OsSharedRealm$MigrationCallback: void onMigrationNeeded(io.realm.internal.OsSharedRealm,long,long)
+io.realm.internal.OsSharedRealm$SchemaChangedCallback
+io.realm.internal.OsSharedRealm$SchemaChangedCallback: void onSchemaChanged()
+io.realm.internal.Property
+io.realm.internal.Property: long nativeGetFinalizerPtr()
+io.realm.internal.Property: long nativeCreatePersistedProperty(java.lang.String,int,boolean,boolean)
+io.realm.internal.Property: long nativeCreatePersistedLinkProperty(java.lang.String,int,java.lang.String)
+io.realm.internal.Property: long nativeCreateComputedLinkProperty(java.lang.String,java.lang.String,java.lang.String)
+io.realm.internal.Property: int nativeGetType(long)
+io.realm.internal.Property: long nativeGetColumnIndex(long)
+io.realm.internal.Property: java.lang.String nativeGetLinkedObjectName(long)
+io.realm.internal.RealmNotifier
+io.realm.internal.RealmNotifier: io.realm.internal.ObserverPairList realmObserverPairs
+io.realm.internal.RealmNotifier: io.realm.internal.ObserverPairList$Callback onChangeCallBack
+io.realm.internal.RealmNotifier: io.realm.internal.OsSharedRealm sharedRealm
+io.realm.internal.RealmNotifier: java.util.List transactionCallbacks
+io.realm.internal.RealmNotifier: java.util.List startSendingNotificationsCallbacks
+io.realm.internal.RealmNotifier: java.util.List finishedSendingNotificationsCallbacks
+io.realm.internal.RealmNotifier: RealmNotifier(io.realm.internal.OsSharedRealm)
+io.realm.internal.RealmNotifier: void didChange()
+io.realm.internal.RealmNotifier: void beforeNotify()
+io.realm.internal.RealmNotifier: void willSendNotifications()
+io.realm.internal.RealmNotifier: void didSendNotifications()
+io.realm.internal.RealmNotifier: void close()
+io.realm.internal.RealmNotifier: void addChangeListener(java.lang.Object,io.realm.RealmChangeListener)
+io.realm.internal.RealmNotifier: void removeChangeListener(java.lang.Object,io.realm.RealmChangeListener)
+io.realm.internal.RealmNotifier: void removeChangeListeners(java.lang.Object)
+io.realm.internal.RealmNotifier: void removeAllChangeListeners()
+io.realm.internal.RealmNotifier: void addTransactionCallback(java.lang.Runnable)
+io.realm.internal.RealmNotifier: boolean post(java.lang.Runnable)
+io.realm.internal.RealmNotifier: int getListenersListSize()
+io.realm.internal.RealmNotifier: void addBeginSendingNotificationsCallback(java.lang.Runnable)
+io.realm.internal.RealmNotifier: void addFinishedSendingNotificationsCallback(java.lang.Runnable)
+io.realm.internal.RealmNotifier: io.realm.internal.OsSharedRealm access$000(io.realm.internal.RealmNotifier)
+io.realm.internal.SortDescriptor
+io.realm.internal.SortDescriptor: java.util.Set SORT_VALID_FIELD_TYPES
+io.realm.internal.SortDescriptor: java.util.Set DISTINCT_VALID_FIELD_TYPES
+io.realm.internal.SortDescriptor: io.realm.internal.Table table
+io.realm.internal.SortDescriptor: long[][] columnIndices
+io.realm.internal.SortDescriptor: boolean[] ascendings
+io.realm.internal.SortDescriptor: io.realm.internal.SortDescriptor getInstanceForSort(io.realm.internal.fields.FieldDescriptor$SchemaProxy,io.realm.internal.Table,java.lang.String,io.realm.Sort)
+io.realm.internal.SortDescriptor: io.realm.internal.SortDescriptor getInstanceForSort(io.realm.internal.fields.FieldDescriptor$SchemaProxy,io.realm.internal.Table,java.lang.String[],io.realm.Sort[])
+io.realm.internal.SortDescriptor: io.realm.internal.SortDescriptor getInstanceForDistinct(io.realm.internal.fields.FieldDescriptor$SchemaProxy,io.realm.internal.Table,java.lang.String)
+io.realm.internal.SortDescriptor: io.realm.internal.SortDescriptor getInstanceForDistinct(io.realm.internal.fields.FieldDescriptor$SchemaProxy,io.realm.internal.Table,java.lang.String[])
+io.realm.internal.SortDescriptor: io.realm.internal.SortDescriptor getInstance(io.realm.internal.fields.FieldDescriptor$SchemaProxy,io.realm.internal.Table,java.lang.String[],io.realm.Sort[],java.util.Set,java.util.Set,java.lang.String)
+io.realm.internal.SortDescriptor: io.realm.internal.SortDescriptor getTestInstance(io.realm.internal.Table,long[])
+io.realm.internal.SortDescriptor: void checkFieldType(io.realm.internal.fields.FieldDescriptor,java.util.Set,java.lang.String,java.lang.String)
+io.realm.internal.SortDescriptor: SortDescriptor(io.realm.internal.Table,long[][],io.realm.Sort[])
+io.realm.internal.SortDescriptor: long[][] getColumnIndices()
+io.realm.internal.SortDescriptor: boolean[] getAscendings()
+io.realm.internal.SortDescriptor: long getTablePtr()
+io.realm.internal.SortDescriptor: void <clinit>()
+io.realm.internal.Table
+io.realm.internal.Table: boolean nativeIsValid(long)
+io.realm.internal.Table: long nativeAddColumn(long,int,java.lang.String,boolean)
+io.realm.internal.Table: long nativeAddPrimitiveListColumn(long,int,java.lang.String,boolean)
+io.realm.internal.Table: long nativeAddColumnLink(long,int,java.lang.String,long)
+io.realm.internal.Table: void nativeRenameColumn(long,long,java.lang.String)
+io.realm.internal.Table: void nativeRemoveColumn(long,long)
+io.realm.internal.Table: void nativeInsertColumn(long,long,int,java.lang.String)
+io.realm.internal.Table: boolean nativeIsColumnNullable(long,long)
+io.realm.internal.Table: void nativeConvertColumnToNullable(long,long,boolean)
+io.realm.internal.Table: void nativeConvertColumnToNotNullable(long,long,boolean)
+io.realm.internal.Table: long nativeSize(long)
+io.realm.internal.Table: void nativeClear(long,boolean)
+io.realm.internal.Table: long nativeGetColumnCount(long)
+io.realm.internal.Table: java.lang.String nativeGetColumnName(long,long)
+io.realm.internal.Table: long nativeGetColumnIndex(long,java.lang.String)
+io.realm.internal.Table: int nativeGetColumnType(long,long)
+io.realm.internal.Table: void nativeMoveLastOver(long,long)
+io.realm.internal.Table: long nativeGetLong(long,long,long)
+io.realm.internal.Table: boolean nativeGetBoolean(long,long,long)
+io.realm.internal.Table: float nativeGetFloat(long,long,long)
+io.realm.internal.Table: double nativeGetDouble(long,long,long)
+io.realm.internal.Table: long nativeGetTimestamp(long,long,long)
+io.realm.internal.Table: java.lang.String nativeGetString(long,long,long)
+io.realm.internal.Table: byte[] nativeGetByteArray(long,long,long)
+io.realm.internal.Table: long nativeGetLink(long,long,long)
+io.realm.internal.Table: long nativeGetLinkTarget(long,long)
+io.realm.internal.Table: boolean nativeIsNull(long,long,long)
+io.realm.internal.Table: long nativeGetRowPtr(long,long)
+io.realm.internal.Table: void nativeSetLong(long,long,long,long,boolean)
+io.realm.internal.Table: void nativeIncrementLong(long,long,long,long)
+io.realm.internal.Table: void nativeSetBoolean(long,long,long,boolean,boolean)
+io.realm.internal.Table: void nativeSetFloat(long,long,long,float,boolean)
+io.realm.internal.Table: void nativeSetDouble(long,long,long,double,boolean)
+io.realm.internal.Table: void nativeSetTimestamp(long,long,long,long,boolean)
+io.realm.internal.Table: void nativeSetString(long,long,long,java.lang.String,boolean)
+io.realm.internal.Table: void nativeSetNull(long,long,long,boolean)
+io.realm.internal.Table: void nativeSetByteArray(long,long,long,byte[],boolean)
+io.realm.internal.Table: void nativeSetLink(long,long,long,long,boolean)
+io.realm.internal.Table: void nativeMigratePrimaryKeyTableIfNeeded(long)
+io.realm.internal.Table: void nativeAddSearchIndex(long,long)
+io.realm.internal.Table: void nativeRemoveSearchIndex(long,long)
+io.realm.internal.Table: boolean nativeHasSearchIndex(long,long)
+io.realm.internal.Table: boolean nativeIsNullLink(long,long,long)
+io.realm.internal.Table: void nativeNullifyLink(long,long,long)
+io.realm.internal.Table: long nativeCountLong(long,long,long)
+io.realm.internal.Table: long nativeCountFloat(long,long,float)
+io.realm.internal.Table: long nativeCountDouble(long,long,double)
+io.realm.internal.Table: long nativeCountString(long,long,java.lang.String)
+io.realm.internal.Table: long nativeWhere(long)
+io.realm.internal.Table: long nativeFindFirstInt(long,long,long)
+io.realm.internal.Table: long nativeFindFirstBool(long,long,boolean)
+io.realm.internal.Table: long nativeFindFirstFloat(long,long,float)
+io.realm.internal.Table: long nativeFindFirstDouble(long,long,double)
+io.realm.internal.Table: long nativeFindFirstTimestamp(long,long,long)
+io.realm.internal.Table: long nativeFindFirstString(long,long,java.lang.String)
+io.realm.internal.Table: long nativeFindFirstNull(long,long)
+io.realm.internal.Table: java.lang.String nativeGetName(long)
+io.realm.internal.Table: boolean nativeHasSameSchema(long,long)
+io.realm.internal.Table: long nativeGetFinalizerPtr()
+io.realm.internal.TableQuery
+io.realm.internal.TableQuery: java.lang.String nativeValidateQuery(long)
+io.realm.internal.TableQuery: void nativeGroup(long)
+io.realm.internal.TableQuery: void nativeEndGroup(long)
+io.realm.internal.TableQuery: void nativeOr(long)
+io.realm.internal.TableQuery: void nativeNot(long)
+io.realm.internal.TableQuery: void nativeEqual(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeNotEqual(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeGreater(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeGreaterEqual(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeLess(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeLessEqual(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeBetween(long,long[],long,long)
+io.realm.internal.TableQuery: void nativeEqual(long,long[],long[],float)
+io.realm.internal.TableQuery: void nativeNotEqual(long,long[],long[],float)
+io.realm.internal.TableQuery: void nativeGreater(long,long[],long[],float)
+io.realm.internal.TableQuery: void nativeGreaterEqual(long,long[],long[],float)
+io.realm.internal.TableQuery: void nativeLess(long,long[],long[],float)
+io.realm.internal.TableQuery: void nativeLessEqual(long,long[],long[],float)
+io.realm.internal.TableQuery: void nativeBetween(long,long[],float,float)
+io.realm.internal.TableQuery: void nativeEqual(long,long[],long[],double)
+io.realm.internal.TableQuery: void nativeNotEqual(long,long[],long[],double)
+io.realm.internal.TableQuery: void nativeGreater(long,long[],long[],double)
+io.realm.internal.TableQuery: void nativeGreaterEqual(long,long[],long[],double)
+io.realm.internal.TableQuery: void nativeLess(long,long[],long[],double)
+io.realm.internal.TableQuery: void nativeLessEqual(long,long[],long[],double)
+io.realm.internal.TableQuery: void nativeBetween(long,long[],double,double)
+io.realm.internal.TableQuery: void nativeEqual(long,long[],long[],boolean)
+io.realm.internal.TableQuery: void nativeEqualTimestamp(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeNotEqualTimestamp(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeGreaterTimestamp(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeGreaterEqualTimestamp(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeLessTimestamp(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeLessEqualTimestamp(long,long[],long[],long)
+io.realm.internal.TableQuery: void nativeBetweenTimestamp(long,long[],long,long)
+io.realm.internal.TableQuery: void nativeEqual(long,long[],long[],byte[])
+io.realm.internal.TableQuery: void nativeNotEqual(long,long[],long[],byte[])
+io.realm.internal.TableQuery: void nativeEqual(long,long[],long[],java.lang.String,boolean)
+io.realm.internal.TableQuery: void nativeNotEqual(long,long[],long[],java.lang.String,boolean)
+io.realm.internal.TableQuery: void nativeBeginsWith(long,long[],long[],java.lang.String,boolean)
+io.realm.internal.TableQuery: void nativeEndsWith(long,long[],long[],java.lang.String,boolean)
+io.realm.internal.TableQuery: void nativeLike(long,long[],long[],java.lang.String,boolean)
+io.realm.internal.TableQuery: void nativeContains(long,long[],long[],java.lang.String,boolean)
+io.realm.internal.TableQuery: void nativeIsEmpty(long,long[],long[])
+io.realm.internal.TableQuery: void nativeIsNotEmpty(long,long[],long[])
+io.realm.internal.TableQuery: void nativeAlwaysTrue(long)
+io.realm.internal.TableQuery: void nativeAlwaysFalse(long)
+io.realm.internal.TableQuery: long nativeFind(long,long)
+io.realm.internal.TableQuery: long nativeFindAll(long,long,long,long)
+io.realm.internal.TableQuery: long nativeSumInt(long,long,long,long,long)
+io.realm.internal.TableQuery: java.lang.Long nativeMaximumInt(long,long,long,long,long)
+io.realm.internal.TableQuery: java.lang.Long nativeMinimumInt(long,long,long,long,long)
+io.realm.internal.TableQuery: double nativeAverageInt(long,long,long,long,long)
+io.realm.internal.TableQuery: double nativeSumFloat(long,long,long,long,long)
+io.realm.internal.TableQuery: java.lang.Float nativeMaximumFloat(long,long,long,long,long)
+io.realm.internal.TableQuery: java.lang.Float nativeMinimumFloat(long,long,long,long,long)
+io.realm.internal.TableQuery: double nativeAverageFloat(long,long,long,long,long)
+io.realm.internal.TableQuery: double nativeSumDouble(long,long,long,long,long)
+io.realm.internal.TableQuery: java.lang.Double nativeMaximumDouble(long,long,long,long,long)
+io.realm.internal.TableQuery: java.lang.Double nativeMinimumDouble(long,long,long,long,long)
+io.realm.internal.TableQuery: double nativeAverageDouble(long,long,long,long,long)
+io.realm.internal.TableQuery: java.lang.Long nativeMaximumTimestamp(long,long,long,long,long)
+io.realm.internal.TableQuery: java.lang.Long nativeMinimumTimestamp(long,long,long,long,long)
+io.realm.internal.TableQuery: void nativeIsNull(long,long[],long[])
+io.realm.internal.TableQuery: void nativeIsNotNull(long,long[],long[])
+io.realm.internal.TableQuery: long nativeCount(long,long,long,long)
+io.realm.internal.TableQuery: long nativeRemove(long)
+io.realm.internal.TableQuery: long nativeGetFinalizerPtr()
+io.realm.internal.TestUtil
+io.realm.internal.TestUtil: long getMaxExceptionNumber()
+io.realm.internal.TestUtil: java.lang.String getExpectedMessage(long)
+io.realm.internal.TestUtil: void testThrowExceptions(long)
+io.realm.internal.UncheckedRow
+io.realm.internal.UncheckedRow: long nativeGetColumnCount(long)
+io.realm.internal.UncheckedRow: java.lang.String nativeGetColumnName(long,long)
+io.realm.internal.UncheckedRow: long nativeGetColumnIndex(long,java.lang.String)
+io.realm.internal.UncheckedRow: int nativeGetColumnType(long,long)
+io.realm.internal.UncheckedRow: long nativeGetIndex(long)
+io.realm.internal.UncheckedRow: long nativeGetLong(long,long)
+io.realm.internal.UncheckedRow: boolean nativeGetBoolean(long,long)
+io.realm.internal.UncheckedRow: float nativeGetFloat(long,long)
+io.realm.internal.UncheckedRow: double nativeGetDouble(long,long)
+io.realm.internal.UncheckedRow: long nativeGetTimestamp(long,long)
+io.realm.internal.UncheckedRow: java.lang.String nativeGetString(long,long)
+io.realm.internal.UncheckedRow: boolean nativeIsNullLink(long,long)
+io.realm.internal.UncheckedRow: byte[] nativeGetByteArray(long,long)
+io.realm.internal.UncheckedRow: void nativeSetLong(long,long,long)
+io.realm.internal.UncheckedRow: void nativeSetBoolean(long,long,boolean)
+io.realm.internal.UncheckedRow: void nativeSetFloat(long,long,float)
+io.realm.internal.UncheckedRow: long nativeGetLink(long,long)
+io.realm.internal.UncheckedRow: void nativeSetDouble(long,long,double)
+io.realm.internal.UncheckedRow: void nativeSetTimestamp(long,long,long)
+io.realm.internal.UncheckedRow: void nativeSetString(long,long,java.lang.String)
+io.realm.internal.UncheckedRow: void nativeSetByteArray(long,long,byte[])
+io.realm.internal.UncheckedRow: void nativeSetLink(long,long,long)
+io.realm.internal.UncheckedRow: void nativeNullifyLink(long,long)
+io.realm.internal.UncheckedRow: boolean nativeIsAttached(long)
+io.realm.internal.UncheckedRow: boolean nativeHasColumn(long,java.lang.String)
+io.realm.internal.UncheckedRow: boolean nativeIsNull(long,long)
+io.realm.internal.UncheckedRow: void nativeSetNull(long,long)
+io.realm.internal.UncheckedRow: long nativeGetFinalizerPtr()
+io.realm.internal.Util
+io.realm.internal.Util: java.lang.String nativeGetTablePrefix()
+io.realm.internal.android.AndroidRealmNotifier
+io.realm.internal.android.AndroidRealmNotifier: android.os.Handler handler
+io.realm.internal.android.AndroidRealmNotifier: AndroidRealmNotifier(io.realm.internal.OsSharedRealm,io.realm.internal.Capabilities)
+io.realm.internal.android.AndroidRealmNotifier: boolean post(java.lang.Runnable)
+io.realm.internal.async.BadVersionException
+io.realm.internal.async.BadVersionException: BadVersionException(java.lang.String)
+io.realm.internal.async.BadVersionException: BadVersionException(java.lang.String,java.lang.Throwable)
+io.realm.internal.sync.BaseModule
+io.realm.internal.sync.OsSubscription
+io.realm.internal.sync.OsSubscription: long nativeCreate(long,java.lang.String)
+io.realm.internal.sync.OsSubscription: long nativeGetFinalizerPtr()
+io.realm.internal.sync.OsSubscription: int nativeGetState(long)
+io.realm.internal.sync.OsSubscription: java.lang.Object nativeGetError(long)
+io.realm.internal.sync.OsSubscription: void nativeStartListening(long)
+io.realm.internal.sync.OsSubscription: void nativeStopListening(long)
+io.realm.internal.sync.OsSubscription$SubscriptionState: io.realm.internal.sync.OsSubscription$SubscriptionState[] values()
+io.realm.internal.sync.OsSubscription$SubscriptionState: io.realm.internal.sync.OsSubscription$SubscriptionState valueOf(java.lang.String)
+io.realm.kotlin.R$string: int app_name
+io.realm.log.RealmLog
+io.realm.log.RealmLog: void nativeAddLogger(io.realm.log.RealmLogger)
+io.realm.log.RealmLog: void nativeRemoveLogger(io.realm.log.RealmLogger)
+io.realm.log.RealmLog: void nativeClearLoggers()
+io.realm.log.RealmLog: void nativeRegisterDefaultLogger()
+io.realm.log.RealmLog: void nativeLog(int,java.lang.String,java.lang.Throwable,java.lang.String)
+io.realm.log.RealmLog: void nativeSetLogLevel(int)
+io.realm.log.RealmLog: int nativeGetLogLevel()
+io.realm.log.RealmLog: long nativeCreateCoreLoggerBridge(java.lang.String)
+io.realm.log.RealmLog: void nativeCloseCoreLoggerBridge(long)
+io.realm.log.RealmLog: void nativeLogToCoreLoggerBridge(long,int,java.lang.String)
+io.realm.log.RealmLogger
+io.realm.log.RealmLogger: void log(int,java.lang.String,java.lang.Throwable,java.lang.String)
+javax.annotation.CheckForNull
+javax.annotation.CheckForSigned
+javax.annotation.CheckReturnValue
+javax.annotation.CheckReturnValue: javax.annotation.meta.When when()
+javax.annotation.Detainted
+javax.annotation.MatchesPattern
+javax.annotation.MatchesPattern: java.lang.String value()
+javax.annotation.MatchesPattern: int flags()
+javax.annotation.MatchesPattern$Checker
+javax.annotation.MatchesPattern$Checker: MatchesPattern$Checker()
+javax.annotation.MatchesPattern$Checker: javax.annotation.meta.When forConstantValue(javax.annotation.MatchesPattern,java.lang.Object)
+javax.annotation.MatchesPattern$Checker: javax.annotation.meta.When forConstantValue(java.lang.annotation.Annotation,java.lang.Object)
+javax.annotation.Nonnegative
+javax.annotation.Nonnegative: javax.annotation.meta.When when()
+javax.annotation.Nonnegative$Checker
+javax.annotation.Nonnegative$Checker: Nonnegative$Checker()
+javax.annotation.Nonnegative$Checker: javax.annotation.meta.When forConstantValue(javax.annotation.Nonnegative,java.lang.Object)
+javax.annotation.Nonnegative$Checker: javax.annotation.meta.When forConstantValue(java.lang.annotation.Annotation,java.lang.Object)
+javax.annotation.Nonnull
+javax.annotation.Nonnull: javax.annotation.meta.When when()
+javax.annotation.Nonnull$Checker
+javax.annotation.Nonnull$Checker: Nonnull$Checker()
+javax.annotation.Nonnull$Checker: javax.annotation.meta.When forConstantValue(javax.annotation.Nonnull,java.lang.Object)
+javax.annotation.Nonnull$Checker: javax.annotation.meta.When forConstantValue(java.lang.annotation.Annotation,java.lang.Object)
+javax.annotation.Nullable
+javax.annotation.OverridingMethodsMustInvokeSuper
+javax.annotation.ParametersAreNonnullByDefault
+javax.annotation.ParametersAreNullableByDefault
+javax.annotation.PropertyKey
+javax.annotation.PropertyKey: javax.annotation.meta.When when()
+javax.annotation.RegEx
+javax.annotation.RegEx: javax.annotation.meta.When when()
+javax.annotation.RegEx$Checker
+javax.annotation.RegEx$Checker: RegEx$Checker()
+javax.annotation.RegEx$Checker: javax.annotation.meta.When forConstantValue(javax.annotation.RegEx,java.lang.Object)
+javax.annotation.RegEx$Checker: javax.annotation.meta.When forConstantValue(java.lang.annotation.Annotation,java.lang.Object)
+javax.annotation.Signed
+javax.annotation.Syntax
+javax.annotation.Syntax: java.lang.String value()
+javax.annotation.Syntax: javax.annotation.meta.When when()
+javax.annotation.Tainted
+javax.annotation.Untainted
+javax.annotation.Untainted: javax.annotation.meta.When when()
+javax.annotation.WillClose
+javax.annotation.WillCloseWhenClosed
+javax.annotation.WillNotClose
+javax.annotation.concurrent.GuardedBy
+javax.annotation.concurrent.GuardedBy: java.lang.String value()
+javax.annotation.concurrent.Immutable
+javax.annotation.concurrent.NotThreadSafe
+javax.annotation.concurrent.ThreadSafe
+javax.annotation.meta.Exclusive
+javax.annotation.meta.Exhaustive
+javax.annotation.meta.TypeQualifier
+javax.annotation.meta.TypeQualifier: java.lang.Class applicableTo()
+javax.annotation.meta.TypeQualifierDefault
+javax.annotation.meta.TypeQualifierDefault: java.lang.annotation.ElementType[] value()
+javax.annotation.meta.TypeQualifierNickname
+javax.annotation.meta.TypeQualifierValidator
+javax.annotation.meta.TypeQualifierValidator: javax.annotation.meta.When forConstantValue(java.lang.annotation.Annotation,java.lang.Object)
+javax.annotation.meta.When
+javax.annotation.meta.When: javax.annotation.meta.When ALWAYS
+javax.annotation.meta.When: javax.annotation.meta.When UNKNOWN
+javax.annotation.meta.When: javax.annotation.meta.When MAYBE
+javax.annotation.meta.When: javax.annotation.meta.When NEVER
+javax.annotation.meta.When: javax.annotation.meta.When[] $VALUES
+javax.annotation.meta.When: javax.annotation.meta.When[] values()
+javax.annotation.meta.When: javax.annotation.meta.When valueOf(java.lang.String)
+javax.annotation.meta.When: When(java.lang.String,int)
+javax.annotation.meta.When: void <clinit>()
 kotlin.DeprecationLevel: kotlin.DeprecationLevel[] values()
 kotlin.DeprecationLevel: kotlin.DeprecationLevel valueOf(java.lang.String)
 kotlin.Experimental$Impact: kotlin.Experimental$Impact[] values()

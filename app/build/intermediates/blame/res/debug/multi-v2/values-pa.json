@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/dmitriy/IdeaProjects/GithubApiRestTestProject/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml",
+            "outputFile": "/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml",
             "map": [
                 {
-                    "source": "/home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/548ae65fdf37005fca6d7924b445bd67/res/values-pa/values-pa.xml",
+                    "source": "/home/dmitriy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/79aca462b31791cf139c438fb09e8295/res/values-pa/values-pa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

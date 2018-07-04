@@ -7,7 +7,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoryServiceRxJava;
 import sfedu.physics.dmitriy.githubapiresttestproject.application.Application;
-import sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository;
 
 public class RepositoriesModel {
 

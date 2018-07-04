@@ -1,6 +1,7 @@
 package sfedu.physics.dmitriy.githubapiresttestproject.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ShareCompat;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
+import sfedu.physics.dmitriy.githubapiresttestproject.utils.BitmapUtils;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -53,17 +55,23 @@ public class DetailActivity extends AppCompatActivity {
         String userName = extras.getString("login");
         String avatarURL = extras.getString("avatar_url");
         String linkURL = extras.getString("html_url");
+        byte[] bitmapData = extras.getByteArray("bitmap");
 
         detail_link.setText(linkURL);
         Linkify.addLinks(detail_link, Linkify.WEB_URLS);
 
         detail_user_nameTV.setText(userName);
 
-        Glide.with(this)
-                .load(avatarURL)
-                .placeholder(R.drawable.load)
-                .into(detail_userIconHeaderIV);
-
+        boolean networkConnected = linkURL != null;
+        if (networkConnected) {
+            Glide.with(this)
+                    .load(avatarURL)
+                    .placeholder(R.drawable.load)
+                    .into(detail_userIconHeaderIV);
+        } else {
+            Bitmap bitmap = BitmapUtils.byteArrayToBitmap(bitmapData);
+            detail_userIconHeaderIV.setImageBitmap(bitmap);
+        }
         show_repositoriesBT.setOnClickListener(v -> {
             Intent intent = new Intent(DetailActivity.this, MvpRepositoryActivity.class);
             intent.setAction(userName);

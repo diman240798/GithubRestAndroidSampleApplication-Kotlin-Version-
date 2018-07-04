@@ -5,7 +5,7 @@ import java.util.List;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
-import sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository;
 
 public interface SearchRepositoryServiceRxJava {
     @GET("/users/{user_login}/repos")

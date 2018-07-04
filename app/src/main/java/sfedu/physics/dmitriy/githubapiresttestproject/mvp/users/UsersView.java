@@ -4,7 +4,7 @@ import com.arellomobile.mvp.MvpView;
 import com.arellomobile.mvp.viewstate.strategy.AddToEndStrategy;
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 
-import sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse;
 
 @StateStrategyType(AddToEndStrategy.class)
 public interface UsersView extends MvpView {

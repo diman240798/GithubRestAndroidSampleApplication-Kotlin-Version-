@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
-import sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository;
 
 public class RepositoryAdapter extends RecyclerView.Adapter<RepositoryAdapter.ViewHolder> {
 

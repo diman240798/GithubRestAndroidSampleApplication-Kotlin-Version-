@@ -1,5 +1,6 @@
 package sfedu.physics.dmitriy.githubapiresttestproject.application;
 
+import io.realm.Realm;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -7,6 +8,12 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Application extends android.app.Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Realm.init(this);
+    }
 
     public static final String BASE_URL = "https://api.github.com";
 

@@ -7,7 +7,7 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 
 import java.util.List;
 
-import sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository;
 
 @StateStrategyType(AddToEndStrategy.class)
 public interface RepositoriesView extends MvpView {

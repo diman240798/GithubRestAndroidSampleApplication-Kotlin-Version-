@@ -5,7 +5,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import sfedu.physics.dmitriy.githubapiresttestproject.api.SearchUsersServiceRxJava;
 import sfedu.physics.dmitriy.githubapiresttestproject.application.Application;
-import sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse;
+import sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse;
 
 public class UsersModel {
 
