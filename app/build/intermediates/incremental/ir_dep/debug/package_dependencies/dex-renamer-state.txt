@@ -1,4 +1,4 @@
-#Wed Jul 04 22:27:38 MSK 2018
+#Thu Jul 05 22:07:39 MSK 2018
 base.10=/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/transforms/dexMerger/debug/11
 path.32=classes.dex
 path.31=classes.dex
@@ -76,7 +76,7 @@ renamed.13=classes14.dex
 renamed.12=classes13.dex
 renamed.11=classes12.dex
 renamed.10=classes11.dex
-base.32=/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/transforms/dexMerger/debug/48
+base.32=/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/transforms/dexMerger/debug/33
 base.31=/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/transforms/dexMerger/debug/32
 base.30=/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/transforms/dexMerger/debug/31
 base.29=/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/transforms/dexMerger/debug/30

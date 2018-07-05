@@ -4,6 +4,9 @@ import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
 
 import io.reactivex.disposables.Disposable;
+import sfedu.physics.dmitriy.githubapiresttestproject.utils.QueryUtils;
+
+import static sfedu.physics.dmitriy.githubapiresttestproject.utils.QueryUtils.createQueryByLocationAndLanguage;
 
 @InjectViewState
 public class UsersPresenter extends MvpPresenter<UsersView> {
@@ -20,7 +23,7 @@ public class UsersPresenter extends MvpPresenter<UsersView> {
 
 
     public void loadUsersByLocationAndLanguage(String userLocation, String userProgrammingLanguage) {
-        query = usersModel.createQueryByLocationAndLanguage(userLocation, userProgrammingLanguage);
+        query = createQueryByLocationAndLanguage(userLocation, userProgrammingLanguage);
         loadUsersByQuery();
     }
 

@@ -4421,8 +4421,57 @@ com.arellomobile.mvp.viewstate.strategy.SingleStateStrategy
 com.arellomobile.mvp.viewstate.strategy.SkipStrategy
 com.arellomobile.mvp.viewstate.strategy.StateStrategyType
 com.bumptech.glide.BitmapOptions
-com.bumptech.glide.BitmapRequestBuilder
-com.bumptech.glide.BitmapTypeRequest
+com.bumptech.glide.BitmapRequestBuilder:
+    73:73:public com.bumptech.glide.BitmapRequestBuilder approximate()
+    84:84:public com.bumptech.glide.BitmapRequestBuilder asIs()
+    96:96:public com.bumptech.glide.BitmapRequestBuilder atMost()
+    111:114:private com.bumptech.glide.BitmapRequestBuilder downsample(com.bumptech.glide.load.resource.bitmap.Downsampler)
+    122:123:public com.bumptech.glide.BitmapRequestBuilder thumbnail(float)
+    151:152:public com.bumptech.glide.BitmapRequestBuilder thumbnail(com.bumptech.glide.BitmapRequestBuilder)
+    160:161:public com.bumptech.glide.BitmapRequestBuilder sizeMultiplier(float)
+    178:179:public com.bumptech.glide.BitmapRequestBuilder cacheDecoder(com.bumptech.glide.load.ResourceDecoder)
+    187:188:public com.bumptech.glide.BitmapRequestBuilder encoder(com.bumptech.glide.load.ResourceEncoder)
+    201:203:public com.bumptech.glide.BitmapRequestBuilder imageDecoder(com.bumptech.glide.load.ResourceDecoder)
+    215:217:public com.bumptech.glide.BitmapRequestBuilder videoDecoder(com.bumptech.glide.load.ResourceDecoder)
+    239:244:public com.bumptech.glide.BitmapRequestBuilder format(com.bumptech.glide.load.DecodeFormat)
+    249:250:public com.bumptech.glide.BitmapRequestBuilder priority(com.bumptech.glide.Priority)
+    312:313:public com.bumptech.glide.BitmapRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
+    321:322:public com.bumptech.glide.BitmapRequestBuilder dontAnimate()
+    330:331:public com.bumptech.glide.BitmapRequestBuilder animate(int)
+    341:342:public com.bumptech.glide.BitmapRequestBuilder animate(android.view.animation.Animation)
+    350:351:public com.bumptech.glide.BitmapRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
+    368:369:public com.bumptech.glide.BitmapRequestBuilder placeholder(android.graphics.drawable.Drawable)
+    374:375:public com.bumptech.glide.BitmapRequestBuilder fallback(android.graphics.drawable.Drawable)
+    380:381:public com.bumptech.glide.BitmapRequestBuilder fallback(int)
+    389:390:public com.bumptech.glide.BitmapRequestBuilder error(int)
+    398:399:public com.bumptech.glide.BitmapRequestBuilder error(android.graphics.drawable.Drawable)
+    408:409:public com.bumptech.glide.BitmapRequestBuilder listener(com.bumptech.glide.request.RequestListener)
+    445:446:public com.bumptech.glide.BitmapRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
+    463:464:public com.bumptech.glide.BitmapRequestBuilder dontTransform()
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder listener(com.bumptech.glide.request.RequestListener)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(android.graphics.drawable.Drawable)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder error(int)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder fallback(int)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder fallback(android.graphics.drawable.Drawable)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder placeholder(android.graphics.drawable.Drawable)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(com.bumptech.glide.request.animation.ViewPropertyAnimation$Animator)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(android.view.animation.Animation)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder animate(int)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontAnimate()
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder transcoder(com.bumptech.glide.load.resource.transcode.ResourceTranscoder)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder dontTransform()
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder priority(com.bumptech.glide.Priority)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder encoder(com.bumptech.glide.load.ResourceEncoder)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder cacheDecoder(com.bumptech.glide.load.ResourceDecoder)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder sizeMultiplier(float)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(float)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder centerCrop()
+    46:46:public bridge synthetic com.bumptech.glide.GenericRequestBuilder fitCenter()
+com.bumptech.glide.BitmapTypeRequest:
+    70:70:public com.bumptech.glide.BitmapRequestBuilder transcode(com.bumptech.glide.load.resource.transcode.ResourceTranscoder,java.lang.Class)
+    84:84:public com.bumptech.glide.BitmapRequestBuilder toBytes()
+    99:99:public com.bumptech.glide.BitmapRequestBuilder toBytes(android.graphics.Bitmap$CompressFormat,int)
 com.bumptech.glide.DownloadOptions
 com.bumptech.glide.DrawableOptions
 com.bumptech.glide.DrawableRequestBuilder:
@@ -4475,13 +4524,11 @@ com.bumptech.glide.DrawableRequestBuilder:
     41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade(int)
     41:41:public bridge synthetic com.bumptech.glide.GenericRequestBuilder crossFade()
 com.bumptech.glide.DrawableTypeRequest:
-    72:72:public com.bumptech.glide.BitmapTypeRequest asBitmap()
     89:89:public com.bumptech.glide.GifTypeRequest asGif()
     96:96:public com.bumptech.glide.request.target.Target downloadOnly(com.bumptech.glide.request.target.Target)
     103:103:public com.bumptech.glide.request.FutureTarget downloadOnly(int,int)
     107:107:private com.bumptech.glide.GenericTranscodeRequest getDownloadOnlyRequest()
 com.bumptech.glide.GenericRequestBuilder:
-    85:92:GenericRequestBuilder(com.bumptech.glide.provider.LoadProvider,java.lang.Class,com.bumptech.glide.GenericRequestBuilder)
     131:137:public com.bumptech.glide.GenericRequestBuilder thumbnail(com.bumptech.glide.GenericRequestBuilder)
     167:172:public com.bumptech.glide.GenericRequestBuilder thumbnail(float)
     185:190:public com.bumptech.glide.GenericRequestBuilder sizeMultiplier(float)
@@ -4519,10 +4566,7 @@ com.bumptech.glide.Glide:
     176:176:public static boolean isSetup()
     191:196:public static void setup(com.bumptech.glide.GlideBuilder)
     200:201:static void tearDown()
-    305:305:com.bumptech.glide.load.resource.bitmap.CenterCrop getBitmapCenterCrop()
-    309:309:com.bumptech.glide.load.resource.bitmap.FitCenter getBitmapFitCenter()
     321:321:android.os.Handler getMainHandler()
-    325:325:com.bumptech.glide.load.DecodeFormat getDecodeFormat()
     359:360:public varargs void preFillBitmapPool(com.bumptech.glide.load.engine.prefill.PreFillType$Builder[])
     397:399:public void clearDiskCache()
     414:418:public void setMemoryCategory(com.bumptech.glide.MemoryCategory)
@@ -5038,34 +5082,38 @@ com.bumptech.glide.util.Util:
     143:146:public static void assertBackgroundThread()
 com.bumptech.glide.util.ViewPreloadSizeProvider
 com.bumptech.glide.util.ViewPreloadSizeProvider$SizeViewTarget
-com.getkeepsafe.relinker.ApkLibraryInstaller
+com.getkeepsafe.relinker.ApkLibraryInstaller:
+    private static final int MAX_TRIES
+    private static final int COPY_BUFFER_SIZE
 com.getkeepsafe.relinker.BuildConfig
-com.getkeepsafe.relinker.MissingLibraryException
 com.getkeepsafe.relinker.R
-com.getkeepsafe.relinker.ReLinker
-com.getkeepsafe.relinker.ReLinker$LibraryInstaller
-com.getkeepsafe.relinker.ReLinker$LibraryLoader
-com.getkeepsafe.relinker.ReLinker$LoadListener
-com.getkeepsafe.relinker.ReLinker$Logger
-com.getkeepsafe.relinker.ReLinkerInstance
-com.getkeepsafe.relinker.ReLinkerInstance$1
-com.getkeepsafe.relinker.ReLinkerInstance$2
-com.getkeepsafe.relinker.SystemLibraryLoader
-com.getkeepsafe.relinker.TextUtils
-com.getkeepsafe.relinker.elf.Dynamic32Structure
-com.getkeepsafe.relinker.elf.Dynamic64Structure
-com.getkeepsafe.relinker.elf.Elf
-com.getkeepsafe.relinker.elf.Elf$DynamicStructure
-com.getkeepsafe.relinker.elf.Elf$Header
-com.getkeepsafe.relinker.elf.Elf$ProgramHeader
-com.getkeepsafe.relinker.elf.Elf$SectionHeader
-com.getkeepsafe.relinker.elf.Elf32Header
-com.getkeepsafe.relinker.elf.Elf64Header
-com.getkeepsafe.relinker.elf.ElfParser
-com.getkeepsafe.relinker.elf.Program32Header
-com.getkeepsafe.relinker.elf.Program64Header
-com.getkeepsafe.relinker.elf.Section32Header
-com.getkeepsafe.relinker.elf.Section64Header
+com.getkeepsafe.relinker.ReLinker:
+    51:52:public static void loadLibrary(android.content.Context,java.lang.String)
+    63:64:public static void loadLibrary(android.content.Context,java.lang.String,com.getkeepsafe.relinker.ReLinker$LoadListener)
+    74:74:public static com.getkeepsafe.relinker.ReLinkerInstance force()
+    78:78:public static com.getkeepsafe.relinker.ReLinkerInstance log(com.getkeepsafe.relinker.ReLinker$Logger)
+    82:82:public static com.getkeepsafe.relinker.ReLinkerInstance recursively()
+    85:85:private ReLinker()
+com.getkeepsafe.relinker.ReLinkerInstance:
+    private static final java.lang.String LIB_DIR
+    64:65:public com.getkeepsafe.relinker.ReLinkerInstance log(com.getkeepsafe.relinker.ReLinker$Logger)
+    72:73:public com.getkeepsafe.relinker.ReLinkerInstance force()
+    81:82:public com.getkeepsafe.relinker.ReLinkerInstance recursively()
+    100:101:public void loadLibrary(android.content.Context,java.lang.String,java.lang.String)
+    110:111:public void loadLibrary(android.content.Context,java.lang.String,com.getkeepsafe.relinker.ReLinker$LoadListener)
+com.getkeepsafe.relinker.TextUtils:
+    7:7:TextUtils()
+com.getkeepsafe.relinker.elf.Elf$DynamicStructure:
+    public static final int DT_NULL
+    public static final int DT_NEEDED
+    public static final int DT_STRTAB
+com.getkeepsafe.relinker.elf.Elf$Header:
+    public static final int ELFCLASS32
+    public static final int ELFCLASS64
+    public static final int ELFDATA2MSB
+com.getkeepsafe.relinker.elf.Elf$ProgramHeader:
+    public static final int PT_LOAD
+    public static final int PT_DYNAMIC
 com.google.devtools.build.android.desugar.runtime.ThrowableExtension:
     public static final java.lang.String SYSTEM_PROPERTY_TWR_DISABLE_MIMIC
     private static final java.lang.String ANDROID_OS_BUILD_VERSION
@@ -7817,7 +7865,6 @@ io.reactivex.subscribers.SerializedSubscriber
 io.reactivex.subscribers.TestSubscriber
 io.reactivex.subscribers.TestSubscriber$EmptySubscriber
 io.realm.BaseModuleMediator:
-    39:45:public java.util.Map getExpectedObjectSchemaInfoMap()
     153:168:public void insert(io.realm.Realm,io.realm.RealmModel,java.util.Map)
     172:211:public void insert(io.realm.Realm,java.util.Collection)
     217:232:public void insertOrUpdate(io.realm.Realm,io.realm.RealmModel,java.util.Map)
@@ -7832,11 +7879,6 @@ io.realm.BaseRealm:
     private static final java.lang.String NOT_IN_TRANSACTION_MESSAGE
     static final java.lang.String LISTENER_NOT_ALLOWED_MESSAGE
     static final java.lang.String DELETE_NOT_SUPPORTED_UNDER_PARTIAL_SYNC
-    static volatile android.content.Context applicationContext
-    private io.realm.internal.OsSharedRealm$SchemaChangedCallback schemaChangedCallback
-    105:107:BaseRealm(io.realm.RealmCache,io.realm.internal.OsSchemaInfo)
-    93:140:BaseRealm(io.realm.RealmConfiguration,io.realm.internal.OsSchemaInfo)
-    93:151:BaseRealm(io.realm.internal.OsSharedRealm)
     165:167:public void setAutoRefresh(boolean)
     175:175:public boolean isAutoRefresh()
     189:194:public void refresh()
@@ -7848,8 +7890,6 @@ io.realm.BaseRealm:
     306:311:public void writeEncryptedCopyTo(java.io.File,byte[])
     325:337:public boolean waitForChange()
     350:364:public void stopWaitForChange()
-    400:402:public void beginTransaction()
-    411:413:public void commitTransaction()
     424:426:public void cancelTransaction()
     443:446:protected void checkIfInTransaction()
     449:457:protected void checkIfPartialRealm()
@@ -7862,17 +7902,11 @@ io.realm.BaseRealm:
     public abstract boolean isEmpty()
     630:647:io.realm.RealmModel get(java.lang.Class,java.lang.String,long)
     659:667:public void deleteAll()
-    673:688:static boolean deleteRealm(io.realm.RealmConfiguration)
     698:701:static boolean compactRealm(io.realm.RealmConfiguration)
     717:770:protected static void migrateRealm(io.realm.RealmConfiguration,io.realm.RealmMigration)
-    773:773:private static io.realm.internal.OsSharedRealm$MigrationCallback createMigrationCallback(io.realm.RealmMigration)
     65:65:static synthetic io.realm.internal.OsSharedRealm$MigrationCallback access$000(io.realm.RealmMigration)
-io.realm.BaseRealm$1
-io.realm.BaseRealm$2
 io.realm.BaseRealm$3
-io.realm.BaseRealm$4
 io.realm.BaseRealm$5
-io.realm.BaseRealm$6
 io.realm.BaseRealm$InstanceCallback
 io.realm.BinaryListOperator:
     1717:1717:public boolean forRealmModel()
@@ -7883,11 +7917,17 @@ io.realm.Case
 io.realm.DateListOperator:
     1867:1867:public boolean forRealmModel()
 io.realm.DefaultCompactOnLaunchCallback
+io.realm.DefaultRealmModuleMediator:
+    111:120:public void insert(io.realm.Realm,io.realm.RealmModel,java.util.Map)
+    124:151:public void insert(io.realm.Realm,java.util.Collection)
+    157:166:public void insertOrUpdate(io.realm.Realm,io.realm.RealmModel,java.util.Map)
+    170:197:public void insertOrUpdate(io.realm.Realm,java.util.Collection)
+    202:210:public io.realm.RealmModel createOrUpdateUsingJsonObject(java.lang.Class,io.realm.Realm,org.json.JSONObject,boolean)
+    216:224:public io.realm.RealmModel createUsingJsonStream(java.lang.Class,io.realm.Realm,android.util.JsonReader)
+    231:239:public io.realm.RealmModel createDetachedCopy(io.realm.RealmModel,int,java.util.Map)
 io.realm.DoubleListOperator:
     1767:1767:public boolean forRealmModel()
 io.realm.DynamicRealm:
-    60:82:private DynamicRealm(io.realm.RealmCache)
-    85:87:private DynamicRealm(io.realm.internal.OsSharedRealm)
     101:104:public static io.realm.DynamicRealm getInstance(io.realm.RealmConfiguration)
     123:126:public static io.realm.RealmAsyncTask getInstanceAsync(io.realm.RealmConfiguration,io.realm.DynamicRealm$Callback)
     137:147:public io.realm.DynamicRealmObject createObject(java.lang.String)
@@ -7898,8 +7938,6 @@ io.realm.DynamicRealm:
     223:224:public void removeAllChangeListeners()
     234:240:public void delete(java.lang.String)
     252:268:public void executeTransaction(io.realm.DynamicRealm$Transaction)
-    276:276:static io.realm.DynamicRealm createInstance(io.realm.RealmCache)
-    287:287:static io.realm.DynamicRealm createInstance(io.realm.internal.OsSharedRealm)
     295:295:public io.reactivex.Flowable asFlowable()
     303:304:public boolean isEmpty()
     376:384:public io.realm.sync.permissions.ClassPrivileges getPrivileges(java.lang.String)
@@ -7910,8 +7948,6 @@ io.realm.DynamicRealm:
     55:55:public bridge synthetic io.realm.sync.permissions.RealmPrivileges getPrivileges()
     55:55:public bridge synthetic long getVersion()
     55:55:public bridge synthetic void cancelTransaction()
-    55:55:public bridge synthetic void commitTransaction()
-    55:55:public bridge synthetic void beginTransaction()
     55:55:public bridge synthetic void stopWaitForChange()
     55:55:public bridge synthetic boolean waitForChange()
     55:55:public bridge synthetic void writeEncryptedCopyTo(java.io.File,byte[])
@@ -7919,7 +7955,6 @@ io.realm.DynamicRealm:
     55:55:public bridge synthetic void refresh()
     55:55:public bridge synthetic boolean isAutoRefresh()
     55:55:public bridge synthetic void setAutoRefresh(boolean)
-io.realm.DynamicRealm$1
 io.realm.DynamicRealm$Callback
 io.realm.DynamicRealm$Transaction
 io.realm.DynamicRealmObject:
@@ -7986,7 +8021,14 @@ io.realm.ImmutableRealmObjectSchema:
     101:101:public io.realm.RealmObjectSchema setNullable(java.lang.String,boolean)
     106:106:public io.realm.RealmObjectSchema transform(io.realm.RealmObjectSchema$Function)
     119:119:varargs io.realm.internal.fields.FieldDescriptor getColumnIndices(java.lang.String,io.realm.RealmFieldType[])
-io.realm.ImmutableRealmSchema
+io.realm.ImmutableRealmSchema:
+    private static final java.lang.String SCHEMA_IMMUTABLE_EXCEPTION_MSG
+    42:47:public io.realm.RealmObjectSchema get(java.lang.String)
+    53:61:public java.util.Set getAll()
+    66:66:public io.realm.RealmObjectSchema create(java.lang.String)
+    71:71:public varargs io.realm.RealmObjectSchema createWithPrimaryKeyField(java.lang.String,java.lang.String,java.lang.Class,io.realm.FieldAttribute[])
+    76:76:public void remove(java.lang.String)
+    81:81:public io.realm.RealmObjectSchema rename(java.lang.String,java.lang.String)
 io.realm.LongListOperator:
     1596:1596:public boolean forRealmModel()
 io.realm.ManagedListOperator:
@@ -8003,7 +8045,14 @@ io.realm.MutableRealmInteger
 io.realm.MutableRealmInteger$Managed
 io.realm.MutableRealmInteger$Unmanaged
 io.realm.MutableRealmObjectSchema
-io.realm.MutableRealmSchema
+io.realm.MutableRealmSchema:
+    39:44:public io.realm.RealmObjectSchema get(java.lang.String)
+    50:58:public java.util.Set getAll()
+    64:74:public io.realm.RealmObjectSchema create(java.lang.String)
+    80:98:public varargs io.realm.RealmObjectSchema createWithPrimaryKeyField(java.lang.String,java.lang.String,java.lang.Class,io.realm.FieldAttribute[])
+    104:111:public void remove(java.lang.String)
+    115:145:public io.realm.RealmObjectSchema rename(java.lang.String,java.lang.String)
+    149:156:private java.lang.String checkAndGetTableNameFromClassName(java.lang.String)
 io.realm.ObjectChangeSet:
     public abstract boolean isDeleted()
     public abstract java.lang.String[] getChangedFields()
@@ -8033,10 +8082,6 @@ io.realm.OrderedRealmCollection:
     public abstract io.realm.OrderedRealmCollectionSnapshot createSnapshot()
 io.realm.OrderedRealmCollectionImpl:
     private static final java.lang.String NOT_SUPPORTED_MESSAGE
-    final boolean forValues
-    39:40:OrderedRealmCollectionImpl(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.Class)
-    43:44:OrderedRealmCollectionImpl(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.String)
-    33:51:private OrderedRealmCollectionImpl(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.Class,java.lang.String)
     54:54:io.realm.internal.Table getTable()
     58:58:io.realm.internal.OsResults getOsResults()
     66:66:public boolean isValid()
@@ -8079,22 +8124,11 @@ io.realm.R
 io.realm.Realm:
     private static final java.lang.String NULL_CONFIG_MSG
     public static final java.lang.String DEFAULT_REALM_NAME
-    private static io.realm.RealmConfiguration defaultConfiguration
-    164:184:private Realm(io.realm.RealmCache)
-    187:190:private Realm(io.realm.internal.OsSharedRealm)
-    193:193:private static io.realm.internal.OsSchemaInfo createExpectedSchemaInfo(io.realm.internal.RealmProxyMediator)
     201:201:public io.reactivex.Flowable asFlowable()
     209:215:public boolean isEmpty()
-    266:282:public static synchronized void init(android.content.Context)
-    297:334:private static void checkFilesDirAvailable(android.content.Context)
-    349:357:public static io.realm.Realm getDefaultInstance()
     375:378:public static io.realm.Realm getInstance(io.realm.RealmConfiguration)
     397:400:public static io.realm.RealmAsyncTask getInstanceAsync(io.realm.RealmConfiguration,io.realm.Realm$Callback)
-    412:418:public static void setDefaultConfiguration(io.realm.RealmConfiguration)
-    427:429:public static io.realm.RealmConfiguration getDefaultConfiguration()
     437:440:public static void removeDefaultConfiguration()
-    449:449:static io.realm.Realm createInstance(io.realm.RealmCache)
-    457:457:static io.realm.Realm createInstance(io.realm.internal.OsSharedRealm)
     477:489:public void createAllFromJson(java.lang.Class,org.json.JSONArray)
     511:523:public void createOrUpdateAllFromJson(java.lang.Class,org.json.JSONArray)
     541:553:public void createAllFromJson(java.lang.Class,java.lang.String)
@@ -8108,7 +8142,6 @@ io.realm.Realm:
     829:860:public io.realm.RealmModel createObjectFromJson(java.lang.Class,java.io.InputStream)
     887:904:public io.realm.RealmModel createOrUpdateObjectFromJson(java.lang.Class,java.io.InputStream)
     910:910:private java.util.Scanner getFullStringScanner(java.io.InputStream)
-    926:927:public io.realm.RealmModel createObject(java.lang.Class)
     973:974:public io.realm.RealmModel createObject(java.lang.Class,java.lang.Object)
     1057:1067:public java.util.List copyToRealm(java.lang.Iterable)
     1094:1103:public void insert(java.util.Collection)
@@ -8120,7 +8153,6 @@ io.realm.Realm:
     1284:1297:public java.util.List copyFromRealm(java.lang.Iterable,int)
     1318:1318:public io.realm.RealmModel copyFromRealm(io.realm.RealmModel)
     1343:1345:public io.realm.RealmModel copyFromRealm(io.realm.RealmModel,int)
-    1356:1357:public io.realm.RealmQuery where(java.lang.Class)
     1377:1378:public void addChangeListener(io.realm.RealmChangeListener)
     1389:1390:public void removeChangeListener(io.realm.RealmChangeListener)
     1399:1400:public void removeAllChangeListeners()
@@ -8129,7 +8161,6 @@ io.realm.Realm:
     1454:1458:public io.realm.RealmAsyncTask executeTransactionAsync(io.realm.Realm$Transaction,io.realm.Realm$Transaction$OnSuccess)
     1472:1476:public io.realm.RealmAsyncTask executeTransactionAsync(io.realm.Realm$Transaction,io.realm.Realm$Transaction$OnError)
     1492:1600:public io.realm.RealmAsyncTask executeTransactionAsync(io.realm.Realm$Transaction,io.realm.Realm$Transaction$OnSuccess,io.realm.Realm$Transaction$OnError)
-    1611:1616:public void delete(java.lang.Class)
     1626:1627:private io.realm.RealmModel createDetachedCopy(io.realm.RealmModel,int,java.util.Map)
     1647:1650:private void checkMaxDepth(int)
     1654:1663:private void checkValidObjectForDetach(io.realm.RealmModel)
@@ -8150,8 +8181,6 @@ io.realm.Realm:
     146:146:public bridge synthetic io.realm.sync.permissions.RealmPrivileges getPrivileges()
     146:146:public bridge synthetic long getVersion()
     146:146:public bridge synthetic void cancelTransaction()
-    146:146:public bridge synthetic void commitTransaction()
-    146:146:public bridge synthetic void beginTransaction()
     146:146:public bridge synthetic void stopWaitForChange()
     146:146:public bridge synthetic boolean waitForChange()
     146:146:public bridge synthetic void writeEncryptedCopyTo(java.io.File,byte[])
@@ -8168,8 +8197,6 @@ io.realm.Realm$3
 io.realm.Realm$4
 io.realm.Realm$5
 io.realm.Realm$Callback
-io.realm.Realm$Transaction:
-    public abstract void execute(io.realm.Realm)
 io.realm.Realm$Transaction$Callback
 io.realm.Realm$Transaction$OnError
 io.realm.Realm$Transaction$OnSuccess
@@ -8178,33 +8205,16 @@ io.realm.RealmAsyncTask
 io.realm.RealmCache:
     private static final java.lang.String ASYNC_NOT_ALLOWED_MSG
     private static final java.lang.String ASYNC_CALLBACK_NULL_MSG
-    private final java.lang.String realmPath
     private static final java.lang.String DIFFERENT_KEY_MESSAGE
     private static final java.lang.String WRONG_REALM_CLASS_MESSAGE
-    207:221:private RealmCache(java.lang.String)
-    224:243:private static io.realm.RealmCache getCache(java.lang.String,boolean)
     248:249:static io.realm.RealmAsyncTask createRealmOrGetFromCacheAsync(io.realm.RealmConfiguration,io.realm.BaseRealm$InstanceCallback,java.lang.Class)
     254:268:private synchronized io.realm.RealmAsyncTask doCreateRealmOrGetFromCacheAsync(io.realm.RealmConfiguration,io.realm.BaseRealm$InstanceCallback,java.lang.Class)
-    280:282:static io.realm.BaseRealm createRealmOrGetFromCache(io.realm.RealmConfiguration,java.lang.Class)
-    288:361:private synchronized io.realm.BaseRealm doCreateRealmOrGetFromCache(io.realm.RealmConfiguration,java.lang.Class)
-    425:447:private void validateConfiguration(io.realm.RealmConfiguration)
-    465:473:static void invokeWithGlobalRefCount(io.realm.RealmConfiguration,io.realm.RealmCache$Callback)
-    476:477:private synchronized void doInvokeWithGlobalRefCount(io.realm.RealmCache$Callback)
     485:486:synchronized void invokeWithLock(io.realm.RealmCache$Callback0)
-    498:524:private static void copyAssetFileIfNeeded(io.realm.RealmConfiguration)
-    527:574:private static void copyFileIfNeeded(java.lang.String,java.io.File)
     577:588:static int getLocalThreadCount(io.realm.RealmConfiguration)
-    592:592:public io.realm.RealmConfiguration getConfiguration()
-    56:56:static synthetic void access$900(java.lang.String,java.io.File)
-io.realm.RealmCache$1
-io.realm.RealmCache$Callback
 io.realm.RealmCache$Callback0
 io.realm.RealmCache$CreateRealmRunnable
 io.realm.RealmCache$CreateRealmRunnable$1
 io.realm.RealmCache$CreateRealmRunnable$2
-io.realm.RealmCache$RefAndCount:
-    66:66:synthetic RealmCache$RefAndCount(io.realm.RealmCache$1)
-    66:66:static synthetic int access$808(io.realm.RealmCache$RefAndCount)
 io.realm.RealmCollection:
     public abstract io.realm.RealmQuery where()
     public abstract java.lang.Number min(java.lang.String)
@@ -8221,22 +8231,26 @@ io.realm.RealmCollection:
 io.realm.RealmConfiguration:
     public static final java.lang.String DEFAULT_REALM_NAME
     public static final int KEY_LENGTH
-    private static java.lang.Boolean rxJavaAvailable
-    126:142:protected RealmConfiguration(java.io.File,java.lang.String,java.lang.String,java.lang.String,byte[],long,io.realm.RealmMigration,boolean,io.realm.internal.OsRealmConfig$Durability,io.realm.internal.RealmProxyMediator,io.realm.rx.RxObservableFactory,io.realm.Realm$Transaction,boolean,io.realm.CompactOnLaunchCallback,boolean)
-    145:145:public java.io.File getRealmDirectory()
-    149:149:public java.lang.String getRealmFileName()
-    161:161:public io.realm.RealmMigration getMigration()
-    188:188:io.realm.Realm$Transaction getInitialDataTransaction()
-    197:197:boolean hasAssetFile()
-    206:206:java.lang.String getAssetFilePath()
     226:226:public java.util.Set getRealmObjectClasses()
-    247:247:boolean realmExists()
     258:263:public io.realm.rx.RxObservableFactory getRxFactory()
-    345:361:protected static io.realm.internal.RealmProxyMediator createSchemaMediator(java.util.Set,java.util.Set)
-    423:431:static synchronized boolean isRxJavaAvailable()
-    437:440:protected static java.lang.String getCanonicalPath(java.io.File)
-    66:66:static synthetic java.lang.Object access$000()
-io.realm.RealmConfiguration$Builder
+io.realm.RealmConfiguration$Builder:
+    511:516:public io.realm.RealmConfiguration$Builder name(java.lang.String)
+    528:541:public io.realm.RealmConfiguration$Builder directory(java.io.File)
+    550:559:public io.realm.RealmConfiguration$Builder encryptionKey(byte[])
+    572:576:public io.realm.RealmConfiguration$Builder schemaVersion(long)
+    586:590:public io.realm.RealmConfiguration$Builder migration(io.realm.RealmMigration)
+    606:611:public io.realm.RealmConfiguration$Builder deleteRealmIfMigrationNeeded()
+    623:629:public io.realm.RealmConfiguration$Builder inMemory()
+    649:658:public varargs io.realm.RealmConfiguration$Builder modules(java.lang.Object,java.lang.Object[])
+    669:674:public final io.realm.RealmConfiguration$Builder addModule(java.lang.Object)
+    684:685:public io.realm.RealmConfiguration$Builder rxFactory(io.realm.rx.RxObservableFactory)
+    695:696:public io.realm.RealmConfiguration$Builder initialData(io.realm.Realm$Transaction)
+    714:725:public io.realm.RealmConfiguration$Builder assetFile(java.lang.String)
+    739:740:public io.realm.RealmConfiguration$Builder readOnly()
+    748:748:public io.realm.RealmConfiguration$Builder compactOnLaunch()
+    761:765:public io.realm.RealmConfiguration$Builder compactOnLaunch(io.realm.CompactOnLaunchCallback)
+    775:786:final varargs io.realm.RealmConfiguration$Builder schema(java.lang.Class,java.lang.Class[])
+    836:840:private void checkModule(java.lang.Object)
 io.realm.RealmFieldTypeConstants
 io.realm.RealmList:
     private static final java.lang.String ONLY_IN_MANAGED_MODE_MESSAGE
@@ -8279,8 +8293,6 @@ io.realm.RealmList:
     1035:1037:public void addChangeListener(io.realm.RealmChangeListener)
     1048:1050:public void removeChangeListener(io.realm.RealmChangeListener)
     1059:1061:public void removeAllChangeListeners()
-io.realm.RealmMigration:
-    public abstract void migrate(io.realm.DynamicRealm,long,long)
 io.realm.RealmModelListOperator:
     1425:1425:public boolean forRealmModel()
 io.realm.RealmObject:
@@ -8339,7 +8351,6 @@ io.realm.RealmObjectSchema:
     430:438:io.realm.RealmObjectSchema add(java.lang.String,io.realm.RealmFieldType,boolean,boolean,boolean)
     442:446:io.realm.RealmObjectSchema add(java.lang.String,io.realm.RealmFieldType,io.realm.RealmObjectSchema)
     450:454:long getAndCheckFieldIndex(java.lang.String)
-    458:458:io.realm.internal.Table getTable()
     462:462:static final java.util.Map getSupportedSimpleFields()
     466:466:protected final io.realm.SchemaConnector getSchemaConnector()
     487:487:long getFieldIndex(java.lang.String)
@@ -8348,16 +8359,133 @@ io.realm.RealmObjectSchema:
     510:518:long getColumnIndex(java.lang.String)
 io.realm.RealmObjectSchema$DynamicColumnIndices
 io.realm.RealmObjectSchema$Function
-io.realm.RealmQuery
+io.realm.RealmQuery:
+    private static final java.lang.String TYPE_MISMATCH
+    private static final java.lang.String EMPTY_VALUES
+    private static final java.lang.String ASYNC_QUERY_WRONG_THREAD_MESSAGE
+    98:98:static io.realm.RealmQuery createDynamicQuery(io.realm.DynamicRealm,java.lang.String)
+    111:113:static io.realm.RealmQuery createQueryFromResult(io.realm.RealmResults)
+    126:128:static io.realm.RealmQuery createQueryFromList(io.realm.RealmList)
+    154:171:private RealmQuery(io.realm.RealmResults,java.lang.Class)
+    173:190:private RealmQuery(io.realm.BaseRealm,io.realm.internal.OsList,java.lang.Class)
+    192:200:private RealmQuery(io.realm.BaseRealm,java.lang.String)
+    202:210:private RealmQuery(io.realm.RealmResults,java.lang.String)
+    212:220:private RealmQuery(io.realm.BaseRealm,io.realm.internal.OsList,java.lang.String)
+    229:236:public boolean isValid()
+    252:258:public io.realm.RealmQuery isNull(java.lang.String)
+    270:276:public io.realm.RealmQuery isNotNull(java.lang.String)
+    288:288:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.String)
+    301:303:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.String,io.realm.Case)
+    307:309:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.lang.String,io.realm.Case)
+    321:323:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.Byte)
+    327:333:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.lang.Byte)
+    345:353:public io.realm.RealmQuery equalTo(java.lang.String,byte[])
+    365:367:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.Short)
+    371:377:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.lang.Short)
+    389:391:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.Integer)
+    395:401:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.lang.Integer)
+    413:415:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.Long)
+    419:425:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.lang.Long)
+    437:439:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.Double)
+    443:449:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.lang.Double)
+    461:463:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.Float)
+    467:473:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.lang.Float)
+    485:487:public io.realm.RealmQuery equalTo(java.lang.String,java.lang.Boolean)
+    491:497:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.lang.Boolean)
+    509:511:public io.realm.RealmQuery equalTo(java.lang.String,java.util.Date)
+    515:517:private io.realm.RealmQuery equalToWithoutThreadValidation(java.lang.String,java.util.Date)
+    530:530:public io.realm.RealmQuery in(java.lang.String,java.lang.String[])
+    544:554:public io.realm.RealmQuery in(java.lang.String,java.lang.String[],io.realm.Case)
+    567:577:public io.realm.RealmQuery in(java.lang.String,java.lang.Byte[])
+    591:601:public io.realm.RealmQuery in(java.lang.String,java.lang.Short[])
+    615:625:public io.realm.RealmQuery in(java.lang.String,java.lang.Integer[])
+    640:650:public io.realm.RealmQuery in(java.lang.String,java.lang.Long[])
+    665:675:public io.realm.RealmQuery in(java.lang.String,java.lang.Double[])
+    689:699:public io.realm.RealmQuery in(java.lang.String,java.lang.Float[])
+    714:725:public io.realm.RealmQuery in(java.lang.String,java.lang.Boolean[])
+    739:749:public io.realm.RealmQuery in(java.lang.String,java.util.Date[])
+    762:762:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.String)
+    775:782:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.String,io.realm.Case)
+    794:802:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.Byte)
+    814:822:public io.realm.RealmQuery notEqualTo(java.lang.String,byte[])
+    834:842:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.Short)
+    854:862:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.Integer)
+    874:882:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.Long)
+    894:902:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.Double)
+    914:922:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.Float)
+    934:942:public io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.Boolean)
+    954:962:public io.realm.RealmQuery notEqualTo(java.lang.String,java.util.Date)
+    974:978:public io.realm.RealmQuery greaterThan(java.lang.String,int)
+    990:994:public io.realm.RealmQuery greaterThan(java.lang.String,long)
+    1006:1010:public io.realm.RealmQuery greaterThan(java.lang.String,double)
+    1022:1026:public io.realm.RealmQuery greaterThan(java.lang.String,float)
+    1038:1042:public io.realm.RealmQuery greaterThan(java.lang.String,java.util.Date)
+    1054:1058:public io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,int)
+    1070:1074:public io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,long)
+    1086:1090:public io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,double)
+    1102:1106:public io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,float)
+    1118:1122:public io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,java.util.Date)
+    1134:1138:public io.realm.RealmQuery lessThan(java.lang.String,int)
+    1150:1154:public io.realm.RealmQuery lessThan(java.lang.String,long)
+    1166:1170:public io.realm.RealmQuery lessThan(java.lang.String,double)
+    1182:1186:public io.realm.RealmQuery lessThan(java.lang.String,float)
+    1198:1202:public io.realm.RealmQuery lessThan(java.lang.String,java.util.Date)
+    1214:1218:public io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,int)
+    1230:1234:public io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,long)
+    1246:1250:public io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,double)
+    1262:1266:public io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,float)
+    1278:1282:public io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,java.util.Date)
+    1295:1299:public io.realm.RealmQuery between(java.lang.String,int,int)
+    1312:1316:public io.realm.RealmQuery between(java.lang.String,long,long)
+    1329:1333:public io.realm.RealmQuery between(java.lang.String,double,double)
+    1346:1350:public io.realm.RealmQuery between(java.lang.String,float,float)
+    1363:1367:public io.realm.RealmQuery between(java.lang.String,java.util.Date,java.util.Date)
+    1380:1380:public io.realm.RealmQuery contains(java.lang.String,java.lang.String)
+    1393:1397:public io.realm.RealmQuery contains(java.lang.String,java.lang.String,io.realm.Case)
+    1409:1409:public io.realm.RealmQuery beginsWith(java.lang.String,java.lang.String)
+    1422:1426:public io.realm.RealmQuery beginsWith(java.lang.String,java.lang.String,io.realm.Case)
+    1438:1438:public io.realm.RealmQuery endsWith(java.lang.String,java.lang.String)
+    1451:1455:public io.realm.RealmQuery endsWith(java.lang.String,java.lang.String,io.realm.Case)
+    1471:1471:public io.realm.RealmQuery like(java.lang.String,java.lang.String)
+    1488:1492:public io.realm.RealmQuery like(java.lang.String,java.lang.String,io.realm.Case)
+    1503:1505:public io.realm.RealmQuery beginGroup()
+    1509:1510:private io.realm.RealmQuery beginGroupWithoutThreadValidation()
+    1520:1522:public io.realm.RealmQuery endGroup()
+    1526:1527:private io.realm.RealmQuery endGroupWithoutThreadValidation()
+    1536:1538:public io.realm.RealmQuery or()
+    1542:1543:private io.realm.RealmQuery orWithoutThreadValidation()
+    1553:1554:public io.realm.RealmQuery and()
+    1563:1566:public io.realm.RealmQuery not()
+    1578:1583:public io.realm.RealmQuery isEmpty(java.lang.String)
+    1595:1600:public io.realm.RealmQuery isNotEmpty(java.lang.String)
+    1613:1624:public java.lang.Number sum(java.lang.String)
+    1640:1651:public double average(java.lang.String)
+    1667:1678:public java.lang.Number min(java.lang.String)
+    1694:1697:public java.util.Date minimumDate(java.lang.String)
+    1711:1722:public java.lang.Number max(java.lang.String)
+    1738:1741:public java.util.Date maximumDate(java.lang.String)
+    1751:1753:public long count()
+    1780:1791:public io.realm.RealmResults findAllAsync()
+    1807:1817:public io.realm.RealmResults findAllAsync(java.lang.String)
+    1831:1832:public io.realm.RealmQuery sort(java.lang.String)
+    1847:1848:public io.realm.RealmQuery sort(java.lang.String,io.realm.Sort)
+    1866:1867:public io.realm.RealmQuery sort(java.lang.String,io.realm.Sort,java.lang.String,io.realm.Sort)
+    1883:1888:public io.realm.RealmQuery sort(java.lang.String[],io.realm.Sort[])
+    1904:1904:public io.realm.RealmQuery distinct(java.lang.String)
+    1921:1933:public varargs io.realm.RealmQuery distinct(java.lang.String,java.lang.String[])
+    1940:1942:public io.realm.RealmQuery alwaysTrue()
+    1949:1951:public io.realm.RealmQuery alwaysFalse()
+    1966:1973:public io.realm.Realm getRealm()
+    1988:1997:public java.lang.Object findFirst()
+    2011:2050:public java.lang.Object findFirstAsync()
+    2080:2088:private long getSourceRowIndexForFirstObject()
+    2093:2093:private io.realm.SchemaConnector getSchemaConnector()
 io.realm.RealmQuery$1
 io.realm.RealmResults:
     66:70:static io.realm.RealmResults createBacklinkResults(io.realm.BaseRealm,io.realm.internal.Row,java.lang.Class,java.lang.String)
     76:80:static io.realm.RealmResults createDynamicBacklinkResults(io.realm.DynamicRealm,io.realm.internal.CheckedRow,io.realm.internal.Table,java.lang.String)
-    85:86:RealmResults(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.Class)
-    89:90:RealmResults(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.String)
     97:98:public io.realm.RealmQuery where()
     106:106:public io.realm.RealmResults sort(java.lang.String,io.realm.Sort,java.lang.String,io.realm.Sort)
-    133:135:public boolean load()
     172:174:public void addChangeListener(io.realm.RealmChangeListener)
     210:212:public void addChangeListener(io.realm.OrderedRealmCollectionChangeListener)
     215:220:private void checkForAddRemoveListener(java.lang.Object,boolean)
@@ -8389,9 +8517,6 @@ io.realm.RealmResults:
     61:61:public bridge synthetic boolean isValid()
 io.realm.RealmSchema:
     static final java.lang.String EMPTY_STRING_MSG
-    private final java.util.Map dynamicClassToTable
-    private final java.util.Map dynamicClassToSchema
-    48:66:RealmSchema(io.realm.BaseRealm,io.realm.internal.ColumnIndices)
     public abstract io.realm.RealmObjectSchema get(java.lang.String)
     public abstract java.util.Set getAll()
     public abstract io.realm.RealmObjectSchema create(java.lang.String)
@@ -8406,7 +8531,6 @@ io.realm.RealmSchema:
     240:241:protected final io.realm.internal.ColumnInfo getColumnInfo(java.lang.String)
     245:246:final void putToClassNameToSchemaMap(java.lang.String,io.realm.RealmObjectSchema)
     249:249:final io.realm.RealmObjectSchema removeFromClassNameToSchemaMap(java.lang.String)
-    262:269:void refresh()
 io.realm.SchemaConnector
 io.realm.StringListOperator:
     1546:1546:public boolean forRealmModel()
@@ -8431,28 +8555,19 @@ io.realm.internal.Capabilities:
 io.realm.internal.CheckedRow:
     39:40:private CheckedRow(io.realm.internal.NativeContext,io.realm.internal.Table,long)
     56:57:public static io.realm.internal.CheckedRow get(io.realm.internal.NativeContext,io.realm.internal.Table,long)
-    92:98:public void setNull(long)
     protected native void nativeSetLong(long,long,long)
     protected native void nativeSetFloat(long,long,float)
     protected native void nativeSetDouble(long,long,double)
     protected native void nativeSetTimestamp(long,long,long)
-    protected native void nativeSetString(long,long,java.lang.String)
-    protected native void nativeSetByteArray(long,long,byte[])
 io.realm.internal.ColumnIndices:
-    private final java.util.Map simpleClassNameToColumnInfoMap
-    51:71:public ColumnIndices(io.realm.internal.RealmProxyMediator,io.realm.internal.OsSchemaInfo)
     99:114:public io.realm.internal.ColumnInfo getColumnInfo(java.lang.String)
-    121:125:public void refresh()
 io.realm.internal.ColumnInfo:
     113:118:protected ColumnInfo(io.realm.internal.ColumnInfo,boolean)
     132:132:public final boolean isMutable()
     141:142:public long getColumnIndex(java.lang.String)
-    163:175:public void copyFrom(io.realm.internal.ColumnInfo)
     protected abstract io.realm.internal.ColumnInfo copy(boolean)
-    protected abstract void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo)
     267:267:public java.util.Map getIndicesMap()
 io.realm.internal.EmptyLoadChangeSet:
-    33:34:public EmptyLoadChangeSet(io.realm.internal.sync.OsSubscription,boolean,boolean)
     42:42:public io.realm.OrderedCollectionChangeSet$State getState()
     47:47:public int[] getDeletions()
     52:52:public int[] getInsertions()
@@ -8467,19 +8582,12 @@ io.realm.internal.InvalidRow:
     129:129:public void setFloat(long,float)
     134:134:public void setDouble(long,double)
     139:139:public void setDate(long,java.util.Date)
-    144:144:public void setString(long,java.lang.String)
-    149:149:public void setBinaryByteArray(long,byte[])
-    169:169:public void setNull(long)
     179:179:public void checkIfAttached()
     184:184:public boolean hasColumn(java.lang.String)
 io.realm.internal.ManagableObject
 io.realm.internal.NativeObject:
     public static final long NULLPTR
 io.realm.internal.ObjectServerFacade:
-    61:61:public void init(android.content.Context)
-    93:93:public java.lang.String getSyncServerCertificateAssetName(io.realm.RealmConfiguration)
-    97:97:public java.lang.String getSyncServerCertificateFilePath(io.realm.RealmConfiguration)
-    109:109:public void downloadRemoteChanges(io.realm.RealmConfiguration)
     115:115:public boolean wasDownloadInterrupted(java.lang.Throwable)
     119:119:public boolean isPartialRealm(io.realm.RealmConfiguration)
     124:124:public void addSupportForObjectLevelPermissions(io.realm.RealmConfiguration$Builder)
@@ -8528,15 +8636,9 @@ io.realm.internal.OsObjectStore:
     public static final long SCHEMA_NOT_VERSIONED
     26:26:public OsObjectStore()
     43:44:public static void setPrimaryKeyForObject(io.realm.internal.OsSharedRealm,java.lang.String,java.lang.String)
-    55:56:public static void setSchemaVersion(io.realm.internal.OsSharedRealm,long)
-    63:63:public static long getSchemaVersion(io.realm.internal.OsSharedRealm)
     73:73:public static boolean deleteTableForObject(io.realm.internal.OsSharedRealm,java.lang.String)
-    86:86:public static boolean callWithLock(io.realm.RealmConfiguration,java.lang.Runnable)
     private static native void nativeSetPrimaryKeyForObject(long,java.lang.String,java.lang.String)
-    private static native void nativeSetSchemaVersion(long,long)
-    private static native long nativeGetSchemaVersion(long)
     private static native boolean nativeDeleteTableForObject(long,java.lang.String)
-    private static native boolean nativeCallWithLock(java.lang.String,java.lang.Runnable)
 io.realm.internal.OsRealmConfig:
     private static final byte SCHEMA_MODE_VALUE_AUTOMATIC
     private static final byte SCHEMA_MODE_VALUE_IMMUTABLE
@@ -8547,11 +8649,6 @@ io.realm.internal.OsRealmConfig:
     private static final byte SYNCSESSION_STOP_POLICY_VALUE_IMMEDIATELY
     private static final byte SYNCSESSION_STOP_POLICY_VALUE_LIVE_INDEFINETELY
     private static final byte SYNCSESSION_STOP_POLICY_VALUE_AFTER_CHANGES_UPLOADED
-io.realm.internal.OsRealmConfig$Builder:
-    105:106:public io.realm.internal.OsRealmConfig$Builder schemaInfo(io.realm.internal.OsSchemaInfo)
-    116:117:public io.realm.internal.OsRealmConfig$Builder migrationCallback(io.realm.internal.OsSharedRealm$MigrationCallback)
-    127:128:public io.realm.internal.OsRealmConfig$Builder initializationCallback(io.realm.internal.OsSharedRealm$InitializationCallback)
-    139:140:public io.realm.internal.OsRealmConfig$Builder autoUpdateNotification(boolean)
 io.realm.internal.OsRealmConfig$SyncSessionStopPolicy
 io.realm.internal.OsResults:
     private static final java.lang.String CLOSED_REALM_MESSAGE
@@ -8565,7 +8662,6 @@ io.realm.internal.OsResults:
     public static final byte MODE_LINKVIEW
     public static final byte MODE_TABLEVIEW
     279:284:public static io.realm.internal.OsResults createForBacklinks(io.realm.internal.OsSharedRealm,io.realm.internal.UncheckedRow,io.realm.internal.Table,java.lang.String)
-    290:294:public static io.realm.internal.OsResults createFromQuery(io.realm.internal.OsSharedRealm,io.realm.internal.TableQuery,io.realm.internal.SortDescriptor,io.realm.internal.SortDescriptor)
     298:298:public static io.realm.internal.OsResults createFromQuery(io.realm.internal.OsSharedRealm,io.realm.internal.TableQuery)
     342:346:public io.realm.internal.UncheckedRow lastUncheckedRow()
     350:350:public io.realm.internal.Table getTable()
@@ -8583,8 +8679,6 @@ io.realm.internal.OsResults:
     404:409:public void addListener(java.lang.Object,io.realm.OrderedRealmCollectionChangeListener)
     412:413:public void addListener(java.lang.Object,io.realm.RealmChangeListener)
     427:429:public void removeAllListeners()
-    474:479:public void load()
-    protected static native long nativeCreateResults(long,long,io.realm.internal.SortDescriptor,io.realm.internal.SortDescriptor)
     private static native long nativeLastRow(long)
     private static native boolean nativeContains(long,long)
     private static native void nativeClear(long)
@@ -8598,12 +8692,7 @@ io.realm.internal.OsResults:
     private static native long nativeWhere(long)
     private static native long nativeIndexOf(long,long)
     private static native long nativeCreateResultsFromBacklinks(long,long,long,long)
-    private static native void nativeEvaluateQueryIfNeeded(long,boolean)
 io.realm.internal.OsResults$Aggregate
-io.realm.internal.OsSchemaInfo:
-    40:44:public OsSchemaInfo(java.util.Collection)
-    63:70:private static long[] convertObjectSchemaInfoListToNativePointerArray(java.util.Collection)
-    private static native long nativeCreateFromList(long[])
 io.realm.internal.PendingRow:
     private static final java.lang.String QUERY_NOT_RETURNED_MESSAGE
     private static final java.lang.String PROXY_NOT_SET_MESSAGE
@@ -8614,9 +8703,6 @@ io.realm.internal.PendingRow:
     158:158:public void setFloat(long,float)
     163:163:public void setDouble(long,double)
     168:168:public void setDate(long,java.util.Date)
-    173:173:public void setString(long,java.lang.String)
-    178:178:public void setBinaryByteArray(long,byte[])
-    198:198:public void setNull(long)
     208:208:public void checkIfAttached()
     213:213:public boolean hasColumn(java.lang.String)
     20:20:static synthetic void access$000(io.realm.internal.PendingRow)
@@ -8637,10 +8723,16 @@ io.realm.internal.Property:
     public static final int TYPE_REQUIRED
     public static final int TYPE_NULLABLE
     public static final int TYPE_ARRAY
-io.realm.internal.RealmCore
+io.realm.internal.RealmCore:
+    private static final java.lang.String JAVA_LIBRARY_PATH
+    33:33:public RealmCore()
+    43:44:public static boolean osIsWindows()
+    67:86:private static java.lang.String loadLibraryWindows()
+    90:97:private static varargs java.lang.String loadCorrectLibrary(java.lang.String[])
+    102:107:public static void addNativeLibraryPath(java.lang.String)
+    117:123:private static void resetLibraryPath()
 io.realm.internal.RealmObjectProxy$CacheData
 io.realm.internal.RealmProxyMediator:
-    public abstract java.util.Map getExpectedObjectSchemaInfoMap()
     public abstract void insert(io.realm.Realm,io.realm.RealmModel,java.util.Map)
     public abstract void insertOrUpdate(io.realm.Realm,io.realm.RealmModel,java.util.Map)
     public abstract void insertOrUpdate(io.realm.Realm,java.util.Collection)
@@ -8654,9 +8746,6 @@ io.realm.internal.Row:
     public abstract void setFloat(long,float)
     public abstract void setDouble(long,double)
     public abstract void setDate(long,java.util.Date)
-    public abstract void setString(long,java.lang.String)
-    public abstract void setBinaryByteArray(long,byte[])
-    public abstract void setNull(long)
     public abstract void checkIfAttached()
     public abstract boolean hasColumn(java.lang.String)
 io.realm.internal.StatefulCollectionChangeSet:
@@ -8669,10 +8758,6 @@ io.realm.internal.StatefulCollectionChangeSet:
     73:73:public io.realm.OrderedCollectionChangeSet$Range[] getChangeRanges()
     79:79:public java.lang.Throwable getError()
     84:84:public boolean isCompleteResult()
-io.realm.internal.SubscriptionAwareOsResults
-io.realm.internal.SubscriptionAwareOsResults$1
-io.realm.internal.SubscriptionAwareOsResults$2
-io.realm.internal.SubscriptionAwareOsResults$3
 io.realm.internal.Table:
     private static final int TABLE_NAME_MAX_LENGTH
     public static final long INFINITE
@@ -8695,7 +8780,6 @@ io.realm.internal.Table:
     229:233:public void convertColumnToNullable(long)
     241:245:public void convertColumnToNotNullable(long)
     265:265:public boolean isEmpty()
-    274:276:public void clear(boolean)
     329:331:public void moveLastOver(long)
     340:340:private boolean isPrimaryKey(long)
     350:350:public static void throwDuplicatePrimaryKeyException(java.lang.Object)
@@ -8714,12 +8798,8 @@ io.realm.internal.Table:
     466:468:public void setFloat(long,long,float,boolean)
     471:473:public void setDouble(long,long,double,boolean)
     476:479:public void setDate(long,long,java.util.Date,boolean)
-    489:495:public void setString(long,long,java.lang.String,boolean)
-    498:500:public void setBinaryByteArray(long,long,byte[],boolean)
-    508:510:public void setNull(long,long,boolean)
     513:515:public void addSearchIndex(long)
     518:520:public void removeSearchIndex(long)
-    535:536:public static void migratePrimaryKeyTableIfNeeded(io.realm.internal.OsSharedRealm)
     539:539:public boolean hasSearchIndex(long)
     543:543:public boolean isNullLink(long,long)
     547:548:public void nullifyLink(long,long)
@@ -8727,7 +8807,6 @@ io.realm.internal.Table:
     570:570:public long count(long,float)
     574:574:public long count(long,double)
     578:578:public long count(long,java.lang.String)
-    586:588:public io.realm.internal.TableQuery where()
     596:596:public long findFirstBoolean(long,boolean)
     600:600:public long findFirstFloat(long,float)
     604:604:public long findFirstDouble(long,double)
@@ -8744,7 +8823,6 @@ io.realm.internal.Table:
     private native boolean nativeIsColumnNullable(long,long)
     private native void nativeConvertColumnToNullable(long,long,boolean)
     private native void nativeConvertColumnToNotNullable(long,long,boolean)
-    private native void nativeClear(long,boolean)
     private native void nativeMoveLastOver(long,long)
     private native long nativeGetLong(long,long,long)
     private native boolean nativeGetBoolean(long,long,long)
@@ -8760,10 +8838,6 @@ io.realm.internal.Table:
     public static native void nativeSetFloat(long,long,long,float,boolean)
     public static native void nativeSetDouble(long,long,long,double,boolean)
     public static native void nativeSetTimestamp(long,long,long,long,boolean)
-    public static native void nativeSetString(long,long,long,java.lang.String,boolean)
-    public static native void nativeSetNull(long,long,long,boolean)
-    public static native void nativeSetByteArray(long,long,long,byte[],boolean)
-    private static native void nativeMigratePrimaryKeyTableIfNeeded(long)
     private native void nativeAddSearchIndex(long,long)
     private native void nativeRemoveSearchIndex(long,long)
     private native boolean nativeHasSearchIndex(long,long)
@@ -8773,7 +8847,6 @@ io.realm.internal.Table:
     private native long nativeCountFloat(long,long,float)
     private native long nativeCountDouble(long,long,double)
     private native long nativeCountString(long,long,java.lang.String)
-    private native long nativeWhere(long)
     private native long nativeFindFirstBool(long,long,boolean)
     private native long nativeFindFirstFloat(long,long,float)
     private native long nativeFindFirstDouble(long,long,double)
@@ -8781,16 +8854,167 @@ io.realm.internal.Table:
     public static native long nativeFindFirstNull(long,long)
     private native boolean nativeHasSameSchema(long,long)
 io.realm.internal.Table$1
-io.realm.internal.TableQuery
+io.realm.internal.TableQuery:
+    private static final boolean DEBUG
+    private static final java.lang.String DATE_NULL_ERROR_MESSAGE
+    85:87:public io.realm.internal.TableQuery group()
+    91:93:public io.realm.internal.TableQuery endGroup()
+    97:99:public io.realm.internal.TableQuery or()
+    103:105:public io.realm.internal.TableQuery not()
+    111:113:public io.realm.internal.TableQuery equalTo(long[],long[],long)
+    117:119:public io.realm.internal.TableQuery notEqualTo(long[],long[],long)
+    123:125:public io.realm.internal.TableQuery greaterThan(long[],long[],long)
+    129:131:public io.realm.internal.TableQuery greaterThanOrEqual(long[],long[],long)
+    135:137:public io.realm.internal.TableQuery lessThan(long[],long[],long)
+    141:143:public io.realm.internal.TableQuery lessThanOrEqual(long[],long[],long)
+    147:149:public io.realm.internal.TableQuery between(long[],long,long)
+    155:157:public io.realm.internal.TableQuery equalTo(long[],long[],float)
+    161:163:public io.realm.internal.TableQuery notEqualTo(long[],long[],float)
+    167:169:public io.realm.internal.TableQuery greaterThan(long[],long[],float)
+    173:175:public io.realm.internal.TableQuery greaterThanOrEqual(long[],long[],float)
+    179:181:public io.realm.internal.TableQuery lessThan(long[],long[],float)
+    185:187:public io.realm.internal.TableQuery lessThanOrEqual(long[],long[],float)
+    191:193:public io.realm.internal.TableQuery between(long[],float,float)
+    199:201:public io.realm.internal.TableQuery equalTo(long[],long[],double)
+    205:207:public io.realm.internal.TableQuery notEqualTo(long[],long[],double)
+    211:213:public io.realm.internal.TableQuery greaterThan(long[],long[],double)
+    217:219:public io.realm.internal.TableQuery greaterThanOrEqual(long[],long[],double)
+    223:225:public io.realm.internal.TableQuery lessThan(long[],long[],double)
+    229:231:public io.realm.internal.TableQuery lessThanOrEqual(long[],long[],double)
+    235:237:public io.realm.internal.TableQuery between(long[],double,double)
+    243:245:public io.realm.internal.TableQuery equalTo(long[],long[],boolean)
+    253:259:public io.realm.internal.TableQuery equalTo(long[],long[],java.util.Date)
+    264:267:public io.realm.internal.TableQuery notEqualTo(long[],long[],java.util.Date)
+    272:275:public io.realm.internal.TableQuery greaterThan(long[],long[],java.util.Date)
+    280:283:public io.realm.internal.TableQuery greaterThanOrEqual(long[],long[],java.util.Date)
+    288:291:public io.realm.internal.TableQuery lessThan(long[],long[],java.util.Date)
+    296:299:public io.realm.internal.TableQuery lessThanOrEqual(long[],long[],java.util.Date)
+    304:309:public io.realm.internal.TableQuery between(long[],java.util.Date,java.util.Date)
+    315:317:public io.realm.internal.TableQuery equalTo(long[],long[],byte[])
+    321:323:public io.realm.internal.TableQuery notEqualTo(long[],long[],byte[])
+    328:330:public io.realm.internal.TableQuery equalTo(long[],long[],java.lang.String,io.realm.Case)
+    334:336:public io.realm.internal.TableQuery equalTo(long[],long[],java.lang.String)
+    341:343:public io.realm.internal.TableQuery notEqualTo(long[],long[],java.lang.String,io.realm.Case)
+    347:349:public io.realm.internal.TableQuery notEqualTo(long[],long[],java.lang.String)
+    353:355:public io.realm.internal.TableQuery beginsWith(long[],long[],java.lang.String,io.realm.Case)
+    359:361:public io.realm.internal.TableQuery beginsWith(long[],long[],java.lang.String)
+    365:367:public io.realm.internal.TableQuery endsWith(long[],long[],java.lang.String,io.realm.Case)
+    371:373:public io.realm.internal.TableQuery endsWith(long[],long[],java.lang.String)
+    377:379:public io.realm.internal.TableQuery like(long[],long[],java.lang.String,io.realm.Case)
+    383:385:public io.realm.internal.TableQuery like(long[],long[],java.lang.String)
+    389:391:public io.realm.internal.TableQuery contains(long[],long[],java.lang.String,io.realm.Case)
+    395:397:public io.realm.internal.TableQuery contains(long[],long[],java.lang.String)
+    401:403:public io.realm.internal.TableQuery isEmpty(long[],long[])
+    407:409:public io.realm.internal.TableQuery isNotEmpty(long[],long[])
+    416:417:public long find(long)
+    424:425:public long find()
+    435:436:public long sumInt(long,long,long,long)
+    440:441:public long sumInt(long)
+    445:446:public java.lang.Long maximumInt(long,long,long,long)
+    450:451:public java.lang.Long maximumInt(long)
+    455:456:public java.lang.Long minimumInt(long,long,long,long)
+    460:461:public java.lang.Long minimumInt(long)
+    465:466:public double averageInt(long,long,long,long)
+    470:471:public double averageInt(long)
+    477:478:public double sumFloat(long,long,long,long)
+    482:483:public double sumFloat(long)
+    487:488:public java.lang.Float maximumFloat(long,long,long,long)
+    492:493:public java.lang.Float maximumFloat(long)
+    497:498:public java.lang.Float minimumFloat(long,long,long,long)
+    502:503:public java.lang.Float minimumFloat(long)
+    507:508:public double averageFloat(long,long,long,long)
+    512:513:public double averageFloat(long)
+    519:520:public double sumDouble(long,long,long,long)
+    524:525:public double sumDouble(long)
+    529:530:public java.lang.Double maximumDouble(long,long,long,long)
+    534:535:public java.lang.Double maximumDouble(long)
+    539:540:public java.lang.Double minimumDouble(long,long,long,long)
+    544:545:public java.lang.Double minimumDouble(long)
+    549:550:public double averageDouble(long,long,long,long)
+    554:555:public double averageDouble(long)
+    561:566:public java.util.Date maximumDate(long,long,long,long)
+    570:575:public java.util.Date maximumDate(long)
+    579:584:public java.util.Date minimumDate(long,long,long,long)
+    588:593:public java.util.Date minimumDate(long)
+    598:600:public io.realm.internal.TableQuery isNull(long[],long[])
+    604:606:public io.realm.internal.TableQuery isNotNull(long[],long[])
+    613:614:public long count(long,long,long)
+    618:619:public long count()
+    623:625:public long remove()
+    629:629:private void throwImmutable()
+    633:634:public void alwaysTrue()
+    637:638:public void alwaysFalse()
+    private native void nativeGroup(long)
+    private native void nativeEndGroup(long)
+    private native void nativeOr(long)
+    private native void nativeNot(long)
+    private native void nativeEqual(long,long[],long[],long)
+    private native void nativeNotEqual(long,long[],long[],long)
+    private native void nativeGreater(long,long[],long[],long)
+    private native void nativeGreaterEqual(long,long[],long[],long)
+    private native void nativeLess(long,long[],long[],long)
+    private native void nativeLessEqual(long,long[],long[],long)
+    private native void nativeBetween(long,long[],long,long)
+    private native void nativeEqual(long,long[],long[],float)
+    private native void nativeNotEqual(long,long[],long[],float)
+    private native void nativeGreater(long,long[],long[],float)
+    private native void nativeGreaterEqual(long,long[],long[],float)
+    private native void nativeLess(long,long[],long[],float)
+    private native void nativeLessEqual(long,long[],long[],float)
+    private native void nativeBetween(long,long[],float,float)
+    private native void nativeEqual(long,long[],long[],double)
+    private native void nativeNotEqual(long,long[],long[],double)
+    private native void nativeGreater(long,long[],long[],double)
+    private native void nativeGreaterEqual(long,long[],long[],double)
+    private native void nativeLess(long,long[],long[],double)
+    private native void nativeLessEqual(long,long[],long[],double)
+    private native void nativeBetween(long,long[],double,double)
+    private native void nativeEqual(long,long[],long[],boolean)
+    private native void nativeEqualTimestamp(long,long[],long[],long)
+    private native void nativeNotEqualTimestamp(long,long[],long[],long)
+    private native void nativeGreaterTimestamp(long,long[],long[],long)
+    private native void nativeGreaterEqualTimestamp(long,long[],long[],long)
+    private native void nativeLessTimestamp(long,long[],long[],long)
+    private native void nativeLessEqualTimestamp(long,long[],long[],long)
+    private native void nativeBetweenTimestamp(long,long[],long,long)
+    private native void nativeEqual(long,long[],long[],byte[])
+    private native void nativeNotEqual(long,long[],long[],byte[])
+    private native void nativeEqual(long,long[],long[],java.lang.String,boolean)
+    private native void nativeNotEqual(long,long[],long[],java.lang.String,boolean)
+    private native void nativeBeginsWith(long,long[],long[],java.lang.String,boolean)
+    private native void nativeEndsWith(long,long[],long[],java.lang.String,boolean)
+    private native void nativeLike(long,long[],long[],java.lang.String,boolean)
+    private native void nativeContains(long,long[],long[],java.lang.String,boolean)
+    private native void nativeIsEmpty(long,long[],long[])
+    private native void nativeIsNotEmpty(long,long[],long[])
+    private native void nativeAlwaysTrue(long)
+    private native void nativeAlwaysFalse(long)
+    private native long nativeFind(long,long)
+    private native long nativeFindAll(long,long,long,long)
+    private native long nativeSumInt(long,long,long,long,long)
+    private native java.lang.Long nativeMaximumInt(long,long,long,long,long)
+    private native java.lang.Long nativeMinimumInt(long,long,long,long,long)
+    private native double nativeAverageInt(long,long,long,long,long)
+    private native double nativeSumFloat(long,long,long,long,long)
+    private native java.lang.Float nativeMaximumFloat(long,long,long,long,long)
+    private native java.lang.Float nativeMinimumFloat(long,long,long,long,long)
+    private native double nativeAverageFloat(long,long,long,long,long)
+    private native double nativeSumDouble(long,long,long,long,long)
+    private native java.lang.Double nativeMaximumDouble(long,long,long,long,long)
+    private native java.lang.Double nativeMinimumDouble(long,long,long,long,long)
+    private native double nativeAverageDouble(long,long,long,long,long)
+    private native java.lang.Long nativeMaximumTimestamp(long,long,long,long,long)
+    private native java.lang.Long nativeMinimumTimestamp(long,long,long,long,long)
+    private native void nativeIsNull(long,long[],long[])
+    private native void nativeIsNotNull(long,long[],long[])
+    private native long nativeCount(long,long,long,long)
+    private native long nativeRemove(long)
 io.realm.internal.TestUtil
 io.realm.internal.UncheckedRow:
     189:191:public void setLong(long,long)
     201:203:public void setFloat(long,float)
     207:209:public void setDouble(long,double)
     213:220:public void setDate(long,java.util.Date)
-    230:236:public void setString(long,java.lang.String)
-    240:242:public void setBinaryByteArray(long,byte[])
-    268:270:public void setNull(long)
     278:278:public io.realm.internal.CheckedRow convertToChecked()
     288:291:public void checkIfAttached()
     295:295:public boolean hasColumn(java.lang.String)
@@ -8798,16 +9022,11 @@ io.realm.internal.UncheckedRow:
     protected native void nativeSetFloat(long,long,float)
     protected native void nativeSetDouble(long,long,double)
     protected native void nativeSetTimestamp(long,long,long)
-    protected native void nativeSetString(long,long,java.lang.String)
-    protected native void nativeSetByteArray(long,long,byte[])
     protected native boolean nativeHasColumn(long,java.lang.String)
-    protected native void nativeSetNull(long,long)
 io.realm.internal.Util:
     37:37:public Util()
     87:90:public static java.lang.String getStackTrace(java.lang.Throwable)
     95:102:public static boolean isEmulator()
-    106:106:public static boolean isEmptyString(java.lang.String)
-    117:148:public static boolean deleteRealm(java.lang.String,java.io.File,java.lang.String)
 io.realm.internal.android.AndroidCapabilities:
     65:65:public boolean isMainThread()
 io.realm.internal.android.ISO8601Utils
@@ -8828,27 +9047,37 @@ io.realm.internal.fields.FieldDescriptor:
     106:111:public static varargs io.realm.internal.fields.FieldDescriptor createStandardFieldDescriptor(io.realm.internal.fields.FieldDescriptor$SchemaProxy,io.realm.internal.Table,java.lang.String,io.realm.RealmFieldType[])
     177:177:public final int length()
     205:206:public final long[] getNativeTablePointers()
-io.realm.internal.modules.CompositeMediator
-io.realm.internal.modules.FilterableMediator
+io.realm.internal.modules.CompositeMediator:
+    126:128:public void insert(io.realm.Realm,io.realm.RealmModel,java.util.Map)
+    132:134:public void insert(io.realm.Realm,java.util.Collection)
+    138:140:public void insertOrUpdate(io.realm.Realm,io.realm.RealmModel,java.util.Map)
+    144:146:public void insertOrUpdate(io.realm.Realm,java.util.Collection)
+    150:151:public io.realm.RealmModel createOrUpdateUsingJsonObject(java.lang.Class,io.realm.Realm,org.json.JSONObject,boolean)
+    156:157:public io.realm.RealmModel createUsingJsonStream(java.lang.Class,io.realm.Realm,android.util.JsonReader)
+    162:163:public io.realm.RealmModel createDetachedCopy(io.realm.RealmModel,int,java.util.Map)
+io.realm.internal.modules.FilterableMediator:
+    124:126:public void insert(io.realm.Realm,io.realm.RealmModel,java.util.Map)
+    130:132:public void insert(io.realm.Realm,java.util.Collection)
+    136:138:public void insertOrUpdate(io.realm.Realm,io.realm.RealmModel,java.util.Map)
+    142:144:public void insertOrUpdate(io.realm.Realm,java.util.Collection)
+    148:149:public io.realm.RealmModel createOrUpdateUsingJsonObject(java.lang.Class,io.realm.Realm,org.json.JSONObject,boolean)
+    154:155:public io.realm.RealmModel createUsingJsonStream(java.lang.Class,io.realm.Realm,android.util.JsonReader)
+    160:161:public io.realm.RealmModel createDetachedCopy(io.realm.RealmModel,int,java.util.Map)
 io.realm.internal.modules.package-info
 io.realm.internal.package-info
 io.realm.internal.sync.OsSubscription:
-    protected final io.realm.internal.ObserverPairList observerPairs
-    74:78:public OsSubscription(io.realm.internal.OsResults,java.lang.String)
-    100:104:public void addChangeListener(io.realm.RealmChangeListener)
     107:111:public void removeChangeListener(io.realm.RealmChangeListener)
     116:117:private void notifyChangeListeners()
-    private static native long nativeCreate(long,java.lang.String)
-    private native void nativeStartListening(long)
     private native void nativeStopListening(long)
 io.realm.internal.sync.OsSubscription$1
 io.realm.internal.sync.OsSubscription$Callback
-io.realm.internal.sync.OsSubscription$SubscriptionObserverPair
-io.realm.internal.sync.SubscriptionAction
+io.realm.internal.sync.OsSubscription$SubscriptionObserverPair:
+    62:63:public void onChange(io.realm.internal.sync.OsSubscription)
+io.realm.internal.sync.SubscriptionAction:
+    27:27:public static io.realm.internal.sync.SubscriptionAction create(java.lang.String)
 io.realm.internal.util.Pair
 io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy:
     99:105:public void realmSet$name(java.lang.String)
-    177:177:public static io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo()
     185:185:public static java.lang.String getSimpleClassName()
     195:243:public static io.realm.sync.permissions.ClassPermissions createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean)
     250:286:public static io.realm.sync.permissions.ClassPermissions createUsingJsonStream(io.realm.Realm,android.util.JsonReader)
@@ -8861,12 +9090,10 @@ io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy$ClassNameHelper
 io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy$ClassPermissionsColumnInfo:
     48:50:io_realm_sync_permissions_ClassPermissionsRealmProxy$ClassPermissionsColumnInfo(io.realm.internal.ColumnInfo,boolean)
     54:54:protected final io.realm.internal.ColumnInfo copy(boolean)
-    59:63:protected final void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo)
 io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxyInterface:
     public abstract void realmSet$name(java.lang.String)
     public abstract void realmSet$permissions(io.realm.RealmList)
 io.realm.io_realm_sync_permissions_PermissionRealmProxy:
-    316:316:public static io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo()
     324:324:public static java.lang.String getSimpleClassName()
     334:398:public static io.realm.sync.permissions.Permission createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean)
     405:473:public static io.realm.sync.permissions.Permission createUsingJsonStream(io.realm.Realm,android.util.JsonReader)
@@ -8879,12 +9106,10 @@ io.realm.io_realm_sync_permissions_PermissionRealmProxy$ClassNameHelper
 io.realm.io_realm_sync_permissions_PermissionRealmProxy$PermissionColumnInfo:
     60:62:io_realm_sync_permissions_PermissionRealmProxy$PermissionColumnInfo(io.realm.internal.ColumnInfo,boolean)
     66:66:protected final io.realm.internal.ColumnInfo copy(boolean)
-    71:81:protected final void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo)
 io.realm.io_realm_sync_permissions_PermissionUserRealmProxy:
     private io.realm.RealmResults rolesBacklinks
     101:107:public void realmSet$id(java.lang.String)
     153:159:public io.realm.RealmResults realmGet$roles()
-    171:171:public static io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo()
     179:179:public static java.lang.String getSimpleClassName()
     189:233:public static io.realm.sync.permissions.PermissionUser createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean)
     240:271:public static io.realm.sync.permissions.PermissionUser createUsingJsonStream(io.realm.Realm,android.util.JsonReader)
@@ -8897,12 +9122,10 @@ io.realm.io_realm_sync_permissions_PermissionUserRealmProxy$ClassNameHelper
 io.realm.io_realm_sync_permissions_PermissionUserRealmProxy$PermissionUserColumnInfo:
     50:52:io_realm_sync_permissions_PermissionUserRealmProxy$PermissionUserColumnInfo(io.realm.internal.ColumnInfo,boolean)
     56:56:protected final io.realm.internal.ColumnInfo copy(boolean)
-    61:65:protected final void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo)
 io.realm.io_realm_sync_permissions_PermissionUserRealmProxyInterface:
     public abstract void realmSet$id(java.lang.String)
     public abstract io.realm.RealmResults realmGet$roles()
 io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy:
-    177:177:public static io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo()
     185:185:public static java.lang.String getSimpleClassName()
     195:243:public static io.realm.sync.permissions.RealmPermissions createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean)
     250:286:public static io.realm.sync.permissions.RealmPermissions createUsingJsonStream(io.realm.Realm,android.util.JsonReader)
@@ -8915,13 +9138,11 @@ io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy$ClassNameHelper
 io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy$RealmPermissionsColumnInfo:
     48:50:io_realm_sync_permissions_RealmPermissionsRealmProxy$RealmPermissionsColumnInfo(io.realm.internal.ColumnInfo,boolean)
     54:54:protected final io.realm.internal.ColumnInfo copy(boolean)
-    59:63:protected final void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo)
 io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxyInterface:
     public abstract void realmSet$id(int)
     public abstract void realmSet$permissions(io.realm.RealmList)
 io.realm.io_realm_sync_permissions_RoleRealmProxy:
     99:105:public void realmSet$name(java.lang.String)
-    177:177:public static io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo()
     185:185:public static java.lang.String getSimpleClassName()
     195:243:public static io.realm.sync.permissions.Role createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean)
     250:286:public static io.realm.sync.permissions.Role createUsingJsonStream(io.realm.Realm,android.util.JsonReader)
@@ -8934,7 +9155,6 @@ io.realm.io_realm_sync_permissions_RoleRealmProxy$ClassNameHelper
 io.realm.io_realm_sync_permissions_RoleRealmProxy$RoleColumnInfo:
     48:50:io_realm_sync_permissions_RoleRealmProxy$RoleColumnInfo(io.realm.internal.ColumnInfo,boolean)
     54:54:protected final io.realm.internal.ColumnInfo copy(boolean)
-    59:63:protected final void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo)
 io.realm.io_realm_sync_permissions_RoleRealmProxyInterface:
     public abstract void realmSet$name(java.lang.String)
     public abstract void realmSet$members(io.realm.RealmList)
@@ -8977,8 +9197,26 @@ io.realm.log.package-info
 io.realm.package-info
 io.realm.rx.CollectionChange
 io.realm.rx.ObjectChange
-io.realm.rx.RealmObservableFactory
-io.realm.rx.RealmObservableFactory$1
+io.realm.rx.RealmObservableFactory:
+    83:84:public io.reactivex.Flowable from(io.realm.Realm)
+    116:117:public io.reactivex.Flowable from(io.realm.DynamicRealm)
+    149:150:public io.reactivex.Flowable from(io.realm.Realm,io.realm.RealmResults)
+    186:187:public io.reactivex.Observable changesetsFrom(io.realm.Realm,io.realm.RealmResults)
+    222:223:public io.reactivex.Flowable from(io.realm.DynamicRealm,io.realm.RealmResults)
+    259:260:public io.reactivex.Observable changesetsFrom(io.realm.DynamicRealm,io.realm.RealmResults)
+    295:296:public io.reactivex.Flowable from(io.realm.Realm,io.realm.RealmList)
+    332:333:public io.reactivex.Observable changesetsFrom(io.realm.Realm,io.realm.RealmList)
+    368:369:public io.reactivex.Flowable from(io.realm.DynamicRealm,io.realm.RealmList)
+    405:406:public io.reactivex.Observable changesetsFrom(io.realm.DynamicRealm,io.realm.RealmList)
+    441:442:public io.reactivex.Flowable from(io.realm.Realm,io.realm.RealmModel)
+    478:479:public io.reactivex.Observable changesetsFrom(io.realm.Realm,io.realm.RealmModel)
+    514:515:public io.reactivex.Flowable from(io.realm.DynamicRealm,io.realm.DynamicRealmObject)
+    551:552:public io.reactivex.Observable changesetsFrom(io.realm.DynamicRealm,io.realm.DynamicRealmObject)
+    587:587:public io.reactivex.Single from(io.realm.Realm,io.realm.RealmQuery)
+    592:592:public io.reactivex.Single from(io.realm.DynamicRealm,io.realm.RealmQuery)
+    55:55:static synthetic java.lang.ThreadLocal access$100(io.realm.rx.RealmObservableFactory)
+    55:55:static synthetic java.lang.ThreadLocal access$200(io.realm.rx.RealmObservableFactory)
+    55:55:static synthetic java.lang.ThreadLocal access$300(io.realm.rx.RealmObservableFactory)
 io.realm.rx.RealmObservableFactory$10
 io.realm.rx.RealmObservableFactory$10$1
 io.realm.rx.RealmObservableFactory$10$2
@@ -9003,8 +9241,6 @@ io.realm.rx.RealmObservableFactory$16$2
 io.realm.rx.RealmObservableFactory$17
 io.realm.rx.RealmObservableFactory$17$1
 io.realm.rx.RealmObservableFactory$17$2
-io.realm.rx.RealmObservableFactory$2
-io.realm.rx.RealmObservableFactory$3
 io.realm.rx.RealmObservableFactory$4
 io.realm.rx.RealmObservableFactory$4$1
 io.realm.rx.RealmObservableFactory$4$2
@@ -9023,7 +9259,9 @@ io.realm.rx.RealmObservableFactory$8$2
 io.realm.rx.RealmObservableFactory$9
 io.realm.rx.RealmObservableFactory$9$1
 io.realm.rx.RealmObservableFactory$9$2
-io.realm.rx.RealmObservableFactory$StrongReferenceCounter
+io.realm.rx.RealmObservableFactory$StrongReferenceCounter:
+    612:618:public void acquireReference(java.lang.Object)
+    621:631:public void releaseReference(java.lang.Object)
 io.realm.rx.RxObservableFactory:
     public abstract io.reactivex.Flowable from(io.realm.Realm)
     public abstract io.reactivex.Flowable from(io.realm.DynamicRealm)
@@ -9042,6 +9280,32 @@ io.realm.rx.RxObservableFactory:
     public abstract io.reactivex.Single from(io.realm.Realm,io.realm.RealmQuery)
     public abstract io.reactivex.Single from(io.realm.DynamicRealm,io.realm.RealmQuery)
 io.realm.rx.package-info
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxy:
+    294:294:public static java.lang.String getSimpleClassName()
+    304:350:public static sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean)
+    357:410:public static sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel createUsingJsonStream(io.realm.Realm,android.util.JsonReader)
+    455:484:public static long insert(io.realm.Realm,sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel,java.util.Map)
+    488:525:public static void insert(io.realm.Realm,java.util.Iterator,java.util.Map)
+    528:567:public static long insertOrUpdate(io.realm.Realm,sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel,java.util.Map)
+    571:618:public static void insertOrUpdate(io.realm.Realm,java.util.Iterator,java.util.Map)
+    621:646:public static sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel createDetachedCopy(sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel,int,int,java.util.Map)
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxy$ClassNameHelper
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxy$RepositoryDbModelColumnInfo:
+    57:59:sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxy$RepositoryDbModelColumnInfo(io.realm.internal.ColumnInfo,boolean)
+    63:63:protected final io.realm.internal.ColumnInfo copy(boolean)
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxy:
+    200:200:public static java.lang.String getSimpleClassName()
+    210:235:public static sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean)
+    242:274:public static sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel createUsingJsonStream(io.realm.Realm,android.util.JsonReader)
+    316:336:public static long insert(io.realm.Realm,sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel,java.util.Map)
+    340:368:public static void insert(io.realm.Realm,java.util.Iterator,java.util.Map)
+    371:397:public static long insertOrUpdate(io.realm.Realm,sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel,java.util.Map)
+    401:435:public static void insertOrUpdate(io.realm.Realm,java.util.Iterator,java.util.Map)
+    438:460:public static sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel createDetachedCopy(sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel,int,int,java.util.Map)
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxy$ClassNameHelper
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxy$UserDbModelColumnInfo:
+    51:53:sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxy$UserDbModelColumnInfo(io.realm.internal.ColumnInfo,boolean)
+    57:57:protected final io.realm.internal.ColumnInfo copy(boolean)
 io.realm.sync.permissions.ClassPermissions:
     java.lang.Class modelClassRef
     48:69:public ClassPermissions(java.lang.Class)
@@ -9945,19 +10209,19 @@ sfedu.physics.dmitriy.githubapiresttestproject.R$styleable
 sfedu.physics.dmitriy.githubapiresttestproject.api.AccessToken
 sfedu.physics.dmitriy.githubapiresttestproject.application.Application:
     public static final java.lang.String BASE_URL
-sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository:
-    37:38:public void setName(java.lang.String)
-    45:46:public void setPrivate(boolean)
-    53:54:public void setDescription(java.lang.String)
-    61:62:public void setLanguage(java.lang.String)
-    69:70:public void setClone_url(java.lang.String)
-    77:78:public void setHtml_url(java.lang.String)
-    80:88:public Repository(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-sfedu.physics.dmitriy.githubapiresttestproject.user_model.User:
-    19:23:public User(java.lang.String,java.lang.String,java.lang.String)
-    30:31:public void setLogin(java.lang.String)
-    38:39:public void setAvatarURL(java.lang.String)
-    46:47:public void setHtmlURL(java.lang.String)
-sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse:
+sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel:
+    20:20:public java.lang.String getName()
+    24:25:public void setName(java.lang.String)
+sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository:
+    35:43:public Repository(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    50:51:public void setName(java.lang.String)
+sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User:
+    23:27:public User(java.lang.String,java.lang.String,java.lang.String)
+    42:43:public void setAvatarURL(java.lang.String)
+sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse:
     23:24:public void setUsers(java.util.List)
     31:32:public void setTotalCount(int)
+sfedu.physics.dmitriy.githubapiresttestproject.utils.BitmapUtils:
+    8:8:public BitmapUtils()
+sfedu.physics.dmitriy.githubapiresttestproject.utils.NetWorkUtils:
+    7:7:public NetWorkUtils()

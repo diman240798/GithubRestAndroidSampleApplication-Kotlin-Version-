@@ -23,6 +23,8 @@ import sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity;
 import sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User;
 import sfedu.physics.dmitriy.githubapiresttestproject.utils.BitmapUtils;
 
+import static sfedu.physics.dmitriy.githubapiresttestproject.utils.IntentConstantsUtils.*;
+
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
 
@@ -81,11 +83,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                     });
         } else {
             Bitmap bitmap = BitmapUtils.byteArrayToBitmap(dataUser.getBitmapData());
-            holder.avatarIV.setImageBitmap(bitmap);
+            if (bitmap != null)
+                holder.avatarIV.setImageBitmap(bitmap);
         }
 
 
-        if(onLoadMoreListener != null && !isLoading && !noMore && holder.getAdapterPosition() == getItemCount() - 1 && networkConnected ) {
+        if (onLoadMoreListener != null && !isLoading && !noMore && holder.getAdapterPosition() == getItemCount() - 1 && networkConnected) {
             isLoading = true;
             onLoadMoreListener.onLoadMore();
         }
@@ -118,16 +121,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                     byte[] userbitmapData = dataUser.getBitmapData();
 
                     Intent intent = new Intent(context, DetailActivity.class);
-                    intent.putExtra("login", userLogin);
-                    intent.putExtra("html_url", userHtmlURL);
-                    intent.putExtra("avatar_url", userAvatarURL);
-                    intent.putExtra("bitmap", userbitmapData);
+                    intent.putExtra(USER_LOGIN, userLogin);
+                    intent.putExtra(USER_HTML_URL, userHtmlURL);
+                    intent.putExtra(USER_AVATAR_URL, userAvatarURL);
+                    intent.putExtra(USER_BITMAP_DATA, userbitmapData);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                     Toast.makeText(context, "You Clicked " + userLogin, Toast.LENGTH_SHORT).show();
                 }
             });
-
 
 
         }

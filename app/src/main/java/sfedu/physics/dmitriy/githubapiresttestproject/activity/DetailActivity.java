@@ -19,6 +19,9 @@ import com.bumptech.glide.Glide;
 
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
 import sfedu.physics.dmitriy.githubapiresttestproject.utils.BitmapUtils;
+import sfedu.physics.dmitriy.githubapiresttestproject.utils.IntentConstantsUtils;
+
+import static sfedu.physics.dmitriy.githubapiresttestproject.utils.IntentConstantsUtils.*;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -52,17 +55,19 @@ public class DetailActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        String userName = extras.getString("login");
-        String avatarURL = extras.getString("avatar_url");
-        String linkURL = extras.getString("html_url");
-        byte[] bitmapData = extras.getByteArray("bitmap");
+        String userName = extras.getString(USER_LOGIN);
+        String avatarURL = extras.getString(USER_AVATAR_URL);
+        String linkURL = extras.getString(USER_HTML_URL);
+        byte[] bitmapData = extras.getByteArray(USER_BITMAP_DATA);
 
         detail_link.setText(linkURL);
         Linkify.addLinks(detail_link, Linkify.WEB_URLS);
 
         detail_user_nameTV.setText(userName);
 
-        boolean networkConnected = linkURL != null;
+        boolean networkConnected = avatarURL != null && !avatarURL.isEmpty();
+
+
         if (networkConnected) {
             Glide.with(this)
                     .load(avatarURL)
@@ -70,7 +75,9 @@ public class DetailActivity extends AppCompatActivity {
                     .into(detail_userIconHeaderIV);
         } else {
             Bitmap bitmap = BitmapUtils.byteArrayToBitmap(bitmapData);
-            detail_userIconHeaderIV.setImageBitmap(bitmap);
+            if (bitmap != null) {
+                detail_userIconHeaderIV.setImageBitmap(bitmap);
+            }
         }
         show_repositoriesBT.setOnClickListener(v -> {
             Intent intent = new Intent(DetailActivity.this, MvpRepositoryActivity.class);
@@ -85,7 +92,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.detail_action_share, menu);
         MenuItem menuItem = menu.findItem(R.id.action_share);
@@ -93,7 +100,7 @@ public class DetailActivity extends AppCompatActivity {
         return true;
     }
 
-    private Intent createShareForcastIntent(){
+    private Intent createShareForcastIntent() {
         String username = getIntent().getExtras().getString("login");
         String link = getIntent().getExtras().getString("html_url");
         Intent shareIntent = ShareCompat.IntentBuilder.from(this)

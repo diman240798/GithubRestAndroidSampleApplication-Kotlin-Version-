@@ -55,6 +55,10 @@ public class RepositoryAdapter extends RecyclerView.Adapter<RepositoryAdapter.Vi
         return repositories.size();
     }
 
+    public List<Repository> getRepositories() {
+        return repositories;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView repo_model_nameTV, repo_model_isPrivateTV,

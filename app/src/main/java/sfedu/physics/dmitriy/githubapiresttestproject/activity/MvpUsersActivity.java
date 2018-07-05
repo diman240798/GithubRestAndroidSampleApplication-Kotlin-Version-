@@ -1,9 +1,6 @@
 package sfedu.physics.dmitriy.githubapiresttestproject.activity;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -21,18 +18,16 @@ import android.widget.Toast;
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import io.realm.Realm;
-import io.realm.RealmResults;
 import sfedu.physics.dmitriy.githubapiresttestproject.R;
 import sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter;
-import sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel;
 import sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter;
 import sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView;
 import sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User;
 import sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse;
+import sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.UserDAO;
+import sfedu.physics.dmitriy.githubapiresttestproject.utils.NetWorkUtils;
 
 public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView {
 
@@ -40,10 +35,9 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
     @InjectPresenter
     UsersPresenter usersPresenter;
 
+
     private RecyclerView recyclerView;
-
     private SwipeRefreshLayout swipeRefreshLayout;
-
     private ProgressDialog progressDialog;
 
 
@@ -54,11 +48,11 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
     private String userLocation;
     private String userProgrammingLanguage;
 
-
+    // Some User Data
     private UserAdapter userAdapter;
     private int pageNumber = 1;
     private int pageLimit = 100;
-    private Realm realm;
+    UserDAO userDAO;
 
 
     @Override
@@ -66,24 +60,18 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
 
+        userDAO = new UserDAO();
+
         initViews();
         configureViews();
         initAndConfigureSearchViews();
-        if (networkConnected()) {
+
+        boolean networkConnected = NetWorkUtils.isNetworkConnected(this);
+        if (networkConnected) {
             usersPresenter.loadUsersByQuery();
+            userDAO.deleteAllUsers();
         } else {
-            realm = Realm.getDefaultInstance();
-
-            RealmResults<UserDbModel> userModels = realm.where(UserDbModel.class).findAll();
-
-            List<User> users = new ArrayList<>();
-            for (UserDbModel userDbModel : userModels) {
-                User user = new User();
-                user.setBitmapData(userDbModel.getBitmapData());
-                user.setHtmlURL(userDbModel.getHtmlURL());
-                user.setLogin(userDbModel.getLogin());
-                users.add(user);
-            }
+            List<User> users = userDAO.loadAllUsers();
             userAdapter = new UserAdapter(this, users);
             recyclerView.setAdapter(userAdapter);
             swipeRefreshLayout.setEnabled(false);
@@ -196,29 +184,7 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
     protected void onDestroy() {
         super.onDestroy();
         usersPresenter.check_if_disposable_is_null_or_unsubscribe();
-        cashUsersAndCloseDbConnection();
-    }
-
-    private void cashUsersAndCloseDbConnection() {
-        if (realm == null)
-            realm = Realm.getDefaultInstance();
-
-        List<User> users = userAdapter.getUsers();
-        realm.beginTransaction();
-        for (User user : users) {
-            UserDbModel userDbModel = realm.createObject(UserDbModel.class);
-            userDbModel.setLogin(user.getLogin());
-            userDbModel.setBitmapData(user.getBitmapData());
-            userDbModel.setHtmlURL(user.getHtmlURL());
-        }
-        realm.commitTransaction();
-        realm.close();
-    }
-
-    public boolean networkConnected() {
-        ConnectivityManager cm =
-                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
+        userDAO.saveUsers(userAdapter.getUsers());
+        userDAO.closeConnection();
     }
 }

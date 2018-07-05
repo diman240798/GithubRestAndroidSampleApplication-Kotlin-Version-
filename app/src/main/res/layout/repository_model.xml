@@ -9,6 +9,7 @@
     android:clickable="true"
     android:focusable="true"
     android:elevation="60dp"
+    android:background="#f9f9f9"
     android:foreground="?android:attr/selectableItemBackground"
     >
 

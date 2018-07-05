@@ -11,7 +11,7 @@ public class UsersModel {
 
     private SearchUsersServiceRxJava searchUsersServiceRxJava = Application.getRxJavaClient().create(SearchUsersServiceRxJava.class);
 
-    public String createQueryByLocationAndLanguage(String userLocation, String userProgrammingLanguage) {
+/*    public String createQueryByLocationAndLanguage(String userLocation, String userProgrammingLanguage) {
         StringBuilder query = new StringBuilder();
         if (!userLocation.isEmpty())
             query.append(String.format("location:%s+", userLocation));
@@ -19,7 +19,7 @@ public class UsersModel {
             query.append(String.format("language:%s", userProgrammingLanguage));
 
         return query.toString();
-    }
+    }*/
 
     public Observable<UserResponse> loadMoreUsers(String query, int pageNumber) {
 

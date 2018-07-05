@@ -1,4 +1,4 @@
-#Wed Jul 04 22:27:38 MSK 2018
-base.0=/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/transforms/dexMerger/debug/42
+#Thu Jul 05 22:23:27 MSK 2018
+base.0=/home/dmitriy/IdeaProjects/GithubRestAndroidSampleApplication/app/build/intermediates/transforms/dexMerger/debug/43
 path.0=classes.dex
 renamed.0=classes.dex

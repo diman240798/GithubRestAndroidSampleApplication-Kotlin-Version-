@@ -23811,7 +23811,48 @@ com.arellomobile.mvp.viewstate.strategy.AddToEndStrategy -> com.arellomobile.mvp
 com.arellomobile.mvp.viewstate.strategy.StateStrategy -> com.arellomobile.mvp.b.a.b:
     void beforeApply(java.util.List,com.arellomobile.mvp.viewstate.ViewCommand) -> a
     void afterApply(java.util.List,com.arellomobile.mvp.viewstate.ViewCommand) -> b
-com.bumptech.glide.DrawableRequestBuilder -> com.bumptech.glide.a:
+com.bumptech.glide.BitmapRequestBuilder -> com.bumptech.glide.a:
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> g
+    com.bumptech.glide.load.resource.bitmap.Downsampler downsampler -> h
+    com.bumptech.glide.load.DecodeFormat decodeFormat -> i
+    com.bumptech.glide.load.ResourceDecoder imageDecoder -> j
+    com.bumptech.glide.load.ResourceDecoder videoDecoder -> k
+    void <init>(com.bumptech.glide.provider.LoadProvider,java.lang.Class,com.bumptech.glide.GenericRequestBuilder) -> <init>
+    com.bumptech.glide.BitmapRequestBuilder decoder(com.bumptech.glide.load.ResourceDecoder) -> a
+    com.bumptech.glide.BitmapRequestBuilder transform(com.bumptech.glide.load.resource.bitmap.BitmapTransformation[]) -> a
+    com.bumptech.glide.BitmapRequestBuilder centerCrop() -> a
+    com.bumptech.glide.BitmapRequestBuilder fitCenter() -> b
+    com.bumptech.glide.BitmapRequestBuilder transform(com.bumptech.glide.load.Transformation[]) -> a
+    com.bumptech.glide.BitmapRequestBuilder placeholder(int) -> a
+    com.bumptech.glide.BitmapRequestBuilder skipMemoryCache(boolean) -> a
+    com.bumptech.glide.BitmapRequestBuilder diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy) -> a
+    com.bumptech.glide.BitmapRequestBuilder override(int,int) -> a
+    com.bumptech.glide.BitmapRequestBuilder sourceEncoder(com.bumptech.glide.load.Encoder) -> a
+    com.bumptech.glide.BitmapRequestBuilder signature(com.bumptech.glide.load.Key) -> a
+    com.bumptech.glide.BitmapRequestBuilder load(java.lang.Object) -> a
+    com.bumptech.glide.BitmapRequestBuilder clone() -> c
+    com.bumptech.glide.request.target.Target into(android.widget.ImageView) -> a
+    void applyFitCenter() -> d
+    void applyCenterCrop() -> e
+    com.bumptech.glide.GenericRequestBuilder clone() -> f
+    com.bumptech.glide.GenericRequestBuilder load(java.lang.Object) -> b
+    com.bumptech.glide.GenericRequestBuilder signature(com.bumptech.glide.load.Key) -> b
+    com.bumptech.glide.GenericRequestBuilder override(int,int) -> b
+    com.bumptech.glide.GenericRequestBuilder skipMemoryCache(boolean) -> b
+    com.bumptech.glide.GenericRequestBuilder placeholder(int) -> b
+    com.bumptech.glide.GenericRequestBuilder transform(com.bumptech.glide.load.Transformation[]) -> b
+    com.bumptech.glide.GenericRequestBuilder diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy) -> b
+    com.bumptech.glide.GenericRequestBuilder sourceEncoder(com.bumptech.glide.load.Encoder) -> b
+    com.bumptech.glide.GenericRequestBuilder decoder(com.bumptech.glide.load.ResourceDecoder) -> b
+    java.lang.Object clone() -> clone
+com.bumptech.glide.BitmapTypeRequest -> com.bumptech.glide.b:
+    com.bumptech.glide.load.model.ModelLoader streamModelLoader -> g
+    com.bumptech.glide.load.model.ModelLoader fileDescriptorModelLoader -> h
+    com.bumptech.glide.Glide glide -> i
+    com.bumptech.glide.RequestManager$OptionsApplier optionsApplier -> j
+    com.bumptech.glide.provider.FixedLoadProvider buildProvider(com.bumptech.glide.Glide,com.bumptech.glide.load.model.ModelLoader,com.bumptech.glide.load.model.ModelLoader,java.lang.Class,com.bumptech.glide.load.resource.transcode.ResourceTranscoder) -> a
+    void <init>(com.bumptech.glide.GenericRequestBuilder,com.bumptech.glide.load.model.ModelLoader,com.bumptech.glide.load.model.ModelLoader,com.bumptech.glide.RequestManager$OptionsApplier) -> <init>
+com.bumptech.glide.DrawableRequestBuilder -> com.bumptech.glide.c:
     void <init>(android.content.Context,java.lang.Class,com.bumptech.glide.provider.LoadProvider,com.bumptech.glide.Glide,com.bumptech.glide.manager.RequestTracker,com.bumptech.glide.manager.Lifecycle) -> <init>
     com.bumptech.glide.DrawableRequestBuilder decoder(com.bumptech.glide.load.ResourceDecoder) -> a
     com.bumptech.glide.DrawableRequestBuilder centerCrop() -> a
@@ -23825,11 +23866,11 @@ com.bumptech.glide.DrawableRequestBuilder -> com.bumptech.glide.a:
     com.bumptech.glide.DrawableRequestBuilder sourceEncoder(com.bumptech.glide.load.Encoder) -> a
     com.bumptech.glide.DrawableRequestBuilder signature(com.bumptech.glide.load.Key) -> a
     com.bumptech.glide.DrawableRequestBuilder load(java.lang.Object) -> a
-    com.bumptech.glide.DrawableRequestBuilder clone() -> d
+    com.bumptech.glide.DrawableRequestBuilder clone() -> g
     com.bumptech.glide.request.target.Target into(android.widget.ImageView) -> a
-    void applyFitCenter() -> e
-    void applyCenterCrop() -> f
-    com.bumptech.glide.GenericRequestBuilder clone() -> g
+    void applyFitCenter() -> d
+    void applyCenterCrop() -> e
+    com.bumptech.glide.GenericRequestBuilder clone() -> f
     com.bumptech.glide.GenericRequestBuilder load(java.lang.Object) -> b
     com.bumptech.glide.GenericRequestBuilder signature(com.bumptech.glide.load.Key) -> b
     com.bumptech.glide.GenericRequestBuilder override(int,int) -> b
@@ -23840,13 +23881,14 @@ com.bumptech.glide.DrawableRequestBuilder -> com.bumptech.glide.a:
     com.bumptech.glide.GenericRequestBuilder sourceEncoder(com.bumptech.glide.load.Encoder) -> b
     com.bumptech.glide.GenericRequestBuilder decoder(com.bumptech.glide.load.ResourceDecoder) -> b
     java.lang.Object clone() -> clone
-com.bumptech.glide.DrawableTypeRequest -> com.bumptech.glide.b:
+com.bumptech.glide.DrawableTypeRequest -> com.bumptech.glide.d:
     com.bumptech.glide.load.model.ModelLoader streamModelLoader -> g
     com.bumptech.glide.load.model.ModelLoader fileDescriptorModelLoader -> h
     com.bumptech.glide.RequestManager$OptionsApplier optionsApplier -> i
     com.bumptech.glide.provider.FixedLoadProvider buildProvider(com.bumptech.glide.Glide,com.bumptech.glide.load.model.ModelLoader,com.bumptech.glide.load.model.ModelLoader,java.lang.Class,java.lang.Class,com.bumptech.glide.load.resource.transcode.ResourceTranscoder) -> a
     void <init>(java.lang.Class,com.bumptech.glide.load.model.ModelLoader,com.bumptech.glide.load.model.ModelLoader,android.content.Context,com.bumptech.glide.Glide,com.bumptech.glide.manager.RequestTracker,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.RequestManager$OptionsApplier) -> <init>
-com.bumptech.glide.GenericRequestBuilder -> com.bumptech.glide.c:
+    com.bumptech.glide.BitmapTypeRequest asBitmap() -> h
+com.bumptech.glide.GenericRequestBuilder -> com.bumptech.glide.e:
     java.lang.Class modelClass -> a
     android.content.Context context -> b
     com.bumptech.glide.Glide glide -> c
@@ -23876,6 +23918,7 @@ com.bumptech.glide.GenericRequestBuilder -> com.bumptech.glide.c:
     boolean isThumbnailBuilt -> A
     android.graphics.drawable.Drawable fallbackDrawable -> B
     int fallbackResource -> C
+    void <init>(com.bumptech.glide.provider.LoadProvider,java.lang.Class,com.bumptech.glide.GenericRequestBuilder) -> <init>
     void <init>(android.content.Context,java.lang.Class,com.bumptech.glide.provider.LoadProvider,java.lang.Class,com.bumptech.glide.Glide,com.bumptech.glide.manager.RequestTracker,com.bumptech.glide.manager.Lifecycle) -> <init>
     com.bumptech.glide.GenericRequestBuilder decoder(com.bumptech.glide.load.ResourceDecoder) -> b
     com.bumptech.glide.GenericRequestBuilder sourceEncoder(com.bumptech.glide.load.Encoder) -> b
@@ -23887,27 +23930,27 @@ com.bumptech.glide.GenericRequestBuilder -> com.bumptech.glide.c:
     com.bumptech.glide.GenericRequestBuilder override(int,int) -> b
     com.bumptech.glide.GenericRequestBuilder signature(com.bumptech.glide.load.Key) -> b
     com.bumptech.glide.GenericRequestBuilder load(java.lang.Object) -> b
-    com.bumptech.glide.GenericRequestBuilder clone() -> g
+    com.bumptech.glide.GenericRequestBuilder clone() -> f
     com.bumptech.glide.request.target.Target into(com.bumptech.glide.request.target.Target) -> a
     com.bumptech.glide.request.target.Target into(android.widget.ImageView) -> a
-    void applyCenterCrop() -> f
-    void applyFitCenter() -> e
+    void applyCenterCrop() -> e
+    void applyFitCenter() -> d
     com.bumptech.glide.Priority getThumbnailPriority() -> a
     com.bumptech.glide.request.Request buildRequest(com.bumptech.glide.request.target.Target) -> b
     com.bumptech.glide.request.Request buildRequestRecursive(com.bumptech.glide.request.target.Target,com.bumptech.glide.request.ThumbnailRequestCoordinator) -> a
     com.bumptech.glide.request.Request obtainRequest(com.bumptech.glide.request.target.Target,float,com.bumptech.glide.Priority,com.bumptech.glide.request.RequestCoordinator) -> a
     java.lang.Object clone() -> clone
-com.bumptech.glide.GenericRequestBuilder$2 -> com.bumptech.glide.c$1:
+com.bumptech.glide.GenericRequestBuilder$2 -> com.bumptech.glide.e$1:
     int[] $SwitchMap$android$widget$ImageView$ScaleType -> a
     void <clinit>() -> <clinit>
-com.bumptech.glide.GenericTranscodeRequest -> com.bumptech.glide.d:
+com.bumptech.glide.GenericTranscodeRequest -> com.bumptech.glide.f:
     com.bumptech.glide.load.model.ModelLoader modelLoader -> g
     java.lang.Class dataClass -> h
     java.lang.Class resourceClass -> i
     com.bumptech.glide.RequestManager$OptionsApplier optionsApplier -> j
     com.bumptech.glide.provider.LoadProvider build(com.bumptech.glide.Glide,com.bumptech.glide.load.model.ModelLoader,java.lang.Class,java.lang.Class,com.bumptech.glide.load.resource.transcode.ResourceTranscoder) -> a
     void <init>(android.content.Context,com.bumptech.glide.Glide,java.lang.Class,com.bumptech.glide.load.model.ModelLoader,java.lang.Class,java.lang.Class,com.bumptech.glide.manager.RequestTracker,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.RequestManager$OptionsApplier) -> <init>
-com.bumptech.glide.Glide -> com.bumptech.glide.e:
+com.bumptech.glide.Glide -> com.bumptech.glide.g:
     com.bumptech.glide.Glide glide -> a
     com.bumptech.glide.load.model.GenericLoaderFactory loaderFactory -> b
     com.bumptech.glide.load.engine.Engine engine -> c
@@ -23930,10 +23973,13 @@ com.bumptech.glide.Glide -> com.bumptech.glide.e:
     com.bumptech.glide.provider.DataLoadProvider buildDataProvider(java.lang.Class,java.lang.Class) -> b
     com.bumptech.glide.request.target.Target buildImageViewTarget(android.widget.ImageView,java.lang.Class) -> a
     com.bumptech.glide.load.engine.Engine getEngine() -> b
-    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation getDrawableCenterCrop() -> c
-    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation getDrawableFitCenter() -> d
-    com.bumptech.glide.load.model.GenericLoaderFactory getLoaderFactory() -> f
-    void clearMemory() -> e
+    com.bumptech.glide.load.resource.bitmap.CenterCrop getBitmapCenterCrop() -> c
+    com.bumptech.glide.load.resource.bitmap.FitCenter getBitmapFitCenter() -> d
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation getDrawableCenterCrop() -> e
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation getDrawableFitCenter() -> f
+    com.bumptech.glide.load.DecodeFormat getDecodeFormat() -> g
+    com.bumptech.glide.load.model.GenericLoaderFactory getLoaderFactory() -> i
+    void clearMemory() -> h
     void trimMemory(int) -> a
     void clear(com.bumptech.glide.request.target.Target) -> a
     void register(java.lang.Class,java.lang.Class,com.bumptech.glide.load.model.ModelLoaderFactory) -> a
@@ -23942,7 +23988,7 @@ com.bumptech.glide.Glide -> com.bumptech.glide.e:
     com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context) -> b
     com.bumptech.glide.RequestManager with(android.content.Context) -> b
     com.bumptech.glide.RequestManager with(android.support.v4.app.FragmentActivity) -> a
-com.bumptech.glide.GlideBuilder -> com.bumptech.glide.f:
+com.bumptech.glide.GlideBuilder -> com.bumptech.glide.h:
     android.content.Context context -> a
     com.bumptech.glide.load.engine.Engine engine -> b
     com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> c
@@ -23953,7 +23999,7 @@ com.bumptech.glide.GlideBuilder -> com.bumptech.glide.f:
     com.bumptech.glide.load.engine.cache.DiskCache$Factory diskCacheFactory -> h
     void <init>(android.content.Context) -> <init>
     com.bumptech.glide.Glide createGlide() -> a
-com.bumptech.glide.Priority -> com.bumptech.glide.g:
+com.bumptech.glide.Priority -> com.bumptech.glide.i:
     com.bumptech.glide.Priority IMMEDIATE -> a
     com.bumptech.glide.Priority HIGH -> b
     com.bumptech.glide.Priority NORMAL -> c
@@ -23964,7 +24010,7 @@ com.bumptech.glide.Priority -> com.bumptech.glide.g:
     com.bumptech.glide.Priority valueOf(java.lang.String) -> valueOf
     void <init>(java.lang.String,int) -> <init>
     void <clinit>() -> <clinit>
-com.bumptech.glide.RequestManager -> com.bumptech.glide.h:
+com.bumptech.glide.RequestManager -> com.bumptech.glide.j:
     android.content.Context context -> a
     com.bumptech.glide.manager.Lifecycle lifecycle -> b
     com.bumptech.glide.manager.RequestManagerTreeNode treeNode -> c
@@ -23993,14 +24039,14 @@ com.bumptech.glide.RequestManager -> com.bumptech.glide.h:
     com.bumptech.glide.manager.Lifecycle access$400(com.bumptech.glide.RequestManager) -> d
     com.bumptech.glide.RequestManager$OptionsApplier access$500(com.bumptech.glide.RequestManager) -> e
     com.bumptech.glide.RequestManager$DefaultOptions access$800(com.bumptech.glide.RequestManager) -> f
-com.bumptech.glide.RequestManager$1 -> com.bumptech.glide.h$1:
+com.bumptech.glide.RequestManager$1 -> com.bumptech.glide.j$1:
     com.bumptech.glide.manager.Lifecycle val$lifecycle -> a
     com.bumptech.glide.RequestManager this$0 -> b
     void <init>(com.bumptech.glide.RequestManager,com.bumptech.glide.manager.Lifecycle) -> <init>
     void run() -> run
-com.bumptech.glide.RequestManager$DefaultOptions -> com.bumptech.glide.h$a:
+com.bumptech.glide.RequestManager$DefaultOptions -> com.bumptech.glide.j$a:
     void apply(com.bumptech.glide.GenericRequestBuilder) -> a
-com.bumptech.glide.RequestManager$GenericModelRequest -> com.bumptech.glide.h$b:
+com.bumptech.glide.RequestManager$GenericModelRequest -> com.bumptech.glide.j$b:
     com.bumptech.glide.load.model.ModelLoader modelLoader -> b
     java.lang.Class dataClass -> c
     com.bumptech.glide.RequestManager this$0 -> a
@@ -24008,18 +24054,18 @@ com.bumptech.glide.RequestManager$GenericModelRequest -> com.bumptech.glide.h$b:
     com.bumptech.glide.RequestManager$GenericModelRequest$GenericTypeRequest load(java.lang.Object) -> a
     com.bumptech.glide.load.model.ModelLoader access$600(com.bumptech.glide.RequestManager$GenericModelRequest) -> a
     java.lang.Class access$700(com.bumptech.glide.RequestManager$GenericModelRequest) -> b
-com.bumptech.glide.RequestManager$GenericModelRequest$GenericTypeRequest -> com.bumptech.glide.h$b$a:
+com.bumptech.glide.RequestManager$GenericModelRequest$GenericTypeRequest -> com.bumptech.glide.j$b$a:
     java.lang.Object model -> b
     java.lang.Class modelClass -> c
     boolean providedModel -> d
     com.bumptech.glide.RequestManager$GenericModelRequest this$1 -> a
     void <init>(com.bumptech.glide.RequestManager$GenericModelRequest,java.lang.Object) -> <init>
     com.bumptech.glide.GenericTranscodeRequest as(java.lang.Class) -> a
-com.bumptech.glide.RequestManager$OptionsApplier -> com.bumptech.glide.h$c:
+com.bumptech.glide.RequestManager$OptionsApplier -> com.bumptech.glide.j$c:
     com.bumptech.glide.RequestManager this$0 -> a
     void <init>(com.bumptech.glide.RequestManager) -> <init>
     com.bumptech.glide.GenericRequestBuilder apply(com.bumptech.glide.GenericRequestBuilder) -> a
-com.bumptech.glide.RequestManager$RequestManagerConnectivityListener -> com.bumptech.glide.h$d:
+com.bumptech.glide.RequestManager$RequestManagerConnectivityListener -> com.bumptech.glide.j$d:
     com.bumptech.glide.manager.RequestTracker requestTracker -> a
     void <init>(com.bumptech.glide.manager.RequestTracker) -> <init>
     void onConnectivityChanged(boolean) -> a
@@ -26440,7 +26486,136 @@ com.bumptech.glide.util.Util -> com.bumptech.glide.i.h:
 com.bumptech.glide.util.Util$1 -> com.bumptech.glide.i.h$1:
     int[] $SwitchMap$android$graphics$Bitmap$Config -> a
     void <clinit>() -> <clinit>
-com.google.devtools.build.android.desugar.runtime.ThrowableExtension -> com.a.a.a.a.a.a.a:
+com.getkeepsafe.relinker.ApkLibraryInstaller -> com.a.a.a:
+    void <init>() -> <init>
+    void installLibrary(android.content.Context,java.lang.String[],java.lang.String,java.io.File,com.getkeepsafe.relinker.ReLinkerInstance) -> a
+    long copy(java.io.InputStream,java.io.OutputStream) -> a
+    void closeSilently(java.io.Closeable) -> a
+com.getkeepsafe.relinker.MissingLibraryException -> com.a.a.b:
+    void <init>(java.lang.String) -> <init>
+com.getkeepsafe.relinker.ReLinker -> com.a.a.c:
+    void loadLibrary(android.content.Context,java.lang.String,java.lang.String) -> a
+    void loadLibrary(android.content.Context,java.lang.String,java.lang.String,com.getkeepsafe.relinker.ReLinker$LoadListener) -> a
+com.getkeepsafe.relinker.ReLinker$LibraryInstaller -> com.a.a.c$a:
+    void installLibrary(android.content.Context,java.lang.String[],java.lang.String,java.io.File,com.getkeepsafe.relinker.ReLinkerInstance) -> a
+com.getkeepsafe.relinker.ReLinker$LibraryLoader -> com.a.a.c$b:
+    void loadLibrary(java.lang.String) -> a
+    void loadPath(java.lang.String) -> b
+    java.lang.String mapLibraryName(java.lang.String) -> c
+    java.lang.String unmapLibraryName(java.lang.String) -> d
+    java.lang.String[] supportedAbis() -> a
+com.getkeepsafe.relinker.ReLinker$LoadListener -> com.a.a.c$c:
+    void success() -> a
+    void failure(java.lang.Throwable) -> a
+com.getkeepsafe.relinker.ReLinker$Logger -> com.a.a.c$d:
+    void log(java.lang.String) -> a
+com.getkeepsafe.relinker.ReLinkerInstance -> com.a.a.d:
+    java.util.Set loadedLibraries -> a
+    com.getkeepsafe.relinker.ReLinker$LibraryLoader libraryLoader -> b
+    com.getkeepsafe.relinker.ReLinker$LibraryInstaller libraryInstaller -> c
+    boolean force -> d
+    boolean recursive -> e
+    com.getkeepsafe.relinker.ReLinker$Logger logger -> f
+    void <init>() -> <init>
+    void <init>(com.getkeepsafe.relinker.ReLinker$LibraryLoader,com.getkeepsafe.relinker.ReLinker$LibraryInstaller) -> <init>
+    void loadLibrary(android.content.Context,java.lang.String) -> a
+    void loadLibrary(android.content.Context,java.lang.String,java.lang.String,com.getkeepsafe.relinker.ReLinker$LoadListener) -> a
+    void loadLibraryInternal(android.content.Context,java.lang.String,java.lang.String) -> c
+    java.io.File getWorkaroundLibDir(android.content.Context) -> a
+    java.io.File getWorkaroundLibFile(android.content.Context,java.lang.String,java.lang.String) -> a
+    void cleanupOldLibFiles(android.content.Context,java.lang.String,java.lang.String) -> b
+    void log(java.lang.String,java.lang.Object[]) -> a
+    void log(java.lang.String) -> a
+    void access$000(com.getkeepsafe.relinker.ReLinkerInstance,android.content.Context,java.lang.String,java.lang.String) -> a
+com.getkeepsafe.relinker.ReLinkerInstance$1 -> com.a.a.d$1:
+    android.content.Context val$context -> a
+    java.lang.String val$library -> b
+    java.lang.String val$version -> c
+    com.getkeepsafe.relinker.ReLinker$LoadListener val$listener -> d
+    com.getkeepsafe.relinker.ReLinkerInstance this$0 -> e
+    void <init>(com.getkeepsafe.relinker.ReLinkerInstance,android.content.Context,java.lang.String,java.lang.String,com.getkeepsafe.relinker.ReLinker$LoadListener) -> <init>
+    void run() -> run
+com.getkeepsafe.relinker.ReLinkerInstance$2 -> com.a.a.d$2:
+    java.lang.String val$mappedLibraryName -> a
+    com.getkeepsafe.relinker.ReLinkerInstance this$0 -> b
+    void <init>(com.getkeepsafe.relinker.ReLinkerInstance,java.lang.String) -> <init>
+    boolean accept(java.io.File,java.lang.String) -> accept
+com.getkeepsafe.relinker.SystemLibraryLoader -> com.a.a.e:
+    void <init>() -> <init>
+    void loadLibrary(java.lang.String) -> a
+    void loadPath(java.lang.String) -> b
+    java.lang.String mapLibraryName(java.lang.String) -> c
+    java.lang.String unmapLibraryName(java.lang.String) -> d
+    java.lang.String[] supportedAbis() -> a
+com.getkeepsafe.relinker.TextUtils -> com.a.a.f:
+    boolean isEmpty(java.lang.CharSequence) -> a
+com.getkeepsafe.relinker.elf.Dynamic32Structure -> com.a.a.a.a:
+    void <init>(com.getkeepsafe.relinker.elf.ElfParser,com.getkeepsafe.relinker.elf.Elf$Header,long,int) -> <init>
+com.getkeepsafe.relinker.elf.Dynamic64Structure -> com.a.a.a.b:
+    void <init>(com.getkeepsafe.relinker.elf.ElfParser,com.getkeepsafe.relinker.elf.Elf$Header,long,int) -> <init>
+com.getkeepsafe.relinker.elf.Elf -> com.a.a.a.c:
+com.getkeepsafe.relinker.elf.Elf$DynamicStructure -> com.a.a.a.c$a:
+    long tag -> a
+    long val -> b
+    void <init>() -> <init>
+com.getkeepsafe.relinker.elf.Elf$Header -> com.a.a.a.c$b:
+    boolean bigEndian -> a
+    int type -> b
+    long phoff -> c
+    long shoff -> d
+    int phentsize -> e
+    int phnum -> f
+    int shentsize -> g
+    int shnum -> h
+    int shstrndx -> i
+    void <init>() -> <init>
+    com.getkeepsafe.relinker.elf.Elf$SectionHeader getSectionHeader(int) -> a
+    com.getkeepsafe.relinker.elf.Elf$ProgramHeader getProgramHeader(long) -> a
+    com.getkeepsafe.relinker.elf.Elf$DynamicStructure getDynamicStructure(long,int) -> a
+com.getkeepsafe.relinker.elf.Elf$ProgramHeader -> com.a.a.a.c$c:
+    long type -> a
+    long offset -> b
+    long vaddr -> c
+    long memsz -> d
+    void <init>() -> <init>
+com.getkeepsafe.relinker.elf.Elf$SectionHeader -> com.a.a.a.c$d:
+    long info -> a
+    void <init>() -> <init>
+com.getkeepsafe.relinker.elf.Elf32Header -> com.a.a.a.d:
+    com.getkeepsafe.relinker.elf.ElfParser parser -> j
+    void <init>(boolean,com.getkeepsafe.relinker.elf.ElfParser) -> <init>
+    com.getkeepsafe.relinker.elf.Elf$SectionHeader getSectionHeader(int) -> a
+    com.getkeepsafe.relinker.elf.Elf$ProgramHeader getProgramHeader(long) -> a
+    com.getkeepsafe.relinker.elf.Elf$DynamicStructure getDynamicStructure(long,int) -> a
+com.getkeepsafe.relinker.elf.Elf64Header -> com.a.a.a.e:
+    com.getkeepsafe.relinker.elf.ElfParser parser -> j
+    void <init>(boolean,com.getkeepsafe.relinker.elf.ElfParser) -> <init>
+    com.getkeepsafe.relinker.elf.Elf$SectionHeader getSectionHeader(int) -> a
+    com.getkeepsafe.relinker.elf.Elf$ProgramHeader getProgramHeader(long) -> a
+    com.getkeepsafe.relinker.elf.Elf$DynamicStructure getDynamicStructure(long,int) -> a
+com.getkeepsafe.relinker.elf.ElfParser -> com.a.a.a.f:
+    int MAGIC -> a
+    java.nio.channels.FileChannel channel -> b
+    void <init>(java.io.File) -> <init>
+    com.getkeepsafe.relinker.elf.Elf$Header parseHeader() -> a
+    java.util.List parseNeededDependencies() -> b
+    long offsetFromVma(com.getkeepsafe.relinker.elf.Elf$Header,long,long) -> a
+    void close() -> close
+    java.lang.String readString(java.nio.ByteBuffer,long) -> a
+    long readLong(java.nio.ByteBuffer,long) -> b
+    long readWord(java.nio.ByteBuffer,long) -> c
+    int readHalf(java.nio.ByteBuffer,long) -> d
+    short readByte(java.nio.ByteBuffer,long) -> e
+    void read(java.nio.ByteBuffer,long,int) -> a
+com.getkeepsafe.relinker.elf.Program32Header -> com.a.a.a.g:
+    void <init>(com.getkeepsafe.relinker.elf.ElfParser,com.getkeepsafe.relinker.elf.Elf$Header,long) -> <init>
+com.getkeepsafe.relinker.elf.Program64Header -> com.a.a.a.h:
+    void <init>(com.getkeepsafe.relinker.elf.ElfParser,com.getkeepsafe.relinker.elf.Elf$Header,long) -> <init>
+com.getkeepsafe.relinker.elf.Section32Header -> com.a.a.a.i:
+    void <init>(com.getkeepsafe.relinker.elf.ElfParser,com.getkeepsafe.relinker.elf.Elf$Header,int) -> <init>
+com.getkeepsafe.relinker.elf.Section64Header -> com.a.a.a.j:
+    void <init>(com.getkeepsafe.relinker.elf.ElfParser,com.getkeepsafe.relinker.elf.Elf$Header,int) -> <init>
+com.google.devtools.build.android.desugar.runtime.ThrowableExtension -> com.b.a.a.a.a.a.a:
     com.google.devtools.build.android.desugar.runtime.ThrowableExtension$AbstractDesugaringStrategy STRATEGY -> a
     int API_LEVEL -> b
     void addSuppressed(java.lang.Throwable,java.lang.Throwable) -> a
@@ -26449,30 +26624,30 @@ com.google.devtools.build.android.desugar.runtime.ThrowableExtension -> com.a.a.
     boolean useMimicStrategy() -> a
     java.lang.Integer readApiLevelFromBuildVersion() -> b
     void <clinit>() -> <clinit>
-com.google.devtools.build.android.desugar.runtime.ThrowableExtension$AbstractDesugaringStrategy -> com.a.a.a.a.a.a.a$a:
+com.google.devtools.build.android.desugar.runtime.ThrowableExtension$AbstractDesugaringStrategy -> com.b.a.a.a.a.a.a$a:
     java.lang.Throwable[] EMPTY_THROWABLE_ARRAY -> a
     void <init>() -> <init>
     void addSuppressed(java.lang.Throwable,java.lang.Throwable) -> a
     void printStackTrace(java.lang.Throwable) -> a
     void printStackTrace(java.lang.Throwable,java.io.PrintStream) -> a
     void <clinit>() -> <clinit>
-com.google.devtools.build.android.desugar.runtime.ThrowableExtension$NullDesugaringStrategy -> com.a.a.a.a.a.a.a$b:
+com.google.devtools.build.android.desugar.runtime.ThrowableExtension$NullDesugaringStrategy -> com.b.a.a.a.a.a.a$b:
     void <init>() -> <init>
     void addSuppressed(java.lang.Throwable,java.lang.Throwable) -> a
     void printStackTrace(java.lang.Throwable) -> a
     void printStackTrace(java.lang.Throwable,java.io.PrintStream) -> a
-com.google.devtools.build.android.desugar.runtime.ThrowableExtension$ReuseDesugaringStrategy -> com.a.a.a.a.a.a.a$c:
+com.google.devtools.build.android.desugar.runtime.ThrowableExtension$ReuseDesugaringStrategy -> com.b.a.a.a.a.a.a$c:
     void <init>() -> <init>
     void addSuppressed(java.lang.Throwable,java.lang.Throwable) -> a
     void printStackTrace(java.lang.Throwable) -> a
     void printStackTrace(java.lang.Throwable,java.io.PrintStream) -> a
-com.google.gson.ExclusionStrategy -> com.a.b.a:
+com.google.gson.ExclusionStrategy -> com.b.b.a:
     boolean shouldSkipField(com.google.gson.FieldAttributes) -> a
     boolean shouldSkipClass(java.lang.Class) -> a
-com.google.gson.FieldAttributes -> com.a.b.b:
+com.google.gson.FieldAttributes -> com.b.b.b:
     java.lang.reflect.Field field -> a
     void <init>(java.lang.reflect.Field) -> <init>
-com.google.gson.FieldNamingPolicy -> com.a.b.c:
+com.google.gson.FieldNamingPolicy -> com.b.b.c:
     com.google.gson.FieldNamingPolicy IDENTITY -> a
     com.google.gson.FieldNamingPolicy UPPER_CAMEL_CASE -> b
     com.google.gson.FieldNamingPolicy UPPER_CAMEL_CASE_WITH_SPACES -> c
@@ -26487,24 +26662,24 @@ com.google.gson.FieldNamingPolicy -> com.a.b.c:
     java.lang.String modifyString(char,java.lang.String,int) -> a
     void <init>(java.lang.String,int,com.google.gson.FieldNamingPolicy$1) -> <init>
     void <clinit>() -> <clinit>
-com.google.gson.FieldNamingPolicy$1 -> com.a.b.c$1:
+com.google.gson.FieldNamingPolicy$1 -> com.b.b.c$1:
     void <init>(java.lang.String,int) -> <init>
     java.lang.String translateName(java.lang.reflect.Field) -> a
-com.google.gson.FieldNamingPolicy$2 -> com.a.b.c$2:
+com.google.gson.FieldNamingPolicy$2 -> com.b.b.c$2:
     void <init>(java.lang.String,int) -> <init>
     java.lang.String translateName(java.lang.reflect.Field) -> a
-com.google.gson.FieldNamingPolicy$3 -> com.a.b.c$3:
+com.google.gson.FieldNamingPolicy$3 -> com.b.b.c$3:
     void <init>(java.lang.String,int) -> <init>
     java.lang.String translateName(java.lang.reflect.Field) -> a
-com.google.gson.FieldNamingPolicy$4 -> com.a.b.c$4:
+com.google.gson.FieldNamingPolicy$4 -> com.b.b.c$4:
     void <init>(java.lang.String,int) -> <init>
     java.lang.String translateName(java.lang.reflect.Field) -> a
-com.google.gson.FieldNamingPolicy$5 -> com.a.b.c$5:
+com.google.gson.FieldNamingPolicy$5 -> com.b.b.c$5:
     void <init>(java.lang.String,int) -> <init>
     java.lang.String translateName(java.lang.reflect.Field) -> a
-com.google.gson.FieldNamingStrategy -> com.a.b.d:
+com.google.gson.FieldNamingStrategy -> com.b.b.d:
     java.lang.String translateName(java.lang.reflect.Field) -> a
-com.google.gson.Gson -> com.a.b.e:
+com.google.gson.Gson -> com.b.b.e:
     com.google.gson.reflect.TypeToken NULL_KEY_SURROGATE -> a
     java.lang.ThreadLocal calls -> b
     java.util.Map typeTokenCache -> c
@@ -26533,51 +26708,51 @@ com.google.gson.Gson -> com.a.b.e:
     com.google.gson.stream.JsonReader newJsonReader(java.io.Reader) -> a
     java.lang.String toString() -> toString
     void <clinit>() -> <clinit>
-com.google.gson.Gson$1 -> com.a.b.e$1:
+com.google.gson.Gson$1 -> com.b.b.e$1:
     void <init>() -> <init>
-com.google.gson.Gson$2 -> com.a.b.e$2:
+com.google.gson.Gson$2 -> com.b.b.e$2:
     com.google.gson.Gson this$0 -> a
     void <init>(com.google.gson.Gson) -> <init>
     java.lang.Double read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.Gson$3 -> com.a.b.e$3:
+com.google.gson.Gson$3 -> com.b.b.e$3:
     com.google.gson.Gson this$0 -> a
     void <init>(com.google.gson.Gson) -> <init>
     java.lang.Float read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.Gson$4 -> com.a.b.e$4:
+com.google.gson.Gson$4 -> com.b.b.e$4:
     void <init>() -> <init>
     java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.Gson$5 -> com.a.b.e$5:
+com.google.gson.Gson$5 -> com.b.b.e$5:
     com.google.gson.TypeAdapter val$longAdapter -> a
     void <init>(com.google.gson.TypeAdapter) -> <init>
     void write(com.google.gson.stream.JsonWriter,java.util.concurrent.atomic.AtomicLong) -> a
     java.util.concurrent.atomic.AtomicLong read(com.google.gson.stream.JsonReader) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.Gson$6 -> com.a.b.e$6:
+com.google.gson.Gson$6 -> com.b.b.e$6:
     com.google.gson.TypeAdapter val$longAdapter -> a
     void <init>(com.google.gson.TypeAdapter) -> <init>
     void write(com.google.gson.stream.JsonWriter,java.util.concurrent.atomic.AtomicLongArray) -> a
     java.util.concurrent.atomic.AtomicLongArray read(com.google.gson.stream.JsonReader) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.Gson$FutureTypeAdapter -> com.a.b.e$a:
+com.google.gson.Gson$FutureTypeAdapter -> com.b.b.e$a:
     com.google.gson.TypeAdapter delegate -> a
     void <init>() -> <init>
     void setDelegate(com.google.gson.TypeAdapter) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.InstanceCreator -> com.a.b.f:
+com.google.gson.InstanceCreator -> com.b.b.f:
     java.lang.Object createInstance(java.lang.reflect.Type) -> a
-com.google.gson.JsonArray -> com.a.b.g:
+com.google.gson.JsonArray -> com.b.b.g:
     java.util.List elements -> a
     void <init>() -> <init>
     void add(com.google.gson.JsonElement) -> a
@@ -26590,10 +26765,10 @@ com.google.gson.JsonArray -> com.a.b.g:
     boolean getAsBoolean() -> f
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
-com.google.gson.JsonDeserializationContext -> com.a.b.h:
-com.google.gson.JsonDeserializer -> com.a.b.i:
+com.google.gson.JsonDeserializationContext -> com.b.b.h:
+com.google.gson.JsonDeserializer -> com.b.b.i:
     java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext) -> a
-com.google.gson.JsonElement -> com.a.b.j:
+com.google.gson.JsonElement -> com.b.b.j:
     void <init>() -> <init>
     boolean isJsonArray() -> g
     boolean isJsonObject() -> h
@@ -26610,27 +26785,27 @@ com.google.gson.JsonElement -> com.a.b.j:
     long getAsLong() -> d
     int getAsInt() -> e
     java.lang.String toString() -> toString
-com.google.gson.JsonIOException -> com.a.b.k:
+com.google.gson.JsonIOException -> com.b.b.k:
     void <init>(java.lang.String) -> <init>
     void <init>(java.lang.Throwable) -> <init>
-com.google.gson.JsonNull -> com.a.b.l:
+com.google.gson.JsonNull -> com.b.b.l:
     com.google.gson.JsonNull INSTANCE -> a
     void <init>() -> <init>
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     void <clinit>() -> <clinit>
-com.google.gson.JsonObject -> com.a.b.m:
+com.google.gson.JsonObject -> com.b.b.m:
     com.google.gson.internal.LinkedTreeMap members -> a
     void <init>() -> <init>
     void add(java.lang.String,com.google.gson.JsonElement) -> a
     java.util.Set entrySet() -> o
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
-com.google.gson.JsonParseException -> com.a.b.n:
+com.google.gson.JsonParseException -> com.b.b.n:
     void <init>(java.lang.String) -> <init>
     void <init>(java.lang.String,java.lang.Throwable) -> <init>
     void <init>(java.lang.Throwable) -> <init>
-com.google.gson.JsonPrimitive -> com.a.b.o:
+com.google.gson.JsonPrimitive -> com.b.b.o:
     java.lang.Class[] PRIMITIVE_TYPES -> a
     java.lang.Object value -> b
     void <init>(java.lang.Boolean) -> <init>
@@ -26652,14 +26827,14 @@ com.google.gson.JsonPrimitive -> com.a.b.o:
     boolean equals(java.lang.Object) -> equals
     boolean isIntegral(com.google.gson.JsonPrimitive) -> a
     void <clinit>() -> <clinit>
-com.google.gson.JsonSerializationContext -> com.a.b.p:
-com.google.gson.JsonSerializer -> com.a.b.q:
+com.google.gson.JsonSerializationContext -> com.b.b.p:
+com.google.gson.JsonSerializer -> com.b.b.q:
     com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
-com.google.gson.JsonSyntaxException -> com.a.b.r:
+com.google.gson.JsonSyntaxException -> com.b.b.r:
     void <init>(java.lang.String) -> <init>
     void <init>(java.lang.String,java.lang.Throwable) -> <init>
     void <init>(java.lang.Throwable) -> <init>
-com.google.gson.LongSerializationPolicy -> com.a.b.s:
+com.google.gson.LongSerializationPolicy -> com.b.b.s:
     com.google.gson.LongSerializationPolicy DEFAULT -> a
     com.google.gson.LongSerializationPolicy STRING -> b
     com.google.gson.LongSerializationPolicy[] $VALUES -> c
@@ -26668,39 +26843,39 @@ com.google.gson.LongSerializationPolicy -> com.a.b.s:
     void <init>(java.lang.String,int) -> <init>
     void <init>(java.lang.String,int,com.google.gson.LongSerializationPolicy$1) -> <init>
     void <clinit>() -> <clinit>
-com.google.gson.LongSerializationPolicy$1 -> com.a.b.s$1:
+com.google.gson.LongSerializationPolicy$1 -> com.b.b.s$1:
     void <init>(java.lang.String,int) -> <init>
-com.google.gson.LongSerializationPolicy$2 -> com.a.b.s$2:
+com.google.gson.LongSerializationPolicy$2 -> com.b.b.s$2:
     void <init>(java.lang.String,int) -> <init>
-com.google.gson.TypeAdapter -> com.a.b.t:
+com.google.gson.TypeAdapter -> com.b.b.t:
     void <init>() -> <init>
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     com.google.gson.TypeAdapter nullSafe() -> a
     com.google.gson.JsonElement toJsonTree(java.lang.Object) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
-com.google.gson.TypeAdapter$1 -> com.a.b.t$1:
+com.google.gson.TypeAdapter$1 -> com.b.b.t$1:
     com.google.gson.TypeAdapter this$0 -> a
     void <init>(com.google.gson.TypeAdapter) -> <init>
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
-com.google.gson.TypeAdapterFactory -> com.a.b.u:
+com.google.gson.TypeAdapterFactory -> com.b.b.u:
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.annotations.Expose -> com.a.b.a.a:
+com.google.gson.annotations.Expose -> com.b.b.a.a:
     boolean serialize() -> a
     boolean deserialize() -> b
-com.google.gson.annotations.JsonAdapter -> com.a.b.a.b:
+com.google.gson.annotations.JsonAdapter -> com.b.b.a.b:
     java.lang.Class value() -> a
-com.google.gson.annotations.SerializedName -> com.a.b.a.c:
+com.google.gson.annotations.SerializedName -> com.b.b.a.c:
     java.lang.String value() -> a
     java.lang.String[] alternate() -> b
-com.google.gson.annotations.Since -> com.a.b.a.d:
+com.google.gson.annotations.Since -> com.b.b.a.d:
     double value() -> a
-com.google.gson.annotations.Until -> com.a.b.a.e:
+com.google.gson.annotations.Until -> com.b.b.a.e:
     double value() -> a
-com.google.gson.internal.$Gson$Preconditions -> com.a.b.b.a:
+com.google.gson.internal.$Gson$Preconditions -> com.b.b.b.a:
     java.lang.Object checkNotNull(java.lang.Object) -> a
     void checkArgument(boolean) -> a
-com.google.gson.internal.$Gson$Types -> com.a.b.b.b:
+com.google.gson.internal.$Gson$Types -> com.b.b.b.b:
     java.lang.reflect.Type[] EMPTY_TYPE_ARRAY -> a
     java.lang.reflect.ParameterizedType newParameterizedTypeWithOwner(java.lang.reflect.Type,java.lang.reflect.Type,java.lang.reflect.Type[]) -> a
     java.lang.reflect.GenericArrayType arrayOf(java.lang.reflect.Type) -> a
@@ -26723,14 +26898,14 @@ com.google.gson.internal.$Gson$Types -> com.a.b.b.b:
     java.lang.Class declaringClassOf(java.lang.reflect.TypeVariable) -> a
     void checkNotPrimitive(java.lang.reflect.Type) -> h
     void <clinit>() -> <clinit>
-com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl -> com.a.b.b.b$a:
+com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl -> com.b.b.b.b$a:
     java.lang.reflect.Type componentType -> a
     void <init>(java.lang.reflect.Type) -> <init>
     java.lang.reflect.Type getGenericComponentType() -> getGenericComponentType
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     java.lang.String toString() -> toString
-com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl -> com.a.b.b.b$b:
+com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl -> com.b.b.b.b$b:
     java.lang.reflect.Type ownerType -> a
     java.lang.reflect.Type rawType -> b
     java.lang.reflect.Type[] typeArguments -> c
@@ -26741,7 +26916,7 @@ com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl -> com.a.b.b.b$b:
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     java.lang.String toString() -> toString
-com.google.gson.internal.$Gson$Types$WildcardTypeImpl -> com.a.b.b.b$c:
+com.google.gson.internal.$Gson$Types$WildcardTypeImpl -> com.b.b.b.b$c:
     java.lang.reflect.Type upperBound -> a
     java.lang.reflect.Type lowerBound -> b
     void <init>(java.lang.reflect.Type[],java.lang.reflect.Type[]) -> <init>
@@ -26750,7 +26925,7 @@ com.google.gson.internal.$Gson$Types$WildcardTypeImpl -> com.a.b.b.b$c:
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     java.lang.String toString() -> toString
-com.google.gson.internal.ConstructorConstructor -> com.a.b.b.c:
+com.google.gson.internal.ConstructorConstructor -> com.b.b.b.c:
     java.util.Map instanceCreators -> a
     void <init>(java.util.Map) -> <init>
     com.google.gson.internal.ObjectConstructor get(com.google.gson.reflect.TypeToken) -> a
@@ -26758,72 +26933,72 @@ com.google.gson.internal.ConstructorConstructor -> com.a.b.b.c:
     com.google.gson.internal.ObjectConstructor newDefaultImplementationConstructor(java.lang.reflect.Type,java.lang.Class) -> a
     com.google.gson.internal.ObjectConstructor newUnsafeAllocator(java.lang.reflect.Type,java.lang.Class) -> b
     java.lang.String toString() -> toString
-com.google.gson.internal.ConstructorConstructor$1 -> com.a.b.b.c$1:
+com.google.gson.internal.ConstructorConstructor$1 -> com.b.b.b.c$1:
     com.google.gson.InstanceCreator val$typeCreator -> a
     java.lang.reflect.Type val$type -> b
     com.google.gson.internal.ConstructorConstructor this$0 -> c
     void <init>(com.google.gson.internal.ConstructorConstructor,com.google.gson.InstanceCreator,java.lang.reflect.Type) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$10 -> com.a.b.b.c$2:
+com.google.gson.internal.ConstructorConstructor$10 -> com.b.b.b.c$2:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$11 -> com.a.b.b.c$3:
+com.google.gson.internal.ConstructorConstructor$11 -> com.b.b.b.c$3:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$12 -> com.a.b.b.c$4:
+com.google.gson.internal.ConstructorConstructor$12 -> com.b.b.b.c$4:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$13 -> com.a.b.b.c$5:
+com.google.gson.internal.ConstructorConstructor$13 -> com.b.b.b.c$5:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$14 -> com.a.b.b.c$6:
+com.google.gson.internal.ConstructorConstructor$14 -> com.b.b.b.c$6:
     com.google.gson.internal.UnsafeAllocator unsafeAllocator -> d
     java.lang.Class val$rawType -> a
     java.lang.reflect.Type val$type -> b
     com.google.gson.internal.ConstructorConstructor this$0 -> c
     void <init>(com.google.gson.internal.ConstructorConstructor,java.lang.Class,java.lang.reflect.Type) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$2 -> com.a.b.b.c$7:
+com.google.gson.internal.ConstructorConstructor$2 -> com.b.b.b.c$7:
     com.google.gson.InstanceCreator val$rawTypeCreator -> a
     java.lang.reflect.Type val$type -> b
     com.google.gson.internal.ConstructorConstructor this$0 -> c
     void <init>(com.google.gson.internal.ConstructorConstructor,com.google.gson.InstanceCreator,java.lang.reflect.Type) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$3 -> com.a.b.b.c$8:
+com.google.gson.internal.ConstructorConstructor$3 -> com.b.b.b.c$8:
     java.lang.reflect.Constructor val$constructor -> a
     com.google.gson.internal.ConstructorConstructor this$0 -> b
     void <init>(com.google.gson.internal.ConstructorConstructor,java.lang.reflect.Constructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$4 -> com.a.b.b.c$9:
+com.google.gson.internal.ConstructorConstructor$4 -> com.b.b.b.c$9:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$5 -> com.a.b.b.c$10:
+com.google.gson.internal.ConstructorConstructor$5 -> com.b.b.b.c$10:
     java.lang.reflect.Type val$type -> a
     com.google.gson.internal.ConstructorConstructor this$0 -> b
     void <init>(com.google.gson.internal.ConstructorConstructor,java.lang.reflect.Type) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$6 -> com.a.b.b.c$11:
+com.google.gson.internal.ConstructorConstructor$6 -> com.b.b.b.c$11:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$7 -> com.a.b.b.c$12:
+com.google.gson.internal.ConstructorConstructor$7 -> com.b.b.b.c$12:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$8 -> com.a.b.b.c$13:
+com.google.gson.internal.ConstructorConstructor$8 -> com.b.b.b.c$13:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.ConstructorConstructor$9 -> com.a.b.b.c$14:
+com.google.gson.internal.ConstructorConstructor$9 -> com.b.b.b.c$14:
     com.google.gson.internal.ConstructorConstructor this$0 -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     java.lang.Object construct() -> a
-com.google.gson.internal.Excluder -> com.a.b.b.d:
+com.google.gson.internal.Excluder -> com.b.b.b.d:
     com.google.gson.internal.Excluder DEFAULT -> a
     double version -> b
     int modifiers -> c
@@ -26844,7 +27019,7 @@ com.google.gson.internal.Excluder -> com.a.b.b.d:
     boolean isValidUntil(com.google.gson.annotations.Until) -> a
     java.lang.Object clone() -> clone
     void <clinit>() -> <clinit>
-com.google.gson.internal.Excluder$1 -> com.a.b.b.d$1:
+com.google.gson.internal.Excluder$1 -> com.b.b.b.d$1:
     com.google.gson.TypeAdapter delegate -> f
     boolean val$skipDeserialize -> a
     boolean val$skipSerialize -> b
@@ -26855,11 +27030,11 @@ com.google.gson.internal.Excluder$1 -> com.a.b.b.d$1:
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     com.google.gson.TypeAdapter delegate() -> b
-com.google.gson.internal.JsonReaderInternalAccess -> com.a.b.b.e:
+com.google.gson.internal.JsonReaderInternalAccess -> com.b.b.b.e:
     com.google.gson.internal.JsonReaderInternalAccess INSTANCE -> a
     void <init>() -> <init>
     void promoteNameToValue(com.google.gson.stream.JsonReader) -> a
-com.google.gson.internal.LazilyParsedNumber -> com.a.b.b.f:
+com.google.gson.internal.LazilyParsedNumber -> com.b.b.b.f:
     java.lang.String value -> a
     void <init>(java.lang.String) -> <init>
     int intValue() -> intValue
@@ -26869,7 +27044,7 @@ com.google.gson.internal.LazilyParsedNumber -> com.a.b.b.f:
     java.lang.String toString() -> toString
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
-com.google.gson.internal.LinkedTreeMap -> com.a.b.b.g:
+com.google.gson.internal.LinkedTreeMap -> com.b.b.b.g:
     java.util.Comparator NATURAL_ORDER -> g
     java.util.Comparator comparator -> a
     com.google.gson.internal.LinkedTreeMap$Node root -> b
@@ -26900,11 +27075,11 @@ com.google.gson.internal.LinkedTreeMap -> com.a.b.b.g:
     java.util.Set entrySet() -> entrySet
     java.util.Set keySet() -> keySet
     void <clinit>() -> <clinit>
-com.google.gson.internal.LinkedTreeMap$1 -> com.a.b.b.g$1:
+com.google.gson.internal.LinkedTreeMap$1 -> com.b.b.b.g$1:
     void <init>() -> <init>
     int compare(java.lang.Comparable,java.lang.Comparable) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-com.google.gson.internal.LinkedTreeMap$EntrySet -> com.a.b.b.g$a:
+com.google.gson.internal.LinkedTreeMap$EntrySet -> com.b.b.b.g$a:
     com.google.gson.internal.LinkedTreeMap this$0 -> a
     void <init>(com.google.gson.internal.LinkedTreeMap) -> <init>
     int size() -> size
@@ -26912,12 +27087,12 @@ com.google.gson.internal.LinkedTreeMap$EntrySet -> com.a.b.b.g$a:
     boolean contains(java.lang.Object) -> contains
     boolean remove(java.lang.Object) -> remove
     void clear() -> clear
-com.google.gson.internal.LinkedTreeMap$EntrySet$1 -> com.a.b.b.g$a$1:
+com.google.gson.internal.LinkedTreeMap$EntrySet$1 -> com.b.b.b.g$a$1:
     com.google.gson.internal.LinkedTreeMap$EntrySet this$1 -> a
     void <init>(com.google.gson.internal.LinkedTreeMap$EntrySet) -> <init>
     java.util.Map$Entry next() -> a
     java.lang.Object next() -> next
-com.google.gson.internal.LinkedTreeMap$KeySet -> com.a.b.b.g$b:
+com.google.gson.internal.LinkedTreeMap$KeySet -> com.b.b.b.g$b:
     com.google.gson.internal.LinkedTreeMap this$0 -> a
     void <init>(com.google.gson.internal.LinkedTreeMap) -> <init>
     int size() -> size
@@ -26925,11 +27100,11 @@ com.google.gson.internal.LinkedTreeMap$KeySet -> com.a.b.b.g$b:
     boolean contains(java.lang.Object) -> contains
     boolean remove(java.lang.Object) -> remove
     void clear() -> clear
-com.google.gson.internal.LinkedTreeMap$KeySet$1 -> com.a.b.b.g$b$1:
+com.google.gson.internal.LinkedTreeMap$KeySet$1 -> com.b.b.b.g$b$1:
     com.google.gson.internal.LinkedTreeMap$KeySet this$1 -> a
     void <init>(com.google.gson.internal.LinkedTreeMap$KeySet) -> <init>
     java.lang.Object next() -> next
-com.google.gson.internal.LinkedTreeMap$LinkedTreeMapIterator -> com.a.b.b.g$c:
+com.google.gson.internal.LinkedTreeMap$LinkedTreeMapIterator -> com.b.b.b.g$c:
     com.google.gson.internal.LinkedTreeMap$Node next -> b
     com.google.gson.internal.LinkedTreeMap$Node lastReturned -> c
     int expectedModCount -> d
@@ -26938,7 +27113,7 @@ com.google.gson.internal.LinkedTreeMap$LinkedTreeMapIterator -> com.a.b.b.g$c:
     boolean hasNext() -> hasNext
     com.google.gson.internal.LinkedTreeMap$Node nextNode() -> b
     void remove() -> remove
-com.google.gson.internal.LinkedTreeMap$Node -> com.a.b.b.g$d:
+com.google.gson.internal.LinkedTreeMap$Node -> com.b.b.b.g$d:
     com.google.gson.internal.LinkedTreeMap$Node parent -> a
     com.google.gson.internal.LinkedTreeMap$Node left -> b
     com.google.gson.internal.LinkedTreeMap$Node right -> c
@@ -26957,41 +27132,41 @@ com.google.gson.internal.LinkedTreeMap$Node -> com.a.b.b.g$d:
     java.lang.String toString() -> toString
     com.google.gson.internal.LinkedTreeMap$Node first() -> a
     com.google.gson.internal.LinkedTreeMap$Node last() -> b
-com.google.gson.internal.ObjectConstructor -> com.a.b.b.h:
+com.google.gson.internal.ObjectConstructor -> com.b.b.b.h:
     java.lang.Object construct() -> a
-com.google.gson.internal.Primitives -> com.a.b.b.i:
+com.google.gson.internal.Primitives -> com.b.b.b.i:
     java.util.Map PRIMITIVE_TO_WRAPPER_TYPE -> a
     java.util.Map WRAPPER_TO_PRIMITIVE_TYPE -> b
     void add(java.util.Map,java.util.Map,java.lang.Class,java.lang.Class) -> a
     boolean isPrimitive(java.lang.reflect.Type) -> a
     void <clinit>() -> <clinit>
-com.google.gson.internal.Streams -> com.a.b.b.j:
+com.google.gson.internal.Streams -> com.b.b.b.j:
     com.google.gson.JsonElement parse(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.JsonElement,com.google.gson.stream.JsonWriter) -> a
-com.google.gson.internal.UnsafeAllocator -> com.a.b.b.k:
+com.google.gson.internal.UnsafeAllocator -> com.b.b.b.k:
     void <init>() -> <init>
     java.lang.Object newInstance(java.lang.Class) -> a
     com.google.gson.internal.UnsafeAllocator create() -> a
     void assertInstantiable(java.lang.Class) -> c
     void access$000(java.lang.Class) -> b
-com.google.gson.internal.UnsafeAllocator$1 -> com.a.b.b.k$1:
+com.google.gson.internal.UnsafeAllocator$1 -> com.b.b.b.k$1:
     java.lang.reflect.Method val$allocateInstance -> a
     java.lang.Object val$unsafe -> b
     void <init>(java.lang.reflect.Method,java.lang.Object) -> <init>
     java.lang.Object newInstance(java.lang.Class) -> a
-com.google.gson.internal.UnsafeAllocator$2 -> com.a.b.b.k$2:
+com.google.gson.internal.UnsafeAllocator$2 -> com.b.b.b.k$2:
     java.lang.reflect.Method val$newInstance -> a
     int val$constructorId -> b
     void <init>(java.lang.reflect.Method,int) -> <init>
     java.lang.Object newInstance(java.lang.Class) -> a
-com.google.gson.internal.UnsafeAllocator$3 -> com.a.b.b.k$3:
+com.google.gson.internal.UnsafeAllocator$3 -> com.b.b.b.k$3:
     java.lang.reflect.Method val$newInstance -> a
     void <init>(java.lang.reflect.Method) -> <init>
     java.lang.Object newInstance(java.lang.Class) -> a
-com.google.gson.internal.UnsafeAllocator$4 -> com.a.b.b.k$4:
+com.google.gson.internal.UnsafeAllocator$4 -> com.b.b.b.k$4:
     void <init>() -> <init>
     java.lang.Object newInstance(java.lang.Class) -> a
-com.google.gson.internal.bind.ArrayTypeAdapter -> com.a.b.b.a.a:
+com.google.gson.internal.bind.ArrayTypeAdapter -> com.b.b.b.a.a:
     com.google.gson.TypeAdapterFactory FACTORY -> a
     java.lang.Class componentType -> b
     com.google.gson.TypeAdapter componentTypeAdapter -> c
@@ -26999,14 +27174,14 @@ com.google.gson.internal.bind.ArrayTypeAdapter -> com.a.b.b.a.a:
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.ArrayTypeAdapter$1 -> com.a.b.b.a.a$1:
+com.google.gson.internal.bind.ArrayTypeAdapter$1 -> com.b.b.b.a.a$1:
     void <init>() -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.internal.bind.CollectionTypeAdapterFactory -> com.a.b.b.a.b:
+com.google.gson.internal.bind.CollectionTypeAdapterFactory -> com.b.b.b.a.b:
     com.google.gson.internal.ConstructorConstructor constructorConstructor -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter -> com.a.b.b.a.b$a:
+com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter -> com.b.b.b.a.b$a:
     com.google.gson.TypeAdapter elementTypeAdapter -> a
     com.google.gson.internal.ObjectConstructor constructor -> b
     void <init>(com.google.gson.Gson,java.lang.reflect.Type,com.google.gson.TypeAdapter,com.google.gson.internal.ObjectConstructor) -> <init>
@@ -27014,7 +27189,7 @@ com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter -> com.a.b.b.
     void write(com.google.gson.stream.JsonWriter,java.util.Collection) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.DateTypeAdapter -> com.a.b.b.a.c:
+com.google.gson.internal.bind.DateTypeAdapter -> com.b.b.b.a.c:
     com.google.gson.TypeAdapterFactory FACTORY -> a
     java.text.DateFormat enUsFormat -> b
     java.text.DateFormat localFormat -> c
@@ -27025,15 +27200,15 @@ com.google.gson.internal.bind.DateTypeAdapter -> com.a.b.b.a.c:
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.DateTypeAdapter$1 -> com.a.b.b.a.c$1:
+com.google.gson.internal.bind.DateTypeAdapter$1 -> com.b.b.b.a.c$1:
     void <init>() -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory -> com.a.b.b.a.d:
+com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory -> com.b.b.b.a.d:
     com.google.gson.internal.ConstructorConstructor constructorConstructor -> a
     void <init>(com.google.gson.internal.ConstructorConstructor) -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
     com.google.gson.TypeAdapter getTypeAdapter(com.google.gson.internal.ConstructorConstructor,com.google.gson.Gson,com.google.gson.reflect.TypeToken,com.google.gson.annotations.JsonAdapter) -> a
-com.google.gson.internal.bind.JsonTreeReader -> com.a.b.b.a.e:
+com.google.gson.internal.bind.JsonTreeReader -> com.b.b.b.a.e:
     java.io.Reader UNREADABLE_READER -> b
     java.lang.Object SENTINEL_CLOSED -> c
     java.lang.Object[] stack -> d
@@ -27064,11 +27239,11 @@ com.google.gson.internal.bind.JsonTreeReader -> com.a.b.b.a.e:
     java.lang.String getPath() -> p
     java.lang.String locationString() -> u
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.JsonTreeReader$1 -> com.a.b.b.a.e$1:
+com.google.gson.internal.bind.JsonTreeReader$1 -> com.b.b.b.a.e$1:
     void <init>() -> <init>
     int read(char[],int,int) -> read
     void close() -> close
-com.google.gson.internal.bind.JsonTreeWriter -> com.a.b.b.a.f:
+com.google.gson.internal.bind.JsonTreeWriter -> com.b.b.b.a.f:
     java.io.Writer UNWRITABLE_WRITER -> a
     com.google.gson.JsonPrimitive SENTINEL_CLOSED -> b
     java.util.List stack -> c
@@ -27092,18 +27267,18 @@ com.google.gson.internal.bind.JsonTreeWriter -> com.a.b.b.a.f:
     void flush() -> flush
     void close() -> close
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.JsonTreeWriter$1 -> com.a.b.b.a.f$1:
+com.google.gson.internal.bind.JsonTreeWriter$1 -> com.b.b.b.a.f$1:
     void <init>() -> <init>
     void write(char[],int,int) -> write
     void flush() -> flush
     void close() -> close
-com.google.gson.internal.bind.MapTypeAdapterFactory -> com.a.b.b.a.g:
+com.google.gson.internal.bind.MapTypeAdapterFactory -> com.b.b.b.a.g:
     com.google.gson.internal.ConstructorConstructor constructorConstructor -> b
     boolean complexMapKeySerialization -> a
     void <init>(com.google.gson.internal.ConstructorConstructor,boolean) -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
     com.google.gson.TypeAdapter getKeyAdapter(com.google.gson.Gson,java.lang.reflect.Type) -> a
-com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter -> com.a.b.b.a.g$a:
+com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter -> com.b.b.b.a.g$a:
     com.google.gson.TypeAdapter keyTypeAdapter -> b
     com.google.gson.TypeAdapter valueTypeAdapter -> c
     com.google.gson.internal.ObjectConstructor constructor -> d
@@ -27114,20 +27289,20 @@ com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter -> com.a.b.b.a.g$a:
     java.lang.String keyToString(com.google.gson.JsonElement) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.ObjectTypeAdapter -> com.a.b.b.a.h:
+com.google.gson.internal.bind.ObjectTypeAdapter -> com.b.b.b.a.h:
     com.google.gson.TypeAdapterFactory FACTORY -> a
     com.google.gson.Gson gson -> b
     void <init>(com.google.gson.Gson) -> <init>
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.ObjectTypeAdapter$1 -> com.a.b.b.a.h$1:
+com.google.gson.internal.bind.ObjectTypeAdapter$1 -> com.b.b.b.a.h$1:
     void <init>() -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.internal.bind.ObjectTypeAdapter$2 -> com.a.b.b.a.h$2:
+com.google.gson.internal.bind.ObjectTypeAdapter$2 -> com.b.b.b.a.h$2:
     int[] $SwitchMap$com$google$gson$stream$JsonToken -> a
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.ReflectiveTypeAdapterFactory -> com.a.b.b.a.i:
+com.google.gson.internal.bind.ReflectiveTypeAdapterFactory -> com.b.b.b.a.i:
     com.google.gson.internal.ConstructorConstructor constructorConstructor -> a
     com.google.gson.FieldNamingStrategy fieldNamingPolicy -> b
     com.google.gson.internal.Excluder excluder -> c
@@ -27139,7 +27314,7 @@ com.google.gson.internal.bind.ReflectiveTypeAdapterFactory -> com.a.b.b.a.i:
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
     com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField createBoundField(com.google.gson.Gson,java.lang.reflect.Field,java.lang.String,com.google.gson.reflect.TypeToken,boolean,boolean) -> a
     java.util.Map getBoundFields(com.google.gson.Gson,com.google.gson.reflect.TypeToken,java.lang.Class) -> a
-com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1 -> com.a.b.b.a.i$1:
+com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1 -> com.b.b.b.a.i$1:
     java.lang.reflect.Field val$field -> a
     boolean val$jsonAdapterPresent -> b
     com.google.gson.TypeAdapter val$typeAdapter -> c
@@ -27151,13 +27326,13 @@ com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1 -> com.a.b.b.a.i$1:
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     void read(com.google.gson.stream.JsonReader,java.lang.Object) -> a
     boolean writeField(java.lang.Object) -> a
-com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter -> com.a.b.b.a.i$a:
+com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter -> com.b.b.b.a.i$a:
     com.google.gson.internal.ObjectConstructor constructor -> a
     java.util.Map boundFields -> b
     void <init>(com.google.gson.internal.ObjectConstructor,java.util.Map) -> <init>
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField -> com.a.b.b.a.i$b:
+com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField -> com.b.b.b.a.i$b:
     java.lang.String name -> h
     boolean serialized -> i
     boolean deserialized -> j
@@ -27165,7 +27340,7 @@ com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$BoundField -> com.a.b
     boolean writeField(java.lang.Object) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     void read(com.google.gson.stream.JsonReader,java.lang.Object) -> a
-com.google.gson.internal.bind.SqlDateTypeAdapter -> com.a.b.b.a.j:
+com.google.gson.internal.bind.SqlDateTypeAdapter -> com.b.b.b.a.j:
     com.google.gson.TypeAdapterFactory FACTORY -> a
     java.text.DateFormat format -> b
     void <init>() -> <init>
@@ -27174,10 +27349,10 @@ com.google.gson.internal.bind.SqlDateTypeAdapter -> com.a.b.b.a.j:
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.SqlDateTypeAdapter$1 -> com.a.b.b.a.j$1:
+com.google.gson.internal.bind.SqlDateTypeAdapter$1 -> com.b.b.b.a.j$1:
     void <init>() -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.internal.bind.TimeTypeAdapter -> com.a.b.b.a.k:
+com.google.gson.internal.bind.TimeTypeAdapter -> com.b.b.b.a.k:
     com.google.gson.TypeAdapterFactory FACTORY -> a
     java.text.DateFormat format -> b
     void <init>() -> <init>
@@ -27186,10 +27361,10 @@ com.google.gson.internal.bind.TimeTypeAdapter -> com.a.b.b.a.k:
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.TimeTypeAdapter$1 -> com.a.b.b.a.k$1:
+com.google.gson.internal.bind.TimeTypeAdapter$1 -> com.b.b.b.a.k$1:
     void <init>() -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.internal.bind.TreeTypeAdapter -> com.a.b.b.a.l:
+com.google.gson.internal.bind.TreeTypeAdapter -> com.b.b.b.a.l:
     com.google.gson.JsonSerializer serializer -> a
     com.google.gson.JsonDeserializer deserializer -> b
     com.google.gson.Gson gson -> c
@@ -27201,12 +27376,12 @@ com.google.gson.internal.bind.TreeTypeAdapter -> com.a.b.b.a.l:
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     com.google.gson.TypeAdapter delegate() -> b
-com.google.gson.internal.bind.TreeTypeAdapter$1 -> com.a.b.b.a.l$1:
-com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl -> com.a.b.b.a.l$a:
+com.google.gson.internal.bind.TreeTypeAdapter$1 -> com.b.b.b.a.l$1:
+com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl -> com.b.b.b.a.l$a:
     com.google.gson.internal.bind.TreeTypeAdapter this$0 -> a
     void <init>(com.google.gson.internal.bind.TreeTypeAdapter) -> <init>
     void <init>(com.google.gson.internal.bind.TreeTypeAdapter,com.google.gson.internal.bind.TreeTypeAdapter$1) -> <init>
-com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper -> com.a.b.b.a.m:
+com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper -> com.b.b.b.a.m:
     com.google.gson.Gson context -> a
     com.google.gson.TypeAdapter delegate -> b
     java.lang.reflect.Type type -> c
@@ -27214,7 +27389,7 @@ com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper -> com.a.b.b.a.m:
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     java.lang.reflect.Type getRuntimeTypeIfMoreSpecific(java.lang.reflect.Type,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters -> com.a.b.b.a.n:
+com.google.gson.internal.bind.TypeAdapters -> com.b.b.b.a.n:
     com.google.gson.TypeAdapter CLASS -> a
     com.google.gson.TypeAdapterFactory CLASS_FACTORY -> b
     com.google.gson.TypeAdapter BIT_SET -> c
@@ -27272,118 +27447,118 @@ com.google.gson.internal.bind.TypeAdapters -> com.a.b.b.a.n:
     com.google.gson.TypeAdapterFactory newFactoryForMultipleTypes(java.lang.Class,java.lang.Class,com.google.gson.TypeAdapter) -> b
     com.google.gson.TypeAdapterFactory newTypeHierarchyFactory(java.lang.Class,com.google.gson.TypeAdapter) -> b
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.TypeAdapters$1 -> com.a.b.b.a.n$1:
+com.google.gson.internal.bind.TypeAdapters$1 -> com.b.b.b.a.n$1:
     void <init>() -> <init>
     void write(com.google.gson.stream.JsonWriter,java.lang.Class) -> a
     java.lang.Class read(com.google.gson.stream.JsonReader) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$10 -> com.a.b.b.a.n$2:
+com.google.gson.internal.bind.TypeAdapters$10 -> com.b.b.b.a.n$2:
     void <init>() -> <init>
     java.util.concurrent.atomic.AtomicIntegerArray read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.util.concurrent.atomic.AtomicIntegerArray) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$11 -> com.a.b.b.a.n$3:
+com.google.gson.internal.bind.TypeAdapters$11 -> com.b.b.b.a.n$3:
     void <init>() -> <init>
     java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$12 -> com.a.b.b.a.n$4:
+com.google.gson.internal.bind.TypeAdapters$12 -> com.b.b.b.a.n$4:
     void <init>() -> <init>
     java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$13 -> com.a.b.b.a.n$5:
+com.google.gson.internal.bind.TypeAdapters$13 -> com.b.b.b.a.n$5:
     void <init>() -> <init>
     java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$14 -> com.a.b.b.a.n$6:
+com.google.gson.internal.bind.TypeAdapters$14 -> com.b.b.b.a.n$6:
     void <init>() -> <init>
     java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$15 -> com.a.b.b.a.n$7:
+com.google.gson.internal.bind.TypeAdapters$15 -> com.b.b.b.a.n$7:
     void <init>() -> <init>
     java.lang.Character read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Character) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$16 -> com.a.b.b.a.n$8:
+com.google.gson.internal.bind.TypeAdapters$16 -> com.b.b.b.a.n$8:
     void <init>() -> <init>
     java.lang.String read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.String) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$17 -> com.a.b.b.a.n$9:
+com.google.gson.internal.bind.TypeAdapters$17 -> com.b.b.b.a.n$9:
     void <init>() -> <init>
     java.math.BigDecimal read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.math.BigDecimal) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$18 -> com.a.b.b.a.n$10:
+com.google.gson.internal.bind.TypeAdapters$18 -> com.b.b.b.a.n$10:
     void <init>() -> <init>
     java.math.BigInteger read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.math.BigInteger) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$19 -> com.a.b.b.a.n$11:
+com.google.gson.internal.bind.TypeAdapters$19 -> com.b.b.b.a.n$11:
     void <init>() -> <init>
     java.lang.StringBuilder read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.StringBuilder) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$2 -> com.a.b.b.a.n$12:
+com.google.gson.internal.bind.TypeAdapters$2 -> com.b.b.b.a.n$12:
     void <init>() -> <init>
     java.util.BitSet read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.util.BitSet) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$20 -> com.a.b.b.a.n$13:
+com.google.gson.internal.bind.TypeAdapters$20 -> com.b.b.b.a.n$13:
     void <init>() -> <init>
     java.lang.StringBuffer read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.StringBuffer) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$21 -> com.a.b.b.a.n$14:
+com.google.gson.internal.bind.TypeAdapters$21 -> com.b.b.b.a.n$14:
     void <init>() -> <init>
     java.net.URL read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.net.URL) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$22 -> com.a.b.b.a.n$15:
+com.google.gson.internal.bind.TypeAdapters$22 -> com.b.b.b.a.n$15:
     void <init>() -> <init>
     java.net.URI read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.net.URI) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$23 -> com.a.b.b.a.n$16:
+com.google.gson.internal.bind.TypeAdapters$23 -> com.b.b.b.a.n$16:
     void <init>() -> <init>
     java.net.InetAddress read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.net.InetAddress) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$24 -> com.a.b.b.a.n$17:
+com.google.gson.internal.bind.TypeAdapters$24 -> com.b.b.b.a.n$17:
     void <init>() -> <init>
     java.util.UUID read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.util.UUID) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$25 -> com.a.b.b.a.n$18:
+com.google.gson.internal.bind.TypeAdapters$25 -> com.b.b.b.a.n$18:
     void <init>() -> <init>
     java.util.Currency read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.util.Currency) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$26 -> com.a.b.b.a.n$19:
+com.google.gson.internal.bind.TypeAdapters$26 -> com.b.b.b.a.n$19:
     void <init>() -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.internal.bind.TypeAdapters$26$1 -> com.a.b.b.a.n$19$1:
+com.google.gson.internal.bind.TypeAdapters$26$1 -> com.b.b.b.a.n$19$1:
     com.google.gson.TypeAdapter val$dateTypeAdapter -> a
     com.google.gson.internal.bind.TypeAdapters$26 this$0 -> b
     void <init>(com.google.gson.internal.bind.TypeAdapters$26,com.google.gson.TypeAdapter) -> <init>
@@ -27391,105 +27566,105 @@ com.google.gson.internal.bind.TypeAdapters$26$1 -> com.a.b.b.a.n$19$1:
     void write(com.google.gson.stream.JsonWriter,java.sql.Timestamp) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$27 -> com.a.b.b.a.n$20:
+com.google.gson.internal.bind.TypeAdapters$27 -> com.b.b.b.a.n$20:
     void <init>() -> <init>
     java.util.Calendar read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.util.Calendar) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$28 -> com.a.b.b.a.n$21:
+com.google.gson.internal.bind.TypeAdapters$28 -> com.b.b.b.a.n$21:
     void <init>() -> <init>
     java.util.Locale read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.util.Locale) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$29 -> com.a.b.b.a.n$22:
+com.google.gson.internal.bind.TypeAdapters$29 -> com.b.b.b.a.n$22:
     void <init>() -> <init>
     com.google.gson.JsonElement read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,com.google.gson.JsonElement) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$3 -> com.a.b.b.a.n$23:
+com.google.gson.internal.bind.TypeAdapters$3 -> com.b.b.b.a.n$23:
     void <init>() -> <init>
     java.lang.Boolean read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Boolean) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$30 -> com.a.b.b.a.n$24:
+com.google.gson.internal.bind.TypeAdapters$30 -> com.b.b.b.a.n$24:
     void <init>() -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
-com.google.gson.internal.bind.TypeAdapters$32 -> com.a.b.b.a.n$25:
+com.google.gson.internal.bind.TypeAdapters$32 -> com.b.b.b.a.n$25:
     java.lang.Class val$type -> a
     com.google.gson.TypeAdapter val$typeAdapter -> b
     void <init>(java.lang.Class,com.google.gson.TypeAdapter) -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
     java.lang.String toString() -> toString
-com.google.gson.internal.bind.TypeAdapters$33 -> com.a.b.b.a.n$26:
+com.google.gson.internal.bind.TypeAdapters$33 -> com.b.b.b.a.n$26:
     java.lang.Class val$unboxed -> a
     java.lang.Class val$boxed -> b
     com.google.gson.TypeAdapter val$typeAdapter -> c
     void <init>(java.lang.Class,java.lang.Class,com.google.gson.TypeAdapter) -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
     java.lang.String toString() -> toString
-com.google.gson.internal.bind.TypeAdapters$34 -> com.a.b.b.a.n$27:
+com.google.gson.internal.bind.TypeAdapters$34 -> com.b.b.b.a.n$27:
     java.lang.Class val$base -> a
     java.lang.Class val$sub -> b
     com.google.gson.TypeAdapter val$typeAdapter -> c
     void <init>(java.lang.Class,java.lang.Class,com.google.gson.TypeAdapter) -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
     java.lang.String toString() -> toString
-com.google.gson.internal.bind.TypeAdapters$35 -> com.a.b.b.a.n$28:
+com.google.gson.internal.bind.TypeAdapters$35 -> com.b.b.b.a.n$28:
     java.lang.Class val$clazz -> a
     com.google.gson.TypeAdapter val$typeAdapter -> b
     void <init>(java.lang.Class,com.google.gson.TypeAdapter) -> <init>
     com.google.gson.TypeAdapter create(com.google.gson.Gson,com.google.gson.reflect.TypeToken) -> a
     java.lang.String toString() -> toString
-com.google.gson.internal.bind.TypeAdapters$35$1 -> com.a.b.b.a.n$28$1:
+com.google.gson.internal.bind.TypeAdapters$35$1 -> com.b.b.b.a.n$28$1:
     java.lang.Class val$requestedType -> a
     com.google.gson.internal.bind.TypeAdapters$35 this$0 -> b
     void <init>(com.google.gson.internal.bind.TypeAdapters$35,java.lang.Class) -> <init>
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
-com.google.gson.internal.bind.TypeAdapters$36 -> com.a.b.b.a.n$29:
+com.google.gson.internal.bind.TypeAdapters$36 -> com.b.b.b.a.n$29:
     int[] $SwitchMap$com$google$gson$stream$JsonToken -> a
     void <clinit>() -> <clinit>
-com.google.gson.internal.bind.TypeAdapters$4 -> com.a.b.b.a.n$30:
+com.google.gson.internal.bind.TypeAdapters$4 -> com.b.b.b.a.n$30:
     void <init>() -> <init>
     java.lang.Boolean read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Boolean) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$5 -> com.a.b.b.a.n$31:
+com.google.gson.internal.bind.TypeAdapters$5 -> com.b.b.b.a.n$31:
     void <init>() -> <init>
     java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$6 -> com.a.b.b.a.n$32:
+com.google.gson.internal.bind.TypeAdapters$6 -> com.b.b.b.a.n$32:
     void <init>() -> <init>
     java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$7 -> com.a.b.b.a.n$33:
+com.google.gson.internal.bind.TypeAdapters$7 -> com.b.b.b.a.n$33:
     void <init>() -> <init>
     java.lang.Number read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.lang.Number) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$8 -> com.a.b.b.a.n$34:
+com.google.gson.internal.bind.TypeAdapters$8 -> com.b.b.b.a.n$34:
     void <init>() -> <init>
     java.util.concurrent.atomic.AtomicInteger read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.util.concurrent.atomic.AtomicInteger) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$9 -> com.a.b.b.a.n$35:
+com.google.gson.internal.bind.TypeAdapters$9 -> com.b.b.b.a.n$35:
     void <init>() -> <init>
     java.util.concurrent.atomic.AtomicBoolean read(com.google.gson.stream.JsonReader) -> a
     void write(com.google.gson.stream.JsonWriter,java.util.concurrent.atomic.AtomicBoolean) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.TypeAdapters$EnumTypeAdapter -> com.a.b.b.a.n$a:
+com.google.gson.internal.bind.TypeAdapters$EnumTypeAdapter -> com.b.b.b.a.n$a:
     java.util.Map nameToConstant -> a
     java.util.Map constantToName -> b
     void <init>(java.lang.Class) -> <init>
@@ -27497,14 +27672,14 @@ com.google.gson.internal.bind.TypeAdapters$EnumTypeAdapter -> com.a.b.b.a.n$a:
     void write(com.google.gson.stream.JsonWriter,java.lang.Enum) -> a
     java.lang.Object read(com.google.gson.stream.JsonReader) -> b
     void write(com.google.gson.stream.JsonWriter,java.lang.Object) -> a
-com.google.gson.internal.bind.util.ISO8601Utils -> com.a.b.b.a.a.a:
+com.google.gson.internal.bind.util.ISO8601Utils -> com.b.b.b.a.a.a:
     java.util.TimeZone TIMEZONE_UTC -> a
     java.util.Date parse(java.lang.String,java.text.ParsePosition) -> a
     boolean checkOffset(java.lang.String,int,char) -> a
     int parseInt(java.lang.String,int,int) -> a
     int indexOfNonDigit(java.lang.String,int) -> a
     void <clinit>() -> <clinit>
-com.google.gson.reflect.TypeToken -> com.a.b.c.a:
+com.google.gson.reflect.TypeToken -> com.b.b.c.a:
     java.lang.Class rawType -> a
     java.lang.reflect.Type type -> b
     int hashCode -> c
@@ -27518,7 +27693,7 @@ com.google.gson.reflect.TypeToken -> com.a.b.c.a:
     java.lang.String toString() -> toString
     com.google.gson.reflect.TypeToken get(java.lang.reflect.Type) -> a
     com.google.gson.reflect.TypeToken get(java.lang.Class) -> b
-com.google.gson.stream.JsonReader -> com.a.b.d.a:
+com.google.gson.stream.JsonReader -> com.b.b.d.a:
     char[] NON_EXECUTE_PREFIX -> b
     java.io.Reader in -> c
     boolean lenient -> d
@@ -27575,10 +27750,10 @@ com.google.gson.stream.JsonReader -> com.a.b.d.a:
     void consumeNonExecutePrefix() -> z
     java.lang.String access$000(com.google.gson.stream.JsonReader) -> a
     void <clinit>() -> <clinit>
-com.google.gson.stream.JsonReader$1 -> com.a.b.d.a$1:
+com.google.gson.stream.JsonReader$1 -> com.b.b.d.a$1:
     void <init>() -> <init>
     void promoteNameToValue(com.google.gson.stream.JsonReader) -> a
-com.google.gson.stream.JsonToken -> com.a.b.d.b:
+com.google.gson.stream.JsonToken -> com.b.b.d.b:
     com.google.gson.stream.JsonToken BEGIN_ARRAY -> a
     com.google.gson.stream.JsonToken END_ARRAY -> b
     com.google.gson.stream.JsonToken BEGIN_OBJECT -> c
@@ -27594,7 +27769,7 @@ com.google.gson.stream.JsonToken -> com.a.b.d.b:
     com.google.gson.stream.JsonToken valueOf(java.lang.String) -> valueOf
     void <init>(java.lang.String,int) -> <init>
     void <clinit>() -> <clinit>
-com.google.gson.stream.JsonWriter -> com.a.b.d.c:
+com.google.gson.stream.JsonWriter -> com.b.b.d.c:
     java.lang.String[] REPLACEMENT_CHARS -> a
     java.lang.String[] HTML_SAFE_REPLACEMENT_CHARS -> b
     java.io.Writer out -> c
@@ -27636,7 +27811,7 @@ com.google.gson.stream.JsonWriter -> com.a.b.d.c:
     void beforeName() -> k
     void beforeValue() -> l
     void <clinit>() -> <clinit>
-com.google.gson.stream.MalformedJsonException -> com.a.b.d.d:
+com.google.gson.stream.MalformedJsonException -> com.b.b.d.d:
     void <init>(java.lang.String) -> <init>
 io.reactivex.BackpressureStrategy -> io.a.a:
     io.reactivex.BackpressureStrategy MISSING -> a
@@ -33091,33 +33266,61 @@ io.reactivex.subjects.UnicastSubject$UnicastQueueDisposable -> io.a.j.d$a:
 io.realm.BaseModuleMediator -> io.realm.BaseModuleMediator:
     java.util.Set MODEL_CLASSES -> a
     void <init>() -> <init>
+    java.util.Map getExpectedObjectSchemaInfoMap() -> a
     io.realm.internal.ColumnInfo createColumnInfo(java.lang.Class,io.realm.internal.OsSchemaInfo) -> a
     java.lang.String getSimpleClassNameImpl(java.lang.Class) -> a
     io.realm.RealmModel newInstance(java.lang.Class,java.lang.Object,io.realm.internal.Row,io.realm.internal.ColumnInfo,boolean,java.util.List) -> a
-    java.util.Set getModelClasses() -> a
+    java.util.Set getModelClasses() -> b
     io.realm.RealmModel copyOrUpdate(io.realm.Realm,io.realm.RealmModel,boolean,java.util.Map) -> a
-    boolean transformerApplied() -> b
+    boolean transformerApplied() -> c
     void <clinit>() -> <clinit>
 io.realm.BaseRealm -> io.realm.a:
-    io.realm.internal.async.RealmThreadPoolExecutor asyncTaskExecutor -> a
-    long threadId -> b
-    io.realm.RealmConfiguration configuration -> c
-    io.realm.RealmCache realmCache -> f
-    io.realm.internal.OsSharedRealm sharedRealm -> d
-    boolean shouldCloseSharedRealm -> g
-    io.realm.BaseRealm$ThreadLocalRealmObjectContext objectContext -> e
+    android.content.Context applicationContext -> a
+    io.realm.internal.async.RealmThreadPoolExecutor asyncTaskExecutor -> b
+    long threadId -> c
+    io.realm.RealmConfiguration configuration -> d
+    io.realm.RealmCache realmCache -> g
+    io.realm.internal.OsSharedRealm sharedRealm -> e
+    boolean shouldCloseSharedRealm -> h
+    io.realm.internal.OsSharedRealm$SchemaChangedCallback schemaChangedCallback -> i
+    io.realm.BaseRealm$ThreadLocalRealmObjectContext objectContext -> f
+    void <init>(io.realm.RealmCache,io.realm.internal.OsSchemaInfo) -> <init>
+    void <init>(io.realm.RealmConfiguration,io.realm.internal.OsSchemaInfo) -> <init>
+    void <init>(io.realm.internal.OsSharedRealm) -> <init>
     boolean isInTransaction() -> a
-    void checkIfValid() -> b
-    java.lang.String getPath() -> c
-    io.realm.RealmConfiguration getConfiguration() -> d
+    void beginTransaction() -> b
+    void commitTransaction() -> c
+    void checkIfValid() -> d
+    java.lang.String getPath() -> e
+    io.realm.RealmConfiguration getConfiguration() -> f
     void close() -> close
-    void doClose() -> e
-    io.realm.RealmSchema getSchema() -> f
+    void doClose() -> g
+    io.realm.RealmSchema getSchema() -> h
     io.realm.RealmModel get(java.lang.Class,java.lang.String,io.realm.internal.UncheckedRow) -> a
     io.realm.RealmModel get(java.lang.Class,long,boolean,java.util.List) -> a
+    boolean deleteRealm(io.realm.RealmConfiguration) -> a
+    io.realm.internal.OsSharedRealm$MigrationCallback createMigrationCallback(io.realm.RealmMigration) -> a
     void finalize() -> finalize
-    io.realm.internal.OsSharedRealm getSharedRealm() -> g
+    io.realm.internal.OsSharedRealm getSharedRealm() -> i
     void <clinit>() -> <clinit>
+io.realm.BaseRealm$1 -> io.realm.a$1:
+    io.realm.BaseRealm this$0 -> a
+    void <init>(io.realm.BaseRealm) -> <init>
+    void onSchemaChanged() -> onSchemaChanged
+io.realm.BaseRealm$2 -> io.realm.a$2:
+    io.realm.Realm$Transaction val$initialDataTransaction -> a
+    io.realm.BaseRealm this$0 -> b
+    void <init>(io.realm.BaseRealm,io.realm.Realm$Transaction) -> <init>
+    void onInit(io.realm.internal.OsSharedRealm) -> onInit
+io.realm.BaseRealm$4 -> io.realm.a$3:
+    io.realm.RealmConfiguration val$configuration -> a
+    java.util.concurrent.atomic.AtomicBoolean val$realmDeleted -> b
+    void <init>(io.realm.RealmConfiguration,java.util.concurrent.atomic.AtomicBoolean) -> <init>
+    void run() -> run
+io.realm.BaseRealm$6 -> io.realm.a$4:
+    io.realm.RealmMigration val$migration -> a
+    void <init>(io.realm.RealmMigration) -> <init>
+    void onMigrationNeeded(io.realm.internal.OsSharedRealm,long,long) -> onMigrationNeeded
 io.realm.BaseRealm$RealmObjectContext -> io.realm.a$a:
     io.realm.BaseRealm realm -> a
     io.realm.internal.Row row -> b
@@ -33162,6 +33365,19 @@ io.realm.DateListOperator -> io.realm.d:
     void insertValue(int,java.lang.Object) -> a
     void setValue(int,java.lang.Object) -> b
     java.lang.Object get(int) -> b
+io.realm.DefaultRealmModule -> io.realm.DefaultRealmModule:
+    void <init>() -> <init>
+io.realm.DefaultRealmModuleMediator -> io.realm.DefaultRealmModuleMediator:
+    java.util.Set MODEL_CLASSES -> a
+    void <init>() -> <init>
+    java.util.Map getExpectedObjectSchemaInfoMap() -> a
+    io.realm.internal.ColumnInfo createColumnInfo(java.lang.Class,io.realm.internal.OsSchemaInfo) -> a
+    java.lang.String getSimpleClassNameImpl(java.lang.Class) -> a
+    io.realm.RealmModel newInstance(java.lang.Class,java.lang.Object,io.realm.internal.Row,io.realm.internal.ColumnInfo,boolean,java.util.List) -> a
+    java.util.Set getModelClasses() -> b
+    io.realm.RealmModel copyOrUpdate(io.realm.Realm,io.realm.RealmModel,boolean,java.util.Map) -> a
+    void <clinit>() -> <clinit>
+    boolean transformerApplied() -> c
 io.realm.DoubleListOperator -> io.realm.e:
     void <init>(io.realm.BaseRealm,io.realm.internal.OsList,java.lang.Class) -> <init>
     java.lang.Double get(int) -> a
@@ -33171,12 +33387,23 @@ io.realm.DoubleListOperator -> io.realm.e:
     void setValue(int,java.lang.Object) -> b
     java.lang.Object get(int) -> b
 io.realm.DynamicRealm -> io.realm.f:
-    io.realm.RealmSchema schema -> f
-    io.realm.RealmSchema getSchema() -> f
+    io.realm.RealmSchema schema -> g
+    void <init>(io.realm.RealmCache) -> <init>
+    void <init>(io.realm.internal.OsSharedRealm) -> <init>
+    io.realm.DynamicRealm createInstance(io.realm.RealmCache) -> a
+    io.realm.DynamicRealm createInstance(io.realm.internal.OsSharedRealm) -> a
+    io.realm.RealmSchema getSchema() -> h
     void close() -> close
-    io.realm.RealmConfiguration getConfiguration() -> d
-    java.lang.String getPath() -> c
+    io.realm.RealmConfiguration getConfiguration() -> f
+    java.lang.String getPath() -> e
+    void commitTransaction() -> c
+    void beginTransaction() -> b
     boolean isInTransaction() -> a
+io.realm.DynamicRealm$1 -> io.realm.f$1:
+    io.realm.RealmCache val$cache -> a
+    io.realm.DynamicRealm this$0 -> b
+    void <init>(io.realm.DynamicRealm,io.realm.RealmCache) -> <init>
+    void onResult(int) -> a
 io.realm.DynamicRealmObject -> io.realm.g:
     io.realm.ProxyState proxyState -> a
     void <init>(io.realm.BaseRealm,io.realm.internal.Row) -> <init>
@@ -33200,14 +33427,16 @@ io.realm.FloatListOperator -> io.realm.h:
     java.lang.Object get(int) -> b
 io.realm.ImmutableRealmObjectSchema -> io.realm.i:
     void <init>(io.realm.BaseRealm,io.realm.RealmSchema,io.realm.internal.Table,io.realm.internal.ColumnInfo) -> <init>
-io.realm.LongListOperator -> io.realm.j:
+io.realm.ImmutableRealmSchema -> io.realm.j:
+    void <init>(io.realm.BaseRealm,io.realm.internal.ColumnIndices) -> <init>
+io.realm.LongListOperator -> io.realm.k:
     void <init>(io.realm.BaseRealm,io.realm.internal.OsList,java.lang.Class) -> <init>
     java.lang.Object get(int) -> b
     void checkValidValue(java.lang.Object) -> a
     void appendValue(java.lang.Object) -> b
     void insertValue(int,java.lang.Object) -> a
     void setValue(int,java.lang.Object) -> b
-io.realm.ManagedListOperator -> io.realm.k:
+io.realm.ManagedListOperator -> io.realm.l:
     io.realm.BaseRealm realm -> a
     io.realm.internal.OsList osList -> b
     java.lang.Class clazz -> c
@@ -33227,14 +33456,16 @@ io.realm.ManagedListOperator -> io.realm.k:
     void setValue(int,java.lang.Object) -> b
     void remove(int) -> e
     void removeAll() -> c
-io.realm.ObjectChangeSet -> io.realm.l:
-io.realm.OrderedCollectionChangeSet -> io.realm.m:
-io.realm.OrderedCollectionChangeSet$Range -> io.realm.m$a:
+io.realm.MutableRealmSchema -> io.realm.m:
+    void <init>(io.realm.BaseRealm) -> <init>
+io.realm.ObjectChangeSet -> io.realm.n:
+io.realm.OrderedCollectionChangeSet -> io.realm.o:
+io.realm.OrderedCollectionChangeSet$Range -> io.realm.o$a:
     int startIndex -> a
     int length -> b
     void <init>(int,int) -> <init>
     java.lang.String toString() -> toString
-io.realm.OrderedCollectionChangeSet$State -> io.realm.m$b:
+io.realm.OrderedCollectionChangeSet$State -> io.realm.o$b:
     io.realm.OrderedCollectionChangeSet$State INITIAL -> a
     io.realm.OrderedCollectionChangeSet$State UPDATE -> b
     io.realm.OrderedCollectionChangeSet$State ERROR -> c
@@ -33244,13 +33475,17 @@ io.realm.OrderedCollectionChangeSet$State -> io.realm.m$b:
     void <init>(java.lang.String,int) -> <init>
     void <clinit>() -> <clinit>
 io.realm.OrderedRealmCollection -> io.realm.OrderedRealmCollection:
-io.realm.OrderedRealmCollectionChangeListener -> io.realm.n:
+io.realm.OrderedRealmCollectionChangeListener -> io.realm.p:
     void onChange(java.lang.Object,io.realm.OrderedCollectionChangeSet) -> a
-io.realm.OrderedRealmCollectionImpl -> io.realm.o:
+io.realm.OrderedRealmCollectionImpl -> io.realm.q:
     io.realm.BaseRealm realm -> a
     java.lang.Class classSpec -> b
     java.lang.String className -> c
-    io.realm.internal.OsResults osResults -> d
+    boolean forValues -> d
+    io.realm.internal.OsResults osResults -> e
+    void <init>(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.Class) -> <init>
+    void <init>(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.String) -> <init>
+    void <init>(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.Class,java.lang.String) -> <init>
     boolean contains(java.lang.Object) -> contains
     java.lang.Object get(int) -> get
     java.util.Iterator iterator() -> iterator
@@ -33267,15 +33502,15 @@ io.realm.OrderedRealmCollectionImpl -> io.realm.o:
     void add(int,java.lang.Object) -> add
     boolean addAll(int,java.util.Collection) -> addAll
     boolean addAll(java.util.Collection) -> addAll
-io.realm.OrderedRealmCollectionImpl$RealmCollectionIterator -> io.realm.o$a:
+io.realm.OrderedRealmCollectionImpl$RealmCollectionIterator -> io.realm.q$a:
     io.realm.OrderedRealmCollectionImpl this$0 -> a
     void <init>(io.realm.OrderedRealmCollectionImpl) -> <init>
     java.lang.Object convertRowToObject(io.realm.internal.UncheckedRow) -> a
-io.realm.OrderedRealmCollectionImpl$RealmCollectionListIterator -> io.realm.o$b:
+io.realm.OrderedRealmCollectionImpl$RealmCollectionListIterator -> io.realm.q$b:
     io.realm.OrderedRealmCollectionImpl this$0 -> a
     void <init>(io.realm.OrderedRealmCollectionImpl,int) -> <init>
     java.lang.Object convertRowToObject(io.realm.internal.UncheckedRow) -> a
-io.realm.ProxyState -> io.realm.p:
+io.realm.ProxyState -> io.realm.r:
     io.realm.RealmModel model -> a
     boolean underConstruction -> b
     io.realm.internal.Row row -> c
@@ -33302,42 +33537,80 @@ io.realm.ProxyState -> io.realm.p:
     void onQueryFinished(io.realm.internal.Row) -> b
     void checkValidObject(io.realm.RealmModel) -> a
     void <clinit>() -> <clinit>
-io.realm.ProxyState$1 -> io.realm.p$1:
-io.realm.ProxyState$QueryCallback -> io.realm.p$a:
+io.realm.ProxyState$1 -> io.realm.r$1:
+io.realm.ProxyState$QueryCallback -> io.realm.r$a:
     void <init>() -> <init>
     void onCalled(io.realm.internal.OsObject$ObjectObserverPair,java.lang.Object) -> a
     void onCalled(io.realm.internal.ObserverPairList$ObserverPair,java.lang.Object) -> a
     void <init>(io.realm.ProxyState$1) -> <init>
-io.realm.Realm -> io.realm.q:
-    java.lang.Object defaultConfigurationLock -> f
-    io.realm.RealmSchema schema -> g
-    io.realm.RealmSchema getSchema() -> f
+io.realm.Realm -> io.realm.s:
+    java.lang.Object defaultConfigurationLock -> g
+    io.realm.RealmConfiguration defaultConfiguration -> h
+    io.realm.RealmSchema schema -> i
+    void <init>(io.realm.RealmCache) -> <init>
+    void <init>(io.realm.internal.OsSharedRealm) -> <init>
+    io.realm.internal.OsSchemaInfo createExpectedSchemaInfo(io.realm.internal.RealmProxyMediator) -> a
+    io.realm.RealmSchema getSchema() -> h
+    void init(android.content.Context) -> a
+    void checkFilesDirAvailable(android.content.Context) -> b
+    io.realm.Realm getDefaultInstance() -> j
+    void setDefaultConfiguration(io.realm.RealmConfiguration) -> b
+    io.realm.RealmConfiguration getDefaultConfiguration() -> k
+    io.realm.Realm createInstance(io.realm.RealmCache) -> a
+    io.realm.Realm createInstance(io.realm.internal.OsSharedRealm) -> a
+    io.realm.RealmModel createObject(java.lang.Class) -> a
     io.realm.RealmModel createObjectInternal(java.lang.Class,boolean,java.util.List) -> a
     io.realm.RealmModel createObjectInternal(java.lang.Class,java.lang.Object,boolean,java.util.List) -> a
     io.realm.RealmModel copyToRealm(io.realm.RealmModel) -> a
     io.realm.RealmModel copyToRealmOrUpdate(io.realm.RealmModel) -> b
+    io.realm.RealmQuery where(java.lang.Class) -> b
+    void delete(java.lang.Class) -> c
     io.realm.RealmModel copyOrUpdate(io.realm.RealmModel,boolean,java.util.Map) -> a
     void checkNotNullObject(io.realm.RealmModel) -> c
-    void checkHasPrimaryKey(java.lang.Class) -> b
-    io.realm.internal.Table getTable(java.lang.Class) -> a
-    java.lang.Object getDefaultModule() -> h
+    void checkHasPrimaryKey(java.lang.Class) -> e
+    io.realm.internal.Table getTable(java.lang.Class) -> d
+    java.lang.Object getDefaultModule() -> l
     void close() -> close
-    io.realm.RealmConfiguration getConfiguration() -> d
-    java.lang.String getPath() -> c
+    io.realm.RealmConfiguration getConfiguration() -> f
+    java.lang.String getPath() -> e
+    void commitTransaction() -> c
+    void beginTransaction() -> b
     boolean isInTransaction() -> a
     void <clinit>() -> <clinit>
-io.realm.Realm$Transaction -> io.realm.q$a:
-io.realm.RealmCache -> io.realm.r:
+io.realm.Realm$Transaction -> io.realm.s$a:
+    void execute(io.realm.Realm) -> a
+io.realm.RealmCache -> io.realm.t:
     java.util.EnumMap refAndCountMap -> a
-    io.realm.RealmConfiguration configuration -> b
-    java.util.List cachesList -> c
-    java.util.concurrent.atomic.AtomicBoolean isLeaked -> d
-    java.util.Collection leakedCaches -> e
+    java.lang.String realmPath -> b
+    io.realm.RealmConfiguration configuration -> c
+    java.util.List cachesList -> d
+    java.util.concurrent.atomic.AtomicBoolean isLeaked -> e
+    java.util.Collection leakedCaches -> f
+    void <init>(java.lang.String) -> <init>
+    io.realm.RealmCache getCache(java.lang.String,boolean) -> a
+    io.realm.BaseRealm createRealmOrGetFromCache(io.realm.RealmConfiguration,java.lang.Class) -> a
+    io.realm.BaseRealm doCreateRealmOrGetFromCache(io.realm.RealmConfiguration,java.lang.Class) -> b
     void release(io.realm.BaseRealm) -> a
-    int getTotalGlobalRefCount() -> b
-    void leak() -> a
+    void validateConfiguration(io.realm.RealmConfiguration) -> a
+    void invokeWithGlobalRefCount(io.realm.RealmConfiguration,io.realm.RealmCache$Callback) -> a
+    void doInvokeWithGlobalRefCount(io.realm.RealmCache$Callback) -> a
+    void copyAssetFileIfNeeded(io.realm.RealmConfiguration) -> b
+    void copyFileIfNeeded(java.lang.String,java.io.File) -> b
+    io.realm.RealmConfiguration getConfiguration() -> a
+    int getTotalGlobalRefCount() -> c
+    void leak() -> b
+    void access$900(java.lang.String,java.io.File) -> a
     void <clinit>() -> <clinit>
-io.realm.RealmCache$RealmCacheType -> io.realm.r$a:
+io.realm.RealmCache$1 -> io.realm.t$1:
+    java.io.File val$realmFileFromAsset -> a
+    io.realm.RealmConfiguration val$configuration -> b
+    boolean val$certFileExists -> c
+    java.lang.String val$syncServerCertificateAssetName -> d
+    void <init>(java.io.File,io.realm.RealmConfiguration,boolean,java.lang.String) -> <init>
+    void run() -> run
+io.realm.RealmCache$Callback -> io.realm.t$a:
+    void onResult(int) -> a
+io.realm.RealmCache$RealmCacheType -> io.realm.t$b:
     io.realm.RealmCache$RealmCacheType TYPED_REALM -> a
     io.realm.RealmCache$RealmCacheType DYNAMIC_REALM -> b
     io.realm.RealmCache$RealmCacheType[] $VALUES -> c
@@ -33346,52 +33619,86 @@ io.realm.RealmCache$RealmCacheType -> io.realm.r$a:
     void <init>(java.lang.String,int) -> <init>
     io.realm.RealmCache$RealmCacheType valueOf(java.lang.Class) -> a
     void <clinit>() -> <clinit>
-io.realm.RealmCache$RefAndCount -> io.realm.r$b:
+io.realm.RealmCache$RefAndCount -> io.realm.t$c:
     java.lang.ThreadLocal localRealm -> a
     java.lang.ThreadLocal localCount -> b
     int globalCount -> c
     void <init>() -> <init>
+    void <init>(io.realm.RealmCache$1) -> <init>
     java.lang.ThreadLocal access$600(io.realm.RealmCache$RefAndCount) -> a
     java.lang.ThreadLocal access$700(io.realm.RealmCache$RefAndCount) -> b
-    int access$810(io.realm.RealmCache$RefAndCount) -> c
-    int access$800(io.realm.RealmCache$RefAndCount) -> d
-io.realm.RealmChangeListener -> io.realm.s:
+    int access$808(io.realm.RealmCache$RefAndCount) -> c
+    int access$810(io.realm.RealmCache$RefAndCount) -> d
+    int access$800(io.realm.RealmCache$RefAndCount) -> e
+io.realm.RealmChangeListener -> io.realm.u:
     void onChange(java.lang.Object) -> a
 io.realm.RealmCollection -> io.realm.RealmCollection:
     boolean isLoaded() -> a
-io.realm.RealmConfiguration -> io.realm.t:
+io.realm.RealmConfiguration -> io.realm.v:
     java.lang.Object DEFAULT_MODULE -> b
     io.realm.internal.RealmProxyMediator DEFAULT_MODULE_MEDIATOR -> a
-    java.io.File realmDirectory -> c
-    java.lang.String realmFileName -> d
-    java.lang.String canonicalPath -> e
-    java.lang.String assetFilePath -> f
-    byte[] key -> g
-    long schemaVersion -> h
-    io.realm.RealmMigration migration -> i
-    boolean deleteRealmIfMigrationNeeded -> j
-    io.realm.internal.OsRealmConfig$Durability durability -> k
-    io.realm.internal.RealmProxyMediator schemaMediator -> l
-    io.realm.rx.RxObservableFactory rxObservableFactory -> m
-    io.realm.Realm$Transaction initialDataTransaction -> n
-    boolean readOnly -> o
-    io.realm.CompactOnLaunchCallback compactOnLaunch -> p
-    boolean isRecoveryConfiguration -> q
-    byte[] getEncryptionKey() -> a
-    long getSchemaVersion() -> b
-    boolean shouldDeleteRealmIfMigrationNeeded() -> c
-    io.realm.internal.OsRealmConfig$Durability getDurability() -> d
-    io.realm.internal.RealmProxyMediator getSchemaMediator() -> e
-    io.realm.CompactOnLaunchCallback getCompactOnLaunchCallback() -> f
-    java.lang.String getPath() -> g
-    boolean isReadOnly() -> h
-    boolean isRecoveryConfiguration() -> i
+    java.lang.Boolean rxJavaAvailable -> c
+    java.io.File realmDirectory -> d
+    java.lang.String realmFileName -> e
+    java.lang.String canonicalPath -> f
+    java.lang.String assetFilePath -> g
+    byte[] key -> h
+    long schemaVersion -> i
+    io.realm.RealmMigration migration -> j
+    boolean deleteRealmIfMigrationNeeded -> k
+    io.realm.internal.OsRealmConfig$Durability durability -> l
+    io.realm.internal.RealmProxyMediator schemaMediator -> m
+    io.realm.rx.RxObservableFactory rxObservableFactory -> n
+    io.realm.Realm$Transaction initialDataTransaction -> o
+    boolean readOnly -> p
+    io.realm.CompactOnLaunchCallback compactOnLaunch -> q
+    boolean isRecoveryConfiguration -> r
+    void <init>(java.io.File,java.lang.String,java.lang.String,java.lang.String,byte[],long,io.realm.RealmMigration,boolean,io.realm.internal.OsRealmConfig$Durability,io.realm.internal.RealmProxyMediator,io.realm.rx.RxObservableFactory,io.realm.Realm$Transaction,boolean,io.realm.CompactOnLaunchCallback,boolean) -> <init>
+    java.io.File getRealmDirectory() -> a
+    java.lang.String getRealmFileName() -> b
+    byte[] getEncryptionKey() -> c
+    long getSchemaVersion() -> d
+    io.realm.RealmMigration getMigration() -> e
+    boolean shouldDeleteRealmIfMigrationNeeded() -> f
+    io.realm.internal.OsRealmConfig$Durability getDurability() -> g
+    io.realm.internal.RealmProxyMediator getSchemaMediator() -> h
+    io.realm.Realm$Transaction getInitialDataTransaction() -> i
+    boolean hasAssetFile() -> j
+    java.lang.String getAssetFilePath() -> k
+    io.realm.CompactOnLaunchCallback getCompactOnLaunchCallback() -> l
+    java.lang.String getPath() -> m
+    boolean realmExists() -> n
+    boolean isReadOnly() -> o
+    boolean isRecoveryConfiguration() -> p
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
+    io.realm.internal.RealmProxyMediator createSchemaMediator(java.util.Set,java.util.Set) -> a
     io.realm.internal.RealmProxyMediator getModuleMediator(java.lang.String) -> a
     java.lang.String toString() -> toString
-    boolean isSyncConfiguration() -> j
+    boolean isRxJavaAvailable() -> q
+    java.lang.String getCanonicalPath(java.io.File) -> a
+    boolean isSyncConfiguration() -> r
+    java.lang.Object access$000() -> s
     void <clinit>() -> <clinit>
+io.realm.RealmConfiguration$Builder -> io.realm.v$a:
+    java.io.File directory -> a
+    java.lang.String fileName -> b
+    java.lang.String assetFilePath -> c
+    byte[] key -> d
+    long schemaVersion -> e
+    io.realm.RealmMigration migration -> f
+    boolean deleteRealmIfMigrationNeeded -> g
+    io.realm.internal.OsRealmConfig$Durability durability -> h
+    java.util.HashSet modules -> i
+    java.util.HashSet debugSchema -> j
+    io.realm.rx.RxObservableFactory rxFactory -> k
+    io.realm.Realm$Transaction initialDataTransaction -> l
+    boolean readOnly -> m
+    io.realm.CompactOnLaunchCallback compactOnLaunch -> n
+    void <init>() -> <init>
+    void <init>(android.content.Context) -> <init>
+    void initializeBuilder(android.content.Context) -> a
+    io.realm.RealmConfiguration build() -> a
 io.realm.RealmFieldType -> io.realm.RealmFieldType:
     io.realm.RealmFieldType INTEGER -> INTEGER
     io.realm.RealmFieldType BOOLEAN -> BOOLEAN
@@ -33421,7 +33728,7 @@ io.realm.RealmFieldType -> io.realm.RealmFieldType:
     boolean isValid(java.lang.Object) -> isValid
     io.realm.RealmFieldType fromNativeValue(int) -> fromNativeValue
     void <clinit>() -> <clinit>
-io.realm.RealmList -> io.realm.u:
+io.realm.RealmList -> io.realm.w:
     java.lang.Class clazz -> a
     java.lang.String className -> b
     io.realm.ManagedListOperator osListOperator -> d
@@ -33455,8 +33762,8 @@ io.realm.RealmList -> io.realm.u:
     int access$400(io.realm.RealmList) -> d
     int access$500(io.realm.RealmList) -> e
     int access$600(io.realm.RealmList) -> f
-io.realm.RealmList$1 -> io.realm.u$1:
-io.realm.RealmList$RealmItr -> io.realm.u$a:
+io.realm.RealmList$1 -> io.realm.w$1:
+io.realm.RealmList$RealmItr -> io.realm.w$a:
     int cursor -> a
     int lastRet -> b
     int expectedModCount -> c
@@ -33467,7 +33774,7 @@ io.realm.RealmList$RealmItr -> io.realm.u$a:
     void remove() -> remove
     void checkConcurrentModification() -> a
     void <init>(io.realm.RealmList,io.realm.RealmList$1) -> <init>
-io.realm.RealmList$RealmListItr -> io.realm.u$b:
+io.realm.RealmList$RealmListItr -> io.realm.w$b:
     io.realm.RealmList this$0 -> e
     void <init>(io.realm.RealmList,int) -> <init>
     boolean hasPrevious() -> hasPrevious
@@ -33476,9 +33783,10 @@ io.realm.RealmList$RealmListItr -> io.realm.u$b:
     int previousIndex() -> previousIndex
     void set(java.lang.Object) -> set
     void add(java.lang.Object) -> add
-io.realm.RealmMigration -> io.realm.v:
-io.realm.RealmModel -> io.realm.w:
-io.realm.RealmModelListOperator -> io.realm.x:
+io.realm.RealmMigration -> io.realm.x:
+    void migrate(io.realm.DynamicRealm,long,long) -> a
+io.realm.RealmModel -> io.realm.y:
+io.realm.RealmModelListOperator -> io.realm.z:
     java.lang.String className -> d
     void <init>(io.realm.BaseRealm,io.realm.internal.OsList,java.lang.Class,java.lang.String) -> <init>
     java.lang.Object get(int) -> b
@@ -33490,13 +33798,13 @@ io.realm.RealmModelListOperator -> io.realm.x:
     void setNull(int) -> d
     void setValue(int,java.lang.Object) -> b
     io.realm.RealmModel copyToRealmIfNeeded(io.realm.RealmModel) -> a
-io.realm.RealmObject -> io.realm.y:
+io.realm.RealmObject -> io.realm.aa:
     void <init>() -> <init>
     boolean isValid(io.realm.RealmModel) -> a
     boolean isManaged(io.realm.RealmModel) -> b
-io.realm.RealmObjectChangeListener -> io.realm.z:
+io.realm.RealmObjectChangeListener -> io.realm.ab:
     void onChange(io.realm.RealmModel,io.realm.ObjectChangeSet) -> a
-io.realm.RealmObjectSchema -> io.realm.aa:
+io.realm.RealmObjectSchema -> io.realm.ac:
     java.util.Map SUPPORTED_SIMPLE_FIELDS -> a
     java.util.Map SUPPORTED_LINKED_FIELDS -> b
     io.realm.RealmSchema schema -> c
@@ -33505,14 +33813,35 @@ io.realm.RealmObjectSchema -> io.realm.aa:
     io.realm.internal.ColumnInfo columnInfo -> f
     void <init>(io.realm.BaseRealm,io.realm.RealmSchema,io.realm.internal.Table,io.realm.internal.ColumnInfo) -> <init>
     java.lang.String getClassName() -> a
+    io.realm.internal.Table getTable() -> b
     void <clinit>() -> <clinit>
-io.realm.RealmObjectSchema$FieldMetaData -> io.realm.aa$a:
+io.realm.RealmObjectSchema$FieldMetaData -> io.realm.ac$a:
     io.realm.RealmFieldType fieldType -> a
     io.realm.RealmFieldType listType -> b
     boolean defaultNullable -> c
     void <init>(io.realm.RealmFieldType,io.realm.RealmFieldType,boolean) -> <init>
-io.realm.RealmResults -> io.realm.ab:
+io.realm.RealmQuery -> io.realm.ad:
+    io.realm.internal.Table table -> a
+    io.realm.BaseRealm realm -> b
+    io.realm.internal.TableQuery query -> c
+    io.realm.RealmObjectSchema schema -> d
+    java.lang.Class clazz -> e
+    java.lang.String className -> f
+    boolean forValues -> g
+    io.realm.internal.OsList osList -> h
+    io.realm.internal.SortDescriptor sortDescriptor -> i
+    io.realm.internal.SortDescriptor distinctDescriptor -> j
+    io.realm.RealmQuery createQuery(io.realm.Realm,java.lang.Class) -> a
+    boolean isClassForRealmModel(java.lang.Class) -> a
+    void <init>(io.realm.Realm,java.lang.Class) -> <init>
+    io.realm.RealmResults findAll() -> a
+    boolean isDynamicQuery() -> b
+    io.realm.RealmResults createRealmResults(io.realm.internal.TableQuery,io.realm.internal.SortDescriptor,io.realm.internal.SortDescriptor,boolean,io.realm.internal.sync.SubscriptionAction) -> a
+io.realm.RealmResults -> io.realm.ae:
+    void <init>(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.Class) -> <init>
+    void <init>(io.realm.BaseRealm,io.realm.internal.OsResults,java.lang.String) -> <init>
     boolean isLoaded() -> a
+    boolean load() -> b
     boolean addAll(java.util.Collection) -> addAll
     boolean addAll(int,java.util.Collection) -> addAll
     void add(int,java.lang.Object) -> add
@@ -33529,18 +33858,22 @@ io.realm.RealmResults -> io.realm.ab:
     java.util.Iterator iterator() -> iterator
     java.lang.Object get(int) -> get
     boolean contains(java.lang.Object) -> contains
-io.realm.RealmSchema -> io.realm.ac:
-    java.util.Map classToTable -> b
-    java.util.Map classToSchema -> c
+io.realm.RealmSchema -> io.realm.af:
+    java.util.Map dynamicClassToTable -> b
+    java.util.Map classToTable -> c
+    java.util.Map classToSchema -> d
+    java.util.Map dynamicClassToSchema -> e
     io.realm.BaseRealm realm -> a
-    io.realm.internal.ColumnIndices columnIndices -> d
+    io.realm.internal.ColumnIndices columnIndices -> f
+    void <init>(io.realm.BaseRealm,io.realm.internal.ColumnIndices) -> <init>
     io.realm.internal.Table getTable(java.lang.Class) -> a
     io.realm.RealmObjectSchema getSchemaForClass(java.lang.Class) -> b
     boolean isProxyClass(java.lang.Class,java.lang.Class) -> a
     boolean haveColumnInfo() -> a
     io.realm.internal.ColumnInfo getColumnInfo(java.lang.Class) -> c
-    void checkIndices() -> b
-io.realm.Sort -> io.realm.ad:
+    void checkIndices() -> c
+    void refresh() -> b
+io.realm.Sort -> io.realm.ag:
     io.realm.Sort ASCENDING -> a
     io.realm.Sort DESCENDING -> b
     boolean value -> c
@@ -33550,7 +33883,7 @@ io.realm.Sort -> io.realm.ad:
     void <init>(java.lang.String,int,boolean) -> <init>
     boolean getValue() -> a
     void <clinit>() -> <clinit>
-io.realm.StringListOperator -> io.realm.ae:
+io.realm.StringListOperator -> io.realm.ah:
     void <init>(io.realm.BaseRealm,io.realm.internal.OsList,java.lang.Class) -> <init>
     java.lang.String get(int) -> a
     void checkValidValue(java.lang.Object) -> a
@@ -33602,7 +33935,8 @@ io.realm.internal.CheckedRow -> io.realm.internal.CheckedRow:
     io.realm.internal.CheckedRow getFromRow(io.realm.internal.UncheckedRow) -> a
     boolean isNullLink(long) -> a
     boolean isNull(long) -> b
-    io.realm.internal.OsList getModelList(long) -> c
+    void setNull(long) -> c
+    io.realm.internal.OsList getModelList(long) -> d
     io.realm.internal.OsList getValueList(long,io.realm.RealmFieldType) -> a
     long nativeGetColumnCount(long) -> nativeGetColumnCount
     java.lang.String nativeGetColumnName(long,long) -> nativeGetColumnName
@@ -33618,13 +33952,18 @@ io.realm.internal.CheckedRow -> io.realm.internal.CheckedRow:
     byte[] nativeGetByteArray(long,long) -> nativeGetByteArray
     void nativeSetBoolean(long,long,boolean) -> nativeSetBoolean
     long nativeGetLink(long,long) -> nativeGetLink
+    void nativeSetString(long,long,java.lang.String) -> nativeSetString
+    void nativeSetByteArray(long,long,byte[]) -> nativeSetByteArray
     void nativeSetLink(long,long,long) -> nativeSetLink
     void nativeNullifyLink(long,long) -> nativeNullifyLink
 io.realm.internal.ColumnIndices -> io.realm.internal.b:
     java.util.Map classToColumnInfoMap -> a
-    io.realm.internal.RealmProxyMediator mediator -> b
-    io.realm.internal.OsSchemaInfo osSchemaInfo -> c
+    java.util.Map simpleClassNameToColumnInfoMap -> b
+    io.realm.internal.RealmProxyMediator mediator -> c
+    io.realm.internal.OsSchemaInfo osSchemaInfo -> d
+    void <init>(io.realm.internal.RealmProxyMediator,io.realm.internal.OsSchemaInfo) -> <init>
     io.realm.internal.ColumnInfo getColumnInfo(java.lang.Class) -> a
+    void refresh() -> a
     java.lang.String toString() -> toString
 io.realm.internal.ColumnInfo -> io.realm.internal.c:
     java.util.Map indicesFromJavaFieldNames -> a
@@ -33633,7 +33972,9 @@ io.realm.internal.ColumnInfo -> io.realm.internal.c:
     void <init>(int) -> <init>
     void <init>(int,boolean) -> <init>
     io.realm.internal.ColumnInfo$ColumnDetails getColumnDetails(java.lang.String) -> a
+    void copyFrom(io.realm.internal.ColumnInfo) -> a
     java.lang.String toString() -> toString
+    void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo) -> a
     long addColumnDetails(java.lang.String,java.lang.String,io.realm.internal.OsObjectSchemaInfo) -> a
     void addBacklinkDetails(io.realm.internal.OsSchemaInfo,java.lang.String,java.lang.String,java.lang.String) -> a
 io.realm.internal.ColumnInfo$1 -> io.realm.internal.c$1:
@@ -33648,6 +33989,7 @@ io.realm.internal.ColumnInfo$ColumnDetails -> io.realm.internal.c$a:
 io.realm.internal.EmptyLoadChangeSet -> io.realm.internal.d:
     int[] NO_INDEX_CHANGES -> c
     io.realm.OrderedCollectionChangeSet$Range[] NO_RANGE_CHANGES -> d
+    void <init>(io.realm.internal.sync.OsSubscription,boolean,boolean) -> <init>
     void <init>(io.realm.internal.sync.OsSubscription,boolean) -> <init>
     io.realm.OrderedCollectionChangeSet$Range[] getDeletionRanges() -> a
     io.realm.OrderedCollectionChangeSet$Range[] getInsertionRanges() -> b
@@ -33674,26 +34016,29 @@ io.realm.internal.InvalidRow -> io.realm.internal.g:
     io.realm.internal.InvalidRow valueOf(java.lang.String) -> valueOf
     void <init>(java.lang.String,int) -> <init>
     long getColumnCount() -> a
-    java.lang.String getColumnName(long) -> d
+    java.lang.String getColumnName(long) -> e
     long getColumnIndex(java.lang.String) -> a
-    io.realm.RealmFieldType getColumnType(long) -> e
+    io.realm.RealmFieldType getColumnType(long) -> f
     io.realm.internal.Table getTable() -> b
     long getIndex() -> c
-    long getLong(long) -> f
-    boolean getBoolean(long) -> g
-    float getFloat(long) -> h
-    double getDouble(long) -> i
-    java.util.Date getDate(long) -> j
-    java.lang.String getString(long) -> k
-    byte[] getBinaryByteArray(long) -> l
-    long getLink(long) -> m
+    long getLong(long) -> g
+    boolean getBoolean(long) -> h
+    float getFloat(long) -> i
+    double getDouble(long) -> j
+    java.util.Date getDate(long) -> k
+    java.lang.String getString(long) -> l
+    byte[] getBinaryByteArray(long) -> m
+    long getLink(long) -> n
     boolean isNullLink(long) -> a
-    io.realm.internal.OsList getModelList(long) -> c
+    io.realm.internal.OsList getModelList(long) -> d
     io.realm.internal.OsList getValueList(long,io.realm.RealmFieldType) -> a
     void setBoolean(long,boolean) -> a
+    void setString(long,java.lang.String) -> a
+    void setBinaryByteArray(long,byte[]) -> a
     void setLink(long,long) -> a
-    void nullifyLink(long) -> n
+    void nullifyLink(long) -> o
     boolean isNull(long) -> b
+    void setNull(long) -> c
     boolean isAttached() -> d
     java.lang.RuntimeException getStubException() -> e
     void <clinit>() -> <clinit>
@@ -33735,11 +34080,15 @@ io.realm.internal.ObjectServerFacade -> io.realm.internal.j:
     io.realm.internal.ObjectServerFacade nonSyncFacade -> a
     io.realm.internal.ObjectServerFacade syncFacade -> b
     void <init>() -> <init>
+    void init(android.content.Context) -> a
     void realmClosed(io.realm.RealmConfiguration) -> a
     java.lang.Object[] getUserAndServerUrl(io.realm.RealmConfiguration) -> b
     io.realm.internal.ObjectServerFacade getFacade(boolean) -> a
     io.realm.internal.ObjectServerFacade getSyncFacadeIfPossible() -> a
     void wrapObjectStoreSessionIfRequired(io.realm.internal.OsRealmConfig) -> a
+    java.lang.String getSyncServerCertificateAssetName(io.realm.RealmConfiguration) -> c
+    java.lang.String getSyncServerCertificateFilePath(io.realm.RealmConfiguration) -> d
+    void downloadRemoteChanges(io.realm.RealmConfiguration) -> e
     void <clinit>() -> <clinit>
 io.realm.internal.ObservableCollection -> io.realm.internal.ObservableCollection:
     void notifyChangeListeners(long) -> notifyChangeListeners
@@ -33953,7 +34302,13 @@ io.realm.internal.OsObjectSchemaInfo$Builder -> io.realm.internal.OsObjectSchema
     io.realm.internal.OsObjectSchemaInfo build() -> a
 io.realm.internal.OsObjectStore -> io.realm.internal.OsObjectStore:
     java.lang.String getPrimaryKeyForObject(io.realm.internal.OsSharedRealm,java.lang.String) -> a
+    void setSchemaVersion(io.realm.internal.OsSharedRealm,long) -> a
+    long getSchemaVersion(io.realm.internal.OsSharedRealm) -> a
+    boolean callWithLock(io.realm.RealmConfiguration,java.lang.Runnable) -> a
     java.lang.String nativeGetPrimaryKeyForObject(long,java.lang.String) -> nativeGetPrimaryKeyForObject
+    void nativeSetSchemaVersion(long,long) -> nativeSetSchemaVersion
+    long nativeGetSchemaVersion(long) -> nativeGetSchemaVersion
+    boolean nativeCallWithLock(java.lang.String,java.lang.Runnable) -> nativeCallWithLock
 io.realm.internal.OsRealmConfig -> io.realm.internal.OsRealmConfig:
     long nativeFinalizerPtr -> a
     io.realm.RealmConfiguration realmConfiguration -> b
@@ -33989,6 +34344,10 @@ io.realm.internal.OsRealmConfig$Builder -> io.realm.internal.OsRealmConfig$a:
     io.realm.internal.OsSharedRealm$InitializationCallback initializationCallback -> d
     boolean autoUpdateNotification -> e
     void <init>(io.realm.RealmConfiguration) -> <init>
+    io.realm.internal.OsRealmConfig$Builder schemaInfo(io.realm.internal.OsSchemaInfo) -> a
+    io.realm.internal.OsRealmConfig$Builder migrationCallback(io.realm.internal.OsSharedRealm$MigrationCallback) -> a
+    io.realm.internal.OsRealmConfig$Builder initializationCallback(io.realm.internal.OsSharedRealm$InitializationCallback) -> a
+    io.realm.internal.OsRealmConfig$Builder autoUpdateNotification(boolean) -> a
     io.realm.internal.OsRealmConfig build() -> a
 io.realm.internal.OsRealmConfig$Durability -> io.realm.internal.OsRealmConfig$b:
     io.realm.internal.OsRealmConfig$Durability FULL -> a
@@ -34022,6 +34381,7 @@ io.realm.internal.OsResults -> io.realm.internal.OsResults:
     boolean loaded -> a
     boolean isSnapshot -> h
     io.realm.internal.ObserverPairList observerPairs -> b
+    io.realm.internal.OsResults createFromQuery(io.realm.internal.OsSharedRealm,io.realm.internal.TableQuery,io.realm.internal.SortDescriptor,io.realm.internal.SortDescriptor) -> a
     void <init>(io.realm.internal.OsSharedRealm,io.realm.internal.Table,long) -> <init>
     io.realm.internal.OsResults createSnapshot() -> a
     long getNativePtr() -> getNativePtr
@@ -34035,7 +34395,9 @@ io.realm.internal.OsResults -> io.realm.internal.OsResults:
     void notifyChangeListeners(long) -> notifyChangeListeners
     io.realm.internal.OsResults$Mode getMode() -> e
     boolean isLoaded() -> f
+    void load() -> g
     long nativeGetFinalizerPtr() -> nativeGetFinalizerPtr
+    long nativeCreateResults(long,long,io.realm.internal.SortDescriptor,io.realm.internal.SortDescriptor) -> nativeCreateResults
     long nativeCreateSnapshot(long) -> nativeCreateSnapshot
     long nativeGetRow(long,int) -> nativeGetRow
     long nativeFirstRow(long) -> nativeFirstRow
@@ -34043,6 +34405,7 @@ io.realm.internal.OsResults -> io.realm.internal.OsResults:
     void nativeStopListening(long) -> nativeStopListening
     boolean nativeIsValid(long) -> nativeIsValid
     byte nativeGetMode(long) -> nativeGetMode
+    void nativeEvaluateQueryIfNeeded(long,boolean) -> nativeEvaluateQueryIfNeeded
     io.realm.internal.OsSharedRealm access$000(io.realm.internal.OsResults) -> a
     boolean access$100(io.realm.internal.OsResults) -> b
     void <clinit>() -> <clinit>
@@ -34082,10 +34445,13 @@ io.realm.internal.OsSchemaInfo -> io.realm.internal.OsSchemaInfo:
     long nativePtr -> a
     long nativeFinalizerPtr -> b
     io.realm.internal.OsSharedRealm sharedRealm -> c
+    void <init>(java.util.Collection) -> <init>
     void <init>(long,io.realm.internal.OsSharedRealm) -> <init>
+    long[] convertObjectSchemaInfoListToNativePointerArray(java.util.Collection) -> a
     io.realm.internal.OsObjectSchemaInfo getObjectSchemaInfo(java.lang.String) -> a
     long getNativePtr() -> getNativePtr
     long getNativeFinalizerPtr() -> getNativeFinalizerPtr
+    long nativeCreateFromList(long[]) -> nativeCreateFromList
     long nativeGetFinalizerPtr() -> nativeGetFinalizerPtr
     long nativeGetObjectSchemaInfo(long,java.lang.String) -> nativeGetObjectSchemaInfo
     void <clinit>() -> <clinit>
@@ -34211,26 +34577,29 @@ io.realm.internal.PendingRow -> io.realm.internal.l:
     java.lang.ref.WeakReference frontEndRef -> d
     boolean returnCheckedRow -> e
     long getColumnCount() -> a
-    java.lang.String getColumnName(long) -> d
+    java.lang.String getColumnName(long) -> e
     long getColumnIndex(java.lang.String) -> a
-    io.realm.RealmFieldType getColumnType(long) -> e
+    io.realm.RealmFieldType getColumnType(long) -> f
     io.realm.internal.Table getTable() -> b
     long getIndex() -> c
-    long getLong(long) -> f
-    boolean getBoolean(long) -> g
-    float getFloat(long) -> h
-    double getDouble(long) -> i
-    java.util.Date getDate(long) -> j
-    java.lang.String getString(long) -> k
-    byte[] getBinaryByteArray(long) -> l
-    long getLink(long) -> m
+    long getLong(long) -> g
+    boolean getBoolean(long) -> h
+    float getFloat(long) -> i
+    double getDouble(long) -> j
+    java.util.Date getDate(long) -> k
+    java.lang.String getString(long) -> l
+    byte[] getBinaryByteArray(long) -> m
+    long getLink(long) -> n
     boolean isNullLink(long) -> a
-    io.realm.internal.OsList getModelList(long) -> c
+    io.realm.internal.OsList getModelList(long) -> d
     io.realm.internal.OsList getValueList(long,io.realm.RealmFieldType) -> a
     void setBoolean(long,boolean) -> a
+    void setString(long,java.lang.String) -> a
+    void setBinaryByteArray(long,byte[]) -> a
     void setLink(long,long) -> a
-    void nullifyLink(long) -> n
+    void nullifyLink(long) -> o
     boolean isNull(long) -> b
+    void setNull(long) -> c
     boolean isAttached() -> d
     void clearPendingCollection() -> f
     void notifyFrontEnd() -> g
@@ -34258,6 +34627,13 @@ io.realm.internal.Property -> io.realm.internal.Property:
     void <clinit>() -> <clinit>
 io.realm.internal.Property$1 -> io.realm.internal.Property$1:
     int[] $SwitchMap$io$realm$RealmFieldType -> a
+    void <clinit>() -> <clinit>
+io.realm.internal.RealmCore -> io.realm.internal.m:
+    java.lang.String FILE_SEP -> a
+    java.lang.String PATH_SEP -> b
+    java.lang.String BINARIES_PATH -> c
+    boolean libraryIsLoaded -> d
+    void loadLibrary(android.content.Context) -> a
     void <clinit>() -> <clinit>
 io.realm.internal.RealmNotifier -> io.realm.internal.RealmNotifier:
     io.realm.internal.ObserverPairList realmObserverPairs -> realmObserverPairs
@@ -34291,44 +34667,48 @@ io.realm.internal.RealmNotifier$RealmObserverPair -> io.realm.internal.RealmNoti
     void <init>(java.lang.Object,io.realm.RealmChangeListener) -> <init>
     void onChange(java.lang.Object) -> a
     void access$100(io.realm.internal.RealmNotifier$RealmObserverPair,java.lang.Object) -> a
-io.realm.internal.RealmObjectProxy -> io.realm.internal.m:
+io.realm.internal.RealmObjectProxy -> io.realm.internal.n:
     void realm$injectObjectContext() -> c
     io.realm.ProxyState realmGet$proxyState() -> d
-io.realm.internal.RealmProxyMediator -> io.realm.internal.n:
+io.realm.internal.RealmProxyMediator -> io.realm.internal.o:
     void <init>() -> <init>
+    java.util.Map getExpectedObjectSchemaInfoMap() -> a
     io.realm.internal.ColumnInfo createColumnInfo(java.lang.Class,io.realm.internal.OsSchemaInfo) -> a
     java.lang.String getSimpleClassName(java.lang.Class) -> b
     java.lang.String getSimpleClassNameImpl(java.lang.Class) -> a
     io.realm.RealmModel newInstance(java.lang.Class,java.lang.Object,io.realm.internal.Row,io.realm.internal.ColumnInfo,boolean,java.util.List) -> a
-    java.util.Set getModelClasses() -> a
+    java.util.Set getModelClasses() -> b
     io.realm.RealmModel copyOrUpdate(io.realm.Realm,io.realm.RealmModel,boolean,java.util.Map) -> a
-    boolean transformerApplied() -> b
+    boolean transformerApplied() -> c
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     void checkClass(java.lang.Class) -> c
     io.realm.exceptions.RealmException getMissingProxyClassException(java.lang.Class) -> d
-io.realm.internal.Row -> io.realm.internal.o:
+io.realm.internal.Row -> io.realm.internal.p:
     long getColumnCount() -> a
-    java.lang.String getColumnName(long) -> d
+    java.lang.String getColumnName(long) -> e
     long getColumnIndex(java.lang.String) -> a
-    io.realm.RealmFieldType getColumnType(long) -> e
+    io.realm.RealmFieldType getColumnType(long) -> f
     io.realm.internal.Table getTable() -> b
     long getIndex() -> c
-    long getLong(long) -> f
-    boolean getBoolean(long) -> g
-    float getFloat(long) -> h
-    double getDouble(long) -> i
-    java.util.Date getDate(long) -> j
-    java.lang.String getString(long) -> k
-    byte[] getBinaryByteArray(long) -> l
-    long getLink(long) -> m
+    long getLong(long) -> g
+    boolean getBoolean(long) -> h
+    float getFloat(long) -> i
+    double getDouble(long) -> j
+    java.util.Date getDate(long) -> k
+    java.lang.String getString(long) -> l
+    byte[] getBinaryByteArray(long) -> m
+    long getLink(long) -> n
     boolean isNullLink(long) -> a
-    io.realm.internal.OsList getModelList(long) -> c
+    io.realm.internal.OsList getModelList(long) -> d
     io.realm.internal.OsList getValueList(long,io.realm.RealmFieldType) -> a
     void setBoolean(long,boolean) -> a
+    void setString(long,java.lang.String) -> a
+    void setBinaryByteArray(long,byte[]) -> a
     void setLink(long,long) -> a
-    void nullifyLink(long) -> n
+    void nullifyLink(long) -> o
     boolean isNull(long) -> b
+    void setNull(long) -> c
     boolean isAttached() -> d
 io.realm.internal.SortDescriptor -> io.realm.internal.SortDescriptor:
     java.util.Set SORT_VALID_FIELD_TYPES -> SORT_VALID_FIELD_TYPES
@@ -34348,12 +34728,41 @@ io.realm.internal.SortDescriptor -> io.realm.internal.SortDescriptor:
     boolean[] getAscendings() -> getAscendings
     long getTablePtr() -> getTablePtr
     void <clinit>() -> <clinit>
-io.realm.internal.StatefulCollectionChangeSet -> io.realm.internal.p:
+io.realm.internal.StatefulCollectionChangeSet -> io.realm.internal.q:
     io.realm.OrderedCollectionChangeSet changeset -> a
     java.lang.Throwable error -> b
     io.realm.OrderedCollectionChangeSet$State state -> c
     boolean remoteDataSynchronized -> d
     void <init>(io.realm.internal.OsCollectionChangeSet) -> <init>
+io.realm.internal.SubscriptionAwareOsResults -> io.realm.internal.r:
+    long delayedNotificationPtr -> c
+    boolean subscriptionChanged -> d
+    io.realm.internal.sync.OsSubscription subscription -> e
+    boolean collectionChanged -> f
+    boolean firstCallback -> g
+    io.realm.internal.SubscriptionAwareOsResults createFromQuery(io.realm.internal.OsSharedRealm,io.realm.internal.TableQuery,io.realm.internal.SortDescriptor,io.realm.internal.SortDescriptor,java.lang.String) -> a
+    void <init>(io.realm.internal.OsSharedRealm,io.realm.internal.Table,long,java.lang.String) -> <init>
+    void triggerDelayedChangeListener() -> h
+    void notifyChangeListeners(long) -> notifyChangeListeners
+    boolean access$002(io.realm.internal.SubscriptionAwareOsResults,boolean) -> a
+    boolean access$102(io.realm.internal.SubscriptionAwareOsResults,boolean) -> b
+    long access$202(io.realm.internal.SubscriptionAwareOsResults,long) -> a
+    boolean access$100(io.realm.internal.SubscriptionAwareOsResults) -> a
+    boolean access$000(io.realm.internal.SubscriptionAwareOsResults) -> b
+    void access$300(io.realm.internal.SubscriptionAwareOsResults) -> c
+io.realm.internal.SubscriptionAwareOsResults$1 -> io.realm.internal.r$1:
+    io.realm.internal.SubscriptionAwareOsResults this$0 -> a
+    void <init>(io.realm.internal.SubscriptionAwareOsResults) -> <init>
+    void onChange(io.realm.internal.sync.OsSubscription) -> a
+    void onChange(java.lang.Object) -> a
+io.realm.internal.SubscriptionAwareOsResults$2 -> io.realm.internal.r$2:
+    io.realm.internal.SubscriptionAwareOsResults this$0 -> a
+    void <init>(io.realm.internal.SubscriptionAwareOsResults) -> <init>
+    void run() -> run
+io.realm.internal.SubscriptionAwareOsResults$3 -> io.realm.internal.r$3:
+    io.realm.internal.SubscriptionAwareOsResults this$0 -> a
+    void <init>(io.realm.internal.SubscriptionAwareOsResults) -> <init>
+    void run() -> run
 io.realm.internal.Table -> io.realm.internal.Table:
     java.lang.String TABLE_PREFIX -> b
     int CLASS_NAME_MAX_LENGTH -> a
@@ -34365,6 +34774,7 @@ io.realm.internal.Table -> io.realm.internal.Table:
     long getNativePtr() -> getNativePtr
     long getNativeFinalizerPtr() -> getNativeFinalizerPtr
     long size() -> a
+    void clear(boolean) -> a
     long getColumnCount() -> b
     java.lang.String getColumnName(long) -> a
     long getColumnIndex(java.lang.String) -> a
@@ -34374,18 +34784,24 @@ io.realm.internal.Table -> io.realm.internal.Table:
     io.realm.internal.UncheckedRow getUncheckedRow(long) -> d
     io.realm.internal.UncheckedRow getUncheckedRowByPointer(long) -> e
     void setBoolean(long,long,boolean,boolean) -> a
+    void setString(long,long,java.lang.String,boolean) -> a
+    void setBinaryByteArray(long,long,byte[],boolean) -> a
     void setLink(long,long,long,boolean) -> a
+    void setNull(long,long,boolean) -> a
+    void migratePrimaryKeyTableIfNeeded(io.realm.internal.OsSharedRealm) -> a
     boolean isImmutable() -> d
     void checkImmutable() -> e
+    io.realm.internal.TableQuery where() -> f
     long findFirstLong(long,long) -> a
     long findFirstString(long,java.lang.String) -> a
-    java.lang.String getName() -> f
-    java.lang.String getClassName() -> g
+    java.lang.String getName() -> g
+    java.lang.String getClassName() -> h
     java.lang.String toString() -> toString
-    void throwImmutable() -> h
+    void throwImmutable() -> i
     java.lang.String getClassNameForTable(java.lang.String) -> b
     java.lang.String getTableNameForClass(java.lang.String) -> c
     long nativeSize(long) -> nativeSize
+    void nativeClear(long,boolean) -> nativeClear
     long nativeGetColumnCount(long) -> nativeGetColumnCount
     java.lang.String nativeGetColumnName(long,long) -> nativeGetColumnName
     long nativeGetColumnIndex(long,java.lang.String) -> nativeGetColumnIndex
@@ -34393,10 +34809,29 @@ io.realm.internal.Table -> io.realm.internal.Table:
     long nativeGetLinkTarget(long,long) -> nativeGetLinkTarget
     long nativeGetRowPtr(long,long) -> nativeGetRowPtr
     void nativeSetBoolean(long,long,long,boolean,boolean) -> nativeSetBoolean
+    void nativeSetString(long,long,long,java.lang.String,boolean) -> nativeSetString
+    void nativeSetNull(long,long,long,boolean) -> nativeSetNull
+    void nativeSetByteArray(long,long,long,byte[],boolean) -> nativeSetByteArray
     void nativeSetLink(long,long,long,long,boolean) -> nativeSetLink
+    void nativeMigratePrimaryKeyTableIfNeeded(long) -> nativeMigratePrimaryKeyTableIfNeeded
+    long nativeWhere(long) -> nativeWhere
     long nativeFindFirstInt(long,long,long) -> nativeFindFirstInt
     long nativeFindFirstString(long,long,java.lang.String) -> nativeFindFirstString
     java.lang.String nativeGetName(long) -> nativeGetName
+    long nativeGetFinalizerPtr() -> nativeGetFinalizerPtr
+    void <clinit>() -> <clinit>
+io.realm.internal.TableQuery -> io.realm.internal.TableQuery:
+    long nativeFinalizerPtr -> a
+    io.realm.internal.NativeContext context -> b
+    io.realm.internal.Table table -> c
+    long nativePtr -> d
+    boolean queryValidated -> e
+    void <init>(io.realm.internal.NativeContext,io.realm.internal.Table,long) -> <init>
+    long getNativePtr() -> getNativePtr
+    long getNativeFinalizerPtr() -> getNativeFinalizerPtr
+    io.realm.internal.Table getTable() -> a
+    void validateQuery() -> b
+    java.lang.String nativeValidateQuery(long) -> nativeValidateQuery
     long nativeGetFinalizerPtr() -> nativeGetFinalizerPtr
     void <clinit>() -> <clinit>
 io.realm.internal.UncheckedRow -> io.realm.internal.UncheckedRow:
@@ -34411,26 +34846,29 @@ io.realm.internal.UncheckedRow -> io.realm.internal.UncheckedRow:
     io.realm.internal.UncheckedRow getByRowIndex(io.realm.internal.NativeContext,io.realm.internal.Table,long) -> a
     io.realm.internal.UncheckedRow getByRowPointer(io.realm.internal.NativeContext,io.realm.internal.Table,long) -> b
     long getColumnCount() -> a
-    java.lang.String getColumnName(long) -> d
+    java.lang.String getColumnName(long) -> e
     long getColumnIndex(java.lang.String) -> a
-    io.realm.RealmFieldType getColumnType(long) -> e
+    io.realm.RealmFieldType getColumnType(long) -> f
     io.realm.internal.Table getTable() -> b
     long getIndex() -> c
-    long getLong(long) -> f
-    boolean getBoolean(long) -> g
-    float getFloat(long) -> h
-    double getDouble(long) -> i
-    java.util.Date getDate(long) -> j
-    java.lang.String getString(long) -> k
-    byte[] getBinaryByteArray(long) -> l
-    long getLink(long) -> m
+    long getLong(long) -> g
+    boolean getBoolean(long) -> h
+    float getFloat(long) -> i
+    double getDouble(long) -> j
+    java.util.Date getDate(long) -> k
+    java.lang.String getString(long) -> l
+    byte[] getBinaryByteArray(long) -> m
+    long getLink(long) -> n
     boolean isNullLink(long) -> a
-    io.realm.internal.OsList getModelList(long) -> c
+    io.realm.internal.OsList getModelList(long) -> d
     io.realm.internal.OsList getValueList(long,io.realm.RealmFieldType) -> a
     void setBoolean(long,boolean) -> a
+    void setString(long,java.lang.String) -> a
+    void setBinaryByteArray(long,byte[]) -> a
     void setLink(long,long) -> a
-    void nullifyLink(long) -> n
+    void nullifyLink(long) -> o
     boolean isNull(long) -> b
+    void setNull(long) -> c
     boolean isAttached() -> d
     long nativeGetColumnCount(long) -> nativeGetColumnCount
     java.lang.String nativeGetColumnName(long,long) -> nativeGetColumnName
@@ -34447,16 +34885,21 @@ io.realm.internal.UncheckedRow -> io.realm.internal.UncheckedRow:
     byte[] nativeGetByteArray(long,long) -> nativeGetByteArray
     void nativeSetBoolean(long,long,boolean) -> nativeSetBoolean
     long nativeGetLink(long,long) -> nativeGetLink
+    void nativeSetString(long,long,java.lang.String) -> nativeSetString
+    void nativeSetByteArray(long,long,byte[]) -> nativeSetByteArray
     void nativeSetLink(long,long,long) -> nativeSetLink
     void nativeNullifyLink(long,long) -> nativeNullifyLink
     boolean nativeIsAttached(long) -> nativeIsAttached
     boolean nativeIsNull(long,long) -> nativeIsNull
+    void nativeSetNull(long,long) -> nativeSetNull
     long nativeGetFinalizerPtr() -> nativeGetFinalizerPtr
     void <clinit>() -> <clinit>
 io.realm.internal.Util -> io.realm.internal.Util:
     java.lang.String getTablePrefix() -> a
     java.lang.String nativeGetTablePrefix() -> nativeGetTablePrefix
     java.lang.Class getOriginalModelClass(java.lang.Class) -> a
+    boolean isEmptyString(java.lang.String) -> a
+    boolean deleteRealm(java.lang.String,java.io.File,java.lang.String) -> a
 io.realm.internal.android.AndroidCapabilities -> io.realm.internal.android.a:
     boolean EMULATE_MAIN_THREAD -> a
     android.os.Looper looper -> b
@@ -34528,20 +34971,51 @@ io.realm.internal.fields.FieldDescriptor$SchemaProxy -> io.realm.internal.a.c$a:
     boolean hasCache() -> a
     io.realm.internal.ColumnInfo getColumnInfo(java.lang.String) -> a
     long getNativeTablePtr(java.lang.String) -> b
+io.realm.internal.modules.CompositeMediator -> io.realm.internal.b.a:
+    java.util.Map mediators -> a
+    java.util.Map internalClassNames -> b
+    void <init>(io.realm.internal.RealmProxyMediator[]) -> <init>
+    java.util.Map getExpectedObjectSchemaInfoMap() -> a
+    io.realm.internal.ColumnInfo createColumnInfo(java.lang.Class,io.realm.internal.OsSchemaInfo) -> a
+    java.lang.String getSimpleClassNameImpl(java.lang.Class) -> a
+    io.realm.RealmModel newInstance(java.lang.Class,java.lang.Object,io.realm.internal.Row,io.realm.internal.ColumnInfo,boolean,java.util.List) -> a
+    java.util.Set getModelClasses() -> b
+    io.realm.RealmModel copyOrUpdate(io.realm.Realm,io.realm.RealmModel,boolean,java.util.Map) -> a
+    boolean transformerApplied() -> c
+    io.realm.internal.RealmProxyMediator getMediator(java.lang.Class) -> e
+io.realm.internal.modules.FilterableMediator -> io.realm.internal.b.b:
+    io.realm.internal.RealmProxyMediator originalMediator -> a
+    java.util.Set allowedClasses -> b
+    void <init>(io.realm.internal.RealmProxyMediator,java.util.Collection) -> <init>
+    java.util.Map getExpectedObjectSchemaInfoMap() -> a
+    io.realm.internal.ColumnInfo createColumnInfo(java.lang.Class,io.realm.internal.OsSchemaInfo) -> a
+    java.lang.String getSimpleClassNameImpl(java.lang.Class) -> a
+    io.realm.RealmModel newInstance(java.lang.Class,java.lang.Object,io.realm.internal.Row,io.realm.internal.ColumnInfo,boolean,java.util.List) -> a
+    java.util.Set getModelClasses() -> b
+    io.realm.RealmModel copyOrUpdate(io.realm.Realm,io.realm.RealmModel,boolean,java.util.Map) -> a
+    boolean transformerApplied() -> c
+    void checkSchemaHasClass(java.lang.Class) -> e
 io.realm.internal.sync.BaseModule -> io.realm.internal.sync.BaseModule:
     void <init>() -> <init>
 io.realm.internal.sync.OsSubscription -> io.realm.internal.sync.OsSubscription:
-    long nativeFinalizerPtr -> a
-    long nativePtr -> b
+    long nativeFinalizerPtr -> b
+    long nativePtr -> c
+    io.realm.internal.ObserverPairList observerPairs -> a
+    void <init>(io.realm.internal.OsResults,java.lang.String) -> <init>
     long getNativePtr() -> getNativePtr
     long getNativeFinalizerPtr() -> getNativeFinalizerPtr
     io.realm.internal.sync.OsSubscription$SubscriptionState getState() -> a
     java.lang.Throwable getError() -> b
+    void addChangeListener(io.realm.RealmChangeListener) -> a
+    long nativeCreate(long,java.lang.String) -> nativeCreate
     long nativeGetFinalizerPtr() -> nativeGetFinalizerPtr
     int nativeGetState(long) -> nativeGetState
     java.lang.Object nativeGetError(long) -> nativeGetError
+    void nativeStartListening(long) -> nativeStartListening
     void <clinit>() -> <clinit>
-io.realm.internal.sync.OsSubscription$SubscriptionState -> io.realm.internal.sync.OsSubscription$a:
+io.realm.internal.sync.OsSubscription$SubscriptionObserverPair -> io.realm.internal.sync.OsSubscription$a:
+    void <init>(io.realm.internal.sync.OsSubscription,io.realm.RealmChangeListener) -> <init>
+io.realm.internal.sync.OsSubscription$SubscriptionState -> io.realm.internal.sync.OsSubscription$b:
     io.realm.internal.sync.OsSubscription$SubscriptionState ERROR -> a
     io.realm.internal.sync.OsSubscription$SubscriptionState CREATING -> b
     io.realm.internal.sync.OsSubscription$SubscriptionState PENDING -> c
@@ -34554,7 +35028,15 @@ io.realm.internal.sync.OsSubscription$SubscriptionState -> io.realm.internal.syn
     void <init>(java.lang.String,int,int) -> <init>
     io.realm.internal.sync.OsSubscription$SubscriptionState fromInternalValue(int) -> a
     void <clinit>() -> <clinit>
-io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy -> io.realm.af:
+io.realm.internal.sync.SubscriptionAction -> io.realm.internal.sync.a:
+    io.realm.internal.sync.SubscriptionAction NO_SUBSCRIPTION -> a
+    io.realm.internal.sync.SubscriptionAction ANONYMOUS_SUBSCRIPTION -> b
+    java.lang.String subscriptionName -> c
+    void <init>(java.lang.String) -> <init>
+    boolean shouldCreateSubscriptions() -> a
+    java.lang.String getName() -> b
+    void <clinit>() -> <clinit>
+io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy -> io.realm.ai:
     io.realm.internal.OsObjectSchemaInfo expectedObjectSchemaInfo -> a
     io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy$ClassPermissionsColumnInfo columnInfo -> b
     io.realm.ProxyState proxyState -> c
@@ -34564,7 +35046,8 @@ io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy -> io.realm.af:
     java.lang.String realmGet$name() -> a
     io.realm.RealmList realmGet$permissions() -> b
     void realmSet$permissions(io.realm.RealmList) -> a
-    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> e
+    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> f
+    io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo() -> e
     io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy$ClassPermissionsColumnInfo createColumnInfo(io.realm.internal.OsSchemaInfo) -> a
     io.realm.sync.permissions.ClassPermissions copyOrUpdate(io.realm.Realm,io.realm.sync.permissions.ClassPermissions,boolean,java.util.Map) -> a
     io.realm.sync.permissions.ClassPermissions copy(io.realm.Realm,io.realm.sync.permissions.ClassPermissions,boolean,java.util.Map) -> b
@@ -34574,14 +35057,15 @@ io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy -> io.realm.af:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     void <clinit>() -> <clinit>
-io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy$ClassPermissionsColumnInfo -> io.realm.af$a:
+io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxy$ClassPermissionsColumnInfo -> io.realm.ai$a:
     long nameIndex -> a
     long permissionsIndex -> b
     void <init>(io.realm.internal.OsSchemaInfo) -> <init>
-io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxyInterface -> io.realm.ag:
+    void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo) -> a
+io.realm.io_realm_sync_permissions_ClassPermissionsRealmProxyInterface -> io.realm.aj:
     java.lang.String realmGet$name() -> a
     io.realm.RealmList realmGet$permissions() -> b
-io.realm.io_realm_sync_permissions_PermissionRealmProxy -> io.realm.ah:
+io.realm.io_realm_sync_permissions_PermissionRealmProxy -> io.realm.ak:
     io.realm.internal.OsObjectSchemaInfo expectedObjectSchemaInfo -> a
     io.realm.io_realm_sync_permissions_PermissionRealmProxy$PermissionColumnInfo columnInfo -> b
     io.realm.ProxyState proxyState -> c
@@ -34603,7 +35087,8 @@ io.realm.io_realm_sync_permissions_PermissionRealmProxy -> io.realm.ah:
     void realmSet$canCreate(boolean) -> f
     boolean realmGet$canModifySchema() -> j
     void realmSet$canModifySchema(boolean) -> g
-    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> k
+    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> l
+    io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo() -> k
     io.realm.io_realm_sync_permissions_PermissionRealmProxy$PermissionColumnInfo createColumnInfo(io.realm.internal.OsSchemaInfo) -> a
     io.realm.sync.permissions.Permission copyOrUpdate(io.realm.Realm,io.realm.sync.permissions.Permission,boolean,java.util.Map) -> a
     io.realm.sync.permissions.Permission copy(io.realm.Realm,io.realm.sync.permissions.Permission,boolean,java.util.Map) -> b
@@ -34612,7 +35097,7 @@ io.realm.io_realm_sync_permissions_PermissionRealmProxy -> io.realm.ah:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     void <clinit>() -> <clinit>
-io.realm.io_realm_sync_permissions_PermissionRealmProxy$PermissionColumnInfo -> io.realm.ah$a:
+io.realm.io_realm_sync_permissions_PermissionRealmProxy$PermissionColumnInfo -> io.realm.ak$a:
     long roleIndex -> a
     long canReadIndex -> b
     long canUpdateIndex -> c
@@ -34622,7 +35107,8 @@ io.realm.io_realm_sync_permissions_PermissionRealmProxy$PermissionColumnInfo -> 
     long canCreateIndex -> g
     long canModifySchemaIndex -> h
     void <init>(io.realm.internal.OsSchemaInfo) -> <init>
-io.realm.io_realm_sync_permissions_PermissionRealmProxyInterface -> io.realm.ai:
+    void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo) -> a
+io.realm.io_realm_sync_permissions_PermissionRealmProxyInterface -> io.realm.al:
     io.realm.sync.permissions.Role realmGet$role() -> a
     void realmSet$role(io.realm.sync.permissions.Role) -> a
     boolean realmGet$canRead() -> b
@@ -34639,7 +35125,7 @@ io.realm.io_realm_sync_permissions_PermissionRealmProxyInterface -> io.realm.ai:
     void realmSet$canCreate(boolean) -> f
     boolean realmGet$canModifySchema() -> j
     void realmSet$canModifySchema(boolean) -> g
-io.realm.io_realm_sync_permissions_PermissionUserRealmProxy -> io.realm.aj:
+io.realm.io_realm_sync_permissions_PermissionUserRealmProxy -> io.realm.am:
     io.realm.internal.OsObjectSchemaInfo expectedObjectSchemaInfo -> b
     io.realm.io_realm_sync_permissions_PermissionUserRealmProxy$PermissionUserColumnInfo columnInfo -> c
     io.realm.ProxyState proxyState -> d
@@ -34648,7 +35134,8 @@ io.realm.io_realm_sync_permissions_PermissionUserRealmProxy -> io.realm.aj:
     java.lang.String realmGet$id() -> a
     io.realm.sync.permissions.Role realmGet$role() -> b
     void realmSet$role(io.realm.sync.permissions.Role) -> a
-    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> e
+    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> f
+    io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo() -> e
     io.realm.io_realm_sync_permissions_PermissionUserRealmProxy$PermissionUserColumnInfo createColumnInfo(io.realm.internal.OsSchemaInfo) -> a
     io.realm.sync.permissions.PermissionUser copyOrUpdate(io.realm.Realm,io.realm.sync.permissions.PermissionUser,boolean,java.util.Map) -> a
     io.realm.sync.permissions.PermissionUser copy(io.realm.Realm,io.realm.sync.permissions.PermissionUser,boolean,java.util.Map) -> b
@@ -34658,15 +35145,16 @@ io.realm.io_realm_sync_permissions_PermissionUserRealmProxy -> io.realm.aj:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     void <clinit>() -> <clinit>
-io.realm.io_realm_sync_permissions_PermissionUserRealmProxy$PermissionUserColumnInfo -> io.realm.aj$a:
+io.realm.io_realm_sync_permissions_PermissionUserRealmProxy$PermissionUserColumnInfo -> io.realm.am$a:
     long idIndex -> a
     long roleIndex -> b
     void <init>(io.realm.internal.OsSchemaInfo) -> <init>
-io.realm.io_realm_sync_permissions_PermissionUserRealmProxyInterface -> io.realm.ak:
+    void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo) -> a
+io.realm.io_realm_sync_permissions_PermissionUserRealmProxyInterface -> io.realm.an:
     java.lang.String realmGet$id() -> a
     io.realm.sync.permissions.Role realmGet$role() -> b
     void realmSet$role(io.realm.sync.permissions.Role) -> a
-io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy -> io.realm.al:
+io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy -> io.realm.ao:
     io.realm.internal.OsObjectSchemaInfo expectedObjectSchemaInfo -> a
     io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy$RealmPermissionsColumnInfo columnInfo -> b
     io.realm.ProxyState proxyState -> c
@@ -34677,7 +35165,8 @@ io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy -> io.realm.al:
     void realmSet$id(int) -> a
     io.realm.RealmList realmGet$permissions() -> b
     void realmSet$permissions(io.realm.RealmList) -> a
-    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> e
+    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> f
+    io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo() -> e
     io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy$RealmPermissionsColumnInfo createColumnInfo(io.realm.internal.OsSchemaInfo) -> a
     io.realm.sync.permissions.RealmPermissions copyOrUpdate(io.realm.Realm,io.realm.sync.permissions.RealmPermissions,boolean,java.util.Map) -> a
     io.realm.sync.permissions.RealmPermissions copy(io.realm.Realm,io.realm.sync.permissions.RealmPermissions,boolean,java.util.Map) -> b
@@ -34687,14 +35176,15 @@ io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy -> io.realm.al:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     void <clinit>() -> <clinit>
-io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy$RealmPermissionsColumnInfo -> io.realm.al$a:
+io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxy$RealmPermissionsColumnInfo -> io.realm.ao$a:
     long idIndex -> a
     long permissionsIndex -> b
     void <init>(io.realm.internal.OsSchemaInfo) -> <init>
-io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxyInterface -> io.realm.am:
+    void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo) -> a
+io.realm.io_realm_sync_permissions_RealmPermissionsRealmProxyInterface -> io.realm.ap:
     int realmGet$id() -> a
     io.realm.RealmList realmGet$permissions() -> b
-io.realm.io_realm_sync_permissions_RoleRealmProxy -> io.realm.an:
+io.realm.io_realm_sync_permissions_RoleRealmProxy -> io.realm.aq:
     io.realm.internal.OsObjectSchemaInfo expectedObjectSchemaInfo -> a
     io.realm.io_realm_sync_permissions_RoleRealmProxy$RoleColumnInfo columnInfo -> b
     io.realm.ProxyState proxyState -> c
@@ -34704,7 +35194,8 @@ io.realm.io_realm_sync_permissions_RoleRealmProxy -> io.realm.an:
     java.lang.String realmGet$name() -> a
     io.realm.RealmList realmGet$members() -> b
     void realmSet$members(io.realm.RealmList) -> a
-    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> e
+    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> f
+    io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo() -> e
     io.realm.io_realm_sync_permissions_RoleRealmProxy$RoleColumnInfo createColumnInfo(io.realm.internal.OsSchemaInfo) -> a
     io.realm.sync.permissions.Role copyOrUpdate(io.realm.Realm,io.realm.sync.permissions.Role,boolean,java.util.Map) -> a
     io.realm.sync.permissions.Role copy(io.realm.Realm,io.realm.sync.permissions.Role,boolean,java.util.Map) -> b
@@ -34714,11 +35205,12 @@ io.realm.io_realm_sync_permissions_RoleRealmProxy -> io.realm.an:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     void <clinit>() -> <clinit>
-io.realm.io_realm_sync_permissions_RoleRealmProxy$RoleColumnInfo -> io.realm.an$a:
+io.realm.io_realm_sync_permissions_RoleRealmProxy$RoleColumnInfo -> io.realm.aq$a:
     long nameIndex -> a
     long membersIndex -> b
     void <init>(io.realm.internal.OsSchemaInfo) -> <init>
-io.realm.io_realm_sync_permissions_RoleRealmProxyInterface -> io.realm.ao:
+    void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo) -> a
+io.realm.io_realm_sync_permissions_RoleRealmProxyInterface -> io.realm.ar:
     java.lang.String realmGet$name() -> a
     io.realm.RealmList realmGet$members() -> b
 io.realm.log.RealmLog -> io.realm.log.RealmLog:
@@ -34735,7 +35227,120 @@ io.realm.log.RealmLog -> io.realm.log.RealmLog:
     void <clinit>() -> <clinit>
 io.realm.log.RealmLogger -> io.realm.log.RealmLogger:
     void log(int,java.lang.String,java.lang.Throwable,java.lang.String) -> log
-io.realm.rx.RxObservableFactory -> io.realm.a.a:
+io.realm.rx.RealmObservableFactory -> io.realm.a.a:
+    java.lang.ThreadLocal resultsRefs -> a
+    java.lang.ThreadLocal listRefs -> b
+    java.lang.ThreadLocal objectRefs -> c
+    io.reactivex.BackpressureStrategy BACK_PRESSURE_STRATEGY -> d
+    void <init>() -> <init>
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    void <clinit>() -> <clinit>
+io.realm.rx.RealmObservableFactory$1 -> io.realm.a.a$1:
+    io.realm.rx.RealmObservableFactory this$0 -> a
+    void <init>(io.realm.rx.RealmObservableFactory) -> <init>
+    io.realm.rx.RealmObservableFactory$StrongReferenceCounter initialValue() -> a
+    java.lang.Object initialValue() -> initialValue
+io.realm.rx.RealmObservableFactory$2 -> io.realm.a.a$2:
+    io.realm.rx.RealmObservableFactory this$0 -> a
+    void <init>(io.realm.rx.RealmObservableFactory) -> <init>
+    io.realm.rx.RealmObservableFactory$StrongReferenceCounter initialValue() -> a
+    java.lang.Object initialValue() -> initialValue
+io.realm.rx.RealmObservableFactory$3 -> io.realm.a.a$3:
+    io.realm.rx.RealmObservableFactory this$0 -> a
+    void <init>(io.realm.rx.RealmObservableFactory) -> <init>
+    io.realm.rx.RealmObservableFactory$StrongReferenceCounter initialValue() -> a
+    java.lang.Object initialValue() -> initialValue
+io.realm.rx.RealmObservableFactory$StrongReferenceCounter -> io.realm.a.a$a:
+    java.util.Map references -> a
+    void <init>() -> <init>
+    void <init>(io.realm.rx.RealmObservableFactory$1) -> <init>
+io.realm.rx.RxObservableFactory -> io.realm.a.b:
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxy -> io.realm.as:
+    io.realm.internal.OsObjectSchemaInfo expectedObjectSchemaInfo -> a
+    io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxy$RepositoryDbModelColumnInfo columnInfo -> b
+    io.realm.ProxyState proxyState -> c
+    void <init>() -> <init>
+    void realm$injectObjectContext() -> c
+    java.lang.String realmGet$name() -> a
+    void realmSet$name(java.lang.String) -> a
+    boolean realmGet$isPrivate() -> b
+    void realmSet$isPrivate(boolean) -> a
+    java.lang.String realmGet$description() -> e
+    void realmSet$description(java.lang.String) -> b
+    java.lang.String realmGet$language() -> f
+    void realmSet$language(java.lang.String) -> c
+    java.lang.String realmGet$clone_url() -> g
+    void realmSet$clone_url(java.lang.String) -> d
+    java.lang.String realmGet$html_url() -> h
+    void realmSet$html_url(java.lang.String) -> e
+    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> o
+    io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo() -> i
+    io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxy$RepositoryDbModelColumnInfo createColumnInfo(io.realm.internal.OsSchemaInfo) -> a
+    sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel copyOrUpdate(io.realm.Realm,sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel,boolean,java.util.Map) -> a
+    sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel copy(io.realm.Realm,sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel,boolean,java.util.Map) -> b
+    java.lang.String toString() -> toString
+    io.realm.ProxyState realmGet$proxyState() -> d
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    void <clinit>() -> <clinit>
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxy$RepositoryDbModelColumnInfo -> io.realm.as$a:
+    long nameIndex -> a
+    long isPrivateIndex -> b
+    long descriptionIndex -> c
+    long languageIndex -> d
+    long clone_urlIndex -> e
+    long html_urlIndex -> f
+    void <init>(io.realm.internal.OsSchemaInfo) -> <init>
+    void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo) -> a
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_RepositoryDbModelRealmProxyInterface -> io.realm.at:
+    java.lang.String realmGet$name() -> a
+    void realmSet$name(java.lang.String) -> a
+    boolean realmGet$isPrivate() -> b
+    void realmSet$isPrivate(boolean) -> a
+    java.lang.String realmGet$description() -> e
+    void realmSet$description(java.lang.String) -> b
+    java.lang.String realmGet$language() -> f
+    void realmSet$language(java.lang.String) -> c
+    java.lang.String realmGet$clone_url() -> g
+    void realmSet$clone_url(java.lang.String) -> d
+    java.lang.String realmGet$html_url() -> h
+    void realmSet$html_url(java.lang.String) -> e
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxy -> io.realm.au:
+    io.realm.internal.OsObjectSchemaInfo expectedObjectSchemaInfo -> a
+    io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxy$UserDbModelColumnInfo columnInfo -> b
+    io.realm.ProxyState proxyState -> c
+    void <init>() -> <init>
+    void realm$injectObjectContext() -> c
+    java.lang.String realmGet$login() -> a
+    void realmSet$login(java.lang.String) -> a
+    java.lang.String realmGet$htmlURL() -> b
+    void realmSet$htmlURL(java.lang.String) -> b
+    byte[] realmGet$bitmapData() -> e
+    void realmSet$bitmapData(byte[]) -> a
+    io.realm.internal.OsObjectSchemaInfo createExpectedObjectSchemaInfo() -> j
+    io.realm.internal.OsObjectSchemaInfo getExpectedObjectSchemaInfo() -> f
+    io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxy$UserDbModelColumnInfo createColumnInfo(io.realm.internal.OsSchemaInfo) -> a
+    sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel copyOrUpdate(io.realm.Realm,sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel,boolean,java.util.Map) -> a
+    sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel copy(io.realm.Realm,sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel,boolean,java.util.Map) -> b
+    java.lang.String toString() -> toString
+    io.realm.ProxyState realmGet$proxyState() -> d
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    void <clinit>() -> <clinit>
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxy$UserDbModelColumnInfo -> io.realm.au$a:
+    long loginIndex -> a
+    long htmlURLIndex -> b
+    long bitmapDataIndex -> c
+    void <init>(io.realm.internal.OsSchemaInfo) -> <init>
+    void copy(io.realm.internal.ColumnInfo,io.realm.internal.ColumnInfo) -> a
+io.realm.sfedu_physics_dmitriy_githubapiresttestproject_data_base_model_UserDbModelRealmProxyInterface -> io.realm.av:
+    java.lang.String realmGet$login() -> a
+    void realmSet$login(java.lang.String) -> a
+    java.lang.String realmGet$htmlURL() -> b
+    void realmSet$htmlURL(java.lang.String) -> b
+    byte[] realmGet$bitmapData() -> e
+    void realmSet$bitmapData(byte[]) -> a
 io.realm.sync.permissions.ClassPermissions -> io.realm.b.a.a:
     java.lang.String name -> a
     io.realm.RealmList permissions -> b
@@ -38876,7 +39481,9 @@ sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity ->
     android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> b
     android.app.ProgressDialog progressDialog -> c
     java.lang.String userName -> d
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter repositoriesPresenter -> e
+    sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.RepositoryDao repositoryDao -> e
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter repositoriesPresenter -> f
+    sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter repositoryAdapter -> g
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void onStartLoading() -> f
@@ -38886,6 +39493,7 @@ sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity ->
     void initViews() -> i
     void configureViews() -> j
     void configureActionBar() -> k
+    void onDestroy() -> onDestroy
     void lambda$configureViews$0$MvpRepositoryActivity() -> h
 sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$Lambda$0 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.b:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity arg$1 -> a
@@ -38903,25 +39511,26 @@ sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$P
     void bind(java.lang.Object,com.arellomobile.mvp.MvpPresenter) -> a
 sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity -> sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity:
     sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter usersPresenter -> a
-    android.support.v7.widget.RecyclerView recyclerView -> b
-    android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> c
-    android.app.ProgressDialog progressDialog -> d
-    android.widget.RelativeLayout relativeLayout -> e
-    android.widget.EditText search_location -> f
-    android.widget.EditText search_language -> g
-    android.widget.Button start_search_button -> h
-    java.lang.String userLocation -> i
-    java.lang.String userProgrammingLanguage -> j
-    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter userAdapter -> k
-    int pageNumber -> l
-    int pageLimit -> m
+    android.support.v7.widget.RecyclerView recyclerView -> c
+    android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> d
+    android.app.ProgressDialog progressDialog -> e
+    android.widget.RelativeLayout relativeLayout -> f
+    android.widget.EditText search_location -> g
+    android.widget.EditText search_language -> h
+    android.widget.Button start_search_button -> i
+    java.lang.String userLocation -> j
+    java.lang.String userProgrammingLanguage -> k
+    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter userAdapter -> l
+    int pageNumber -> m
+    int pageLimit -> n
+    sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.UserDAO userDAO -> b
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void onStartLoading() -> f
-    void loadUsersByQuery(sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse) -> a
+    void loadUsersByQuery(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> a
     void onErrorLoadingUsers(java.lang.Throwable) -> a
     void onLoadingFinished() -> g
-    void loadMoreUsers(sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse) -> b
+    void loadMoreUsers(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> b
     void initViews() -> k
     void configureViews() -> l
     void initAndConfigureSearchViews() -> m
@@ -38969,6 +39578,7 @@ sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter -> sfed
     sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
     void onBindViewHolder(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder,int) -> a
     int getItemCount() -> getItemCount
+    java.util.List getRepositories() -> a
     void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
     android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
 sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder -> sfedu.physics.dmitriy.githubapiresttestproject.a.a$a:
@@ -39004,6 +39614,13 @@ sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter -> sfedu.phys
     android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
     java.util.List access$300(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter) -> a
     android.content.Context access$400(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter) -> b
+sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$1 -> sfedu.physics.dmitriy.githubapiresttestproject.a.b$1:
+    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder val$holder -> a
+    sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User val$dataUser -> b
+    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter this$0 -> c
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter,sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder,sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User) -> <init>
+    void onResourceReady(android.graphics.Bitmap,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
 sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$OnLoadMoreListener -> sfedu.physics.dmitriy.githubapiresttestproject.a.b$a:
     void onLoadMore() -> a
 sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder -> sfedu.physics.dmitriy.githubapiresttestproject.a.b$b:
@@ -39031,7 +39648,93 @@ sfedu.physics.dmitriy.githubapiresttestproject.api.SearchUsersServiceRxJava -> s
 sfedu.physics.dmitriy.githubapiresttestproject.application.Application -> sfedu.physics.dmitriy.githubapiresttestproject.application.Application:
     retrofit2.Retrofit rxJavaRetrofit -> a
     void <init>() -> <init>
+    void onCreate() -> onCreate
     retrofit2.Retrofit getRxJavaClient() -> a
+sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel -> sfedu.physics.dmitriy.githubapiresttestproject.b.a:
+    java.lang.String name -> a
+    boolean isPrivate -> b
+    java.lang.String description -> c
+    java.lang.String language -> d
+    java.lang.String clone_url -> e
+    java.lang.String html_url -> f
+    void <init>() -> <init>
+    boolean isPrivate() -> j
+    void setPrivate(boolean) -> b
+    java.lang.String getDescription() -> k
+    void setDescription(java.lang.String) -> f
+    java.lang.String getLanguage() -> l
+    void setLanguage(java.lang.String) -> g
+    java.lang.String getClone_url() -> m
+    void setClone_url(java.lang.String) -> h
+    java.lang.String getHtml_url() -> n
+    void setHtml_url(java.lang.String) -> i
+    java.lang.String realmGet$name() -> a
+    void realmSet$name(java.lang.String) -> a
+    boolean realmGet$isPrivate() -> b
+    void realmSet$isPrivate(boolean) -> a
+    java.lang.String realmGet$description() -> e
+    void realmSet$description(java.lang.String) -> b
+    java.lang.String realmGet$language() -> f
+    void realmSet$language(java.lang.String) -> c
+    java.lang.String realmGet$clone_url() -> g
+    void realmSet$clone_url(java.lang.String) -> d
+    java.lang.String realmGet$html_url() -> h
+    void realmSet$html_url(java.lang.String) -> e
+sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel -> sfedu.physics.dmitriy.githubapiresttestproject.b.b:
+    java.lang.String login -> a
+    java.lang.String htmlURL -> b
+    byte[] bitmapData -> c
+    void <init>() -> <init>
+    java.lang.String getLogin() -> g
+    void setLogin(java.lang.String) -> c
+    java.lang.String getHtmlURL() -> h
+    void setHtmlURL(java.lang.String) -> d
+    byte[] getBitmapData() -> i
+    void setBitmapData(byte[]) -> b
+    java.lang.String realmGet$login() -> a
+    void realmSet$login(java.lang.String) -> a
+    java.lang.String realmGet$htmlURL() -> b
+    void realmSet$htmlURL(java.lang.String) -> b
+    byte[] realmGet$bitmapData() -> e
+    void realmSet$bitmapData(byte[]) -> a
+sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository -> sfedu.physics.dmitriy.githubapiresttestproject.c.a.a:
+    java.lang.String name -> a
+    boolean isPrivate -> b
+    java.lang.String description -> c
+    java.lang.String language -> d
+    java.lang.String clone_url -> e
+    java.lang.String html_url -> f
+    void <init>() -> <init>
+    java.lang.String getName() -> a
+    boolean isPrivate() -> b
+    void setPrivate(boolean) -> a
+    java.lang.String getDescription() -> c
+    void setDescription(java.lang.String) -> a
+    java.lang.String getLanguage() -> d
+    void setLanguage(java.lang.String) -> b
+    java.lang.String getClone_url() -> e
+    void setClone_url(java.lang.String) -> c
+    java.lang.String getHtml_url() -> f
+    void setHtml_url(java.lang.String) -> d
+sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User -> sfedu.physics.dmitriy.githubapiresttestproject.c.b.a:
+    java.lang.String login -> a
+    java.lang.String avatarURL -> b
+    java.lang.String htmlURL -> c
+    byte[] bitmapData -> d
+    void <init>() -> <init>
+    java.lang.String getLogin() -> a
+    void setLogin(java.lang.String) -> a
+    java.lang.String getAvatarURL() -> b
+    java.lang.String getHtmlURL() -> c
+    void setHtmlURL(java.lang.String) -> b
+    void setBitmapData(byte[]) -> a
+    byte[] getBitmapData() -> d
+sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse -> sfedu.physics.dmitriy.githubapiresttestproject.c.b.b:
+    java.util.List users -> a
+    int totalCount -> b
+    void <init>() -> <init>
+    java.util.List getUsers() -> a
+    int getTotalCount() -> b
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesModel -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.a:
     sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoryServiceRxJava searchRepositoryServiceRxJava -> a
     void <init>() -> <init>
@@ -39139,27 +39842,27 @@ sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$$ViewSta
     com.arellomobile.mvp.viewstate.MvpViewState getViewState() -> a
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView:
     void onStartLoading() -> f
-    void loadUsersByQuery(sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse) -> a
+    void loadUsersByQuery(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> a
     void onErrorLoadingUsers(java.lang.Throwable) -> a
     void onLoadingFinished() -> g
-    void loadMoreUsers(sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse) -> b
+    void loadMoreUsers(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> b
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State:
     void <init>() -> <init>
     void onStartLoading() -> f
-    void loadUsersByQuery(sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse) -> a
+    void loadUsersByQuery(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> a
     void onErrorLoadingUsers(java.lang.Throwable) -> a
     void onLoadingFinished() -> g
-    void loadMoreUsers(sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse) -> b
+    void loadMoreUsers(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> b
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State$LoadMoreUsersCommand -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State$a:
-    sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse userResponse -> a
+    sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse userResponse -> a
     sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State this$0 -> b
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State,sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse) -> <init>
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State,sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> <init>
     void apply(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> a
     void apply(com.arellomobile.mvp.MvpView) -> a
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State$LoadUsersByQueryCommand -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State$b:
-    sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse userResponse -> a
+    sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse userResponse -> a
     sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State this$0 -> b
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State,sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse) -> <init>
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State,sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> <init>
     void apply(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> a
     void apply(com.arellomobile.mvp.MvpView) -> a
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State$OnErrorLoadingUsersCommand -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State$c:
@@ -39178,29 +39881,22 @@ sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State$OnStar
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State) -> <init>
     void apply(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> a
     void apply(com.arellomobile.mvp.MvpView) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.repos_model.Repository -> sfedu.physics.dmitriy.githubapiresttestproject.b.a:
-    java.lang.String name -> a
-    boolean isPrivate -> b
-    java.lang.String description -> c
-    java.lang.String language -> d
-    java.lang.String clone_url -> e
-    java.lang.String html_url -> f
-    java.lang.String getName() -> a
-    boolean isPrivate() -> b
-    java.lang.String getDescription() -> c
-    java.lang.String getLanguage() -> d
-    java.lang.String getClone_url() -> e
-    java.lang.String getHtml_url() -> f
-sfedu.physics.dmitriy.githubapiresttestproject.user_model.User -> sfedu.physics.dmitriy.githubapiresttestproject.c.a:
-    java.lang.String login -> a
-    java.lang.String avatarURL -> b
-    java.lang.String htmlURL -> c
-    java.lang.String getLogin() -> a
-    java.lang.String getAvatarURL() -> b
-    java.lang.String getHtmlURL() -> c
-sfedu.physics.dmitriy.githubapiresttestproject.user_model.UserResponse -> sfedu.physics.dmitriy.githubapiresttestproject.c.b:
-    java.util.List users -> a
-    int totalCount -> b
+sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.RepositoryDao -> sfedu.physics.dmitriy.githubapiresttestproject.d.a:
+    io.realm.Realm realm -> a
     void <init>() -> <init>
-    java.util.List getUsers() -> a
-    int getTotalCount() -> b
+    void saveRepositories(java.util.List) -> a
+    java.util.List loadAllRepositories() -> a
+    void deleteAllRepositories() -> b
+    void closeConnection() -> c
+sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.UserDAO -> sfedu.physics.dmitriy.githubapiresttestproject.d.b:
+    io.realm.Realm realm -> a
+    void <init>() -> <init>
+    void deleteAllUsers() -> a
+    void saveUsers(java.util.List) -> a
+    java.util.List loadAllUsers() -> b
+    void closeConnection() -> c
+sfedu.physics.dmitriy.githubapiresttestproject.utils.BitmapUtils -> sfedu.physics.dmitriy.githubapiresttestproject.e.a:
+    byte[] bitmapToByte(android.graphics.Bitmap) -> a
+    android.graphics.Bitmap byteArrayToBitmap(byte[]) -> a
+sfedu.physics.dmitriy.githubapiresttestproject.utils.NetWorkUtils -> sfedu.physics.dmitriy.githubapiresttestproject.e.b:
+    boolean isNetworkConnected(android.content.Context) -> a

@@ -15136,6 +15136,8 @@ io.realm.Case: io.realm.Case[] values()
 io.realm.Case: io.realm.Case valueOf(java.lang.String)
 io.realm.CompactOnLaunchCallback
 io.realm.CompactOnLaunchCallback: boolean shouldCompact(long,long)
+io.realm.DefaultRealmModule
+io.realm.DefaultRealmModuleMediator
 io.realm.FieldAttribute: io.realm.FieldAttribute[] values()
 io.realm.FieldAttribute: io.realm.FieldAttribute valueOf(java.lang.String)
 io.realm.OrderedCollectionChangeSet$State: io.realm.OrderedCollectionChangeSet$State[] values()

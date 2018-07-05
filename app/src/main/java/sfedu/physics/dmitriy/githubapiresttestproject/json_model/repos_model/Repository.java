@@ -29,6 +29,19 @@ public class Repository {
     @Expose
     private String html_url;
 
+    public Repository() {
+    }
+
+    public Repository(String name, boolean isPrivate, String description, String language, String clone_url, String html_url) {
+
+        this.name = name;
+        this.isPrivate = isPrivate;
+        this.description = description;
+        this.language = language;
+        this.clone_url = clone_url;
+        this.html_url = html_url;
+    }
+
     public String getName() {
         return name;
     }
@@ -74,16 +87,6 @@ public class Repository {
     }
 
     public void setHtml_url(String html_url) {
-        this.html_url = html_url;
-    }
-
-    public Repository(String name, boolean isPrivate, String description, String language, String clone_url, String html_url) {
-
-        this.name = name;
-        this.isPrivate = isPrivate;
-        this.description = description;
-        this.language = language;
-        this.clone_url = clone_url;
         this.html_url = html_url;
     }
 }
