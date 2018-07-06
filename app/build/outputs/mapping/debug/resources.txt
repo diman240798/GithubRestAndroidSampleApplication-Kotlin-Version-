@@ -5,6 +5,7 @@ Referenced Strings:
   $ClientProvider
   $Provider
   $ServerProvider
+  $receiver
   %0A
   %0D
   %22
@@ -869,6 +870,7 @@ Referenced Strings:
   app_data
   appcompat:local_night_mode
   appcompat_skip_skip
+  applicationContext
   appops
   audio
   author
@@ -879,6 +881,7 @@ Referenced Strings:
   binary
   bitmap
   bitmapData
+  bitmap_data
   bottom
   bottomRight
   bounceInterpolator
@@ -962,6 +965,8 @@ Referenced Strings:
   default.realm
   delegate
   description
+  detail_link
+  detail_user_nameTV
   dimen
   disconnect...
   dismissalId
@@ -1034,6 +1039,7 @@ Referenced Strings:
   getScript
   getTextDirectionHeuristic
   getTransitionAlpha
+  glideAnimation
   gps
   gravity
   group
@@ -1041,6 +1047,7 @@ Referenced Strings:
   h2
   here
   hintScreenTimeout
+  holder
   host
   hourOfDay
   htmlURL
@@ -1069,6 +1076,7 @@ Referenced Strings:
   initialCapacity
   input_method
   instance
+  intent
   intent_extra_data_key
   interpolator
   interrupted
@@ -1082,6 +1090,7 @@ Referenced Strings:
   isCleartextTrafficPermitted
   isPrivate
   isProjected
+  it
   item
   itemId
   items
@@ -1138,6 +1147,7 @@ Referenced Strings:
   media_item
   members
   menu
+  menuItem
   messages
   minimumHorizontalAngle
   minimumVerticalAngle
@@ -1170,6 +1180,7 @@ Referenced Strings:
   onErrorLoadingUsers
   onLoadChildren
   onLoadFinished
+  onLoadMoreListener
   onLoaderReset
   onLoadingFinished
   onServiceConnected
@@ -1182,10 +1193,12 @@ Referenced Strings:
   ordering
   org.apache.harmony.xnet.provider.jsse...
   org.eclipse.jetty.alpn.ALPN
+  other
   overshootInterpolator
   packageName:
   page
   pages
+  parent
   participants
   path
   pathData
@@ -1195,9 +1208,11 @@ Referenced Strings:
   position
   power
   prefetch
+  prefix
   priority
   private
   progress
+  progressDialog
   promo
   propertyName
   propertyValuesHolder
@@ -1215,6 +1230,7 @@ Referenced Strings:
   range
   realm
   recommendation
+  recyclerView
   referer
   refresh
   release
@@ -1228,10 +1244,14 @@ Referenced Strings:
   reparentWithOverlay
   repeatCount
   repeatMode
+  repositories
   repositoriesPresenter
+  repositoryDao
   res/
   resizeClip
   resolveInfo:
+  resource
+  response
   resultKey
   result_code
   right
@@ -1318,7 +1338,9 @@ Referenced Strings:
   sun.security.ssl.SSLContextImpl
   supports
   suppressLayout
+  swipeRefreshLayout
   sys
+  t
   target
   te
   text
@@ -1326,6 +1348,7 @@ Referenced Strings:
   text/vnd.android.intent
   theUnsafe
   this
+  throwable
   thumbPos
   time
   timeout
@@ -1359,9 +1382,14 @@ Referenced Strings:
   up
   upgrade
   uri
+  userLocation
+  userLogin
+  userProgrammingLanguage
   user_login
   user_query
+  users
   usersPresenter
+  v
   value
   valueFrom
   valueTo
@@ -1394,6 +1422,13 @@ Marking attr:closeItemLayout:2130903127 used because its prefix matches string p
 Marking declare-styleable:ActionMenuView:-1 used because its prefix matches string pool constant ActionMenuView
 Marking styleable:ActionMenuView:-1 used because its prefix matches string pool constant ActionMenuView
 Marking id:add:2131230748 used because its prefix matches string pool constant add
+Marking id:users_recyclerView:2131230924 used because its prefix matches string pool constant users
+Marking id:users_search_languageET:2131230925 used because its prefix matches string pool constant users
+Marking id:users_search_layoutRL:2131230926 used because its prefix matches string pool constant users
+Marking id:users_search_locationET:2131230927 used because its prefix matches string pool constant users
+Marking id:users_search_startBT:2131230928 used because its prefix matches string pool constant users
+Marking id:users_swipeContainer:2131230929 used because its prefix matches string pool constant users
+Marking menu:users_action_search:2131427329 used because its prefix matches string pool constant users
 Marking declare-styleable:SearchView:-1 used because its prefix matches string pool constant SearchView
 Marking styleable:SearchView:-1 used because its prefix matches string pool constant SearchView
 Marking id:top:2131230910 used because its prefix matches string pool constant top
@@ -1551,6 +1586,7 @@ Marking dimen:item_touch_helper_max_drag_scroll_per_frame:2131099782 used becaus
 Marking dimen:item_touch_helper_swipe_escape_max_velocity:2131099783 used because its prefix matches string pool constant item
 Marking dimen:item_touch_helper_swipe_escape_velocity:2131099784 used because its prefix matches string pool constant item
 Marking id:item_touch_helper_previous_elevation:2131230815 used because its prefix matches string pool constant item
+Marking id:detail_user_nameTV:2131230787 used because its prefix matches string pool constant detail_user_nameTV
 Marking color:notification_action_color_filter:2131034189 used because its prefix matches string pool constant notification
 Marking color:notification_icon_bg_color:2131034190 used because its prefix matches string pool constant notification
 Marking dimen:notification_action_icon_size:2131099785 used because its prefix matches string pool constant notification
@@ -1598,6 +1634,9 @@ Marking layout:notification_template_big_media_narrow_custom:2131361844 used bec
 Marking layout:notification_template_lines_media:2131361847 used because its prefix matches string pool constant notification
 Marking layout:notification_template_media:2131361848 used because its prefix matches string pool constant notification
 Marking layout:notification_template_media_custom:2131361849 used because its prefix matches string pool constant notification
+Marking id:parent_matrix:2131230839 used because its prefix matches string pool constant parent
+Marking id:parentPanel:2131230838 used because its prefix matches string pool constant parent
+Marking id:parent:2131230837 used because its prefix matches string pool constant parent
 Marking string:path_password_eye:2131558446 used because its prefix matches string pool constant path
 Marking string:path_password_eye_mask_strike_through:2131558447 used because its prefix matches string pool constant path
 Marking string:path_password_eye_mask_visible:2131558448 used because its prefix matches string pool constant path
@@ -1706,6 +1745,16 @@ Marking id:textSpacerNoTitle:2131230902 used because its prefix matches string p
 Marking id:text_input_password_toggle:2131230903 used because its prefix matches string pool constant text
 Marking id:textinput_counter:2131230904 used because its prefix matches string pool constant text
 Marking id:textinput_error:2131230905 used because its prefix matches string pool constant text
+Marking id:italic:2131230814 used because its prefix matches string pool constant it
+Marking attr:itemBackground:2130903230 used because its prefix matches string pool constant it
+Marking attr:itemIconTint:2130903231 used because its prefix matches string pool constant it
+Marking attr:itemPadding:2130903232 used because its prefix matches string pool constant it
+Marking attr:itemTextAppearance:2130903233 used because its prefix matches string pool constant it
+Marking attr:itemTextColor:2130903234 used because its prefix matches string pool constant it
+Marking dimen:item_touch_helper_max_drag_scroll_per_frame:2131099782 used because its prefix matches string pool constant it
+Marking dimen:item_touch_helper_swipe_escape_max_velocity:2131099783 used because its prefix matches string pool constant it
+Marking dimen:item_touch_helper_swipe_escape_velocity:2131099784 used because its prefix matches string pool constant it
+Marking id:item_touch_helper_previous_elevation:2131230815 used because its prefix matches string pool constant it
 Marking integer:status_bar_notification_info_maxnum:2131296265 used because its prefix matches string pool constant status
 Marking string:status_bar_notification_info_overflow:2131558454 used because its prefix matches string pool constant status
 Marking id:status_bar_latest_event_content:2131230895 used because its prefix matches string pool constant status
@@ -1762,6 +1811,7 @@ Marking id:up:2131230919 used because its prefix matches string pool constant up
 Marking attr:queryBackground:2130903340 used because its prefix matches string pool constant query
 Marking attr:queryHint:2130903341 used because its prefix matches string pool constant query
 Marking attr:allowStacking:2130903078 used because its prefix matches string pool constant allow
+Marking id:detail_link:2131230784 used because its prefix matches string pool constant detail_link
 Marking declare-styleable:View:-1 used because its prefix matches string pool constant View
 Marking styleable:View:-1 used because its prefix matches string pool constant View
 Marking declare-styleable:ViewBackgroundHelper:-1 used because its prefix matches string pool constant View
@@ -2354,6 +2404,7 @@ attr:font:2130903200,
    id:icon:2131230808,
    id:icon_group:2131230809,
    id:info:2131230812,
+   id:italic:2131230814,
    id:line1:2131230818,
    id:line3:2131230819,
    id:notification_background:2131230832,
@@ -2853,6 +2904,7 @@ attr:font:2130903200,
    attr:content:2130903146,
    attr:emptyVisibility:2130903182,
    id:dimensions:2131230788,
+   id:parent:2131230837,
    declare-styleable:ConstraintLayout_Layout:-1,
    styleable:ConstraintLayout_Layout:-1,
    declare-styleable:ConstraintLayout_placeholder:-1,

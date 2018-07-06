@@ -21623,9 +21623,9 @@ sfedu.physics.dmitriy.githubapiresttestproject.R$styleable: int ViewStubCompat_a
 sfedu.physics.dmitriy.githubapiresttestproject.R$styleable: int ViewStubCompat_android_layout
 sfedu.physics.dmitriy.githubapiresttestproject.R$styleable: int ViewStubCompat_android_inflatedId
 sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity
-sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity: AuthorizationActivity()
 sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity: void attemptLogin(android.view.View)
 sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity: void skipRegistration(android.view.View)
+sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity: AuthorizationActivity()
 sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity
 sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity: DetailActivity()
 sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity

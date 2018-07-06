@@ -2,7 +2,7 @@ package sfedu.physics.dmitriy.githubapiresttestproject
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import sfedu.physics.dmitriy.githubapiresttestproject.utils.QueryUtils.createQueryByLocationAndLanguage
+import sfedu.physics.dmitriy.githubapiresttestproject.utils.QueryUtils.Companion.createQueryByLocationAndLanguage
 
 /**
  * Example local unit test, which will execute on the development machine (host).

@@ -72,7 +72,6 @@ dependencies {
     kapt 'com.arello-mobile:moxy-compiler:1.5.5'
     implementation 'com.arello-mobile:moxy-app-compat:1.5.5'
 
-    //Picasso
 
 
 }

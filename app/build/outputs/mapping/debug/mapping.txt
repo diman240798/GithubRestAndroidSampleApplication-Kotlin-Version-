@@ -35468,6 +35468,41 @@ javax.annotation.meta.When -> javax.annotation.meta.When:
     javax.annotation.meta.When valueOf(java.lang.String) -> valueOf
     void <init>(java.lang.String,int) -> <init>
     void <clinit>() -> <clinit>
+kotlin.KotlinNullPointerException -> a.a:
+    void <init>() -> <init>
+kotlin.TypeCastException -> a.b:
+    void <init>() -> <init>
+    void <init>(java.lang.String) -> <init>
+kotlin.UninitializedPropertyAccessException -> a.c:
+    void <init>() -> <init>
+    void <init>(java.lang.String) -> <init>
+kotlin.jvm.internal.DefaultConstructorMarker -> a.a.a.a:
+kotlin.jvm.internal.Intrinsics -> a.a.a.b:
+    void <init>() -> <init>
+    void throwNpe() -> a
+    void throwUninitializedProperty(java.lang.String) -> a
+    void throwUninitializedPropertyAccessException(java.lang.String) -> b
+    void checkExpressionValueIsNotNull(java.lang.Object,java.lang.String) -> a
+    void checkParameterIsNotNull(java.lang.Object,java.lang.String) -> b
+    void throwParameterIsNullException(java.lang.String) -> c
+    java.lang.Throwable sanitizeStackTrace(java.lang.Throwable) -> a
+    java.lang.Throwable sanitizeStackTrace(java.lang.Throwable,java.lang.String) -> a
+kotlin.jvm.internal.StringCompanionObject -> a.a.a.c:
+    kotlin.jvm.internal.StringCompanionObject INSTANCE -> a
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+kotlin.text.StringsKt -> a.b.a:
+kotlin.text.StringsKt__IndentKt -> a.b.b:
+kotlin.text.StringsKt__RegexExtensionsKt -> a.b.c:
+kotlin.text.StringsKt__StringBuilderJVMKt -> a.b.d:
+kotlin.text.StringsKt__StringBuilderKt -> a.b.e:
+kotlin.text.StringsKt__StringNumberConversionsKt -> a.b.f:
+kotlin.text.StringsKt__StringsJVMKt -> a.b.g:
+    boolean startsWith(java.lang.String,java.lang.String,boolean) -> a
+    boolean startsWith$default(java.lang.String,java.lang.String,boolean,int,java.lang.Object) -> a
+    boolean regionMatches(java.lang.String,int,java.lang.String,int,int,boolean) -> a
+kotlin.text.StringsKt__StringsKt -> a.b.h:
+kotlin.text.StringsKt___StringsKt -> a.b.i:
 okhttp3.Address -> okhttp3.Address:
     okhttp3.HttpUrl url -> url
     okhttp3.Dns dns -> dns
@@ -38313,7 +38348,7 @@ okhttp3.logging.HttpLoggingInterceptor$Logger$1 -> okhttp3.logging.HttpLoggingIn
     void log(java.lang.String) -> log
 okhttp3.logging.package-info -> okhttp3.logging.package-info:
 okhttp3.package-info -> okhttp3.package-info:
-okio.AsyncTimeout -> a.a:
+okio.AsyncTimeout -> b.a:
     int TIMEOUT_WRITE_SIZE -> TIMEOUT_WRITE_SIZE
     long IDLE_TIMEOUT_MILLIS -> IDLE_TIMEOUT_MILLIS
     long IDLE_TIMEOUT_NANOS -> IDLE_TIMEOUT_NANOS
@@ -38335,7 +38370,7 @@ okio.AsyncTimeout -> a.a:
     java.io.IOException newTimeoutException(java.io.IOException) -> newTimeoutException
     okio.AsyncTimeout awaitTimeout() -> awaitTimeout
     void <clinit>() -> <clinit>
-okio.AsyncTimeout$1 -> a.a$1:
+okio.AsyncTimeout$1 -> b.a$1:
     okio.Sink val$sink -> a
     okio.AsyncTimeout this$0 -> b
     void <init>(okio.AsyncTimeout,okio.Sink) -> <init>
@@ -38344,7 +38379,7 @@ okio.AsyncTimeout$1 -> a.a$1:
     void close() -> close
     okio.Timeout timeout() -> timeout
     java.lang.String toString() -> toString
-okio.AsyncTimeout$2 -> a.a$2:
+okio.AsyncTimeout$2 -> b.a$2:
     okio.Source val$source -> a
     okio.AsyncTimeout this$0 -> b
     void <init>(okio.AsyncTimeout,okio.Source) -> <init>
@@ -38352,17 +38387,17 @@ okio.AsyncTimeout$2 -> a.a$2:
     void close() -> close
     okio.Timeout timeout() -> timeout
     java.lang.String toString() -> toString
-okio.AsyncTimeout$Watchdog -> a.a$a:
+okio.AsyncTimeout$Watchdog -> b.a$a:
     void <init>() -> <init>
     void run() -> run
-okio.Base64 -> a.b:
+okio.Base64 -> b.b:
     byte[] MAP -> a
     byte[] URL_MAP -> b
     byte[] decode(java.lang.String) -> a
     java.lang.String encode(byte[]) -> a
     java.lang.String encode(byte[],byte[]) -> a
     void <clinit>() -> <clinit>
-okio.Buffer -> a.c:
+okio.Buffer -> b.c:
     byte[] DIGITS -> c
     okio.Segment head -> a
     long size -> b
@@ -38449,7 +38484,7 @@ okio.Buffer -> a.c:
     okio.BufferedSink write(byte[]) -> c
     okio.BufferedSink write(okio.ByteString) -> b
     void <clinit>() -> <clinit>
-okio.Buffer$1 -> a.c$1:
+okio.Buffer$1 -> b.c$1:
     okio.Buffer this$0 -> a
     void <init>(okio.Buffer) -> <init>
     void write(int) -> write
@@ -38457,7 +38492,7 @@ okio.Buffer$1 -> a.c$1:
     void flush() -> flush
     void close() -> close
     java.lang.String toString() -> toString
-okio.Buffer$2 -> a.c$2:
+okio.Buffer$2 -> b.c$2:
     okio.Buffer this$0 -> a
     void <init>(okio.Buffer) -> <init>
     int read() -> read
@@ -38465,7 +38500,7 @@ okio.Buffer$2 -> a.c$2:
     int available() -> available
     void close() -> close
     java.lang.String toString() -> toString
-okio.BufferedSink -> a.d:
+okio.BufferedSink -> b.d:
     okio.Buffer buffer() -> b
     okio.BufferedSink write(okio.ByteString) -> b
     okio.BufferedSink write(byte[]) -> c
@@ -38481,7 +38516,7 @@ okio.BufferedSink -> a.d:
     void flush() -> flush
     okio.BufferedSink emit() -> e
     okio.BufferedSink emitCompleteSegments() -> y
-okio.BufferedSource -> a.e:
+okio.BufferedSource -> b.e:
     okio.Buffer buffer() -> b
     boolean exhausted() -> f
     void require(long) -> a
@@ -38507,7 +38542,7 @@ okio.BufferedSource -> a.e:
     long indexOf(byte) -> a
     boolean rangeEquals(long,okio.ByteString) -> a
     java.io.InputStream inputStream() -> g
-okio.ByteString -> a.f:
+okio.ByteString -> b.f:
     char[] HEX_DIGITS -> a
     okio.ByteString EMPTY -> b
     byte[] data -> c
@@ -38542,7 +38577,7 @@ okio.ByteString -> a.f:
     int codePointIndexToCharIndex(java.lang.String,int) -> a
     int compareTo(java.lang.Object) -> compareTo
     void <clinit>() -> <clinit>
-okio.ForwardingSink -> a.g:
+okio.ForwardingSink -> b.g:
     okio.Sink delegate -> delegate
     void <init>(okio.Sink) -> <init>
     okio.Sink delegate() -> delegate
@@ -38551,7 +38586,7 @@ okio.ForwardingSink -> a.g:
     okio.Timeout timeout() -> timeout
     void close() -> close
     java.lang.String toString() -> toString
-okio.ForwardingSource -> a.h:
+okio.ForwardingSource -> b.h:
     okio.Source delegate -> delegate
     void <init>(okio.Source) -> <init>
     okio.Source delegate() -> delegate
@@ -38559,7 +38594,7 @@ okio.ForwardingSource -> a.h:
     okio.Timeout timeout() -> timeout
     void close() -> close
     java.lang.String toString() -> toString
-okio.ForwardingTimeout -> a.i:
+okio.ForwardingTimeout -> b.i:
     okio.Timeout delegate -> a
     void <init>(okio.Timeout) -> <init>
     okio.Timeout delegate() -> a
@@ -38572,7 +38607,7 @@ okio.ForwardingTimeout -> a.i:
     okio.Timeout clearTimeout() -> clearTimeout
     okio.Timeout clearDeadline() -> clearDeadline
     void throwIfReached() -> throwIfReached
-okio.GzipSource -> a.j:
+okio.GzipSource -> b.j:
     int section -> a
     okio.BufferedSource source -> b
     java.util.zip.Inflater inflater -> c
@@ -38586,7 +38621,7 @@ okio.GzipSource -> a.j:
     void close() -> close
     void updateCrc(okio.Buffer,long,long) -> a
     void checkEqual(java.lang.String,int,int) -> a
-okio.InflaterSource -> a.k:
+okio.InflaterSource -> b.k:
     okio.BufferedSource source -> a
     java.util.zip.Inflater inflater -> b
     int bufferBytesHeldByInflater -> c
@@ -38597,7 +38632,7 @@ okio.InflaterSource -> a.k:
     void releaseInflatedBytes() -> b
     okio.Timeout timeout() -> timeout
     void close() -> close
-okio.Okio -> a.l:
+okio.Okio -> b.l:
     java.util.logging.Logger logger -> a
     void <init>() -> <init>
     okio.BufferedSource buffer(okio.Source) -> a
@@ -38615,7 +38650,7 @@ okio.Okio -> a.l:
     okio.AsyncTimeout timeout(java.net.Socket) -> c
     boolean isAndroidGetsocknameError(java.lang.AssertionError) -> a
     void <clinit>() -> <clinit>
-okio.Okio$1 -> a.l$1:
+okio.Okio$1 -> b.l$1:
     okio.Timeout val$timeout -> a
     java.io.OutputStream val$out -> b
     void <init>(okio.Timeout,java.io.OutputStream) -> <init>
@@ -38624,7 +38659,7 @@ okio.Okio$1 -> a.l$1:
     void close() -> close
     okio.Timeout timeout() -> timeout
     java.lang.String toString() -> toString
-okio.Okio$2 -> a.l$2:
+okio.Okio$2 -> b.l$2:
     okio.Timeout val$timeout -> a
     java.io.InputStream val$in -> b
     void <init>(okio.Timeout,java.io.InputStream) -> <init>
@@ -38632,18 +38667,18 @@ okio.Okio$2 -> a.l$2:
     void close() -> close
     okio.Timeout timeout() -> timeout
     java.lang.String toString() -> toString
-okio.Okio$3 -> a.l$3:
+okio.Okio$3 -> b.l$3:
     void <init>() -> <init>
     void write(okio.Buffer,long) -> write
     void flush() -> flush
     okio.Timeout timeout() -> timeout
     void close() -> close
-okio.Okio$4 -> a.l$4:
+okio.Okio$4 -> b.l$4:
     java.net.Socket val$socket -> a
     void <init>(java.net.Socket) -> <init>
     java.io.IOException newTimeoutException(java.io.IOException) -> newTimeoutException
     void timedOut() -> timedOut
-okio.RealBufferedSink -> a.m:
+okio.RealBufferedSink -> b.m:
     okio.Buffer buffer -> a
     okio.Sink sink -> b
     boolean closed -> c
@@ -38667,7 +38702,7 @@ okio.RealBufferedSink -> a.m:
     void close() -> close
     okio.Timeout timeout() -> timeout
     java.lang.String toString() -> toString
-okio.RealBufferedSource -> a.n:
+okio.RealBufferedSource -> b.n:
     okio.Buffer buffer -> a
     okio.Source source -> b
     boolean closed -> c
@@ -38704,7 +38739,7 @@ okio.RealBufferedSource -> a.n:
     void close() -> close
     okio.Timeout timeout() -> timeout
     java.lang.String toString() -> toString
-okio.RealBufferedSource$1 -> a.n$1:
+okio.RealBufferedSource$1 -> b.n$1:
     okio.RealBufferedSource this$0 -> a
     void <init>(okio.RealBufferedSource) -> <init>
     int read() -> read
@@ -38712,7 +38747,7 @@ okio.RealBufferedSource$1 -> a.n$1:
     int available() -> available
     void close() -> close
     java.lang.String toString() -> toString
-okio.Segment -> a.o:
+okio.Segment -> b.o:
     byte[] data -> a
     int pos -> b
     int limit -> c
@@ -38728,13 +38763,13 @@ okio.Segment -> a.o:
     okio.Segment split(int) -> a
     void compact() -> b
     void writeTo(okio.Segment,int) -> a
-okio.SegmentPool -> a.p:
+okio.SegmentPool -> b.p:
     okio.Segment next -> a
     long byteCount -> b
     void <init>() -> <init>
     okio.Segment take() -> a
     void recycle(okio.Segment) -> a
-okio.SegmentedByteString -> a.q:
+okio.SegmentedByteString -> b.q:
     byte[][] segments -> f
     int[] directory -> g
     void <init>(okio.Buffer,int) -> <init>
@@ -38757,16 +38792,16 @@ okio.SegmentedByteString -> a.q:
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     java.lang.String toString() -> toString
-okio.Sink -> a.r:
+okio.Sink -> b.r:
     void write(okio.Buffer,long) -> write
     void flush() -> flush
     okio.Timeout timeout() -> timeout
     void close() -> close
-okio.Source -> a.s:
+okio.Source -> b.s:
     long read(okio.Buffer,long) -> read
     okio.Timeout timeout() -> timeout
     void close() -> close
-okio.Timeout -> a.t:
+okio.Timeout -> b.t:
     okio.Timeout NONE -> NONE
     boolean hasDeadline -> hasDeadline
     long deadlineNanoTime -> deadlineNanoTime
@@ -38783,12 +38818,12 @@ okio.Timeout -> a.t:
     void throwIfReached() -> throwIfReached
     void waitUntilNotified(java.lang.Object) -> waitUntilNotified
     void <clinit>() -> <clinit>
-okio.Timeout$1 -> a.t$1:
+okio.Timeout$1 -> b.t$1:
     void <init>() -> <init>
     okio.Timeout timeout(long,java.util.concurrent.TimeUnit) -> timeout
     okio.Timeout deadlineNanoTime(long) -> deadlineNanoTime
     void throwIfReached() -> throwIfReached
-okio.Util -> a.u:
+okio.Util -> b.u:
     java.nio.charset.Charset UTF_8 -> a
     void checkOffsetAndCount(long,long,long) -> a
     short reverseBytesShort(short) -> a
@@ -39444,71 +39479,284 @@ retrofit2.http.QueryName -> retrofit2.http.QueryName:
 retrofit2.http.Streaming -> retrofit2.http.Streaming:
 retrofit2.http.Url -> retrofit2.http.Url:
 retrofit2.package-info -> retrofit2.package-info:
+sfedu.physics.dmitriy.githubapiresttestproject.R -> sfedu.physics.dmitriy.githubapiresttestproject.a:
+sfedu.physics.dmitriy.githubapiresttestproject.R$id -> sfedu.physics.dmitriy.githubapiresttestproject.a$a:
+    int ALT -> ALT
+    int CTRL -> CTRL
+    int FUNCTION -> FUNCTION
+    int META -> META
+    int SHIFT -> SHIFT
+    int SYM -> SYM
+    int action0 -> action0
+    int action_bar -> action_bar
+    int action_bar_activity_content -> action_bar_activity_content
+    int action_bar_container -> action_bar_container
+    int action_bar_root -> action_bar_root
+    int action_bar_spinner -> action_bar_spinner
+    int action_bar_subtitle -> action_bar_subtitle
+    int action_bar_title -> action_bar_title
+    int action_container -> action_container
+    int action_context_bar -> action_context_bar
+    int action_divider -> action_divider
+    int action_image -> action_image
+    int action_menu_divider -> action_menu_divider
+    int action_menu_presenter -> action_menu_presenter
+    int action_mode_bar -> action_mode_bar
+    int action_mode_bar_stub -> action_mode_bar_stub
+    int action_mode_close_button -> action_mode_close_button
+    int action_search -> action_search
+    int action_share -> action_share
+    int action_text -> action_text
+    int actions -> actions
+    int activity_chooser_view_content -> activity_chooser_view_content
+    int add -> add
+    int alertTitle -> alertTitle
+    int all -> all
+    int always -> always
+    int async -> async
+    int auth_logo_image -> auth_logo_image
+    int auth_registerBT -> auth_registerBT
+    int auth_skip_registerBT -> auth_skip_registerBT
+    int auto -> auto
+    int barrier -> barrier
+    int beginning -> beginning
+    int blocking -> blocking
+    int bottom -> bottom
+    int buttonPanel -> buttonPanel
+    int cancel_action -> cancel_action
+    int center -> center
+    int center_horizontal -> center_horizontal
+    int center_vertical -> center_vertical
+    int chains -> chains
+    int checkbox -> checkbox
+    int chronometer -> chronometer
+    int clip_horizontal -> clip_horizontal
+    int clip_vertical -> clip_vertical
+    int collapseActionView -> collapseActionView
+    int container -> container
+    int contentPanel -> contentPanel
+    int coordinator -> coordinator
+    int custom -> custom
+    int customPanel -> customPanel
+    int decor_content_parent -> decor_content_parent
+    int default_activity_button -> default_activity_button
+    int design_bottom_sheet -> design_bottom_sheet
+    int design_menu_item_action_area -> design_menu_item_action_area
+    int design_menu_item_action_area_stub -> design_menu_item_action_area_stub
+    int design_menu_item_text -> design_menu_item_text
+    int design_navigation_view -> design_navigation_view
+    int detail_link -> detail_link
+    int detail_show_repositoriesBT -> detail_show_repositoriesBT
+    int detail_userIconHeaderIV -> detail_userIconHeaderIV
+    int detail_user_nameTV -> detail_user_nameTV
+    int dimensions -> dimensions
+    int direct -> direct
+    int disableHome -> disableHome
+    int edit_query -> edit_query
+    int end -> end
+    int end_padder -> end_padder
+    int enterAlways -> enterAlways
+    int enterAlwaysCollapsed -> enterAlwaysCollapsed
+    int exitUntilCollapsed -> exitUntilCollapsed
+    int expand_activities_button -> expand_activities_button
+    int expanded_menu -> expanded_menu
+    int fill -> fill
+    int fill_horizontal -> fill_horizontal
+    int fill_vertical -> fill_vertical
+    int fixed -> fixed
+    int forever -> forever
+    int ghost_view -> ghost_view
+    int gone -> gone
+    int home -> home
+    int homeAsUp -> homeAsUp
+    int icon -> icon
+    int icon_group -> icon_group
+    int ifRoom -> ifRoom
+    int image -> image
+    int info -> info
+    int invisible -> invisible
+    int italic -> italic
+    int item_touch_helper_previous_elevation -> item_touch_helper_previous_elevation
+    int largeLabel -> largeLabel
+    int left -> left
+    int line1 -> line1
+    int line3 -> line3
+    int listMode -> listMode
+    int list_item -> list_item
+    int masked -> masked
+    int media_actions -> media_actions
+    int message -> message
+    int middle -> middle
+    int mini -> mini
+    int multiply -> multiply
+    int navigation_header_container -> navigation_header_container
+    int never -> never
+    int none -> none
+    int normal -> normal
+    int notification_background -> notification_background
+    int notification_main_column -> notification_main_column
+    int notification_main_column_container -> notification_main_column_container
+    int packed -> packed
+    int parallax -> parallax
+    int parent -> parent
+    int parentPanel -> parentPanel
+    int parent_matrix -> parent_matrix
+    int percent -> percent
+    int pin -> pin
+    int progress_circular -> progress_circular
+    int progress_horizontal -> progress_horizontal
+    int radio -> radio
+    int repo_model_cloneURLTV -> repo_model_cloneURLTV
+    int repo_model_descritionTV -> repo_model_descritionTV
+    int repo_model_htmlURLTV -> repo_model_htmlURLTV
+    int repo_model_isPrivateTV -> repo_model_isPrivateTV
+    int repo_model_languageTV -> repo_model_languageTV
+    int repo_model_nameTV -> repo_model_nameTV
+    int repo_recyclerView -> repo_recyclerView
+    int repo_swipeContainer -> repo_swipeContainer
+    int right -> right
+    int right_icon -> right_icon
+    int right_side -> right_side
+    int rl_users_language -> rl_users_language
+    int rl_users_location -> rl_users_location
+    int save_image_matrix -> save_image_matrix
+    int save_non_transition_alpha -> save_non_transition_alpha
+    int save_scale_type -> save_scale_type
+    int screen -> screen
+    int scroll -> scroll
+    int scrollIndicatorDown -> scrollIndicatorDown
+    int scrollIndicatorUp -> scrollIndicatorUp
+    int scrollView -> scrollView
+    int scrollable -> scrollable
+    int search_badge -> search_badge
+    int search_bar -> search_bar
+    int search_button -> search_button
+    int search_close_btn -> search_close_btn
+    int search_edit_frame -> search_edit_frame
+    int search_go_btn -> search_go_btn
+    int search_mag_icon -> search_mag_icon
+    int search_plate -> search_plate
+    int search_src_text -> search_src_text
+    int search_voice_btn -> search_voice_btn
+    int select_dialog_listview -> select_dialog_listview
+    int shortcut -> shortcut
+    int showCustom -> showCustom
+    int showHome -> showHome
+    int showTitle -> showTitle
+    int smallLabel -> smallLabel
+    int snackbar_action -> snackbar_action
+    int snackbar_text -> snackbar_text
+    int snap -> snap
+    int spacer -> spacer
+    int split_action_bar -> split_action_bar
+    int spread -> spread
+    int spread_inside -> spread_inside
+    int src_atop -> src_atop
+    int src_in -> src_in
+    int src_over -> src_over
+    int standard -> standard
+    int start -> start
+    int status_bar_latest_event_content -> status_bar_latest_event_content
+    int submenuarrow -> submenuarrow
+    int submit_area -> submit_area
+    int tabMode -> tabMode
+    int text -> text
+    int text2 -> text2
+    int textSpacerNoButtons -> textSpacerNoButtons
+    int textSpacerNoTitle -> textSpacerNoTitle
+    int text_input_password_toggle -> text_input_password_toggle
+    int textinput_counter -> textinput_counter
+    int textinput_error -> textinput_error
+    int time -> time
+    int title -> title
+    int titleDividerNoCustom -> titleDividerNoCustom
+    int title_template -> title_template
+    int top -> top
+    int topPanel -> topPanel
+    int touch_outside -> touch_outside
+    int transition_current_scene -> transition_current_scene
+    int transition_layout_save -> transition_layout_save
+    int transition_position -> transition_position
+    int transition_scene_layoutid_cache -> transition_scene_layoutid_cache
+    int transition_transform -> transition_transform
+    int uniform -> uniform
+    int up -> up
+    int useLogo -> useLogo
+    int user_model_githubLinkTV -> user_model_githubLinkTV
+    int user_model_iconIV -> user_model_iconIV
+    int user_model_titleTV -> user_model_titleTV
+    int users_recyclerView -> users_recyclerView
+    int users_search_languageET -> users_search_languageET
+    int users_search_layoutRL -> users_search_layoutRL
+    int users_search_locationET -> users_search_locationET
+    int users_search_startBT -> users_search_startBT
+    int users_swipeContainer -> users_swipeContainer
+    int view_offset_helper -> view_offset_helper
+    int visible -> visible
+    int withText -> withText
+    int wrap -> wrap
+    int wrap_content -> wrap_content
 sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity -> sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity:
-    java.lang.String CLIENT_ID -> a
-    java.lang.String CLIENT_SECRET -> b
-    java.lang.String CLIENT_CALLBACK_URL -> c
-    void <init>() -> <init>
+    java.lang.String getCLIENT_ID() -> e
+    java.lang.String getCLIENT_SECRET() -> f
+    java.lang.String getCLIENT_CALLBACK_URL() -> g
     void onCreate(android.os.Bundle) -> onCreate
     void attemptLogin(android.view.View) -> attemptLogin
     void onResume() -> onResume
     void skipRegistration(android.view.View) -> skipRegistration
-sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity$1 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity$1:
+    void <init>() -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity$onResume$1 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity$a:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity this$0 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity) -> <init>
     void onResponse(retrofit2.Call,retrofit2.Response) -> onResponse
     void onFailure(retrofit2.Call,java.lang.Throwable) -> onFailure
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.AuthorizationActivity) -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity -> sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity:
-    android.widget.TextView detail_link -> a
-    android.widget.TextView detail_user_nameTV -> b
-    android.widget.ImageView detail_userIconHeaderIV -> c
-    android.widget.Button show_repositoriesBT -> d
-    void <init>() -> <init>
+    java.util.HashMap _$_findViewCache -> a
     void onCreate(android.os.Bundle) -> onCreate
-    void initView() -> e
-    void configureViews() -> f
-    void configureActionBar() -> g
+    void configureActionBar() -> e
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    android.content.Intent createShareForcastIntent() -> h
-    void lambda$configureViews$0$DetailActivity(java.lang.String,android.view.View) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity$$Lambda$0 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.a:
-    sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity arg$1 -> a
-    java.lang.String arg$2 -> b
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity,java.lang.String) -> <init>
+    android.content.Intent createShareForcastIntent() -> f
+    void <init>() -> <init>
+    android.view.View _$_findCachedViewById(int) -> a
+sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity$onCreate$1 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity$a:
+    sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity this$0 -> a
+    java.lang.String $userName -> b
     void onClick(android.view.View) -> onClick
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.DetailActivity,java.lang.String) -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity -> sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity:
     android.support.v7.widget.RecyclerView recyclerView -> a
     android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> b
     android.app.ProgressDialog progressDialog -> c
-    java.lang.String userName -> d
-    sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.RepositoryDao repositoryDao -> e
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter repositoriesPresenter -> f
+    java.lang.String userName -> f
+    sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.RepositoryDao repositoryDao -> d
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter repositoriesPresenter -> e
     sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter repositoryAdapter -> g
-    void <init>() -> <init>
+    java.lang.String getUserName() -> f
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter getRepositoriesPresenter() -> g
     void onCreate(android.os.Bundle) -> onCreate
-    void onStartLoading() -> f
+    void onStartLoading() -> h
     void loadRepositoriesByQuery(java.util.List) -> a
     void onErrorLoadingRepositories(java.lang.Throwable) -> a
-    void onLoadingFinished() -> g
-    void initViews() -> i
-    void configureViews() -> j
-    void configureActionBar() -> k
+    void onLoadingFinished() -> i
+    void initViews() -> j
+    void configureViews() -> k
+    void configureActionBar() -> l
     void onDestroy() -> onDestroy
-    void lambda$configureViews$0$MvpRepositoryActivity() -> h
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$Lambda$0 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.b:
-    sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity) -> <init>
-    void onRefresh() -> a
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$PresentersBinder -> sfedu.physics.dmitriy.githubapiresttestproject.activity.c:
+    void <init>() -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$PresentersBinder -> sfedu.physics.dmitriy.githubapiresttestproject.activity.a:
     void <init>() -> <init>
     java.util.List getPresenterFields() -> a
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$PresentersBinder$repositoriesPresenterBinder -> sfedu.physics.dmitriy.githubapiresttestproject.activity.c$a:
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$PresentersBinder$repositoriesPresenterBinder -> sfedu.physics.dmitriy.githubapiresttestproject.activity.a$a:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$PresentersBinder this$0 -> e
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$$PresentersBinder) -> <init>
     void bind(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity,com.arellomobile.mvp.MvpPresenter) -> a
     com.arellomobile.mvp.MvpPresenter providePresenter(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity) -> a
     com.arellomobile.mvp.MvpPresenter providePresenter(java.lang.Object) -> b
     void bind(java.lang.Object,com.arellomobile.mvp.MvpPresenter) -> a
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$configureViews$1 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity$a:
+    sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity this$0 -> a
+    void onRefresh() -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpRepositoryActivity) -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity -> sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity:
     sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter usersPresenter -> a
     android.support.v7.widget.RecyclerView recyclerView -> c
@@ -39541,30 +39789,30 @@ sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity -> sfed
     void lambda$configureViews$2$MvpUsersActivity() -> h
     void lambda$loadMoreUsers$1$MvpUsersActivity() -> i
     void lambda$loadUsersByQuery$0$MvpUsersActivity() -> j
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$0 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.d:
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$0 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.b:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity arg$1 -> a
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity) -> <init>
     void onLoadMore() -> a
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$1 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.e:
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$1 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.c:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity arg$1 -> a
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity) -> <init>
     void run() -> run
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$2 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.f:
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$2 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.d:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity arg$1 -> a
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity) -> <init>
     void onRefresh() -> a
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$3 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.g:
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$3 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.e:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity arg$1 -> a
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity) -> <init>
     void onClick(android.view.View) -> onClick
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$4 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.h:
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Lambda$4 -> sfedu.physics.dmitriy.githubapiresttestproject.activity.f:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity arg$1 -> a
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity) -> <init>
     boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$PresentersBinder -> sfedu.physics.dmitriy.githubapiresttestproject.activity.i:
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$PresentersBinder -> sfedu.physics.dmitriy.githubapiresttestproject.activity.g:
     void <init>() -> <init>
     java.util.List getPresenterFields() -> a
-sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$PresentersBinder$usersPresenterBinder -> sfedu.physics.dmitriy.githubapiresttestproject.activity.i$a:
+sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$PresentersBinder$usersPresenterBinder -> sfedu.physics.dmitriy.githubapiresttestproject.activity.g$a:
     sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$PresentersBinder this$0 -> e
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$PresentersBinder) -> <init>
     void bind(sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity,com.arellomobile.mvp.MvpPresenter) -> a
@@ -39572,15 +39820,15 @@ sfedu.physics.dmitriy.githubapiresttestproject.activity.MvpUsersActivity$$Presen
     com.arellomobile.mvp.MvpPresenter providePresenter(java.lang.Object) -> b
     void bind(java.lang.Object,com.arellomobile.mvp.MvpPresenter) -> a
 sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter -> sfedu.physics.dmitriy.githubapiresttestproject.a.a:
-    java.util.List repositories -> a
-    android.content.Context context -> b
-    void <init>(android.content.Context,java.util.List) -> <init>
+    android.content.Context context -> a
+    java.util.List repositories -> b
     sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
+    android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
     void onBindViewHolder(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder,int) -> a
+    void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
     int getItemCount() -> getItemCount
     java.util.List getRepositories() -> a
-    void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
-    android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
+    void <init>(android.content.Context,java.util.List) -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder -> sfedu.physics.dmitriy.githubapiresttestproject.a.a$a:
     android.widget.TextView repo_model_nameTV -> b
     android.widget.TextView repo_model_isPrivateTV -> c
@@ -39589,38 +39837,30 @@ sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHol
     android.widget.TextView repo_model_cloneURLTV -> f
     android.widget.TextView repo_model_htmlURLTV -> g
     sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter this$0 -> a
+    android.widget.TextView getRepo_model_nameTV() -> a
+    android.widget.TextView getRepo_model_isPrivateTV() -> b
+    android.widget.TextView getRepo_model_descritionTV() -> c
+    android.widget.TextView getRepo_model_languageTV() -> d
+    android.widget.TextView getRepo_model_cloneURLTV() -> e
+    android.widget.TextView getRepo_model_htmlURLTV() -> f
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter,android.view.View) -> <init>
-    android.widget.TextView access$000(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder) -> a
-    android.widget.TextView access$100(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder) -> b
-    android.widget.TextView access$200(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder) -> c
-    android.widget.TextView access$300(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder) -> d
-    android.widget.TextView access$400(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder) -> e
-    android.widget.TextView access$500(sfedu.physics.dmitriy.githubapiresttestproject.adapter.RepositoryAdapter$ViewHolder) -> f
 sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter -> sfedu.physics.dmitriy.githubapiresttestproject.a.b:
     sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$OnLoadMoreListener onLoadMoreListener -> a
     boolean isLoading -> b
     boolean noMore -> c
-    java.util.List users -> d
-    android.content.Context context -> e
-    void <init>(android.content.Context,java.util.List) -> <init>
-    java.util.List getUsers() -> a
+    android.content.Context context -> d
+    java.util.List users -> e
     sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
+    android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
     void onBindViewHolder(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder,int) -> a
+    void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
     int getItemCount() -> getItemCount
     void setOnLoadMoreListener(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$OnLoadMoreListener) -> a
-    void endLoading() -> b
-    void setNoMore() -> c
-    void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
-    android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
-    java.util.List access$300(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter) -> a
-    android.content.Context access$400(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter) -> b
-sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$1 -> sfedu.physics.dmitriy.githubapiresttestproject.a.b$1:
-    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder val$holder -> a
-    sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User val$dataUser -> b
-    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter this$0 -> c
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter,sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder,sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User) -> <init>
-    void onResourceReady(android.graphics.Bitmap,com.bumptech.glide.request.animation.GlideAnimation) -> a
-    void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    void endLoading() -> a
+    void setNoMore() -> b
+    java.util.List getUsers() -> c
+    void <init>(android.content.Context,java.util.List) -> <init>
+    android.content.Context access$getContext$p(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter) -> a
 sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$OnLoadMoreListener -> sfedu.physics.dmitriy.githubapiresttestproject.a.b$a:
     void onLoadMore() -> a
 sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder -> sfedu.physics.dmitriy.githubapiresttestproject.a.b$b:
@@ -39628,15 +39868,20 @@ sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder ->
     android.widget.TextView githubLink -> c
     android.widget.ImageView avatarIV -> d
     sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter this$0 -> a
+    android.widget.TextView getTitle() -> a
+    android.widget.TextView getGithubLink() -> b
+    android.widget.ImageView getAvatarIV() -> c
     void <init>(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter,android.view.View) -> <init>
-    void lambda$new$0$UserAdapter$ViewHolder(android.view.View) -> a
-    android.widget.TextView access$000(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder) -> a
-    android.widget.TextView access$100(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder) -> b
-    android.widget.ImageView access$200(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder) -> c
-sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder$$Lambda$0 -> sfedu.physics.dmitriy.githubapiresttestproject.a.c:
-    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder$1 -> sfedu.physics.dmitriy.githubapiresttestproject.a.b$b$1:
+    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder this$0 -> a
     void onClick(android.view.View) -> onClick
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$onBindViewHolder$1 -> sfedu.physics.dmitriy.githubapiresttestproject.a.b$c:
+    sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder $holder -> a
+    sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User $dataUser -> b
+    void onResourceReady(android.graphics.Bitmap,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.adapter.UserAdapter$ViewHolder,sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User) -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.api.AuthorizationService -> sfedu.physics.dmitriy.githubapiresttestproject.api.AuthorizationService:
     retrofit2.Call getAccessToken(java.lang.String,java.lang.String,java.lang.String) -> getAccessToken
 sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoryServiceRxJava -> sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoryServiceRxJava:
@@ -39646,10 +39891,17 @@ sfedu.physics.dmitriy.githubapiresttestproject.api.SearchUsersServiceRxJava -> s
     io.reactivex.Observable getUsersByQuery(java.lang.String) -> getUsersByQuery
     io.reactivex.Observable getUsersByQueryAndPage(java.lang.String,int) -> getUsersByQueryAndPage
 sfedu.physics.dmitriy.githubapiresttestproject.application.Application -> sfedu.physics.dmitriy.githubapiresttestproject.application.Application:
-    retrofit2.Retrofit rxJavaRetrofit -> a
-    void <init>() -> <init>
+    java.lang.String BASE_URL -> b
+    sfedu.physics.dmitriy.githubapiresttestproject.application.Application$Companion Companion -> a
     void onCreate() -> onCreate
-    retrofit2.Retrofit getRxJavaClient() -> a
+    void <init>() -> <init>
+    java.lang.String access$getBASE_URL$cp() -> a
+    void <clinit>() -> <clinit>
+sfedu.physics.dmitriy.githubapiresttestproject.application.Application$Companion -> sfedu.physics.dmitriy.githubapiresttestproject.application.Application$a:
+    java.lang.String getBASE_URL() -> a
+    retrofit2.Retrofit getRxJavaRetrofit() -> b
+    void <init>() -> <init>
+    void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel -> sfedu.physics.dmitriy.githubapiresttestproject.b.a:
     java.lang.String name -> a
     boolean isPrivate -> b
@@ -39657,7 +39909,6 @@ sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel
     java.lang.String language -> d
     java.lang.String clone_url -> e
     java.lang.String html_url -> f
-    void <init>() -> <init>
     boolean isPrivate() -> j
     void setPrivate(boolean) -> b
     java.lang.String getDescription() -> k
@@ -39668,6 +39919,7 @@ sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.RepositoryDbModel
     void setClone_url(java.lang.String) -> h
     java.lang.String getHtml_url() -> n
     void setHtml_url(java.lang.String) -> i
+    void <init>() -> <init>
     java.lang.String realmGet$name() -> a
     void realmSet$name(java.lang.String) -> a
     boolean realmGet$isPrivate() -> b
@@ -39684,13 +39936,13 @@ sfedu.physics.dmitriy.githubapiresttestproject.data_base_model.UserDbModel -> sf
     java.lang.String login -> a
     java.lang.String htmlURL -> b
     byte[] bitmapData -> c
-    void <init>() -> <init>
     java.lang.String getLogin() -> g
     void setLogin(java.lang.String) -> c
     java.lang.String getHtmlURL() -> h
     void setHtmlURL(java.lang.String) -> d
     byte[] getBitmapData() -> i
     void setBitmapData(byte[]) -> b
+    void <init>() -> <init>
     java.lang.String realmGet$login() -> a
     void realmSet$login(java.lang.String) -> a
     java.lang.String realmGet$htmlURL() -> b
@@ -39704,7 +39956,6 @@ sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository
     java.lang.String language -> d
     java.lang.String clone_url -> e
     java.lang.String html_url -> f
-    void <init>() -> <init>
     java.lang.String getName() -> a
     boolean isPrivate() -> b
     void setPrivate(boolean) -> a
@@ -39716,64 +39967,64 @@ sfedu.physics.dmitriy.githubapiresttestproject.json_model.repos_model.Repository
     void setClone_url(java.lang.String) -> c
     java.lang.String getHtml_url() -> f
     void setHtml_url(java.lang.String) -> d
+    void <init>() -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.User -> sfedu.physics.dmitriy.githubapiresttestproject.c.b.a:
     java.lang.String login -> a
     java.lang.String avatarURL -> b
     java.lang.String htmlURL -> c
     byte[] bitmapData -> d
-    void <init>() -> <init>
     java.lang.String getLogin() -> a
     void setLogin(java.lang.String) -> a
     java.lang.String getAvatarURL() -> b
     java.lang.String getHtmlURL() -> c
     void setHtmlURL(java.lang.String) -> b
-    void setBitmapData(byte[]) -> a
     byte[] getBitmapData() -> d
+    void setBitmapData(byte[]) -> a
+    void <init>() -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse -> sfedu.physics.dmitriy.githubapiresttestproject.c.b.b:
     java.util.List users -> a
     int totalCount -> b
-    void <init>() -> <init>
     java.util.List getUsers() -> a
     int getTotalCount() -> b
+    void <init>() -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesModel -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.a:
     sfedu.physics.dmitriy.githubapiresttestproject.api.SearchRepositoryServiceRxJava searchRepositoryServiceRxJava -> a
-    void <init>() -> <init>
     io.reactivex.Observable loadRepositories(java.lang.String) -> a
+    void <init>() -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter:
     sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesModel repositoriesModel -> a
     io.reactivex.disposables.Disposable disposable -> b
-    void <init>() -> <init>
     void loadRepositoriesByUserLogin(java.lang.String) -> b
     void check_if_disposable_is_null_or_unsubscribe() -> g
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$$Lambda$0 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.b:
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView) -> <init>
-    io.reactivex.functions.Consumer get$Lambda(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView) -> a
-    void accept(java.lang.Object) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$$Lambda$1 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.c:
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView) -> <init>
-    io.reactivex.functions.Consumer get$Lambda(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView) -> a
-    void accept(java.lang.Object) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$$Lambda$2 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.d:
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView) -> <init>
-    io.reactivex.functions.Action get$Lambda(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView) -> a
-    void run() -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$$ViewStateProvider -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.e:
+    void <init>() -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$$ViewStateProvider -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.b:
     void <init>() -> <init>
     com.arellomobile.mvp.viewstate.MvpViewState getViewState() -> a
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$loadRepositoriesByUserLogin$1 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$a:
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter this$0 -> a
+    void accept(java.lang.Object) -> a
+    void accept(java.util.List) -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$loadRepositoriesByUserLogin$2 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$b:
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter this$0 -> a
+    void accept(java.lang.Object) -> a
+    void accept(java.lang.Throwable) -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$loadRepositoriesByUserLogin$3 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter$c:
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter this$0 -> a
+    void run() -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesPresenter) -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView:
-    void onStartLoading() -> f
+    void onStartLoading() -> h
     void loadRepositoriesByQuery(java.util.List) -> a
     void onErrorLoadingRepositories(java.lang.Throwable) -> a
-    void onLoadingFinished() -> g
+    void onLoadingFinished() -> i
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView$$State -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView$$State:
     void <init>() -> <init>
-    void onStartLoading() -> f
+    void onStartLoading() -> h
     void loadRepositoriesByQuery(java.util.List) -> a
     void onErrorLoadingRepositories(java.lang.Throwable) -> a
-    void onLoadingFinished() -> g
+    void onLoadingFinished() -> i
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView$$State$LoadRepositoriesByQueryCommand -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView$$State$a:
     java.util.List repositories -> a
     sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView$$State this$0 -> b
@@ -39798,48 +40049,46 @@ sfedu.physics.dmitriy.githubapiresttestproject.mvp.repositpries.RepositoriesView
     void apply(com.arellomobile.mvp.MvpView) -> a
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersModel -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.a:
     sfedu.physics.dmitriy.githubapiresttestproject.api.SearchUsersServiceRxJava searchUsersServiceRxJava -> a
-    void <init>() -> <init>
-    java.lang.String createQueryByLocationAndLanguage(java.lang.String,java.lang.String) -> a
     io.reactivex.Observable loadMoreUsers(java.lang.String,int) -> a
     io.reactivex.Observable loadUsersByQuery(java.lang.String) -> a
+    void <init>() -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter:
     sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersModel usersModel -> a
     java.lang.String initQuery -> b
     java.lang.String query -> c
     io.reactivex.disposables.Disposable disposable -> d
-    void <init>() -> <init>
     void loadUsersByLocationAndLanguage(java.lang.String,java.lang.String) -> a
     void check_if_disposable_is_null_or_unsubscribe() -> g
     void loadUsersByQuery() -> h
     void loadMoreUsers(int) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$$Lambda$0 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.b:
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> <init>
-    io.reactivex.functions.Consumer get$Lambda(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> a
-    void accept(java.lang.Object) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$$Lambda$1 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.c:
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> <init>
-    io.reactivex.functions.Consumer get$Lambda(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> a
-    void accept(java.lang.Object) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$$Lambda$2 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.d:
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> <init>
-    io.reactivex.functions.Action get$Lambda(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> a
-    void run() -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$$Lambda$3 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.e:
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> <init>
-    io.reactivex.functions.Consumer get$Lambda(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> a
-    void accept(java.lang.Object) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$$Lambda$4 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.f:
-    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView arg$1 -> a
-    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> <init>
-    io.reactivex.functions.Consumer get$Lambda(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView) -> a
-    void accept(java.lang.Object) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$$ViewStateProvider -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.g:
+    void <init>() -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$$ViewStateProvider -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.b:
     void <init>() -> <init>
     com.arellomobile.mvp.viewstate.MvpViewState getViewState() -> a
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$loadMoreUsers$1 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$a:
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter this$0 -> a
+    void accept(java.lang.Object) -> a
+    void accept(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$loadMoreUsers$2 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$b:
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter this$0 -> a
+    void accept(java.lang.Object) -> a
+    void accept(java.lang.Throwable) -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$loadUsersByQuery$1 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$c:
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter this$0 -> a
+    void accept(java.lang.Object) -> a
+    void accept(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$loadUsersByQuery$2 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$d:
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter this$0 -> a
+    void accept(java.lang.Object) -> a
+    void accept(java.lang.Throwable) -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$loadUsersByQuery$3 -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter$e:
+    sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter this$0 -> a
+    void run() -> a
+    void <init>(sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersPresenter) -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView -> sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView:
     void onStartLoading() -> f
     void loadUsersByQuery(sfedu.physics.dmitriy.githubapiresttestproject.json_model.user_model.UserResponse) -> a
@@ -39883,20 +40132,51 @@ sfedu.physics.dmitriy.githubapiresttestproject.mvp.users.UsersView$$State$OnStar
     void apply(com.arellomobile.mvp.MvpView) -> a
 sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.RepositoryDao -> sfedu.physics.dmitriy.githubapiresttestproject.d.a:
     io.realm.Realm realm -> a
-    void <init>() -> <init>
     void saveRepositories(java.util.List) -> a
     java.util.List loadAllRepositories() -> a
     void deleteAllRepositories() -> b
     void closeConnection() -> c
+    void <init>() -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.realmDAO.UserDAO -> sfedu.physics.dmitriy.githubapiresttestproject.d.b:
     io.realm.Realm realm -> a
-    void <init>() -> <init>
     void deleteAllUsers() -> a
     void saveUsers(java.util.List) -> a
     java.util.List loadAllUsers() -> b
     void closeConnection() -> c
+    void <init>() -> <init>
 sfedu.physics.dmitriy.githubapiresttestproject.utils.BitmapUtils -> sfedu.physics.dmitriy.githubapiresttestproject.e.a:
+    sfedu.physics.dmitriy.githubapiresttestproject.utils.BitmapUtils INSTANCE -> a
     byte[] bitmapToByte(android.graphics.Bitmap) -> a
     android.graphics.Bitmap byteArrayToBitmap(byte[]) -> a
-sfedu.physics.dmitriy.githubapiresttestproject.utils.NetWorkUtils -> sfedu.physics.dmitriy.githubapiresttestproject.e.b:
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+sfedu.physics.dmitriy.githubapiresttestproject.utils.IntentConstantsUtils -> sfedu.physics.dmitriy.githubapiresttestproject.e.b:
+    java.lang.String USER_LOGIN -> b
+    java.lang.String USER_HTML_URL -> c
+    java.lang.String USER_AVATAR_URL -> d
+    java.lang.String USER_BITMAP_DATA -> e
+    sfedu.physics.dmitriy.githubapiresttestproject.utils.IntentConstantsUtils$Companion Companion -> a
+    java.lang.String access$getUSER_LOGIN$cp() -> a
+    java.lang.String access$getUSER_HTML_URL$cp() -> b
+    java.lang.String access$getUSER_AVATAR_URL$cp() -> c
+    java.lang.String access$getUSER_BITMAP_DATA$cp() -> d
+    void <clinit>() -> <clinit>
+sfedu.physics.dmitriy.githubapiresttestproject.utils.IntentConstantsUtils$Companion -> sfedu.physics.dmitriy.githubapiresttestproject.e.b$a:
+    java.lang.String getUSER_LOGIN() -> a
+    java.lang.String getUSER_HTML_URL() -> b
+    java.lang.String getUSER_AVATAR_URL() -> c
+    java.lang.String getUSER_BITMAP_DATA() -> d
+    void <init>() -> <init>
+    void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>
+sfedu.physics.dmitriy.githubapiresttestproject.utils.NetWorkUtils -> sfedu.physics.dmitriy.githubapiresttestproject.e.c:
+    sfedu.physics.dmitriy.githubapiresttestproject.utils.NetWorkUtils INSTANCE -> a
     boolean isNetworkConnected(android.content.Context) -> a
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+sfedu.physics.dmitriy.githubapiresttestproject.utils.QueryUtils -> sfedu.physics.dmitriy.githubapiresttestproject.e.d:
+    sfedu.physics.dmitriy.githubapiresttestproject.utils.QueryUtils$Companion Companion -> a
+    void <clinit>() -> <clinit>
+sfedu.physics.dmitriy.githubapiresttestproject.utils.QueryUtils$Companion -> sfedu.physics.dmitriy.githubapiresttestproject.e.d$a:
+    java.lang.String createQueryByLocationAndLanguage(java.lang.String,java.lang.String) -> a
+    void <init>() -> <init>
+    void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>

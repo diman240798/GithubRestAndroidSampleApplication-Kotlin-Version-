@@ -66,7 +66,7 @@ public class MvpUsersActivity extends MvpAppCompatActivity implements UsersView 
         configureViews();
         initAndConfigureSearchViews();
 
-        boolean networkConnected = NetWorkUtils.isNetworkConnected(this);
+        boolean networkConnected = NetWorkUtils.INSTANCE.isNetworkConnected(this);
         if (networkConnected) {
             usersPresenter.loadUsersByQuery();
             userDAO.deleteAllUsers();
